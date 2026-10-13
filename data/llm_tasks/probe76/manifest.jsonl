@@ -1,0 +1,1 @@
+{"stage": "probe76", "call_id": "probe76_haiku_000", "model": "haiku", "items": ["probe76-2", "probe76-1", "probe76-0", "probe76-3"], "task": "data/llm_tasks/probe76/probe76_haiku_000.md", "out": "data/llm_tasks/probe76/probe76_haiku_000.out.json"}

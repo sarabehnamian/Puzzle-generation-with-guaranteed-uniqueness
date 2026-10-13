@@ -1,0 +1,3 @@
+{"stage": "e5_solve", "call_id": "e5_solve_haiku", "model": "haiku", "items": ["genre-0", "genre-1", "genre-2", "genre-3"], "task": "data/llm_tasks/e5_solve/e5_solve_haiku.md", "out": "data/llm_tasks/e5_solve/e5_solve_haiku.out.json"}
+{"stage": "e5_solve", "call_id": "e5_solve_sonnet", "model": "sonnet", "items": ["genre-0", "genre-1", "genre-2", "genre-3"], "task": "data/llm_tasks/e5_solve/e5_solve_sonnet.md", "out": "data/llm_tasks/e5_solve/e5_solve_sonnet.out.json"}
+{"stage": "e5_solve", "call_id": "e5_solve_opus", "model": "opus", "items": ["genre-0", "genre-1", "genre-2", "genre-3"], "task": "data/llm_tasks/e5_solve/e5_solve_opus.md", "out": "data/llm_tasks/e5_solve/e5_solve_opus.out.json"}

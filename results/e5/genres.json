@@ -1,0 +1,10080 @@
+[
+ {
+  "name": "Parity Pairs Latin",
+  "rules_text": "Fill the 4x4 grid with digits 1-4 so that no digit repeats in any row or column. Clues sit between two adjacent cells and describe their sum or order.",
+  "clue_text": "Each clue names two adjacent cells and says either that their sum is even, that their sum is odd, that their sum equals a given number, or that one is smaller than the other.",
+  "code": "GRID = (4, 4, 4)\n\ndef rules(g):\n    for i in range(g.R):\n        g.alldiff([(i, j) for j in range(g.C)])\n    for j in range(g.C):\n        g.alldiff([(i, j) for i in range(g.R)])\n\ndef clues(sol):\n    R = len(sol)\n    C = len(sol[0])\n    out = []\n    for r in range(R):\n        for c in range(C):\n            for d in ((0, 1), (1, 0)):\n                r2 = r + d[0]\n                c2 = c + d[1]\n                if r2 < R and c2 < C:\n                    a = sol[r][c]\n                    b = sol[r2][c2]\n                    cells = [(r, c), (r2, c2)]\n                    n = 'R' + str(r + 1) + 'C' + str(c + 1)\n                    m = 'R' + str(r2 + 1) + 'C' + str(c2 + 1)\n                    if (a + b) % 2 == 0:\n                        out.append({'cells': cells, 'check': 'lambda a, b: (a + b) % 2 == 0', 'text': n + ' + ' + m + ' is even'})\n                    else:\n                        out.append({'cells': cells, 'check': 'lambda a, b: (a + b) % 2 == 1', 'text': n + ' + ' + m + ' is odd'})\n                    out.append({'cells': cells, 'check': 'lambda a, b: a + b == ' + str(a + b), 'text': n + ' + ' + m + ' = ' + str(a + b)})\n                    if a < b:\n                        out.append({'cells': cells, 'check': 'lambda a, b: a < b', 'text': n + ' < ' + m})\n                    elif a > b:\n                        out.append({'cells': cells, 'check': 'lambda a, b: a > b', 'text': n + ' > ' + m})\n    return out\n",
+  "instances": [
+   {
+    "status": "ok",
+    "grid": [
+     [
+      4,
+      2,
+      1,
+      3
+     ],
+     [
+      1,
+      4,
+      3,
+      2
+     ],
+     [
+      2,
+      3,
+      4,
+      1
+     ],
+     [
+      3,
+      1,
+      2,
+      4
+     ]
+    ],
+    "clues": [
+     {
+      "cells": [
+       [
+        0,
+        2
+       ],
+       [
+        0,
+        3
+       ]
+      ],
+      "check": "lambda a, b: (a + b) % 2 == 0",
+      "text": "R1C3 + R1C4 is even"
+     },
+     {
+      "cells": [
+       [
+        1,
+        0
+       ],
+       [
+        1,
+        1
+       ]
+      ],
+      "check": "lambda a, b: a + b == 5",
+      "text": "R2C1 + R2C2 = 5"
+     },
+     {
+      "cells": [
+       [
+        1,
+        2
+       ],
+       [
+        2,
+        2
+       ]
+      ],
+      "check": "lambda a, b: a + b == 7",
+      "text": "R2C3 + R3C3 = 7"
+     },
+     {
+      "cells": [
+       [
+        2,
+        1
+       ],
+       [
+        2,
+        2
+       ]
+      ],
+      "check": "lambda a, b: a < b",
+      "text": "R3C2 < R3C3"
+     },
+     {
+      "cells": [
+       [
+        3,
+        1
+       ],
+       [
+        3,
+        2
+       ]
+      ],
+      "check": "lambda a, b: a < b",
+      "text": "R4C2 < R4C3"
+     }
+    ],
+    "level": 3,
+    "n_clues": 5,
+    "frac_false_clues": 0.0,
+    "counts": {
+     "UP": 44,
+     "GAC": 9,
+     "FL1": 11,
+     "FL2": 0
+    }
+   },
+   {
+    "status": "ok",
+    "grid": [
+     [
+      1,
+      3,
+      4,
+      2
+     ],
+     [
+      2,
+      4,
+      3,
+      1
+     ],
+     [
+      4,
+      1,
+      2,
+      3
+     ],
+     [
+      3,
+      2,
+      1,
+      4
+     ]
+    ],
+    "clues": [
+     {
+      "cells": [
+       [
+        0,
+        2
+       ],
+       [
+        0,
+        3
+       ]
+      ],
+      "check": "lambda a, b: a + b == 6",
+      "text": "R1C3 + R1C4 = 6"
+     },
+     {
+      "cells": [
+       [
+        1,
+        3
+       ],
+       [
+        2,
+        3
+       ]
+      ],
+      "check": "lambda a, b: a + b == 4",
+      "text": "R2C4 + R3C4 = 4"
+     },
+     {
+      "cells": [
+       [
+        2,
+        2
+       ],
+       [
+        3,
+        2
+       ]
+      ],
+      "check": "lambda a, b: a + b == 3",
+      "text": "R3C3 + R4C3 = 3"
+     },
+     {
+      "cells": [
+       [
+        3,
+        1
+       ],
+       [
+        3,
+        2
+       ]
+      ],
+      "check": "lambda a, b: (a + b) % 2 == 1",
+      "text": "R4C2 + R4C3 is odd"
+     },
+     {
+      "cells": [
+       [
+        3,
+        2
+       ],
+       [
+        3,
+        3
+       ]
+      ],
+      "check": "lambda a, b: (a + b) % 2 == 1",
+      "text": "R4C3 + R4C4 is odd"
+     }
+    ],
+    "level": 2,
+    "n_clues": 5,
+    "frac_false_clues": 0.0,
+    "counts": {
+     "UP": 51,
+     "GAC": 13,
+     "FL1": 0,
+     "FL2": 0
+    }
+   },
+   {
+    "status": "ok",
+    "grid": [
+     [
+      2,
+      1,
+      3,
+      4
+     ],
+     [
+      4,
+      3,
+      2,
+      1
+     ],
+     [
+      1,
+      2,
+      4,
+      3
+     ],
+     [
+      3,
+      4,
+      1,
+      2
+     ]
+    ],
+    "clues": [
+     {
+      "cells": [
+       [
+        0,
+        0
+       ],
+       [
+        0,
+        1
+       ]
+      ],
+      "check": "lambda a, b: a + b == 3",
+      "text": "R1C1 + R1C2 = 3"
+     },
+     {
+      "cells": [
+       [
+        0,
+        0
+       ],
+       [
+        1,
+        0
+       ]
+      ],
+      "check": "lambda a, b: a + b == 6",
+      "text": "R1C1 + R2C1 = 6"
+     },
+     {
+      "cells": [
+       [
+        1,
+        2
+       ],
+       [
+        1,
+        3
+       ]
+      ],
+      "check": "lambda a, b: a > b",
+      "text": "R2C3 > R2C4"
+     },
+     {
+      "cells": [
+       [
+        1,
+        2
+       ],
+       [
+        2,
+        2
+       ]
+      ],
+      "check": "lambda a, b: (a + b) % 2 == 0",
+      "text": "R2C3 + R3C3 is even"
+     },
+     {
+      "cells": [
+       [
+        2,
+        3
+       ],
+       [
+        3,
+        3
+       ]
+      ],
+      "check": "lambda a, b: a > b",
+      "text": "R3C4 > R4C4"
+     }
+    ],
+    "level": 3,
+    "n_clues": 5,
+    "frac_false_clues": 0.0,
+    "counts": {
+     "UP": 41,
+     "GAC": 11,
+     "FL1": 12,
+     "FL2": 0
+    }
+   },
+   {
+    "status": "ok",
+    "grid": [
+     [
+      2,
+      1,
+      3,
+      4
+     ],
+     [
+      1,
+      2,
+      4,
+      3
+     ],
+     [
+      3,
+      4,
+      1,
+      2
+     ],
+     [
+      4,
+      3,
+      2,
+      1
+     ]
+    ],
+    "clues": [
+     {
+      "cells": [
+       [
+        0,
+        1
+       ],
+       [
+        0,
+        2
+       ]
+      ],
+      "check": "lambda a, b: (a + b) % 2 == 0",
+      "text": "R1C2 + R1C3 is even"
+     },
+     {
+      "cells": [
+       [
+        0,
+        1
+       ],
+       [
+        1,
+        1
+       ]
+      ],
+      "check": "lambda a, b: a + b == 3",
+      "text": "R1C2 + R2C2 = 3"
+     },
+     {
+      "cells": [
+       [
+        1,
+        1
+       ],
+       [
+        2,
+        1
+       ]
+      ],
+      "check": "lambda a, b: a + b == 6",
+      "text": "R2C2 + R3C2 = 6"
+     },
+     {
+      "cells": [
+       [
+        1,
+        3
+       ],
+       [
+        2,
+        3
+       ]
+      ],
+      "check": "lambda a, b: a + b == 5",
+      "text": "R2C4 + R3C4 = 5"
+     }
+    ],
+    "level": 2,
+    "n_clues": 4,
+    "frac_false_clues": 0.0,
+    "counts": {
+     "UP": 56,
+     "GAC": 8,
+     "FL1": 0,
+     "FL2": 0
+    }
+   },
+   {
+    "status": "ok",
+    "grid": [
+     [
+      3,
+      4,
+      2,
+      1
+     ],
+     [
+      2,
+      3,
+      1,
+      4
+     ],
+     [
+      4,
+      1,
+      3,
+      2
+     ],
+     [
+      1,
+      2,
+      4,
+      3
+     ]
+    ],
+    "clues": [
+     {
+      "cells": [
+       [
+        1,
+        0
+       ],
+       [
+        2,
+        0
+       ]
+      ],
+      "check": "lambda a, b: (a + b) % 2 == 0",
+      "text": "R2C1 + R3C1 is even"
+     },
+     {
+      "cells": [
+       [
+        1,
+        1
+       ],
+       [
+        1,
+        2
+       ]
+      ],
+      "check": "lambda a, b: a + b == 4",
+      "text": "R2C2 + R2C3 = 4"
+     },
+     {
+      "cells": [
+       [
+        2,
+        1
+       ],
+       [
+        2,
+        2
+       ]
+      ],
+      "check": "lambda a, b: (a + b) % 2 == 0",
+      "text": "R3C2 + R3C3 is even"
+     },
+     {
+      "cells": [
+       [
+        2,
+        2
+       ],
+       [
+        2,
+        3
+       ]
+      ],
+      "check": "lambda a, b: a > b",
+      "text": "R3C3 > R3C4"
+     },
+     {
+      "cells": [
+       [
+        3,
+        0
+       ],
+       [
+        3,
+        1
+       ]
+      ],
+      "check": "lambda a, b: a + b == 3",
+      "text": "R4C1 + R4C2 = 3"
+     }
+    ],
+    "level": 3,
+    "n_clues": 5,
+    "frac_false_clues": 0.0,
+    "counts": {
+     "UP": 25,
+     "GAC": 12,
+     "FL1": 27,
+     "FL2": 0
+    }
+   },
+   {
+    "status": "ok",
+    "grid": [
+     [
+      4,
+      3,
+      2,
+      1
+     ],
+     [
+      1,
+      2,
+      3,
+      4
+     ],
+     [
+      2,
+      4,
+      1,
+      3
+     ],
+     [
+      3,
+      1,
+      4,
+      2
+     ]
+    ],
+    "clues": [
+     {
+      "cells": [
+       [
+        0,
+        0
+       ],
+       [
+        0,
+        1
+       ]
+      ],
+      "check": "lambda a, b: a + b == 7",
+      "text": "R1C1 + R1C2 = 7"
+     },
+     {
+      "cells": [
+       [
+        0,
+        0
+       ],
+       [
+        0,
+        1
+       ]
+      ],
+      "check": "lambda a, b: a > b",
+      "text": "R1C1 > R1C2"
+     },
+     {
+      "cells": [
+       [
+        0,
+        2
+       ],
+       [
+        0,
+        3
+       ]
+      ],
+      "check": "lambda a, b: a > b",
+      "text": "R1C3 > R1C4"
+     },
+     {
+      "cells": [
+       [
+        1,
+        2
+       ],
+       [
+        1,
+        3
+       ]
+      ],
+      "check": "lambda a, b: a + b == 7",
+      "text": "R2C3 + R2C4 = 7"
+     },
+     {
+      "cells": [
+       [
+        3,
+        0
+       ],
+       [
+        3,
+        1
+       ]
+      ],
+      "check": "lambda a, b: a + b == 4",
+      "text": "R4C1 + R4C2 = 4"
+     }
+    ],
+    "level": 3,
+    "n_clues": 5,
+    "frac_false_clues": 0.0,
+    "counts": {
+     "UP": 38,
+     "GAC": 16,
+     "FL1": 10,
+     "FL2": 0
+    }
+   },
+   {
+    "status": "ok",
+    "grid": [
+     [
+      4,
+      1,
+      3,
+      2
+     ],
+     [
+      3,
+      2,
+      4,
+      1
+     ],
+     [
+      2,
+      4,
+      1,
+      3
+     ],
+     [
+      1,
+      3,
+      2,
+      4
+     ]
+    ],
+    "clues": [
+     {
+      "cells": [
+       [
+        0,
+        1
+       ],
+       [
+        0,
+        2
+       ]
+      ],
+      "check": "lambda a, b: (a + b) % 2 == 0",
+      "text": "R1C2 + R1C3 is even"
+     },
+     {
+      "cells": [
+       [
+        1,
+        3
+       ],
+       [
+        2,
+        3
+       ]
+      ],
+      "check": "lambda a, b: (a + b) % 2 == 0",
+      "text": "R2C4 + R3C4 is even"
+     },
+     {
+      "cells": [
+       [
+        2,
+        2
+       ],
+       [
+        2,
+        3
+       ]
+      ],
+      "check": "lambda a, b: a + b == 4",
+      "text": "R3C3 + R3C4 = 4"
+     },
+     {
+      "cells": [
+       [
+        2,
+        3
+       ],
+       [
+        3,
+        3
+       ]
+      ],
+      "check": "lambda a, b: a + b == 7",
+      "text": "R3C4 + R4C4 = 7"
+     }
+    ],
+    "level": 3,
+    "n_clues": 4,
+    "frac_false_clues": 0.0,
+    "counts": {
+     "UP": 47,
+     "GAC": 6,
+     "FL1": 11,
+     "FL2": 0
+    }
+   },
+   {
+    "status": "ok",
+    "grid": [
+     [
+      1,
+      4,
+      2,
+      3
+     ],
+     [
+      4,
+      2,
+      3,
+      1
+     ],
+     [
+      2,
+      3,
+      1,
+      4
+     ],
+     [
+      3,
+      1,
+      4,
+      2
+     ]
+    ],
+    "clues": [
+     {
+      "cells": [
+       [
+        0,
+        2
+       ],
+       [
+        1,
+        2
+       ]
+      ],
+      "check": "lambda a, b: a < b",
+      "text": "R1C3 < R2C3"
+     },
+     {
+      "cells": [
+       [
+        0,
+        3
+       ],
+       [
+        1,
+        3
+       ]
+      ],
+      "check": "lambda a, b: a + b == 4",
+      "text": "R1C4 + R2C4 = 4"
+     },
+     {
+      "cells": [
+       [
+        1,
+        1
+       ],
+       [
+        2,
+        1
+       ]
+      ],
+      "check": "lambda a, b: a < b",
+      "text": "R2C2 < R3C2"
+     },
+     {
+      "cells": [
+       [
+        1,
+        2
+       ],
+       [
+        2,
+        2
+       ]
+      ],
+      "check": "lambda a, b: a + b == 4",
+      "text": "R2C3 + R3C3 = 4"
+     }
+    ],
+    "level": 2,
+    "n_clues": 4,
+    "frac_false_clues": 0.0,
+    "counts": {
+     "UP": 51,
+     "GAC": 13,
+     "FL1": 0,
+     "FL2": 0
+    }
+   },
+   {
+    "status": "ok",
+    "grid": [
+     [
+      2,
+      1,
+      3,
+      4
+     ],
+     [
+      3,
+      2,
+      4,
+      1
+     ],
+     [
+      4,
+      3,
+      1,
+      2
+     ],
+     [
+      1,
+      4,
+      2,
+      3
+     ]
+    ],
+    "clues": [
+     {
+      "cells": [
+       [
+        0,
+        0
+       ],
+       [
+        0,
+        1
+       ]
+      ],
+      "check": "lambda a, b: a > b",
+      "text": "R1C1 > R1C2"
+     },
+     {
+      "cells": [
+       [
+        0,
+        1
+       ],
+       [
+        0,
+        2
+       ]
+      ],
+      "check": "lambda a, b: (a + b) % 2 == 0",
+      "text": "R1C2 + R1C3 is even"
+     },
+     {
+      "cells": [
+       [
+        1,
+        3
+       ],
+       [
+        2,
+        3
+       ]
+      ],
+      "check": "lambda a, b: a + b == 3",
+      "text": "R2C4 + R3C4 = 3"
+     },
+     {
+      "cells": [
+       [
+        2,
+        3
+       ],
+       [
+        3,
+        3
+       ]
+      ],
+      "check": "lambda a, b: a + b == 5",
+      "text": "R3C4 + R4C4 = 5"
+     },
+     {
+      "cells": [
+       [
+        3,
+        0
+       ],
+       [
+        3,
+        1
+       ]
+      ],
+      "check": "lambda a, b: a + b == 5",
+      "text": "R4C1 + R4C2 = 5"
+     }
+    ],
+    "level": 3,
+    "n_clues": 5,
+    "frac_false_clues": 0.0,
+    "counts": {
+     "UP": 38,
+     "GAC": 10,
+     "FL1": 16,
+     "FL2": 0
+    }
+   },
+   {
+    "status": "ok",
+    "grid": [
+     [
+      1,
+      4,
+      3,
+      2
+     ],
+     [
+      2,
+      1,
+      4,
+      3
+     ],
+     [
+      4,
+      3,
+      2,
+      1
+     ],
+     [
+      3,
+      2,
+      1,
+      4
+     ]
+    ],
+    "clues": [
+     {
+      "cells": [
+       [
+        1,
+        0
+       ],
+       [
+        2,
+        0
+       ]
+      ],
+      "check": "lambda a, b: a + b == 6",
+      "text": "R2C1 + R3C1 = 6"
+     },
+     {
+      "cells": [
+       [
+        2,
+        2
+       ],
+       [
+        2,
+        3
+       ]
+      ],
+      "check": "lambda a, b: a + b == 3",
+      "text": "R3C3 + R3C4 = 3"
+     },
+     {
+      "cells": [
+       [
+        3,
+        1
+       ],
+       [
+        3,
+        2
+       ]
+      ],
+      "check": "lambda a, b: a + b == 3",
+      "text": "R4C2 + R4C3 = 3"
+     },
+     {
+      "cells": [
+       [
+        3,
+        2
+       ],
+       [
+        3,
+        3
+       ]
+      ],
+      "check": "lambda a, b: a + b == 5",
+      "text": "R4C3 + R4C4 = 5"
+     }
+    ],
+    "level": 2,
+    "n_clues": 4,
+    "frac_false_clues": 0.0,
+    "counts": {
+     "UP": 43,
+     "GAC": 21,
+     "FL1": 0,
+     "FL2": 0
+    }
+   },
+   {
+    "status": "ok",
+    "grid": [
+     [
+      3,
+      1,
+      2,
+      4
+     ],
+     [
+      4,
+      3,
+      1,
+      2
+     ],
+     [
+      1,
+      2,
+      4,
+      3
+     ],
+     [
+      2,
+      4,
+      3,
+      1
+     ]
+    ],
+    "clues": [
+     {
+      "cells": [
+       [
+        0,
+        0
+       ],
+       [
+        1,
+        0
+       ]
+      ],
+      "check": "lambda a, b: a + b == 7",
+      "text": "R1C1 + R2C1 = 7"
+     },
+     {
+      "cells": [
+       [
+        0,
+        1
+       ],
+       [
+        1,
+        1
+       ]
+      ],
+      "check": "lambda a, b: (a + b) % 2 == 0",
+      "text": "R1C2 + R2C2 is even"
+     },
+     {
+      "cells": [
+       [
+        1,
+        0
+       ],
+       [
+        1,
+        1
+       ]
+      ],
+      "check": "lambda a, b: (a + b) % 2 == 1",
+      "text": "R2C1 + R2C2 is odd"
+     },
+     {
+      "cells": [
+       [
+        1,
+        0
+       ],
+       [
+        2,
+        0
+       ]
+      ],
+      "check": "lambda a, b: a + b == 5",
+      "text": "R2C1 + R3C1 = 5"
+     },
+     {
+      "cells": [
+       [
+        2,
+        2
+       ],
+       [
+        2,
+        3
+       ]
+      ],
+      "check": "lambda a, b: a > b",
+      "text": "R3C3 > R3C4"
+     },
+     {
+      "cells": [
+       [
+        2,
+        2
+       ],
+       [
+        3,
+        2
+       ]
+      ],
+      "check": "lambda a, b: a + b == 7",
+      "text": "R3C3 + R4C3 = 7"
+     }
+    ],
+    "level": 3,
+    "n_clues": 6,
+    "frac_false_clues": 0.0,
+    "counts": {
+     "UP": 32,
+     "GAC": 17,
+     "FL1": 15,
+     "FL2": 0
+    }
+   },
+   {
+    "status": "ok",
+    "grid": [
+     [
+      2,
+      4,
+      3,
+      1
+     ],
+     [
+      3,
+      1,
+      4,
+      2
+     ],
+     [
+      1,
+      3,
+      2,
+      4
+     ],
+     [
+      4,
+      2,
+      1,
+      3
+     ]
+    ],
+    "clues": [
+     {
+      "cells": [
+       [
+        1,
+        1
+       ],
+       [
+        1,
+        2
+       ]
+      ],
+      "check": "lambda a, b: a + b == 5",
+      "text": "R2C2 + R2C3 = 5"
+     },
+     {
+      "cells": [
+       [
+        2,
+        0
+       ],
+       [
+        2,
+        1
+       ]
+      ],
+      "check": "lambda a, b: a + b == 4",
+      "text": "R3C1 + R3C2 = 4"
+     },
+     {
+      "cells": [
+       [
+        2,
+        3
+       ],
+       [
+        3,
+        3
+       ]
+      ],
+      "check": "lambda a, b: a > b",
+      "text": "R3C4 > R4C4"
+     },
+     {
+      "cells": [
+       [
+        3,
+        1
+       ],
+       [
+        3,
+        2
+       ]
+      ],
+      "check": "lambda a, b: a + b == 3",
+      "text": "R4C2 + R4C3 = 3"
+     }
+    ],
+    "level": 3,
+    "n_clues": 4,
+    "frac_false_clues": 0.0,
+    "counts": {
+     "UP": 42,
+     "GAC": 8,
+     "FL1": 14,
+     "FL2": 0
+    }
+   }
+  ],
+  "compiled": true,
+  "n_ok": 12,
+  "levels": [
+   2,
+   2,
+   2,
+   2,
+   3,
+   3,
+   3,
+   3,
+   3,
+   3,
+   3,
+   3
+  ]
+ },
+ {
+  "name": "Median Line Latin",
+  "rules_text": "Fill the 5x5 grid with digits 1-5 so that no digit repeats in any row or column. Some clues mark three consecutive cells in a line whose middle value lies strictly between the other two; others give sums of two or three neighbours.",
+  "clue_text": "A clue lists three consecutive cells and says the middle one is the median, or lists neighbouring cells with their total, or states an order between two neighbours.",
+  "code": "GRID = (5, 5, 5)\n\ndef rules(g):\n    for i in range(g.R):\n        g.alldiff([(i, j) for j in range(g.C)])\n    for j in range(g.C):\n        g.alldiff([(i, j) for i in range(g.R)])\n\ndef clues(sol):\n    R = len(sol)\n    C = len(sol[0])\n    out = []\n    def nm(p):\n        return 'R' + str(p[0] + 1) + 'C' + str(p[1] + 1)\n    for r in range(R):\n        for c in range(C):\n            for d in ((0, 1), (1, 0)):\n                cs = [(r + k * d[0], c + k * d[1]) for k in range(3)]\n                if cs[2][0] < R and cs[2][1] < C:\n                    v = [sol[p[0]][p[1]] for p in cs]\n                    if (v[0] < v[1] and v[1] < v[2]) or (v[0] > v[1] and v[1] > v[2]):\n                        out.append({'cells': cs, 'check': 'lambda a, b, c: (a < b and b < c) or (a > b and b > c)', 'text': nm(cs[1]) + ' is the median of ' + nm(cs[0]) + ', ' + nm(cs[1]) + ', ' + nm(cs[2])})\n                    else:\n                        out.append({'cells': cs, 'check': 'lambda a, b, c: not ((a < b and b < c) or (a > b and b > c))', 'text': nm(cs[1]) + ' is NOT the median of ' + nm(cs[0]) + ', ' + nm(cs[1]) + ', ' + nm(cs[2])})\n                    out.append({'cells': cs, 'check': 'lambda a, b, c: a + b + c == ' + str(sum(v)), 'text': nm(cs[0]) + ' + ' + nm(cs[1]) + ' + ' + nm(cs[2]) + ' = ' + str(sum(v))})\n                p2 = (r + d[0], c + d[1])\n                if p2[0] < R and p2[1] < C:\n                    a = sol[r][c]\n                    b = sol[p2[0]][p2[1]]\n                    pc = [(r, c), p2]\n                    out.append({'cells': pc, 'check': 'lambda a, b: a + b == ' + str(a + b), 'text': nm((r, c)) + ' + ' + nm(p2) + ' = ' + str(a + b)})\n                    if a < b:\n                        out.append({'cells': pc, 'check': 'lambda a, b: a < b', 'text': nm((r, c)) + ' < ' + nm(p2)})\n                    else:\n                        out.append({'cells': pc, 'check': 'lambda a, b: a > b', 'text': nm((r, c)) + ' > ' + nm(p2)})\n    return out\n",
+  "instances": [
+   {
+    "status": "ok",
+    "grid": [
+     [
+      4,
+      3,
+      1,
+      2,
+      5
+     ],
+     [
+      3,
+      5,
+      4,
+      1,
+      2
+     ],
+     [
+      1,
+      2,
+      5,
+      4,
+      3
+     ],
+     [
+      2,
+      4,
+      3,
+      5,
+      1
+     ],
+     [
+      5,
+      1,
+      2,
+      3,
+      4
+     ]
+    ],
+    "clues": [
+     {
+      "cells": [
+       [
+        0,
+        0
+       ],
+       [
+        0,
+        1
+       ],
+       [
+        0,
+        2
+       ]
+      ],
+      "check": "lambda a, b, c: a + b + c == 8",
+      "text": "R1C1 + R1C2 + R1C3 = 8"
+     },
+     {
+      "cells": [
+       [
+        0,
+        2
+       ],
+       [
+        0,
+        3
+       ],
+       [
+        0,
+        4
+       ]
+      ],
+      "check": "lambda a, b, c: (a < b and b < c) or (a > b and b > c)",
+      "text": "R1C4 is the median of R1C3, R1C4, R1C5"
+     },
+     {
+      "cells": [
+       [
+        1,
+        3
+       ],
+       [
+        2,
+        3
+       ],
+       [
+        3,
+        3
+       ]
+      ],
+      "check": "lambda a, b, c: a + b + c == 10",
+      "text": "R2C4 + R3C4 + R4C4 = 10"
+     },
+     {
+      "cells": [
+       [
+        2,
+        1
+       ],
+       [
+        3,
+        1
+       ]
+      ],
+      "check": "lambda a, b: a + b == 6",
+      "text": "R3C2 + R4C2 = 6"
+     },
+     {
+      "cells": [
+       [
+        2,
+        3
+       ],
+       [
+        2,
+        4
+       ]
+      ],
+      "check": "lambda a, b: a > b",
+      "text": "R3C4 > R3C5"
+     },
+     {
+      "cells": [
+       [
+        3,
+        2
+       ],
+       [
+        4,
+        2
+       ]
+      ],
+      "check": "lambda a, b: a + b == 5",
+      "text": "R4C3 + R5C3 = 5"
+     },
+     {
+      "cells": [
+       [
+        3,
+        4
+       ],
+       [
+        4,
+        4
+       ]
+      ],
+      "check": "lambda a, b: a + b == 5",
+      "text": "R4C5 + R5C5 = 5"
+     },
+     {
+      "cells": [
+       [
+        4,
+        2
+       ],
+       [
+        4,
+        3
+       ],
+       [
+        4,
+        4
+       ]
+      ],
+      "check": "lambda a, b, c: a + b + c == 9",
+      "text": "R5C3 + R5C4 + R5C5 = 9"
+     }
+    ],
+    "level": 4,
+    "n_clues": 8,
+    "frac_false_clues": 0.0,
+    "counts": {
+     "UP": 59,
+     "GAC": 26,
+     "FL1": 37,
+     "FL2": 3
+    }
+   },
+   {
+    "status": "ok",
+    "grid": [
+     [
+      5,
+      4,
+      2,
+      3,
+      1
+     ],
+     [
+      2,
+      1,
+      4,
+      5,
+      3
+     ],
+     [
+      3,
+      5,
+      1,
+      2,
+      4
+     ],
+     [
+      1,
+      3,
+      5,
+      4,
+      2
+     ],
+     [
+      4,
+      2,
+      3,
+      1,
+      5
+     ]
+    ],
+    "clues": [
+     {
+      "cells": [
+       [
+        0,
+        0
+       ],
+       [
+        0,
+        1
+       ],
+       [
+        0,
+        2
+       ]
+      ],
+      "check": "lambda a, b, c: (a < b and b < c) or (a > b and b > c)",
+      "text": "R1C2 is the median of R1C1, R1C2, R1C3"
+     },
+     {
+      "cells": [
+       [
+        0,
+        2
+       ],
+       [
+        1,
+        2
+       ],
+       [
+        2,
+        2
+       ]
+      ],
+      "check": "lambda a, b, c: a + b + c == 7",
+      "text": "R1C3 + R2C3 + R3C3 = 7"
+     },
+     {
+      "cells": [
+       [
+        0,
+        3
+       ],
+       [
+        1,
+        3
+       ]
+      ],
+      "check": "lambda a, b: a < b",
+      "text": "R1C4 < R2C4"
+     },
+     {
+      "cells": [
+       [
+        1,
+        0
+       ],
+       [
+        2,
+        0
+       ]
+      ],
+      "check": "lambda a, b: a + b == 5",
+      "text": "R2C1 + R3C1 = 5"
+     },
+     {
+      "cells": [
+       [
+        1,
+        3
+       ],
+       [
+        2,
+        3
+       ]
+      ],
+      "check": "lambda a, b: a + b == 7",
+      "text": "R2C4 + R3C4 = 7"
+     },
+     {
+      "cells": [
+       [
+        3,
+        2
+       ],
+       [
+        3,
+        3
+       ]
+      ],
+      "check": "lambda a, b: a + b == 9",
+      "text": "R4C3 + R4C4 = 9"
+     },
+     {
+      "cells": [
+       [
+        4,
+        1
+       ],
+       [
+        4,
+        2
+       ],
+       [
+        4,
+        3
+       ]
+      ],
+      "check": "lambda a, b, c: not ((a < b and b < c) or (a > b and b > c))",
+      "text": "R5C3 is NOT the median of R5C2, R5C3, R5C4"
+     }
+    ],
+    "level": 4,
+    "n_clues": 7,
+    "frac_false_clues": 0.0,
+    "counts": {
+     "UP": 84,
+     "GAC": 29,
+     "FL1": 5,
+     "FL2": 7
+    }
+   },
+   {
+    "status": "ok",
+    "grid": [
+     [
+      3,
+      5,
+      1,
+      2,
+      4
+     ],
+     [
+      1,
+      2,
+      3,
+      4,
+      5
+     ],
+     [
+      4,
+      1,
+      2,
+      5,
+      3
+     ],
+     [
+      5,
+      3,
+      4,
+      1,
+      2
+     ],
+     [
+      2,
+      4,
+      5,
+      3,
+      1
+     ]
+    ],
+    "clues": [
+     {
+      "cells": [
+       [
+        0,
+        0
+       ],
+       [
+        1,
+        0
+       ],
+       [
+        2,
+        0
+       ]
+      ],
+      "check": "lambda a, b, c: a + b + c == 8",
+      "text": "R1C1 + R2C1 + R3C1 = 8"
+     },
+     {
+      "cells": [
+       [
+        0,
+        2
+       ],
+       [
+        0,
+        3
+       ]
+      ],
+      "check": "lambda a, b: a + b == 3",
+      "text": "R1C3 + R1C4 = 3"
+     },
+     {
+      "cells": [
+       [
+        1,
+        1
+       ],
+       [
+        1,
+        2
+       ],
+       [
+        1,
+        3
+       ]
+      ],
+      "check": "lambda a, b, c: a + b + c == 9",
+      "text": "R2C2 + R2C3 + R2C4 = 9"
+     },
+     {
+      "cells": [
+       [
+        1,
+        4
+       ],
+       [
+        2,
+        4
+       ],
+       [
+        3,
+        4
+       ]
+      ],
+      "check": "lambda a, b, c: a + b + c == 10",
+      "text": "R2C5 + R3C5 + R4C5 = 10"
+     },
+     {
+      "cells": [
+       [
+        3,
+        0
+       ],
+       [
+        4,
+        0
+       ]
+      ],
+      "check": "lambda a, b: a > b",
+      "text": "R4C1 > R5C1"
+     },
+     {
+      "cells": [
+       [
+        3,
+        1
+       ],
+       [
+        3,
+        2
+       ]
+      ],
+      "check": "lambda a, b: a < b",
+      "text": "R4C2 < R4C3"
+     },
+     {
+      "cells": [
+       [
+        3,
+        1
+       ],
+       [
+        4,
+        1
+       ]
+      ],
+      "check": "lambda a, b: a + b == 7",
+      "text": "R4C2 + R5C2 = 7"
+     },
+     {
+      "cells": [
+       [
+        3,
+        3
+       ],
+       [
+        3,
+        4
+       ]
+      ],
+      "check": "lambda a, b: a < b",
+      "text": "R4C4 < R4C5"
+     }
+    ],
+    "level": 4,
+    "n_clues": 8,
+    "frac_false_clues": 0.0,
+    "counts": {
+     "UP": 64,
+     "GAC": 23,
+     "FL1": 36,
+     "FL2": 2
+    }
+   },
+   {
+    "status": "ok",
+    "grid": [
+     [
+      4,
+      3,
+      2,
+      1,
+      5
+     ],
+     [
+      1,
+      4,
+      3,
+      5,
+      2
+     ],
+     [
+      3,
+      5,
+      4,
+      2,
+      1
+     ],
+     [
+      5,
+      2,
+      1,
+      3,
+      4
+     ],
+     [
+      2,
+      1,
+      5,
+      4,
+      3
+     ]
+    ],
+    "clues": [
+     {
+      "cells": [
+       [
+        0,
+        0
+       ],
+       [
+        0,
+        1
+       ],
+       [
+        0,
+        2
+       ]
+      ],
+      "check": "lambda a, b, c: a + b + c == 9",
+      "text": "R1C1 + R1C2 + R1C3 = 9"
+     },
+     {
+      "cells": [
+       [
+        0,
+        1
+       ],
+       [
+        0,
+        2
+       ],
+       [
+        0,
+        3
+       ]
+      ],
+      "check": "lambda a, b, c: a + b + c == 6",
+      "text": "R1C2 + R1C3 + R1C4 = 6"
+     },
+     {
+      "cells": [
+       [
+        2,
+        0
+       ],
+       [
+        2,
+        1
+       ]
+      ],
+      "check": "lambda a, b: a + b == 8",
+      "text": "R3C1 + R3C2 = 8"
+     },
+     {
+      "cells": [
+       [
+        2,
+        3
+       ],
+       [
+        3,
+        3
+       ],
+       [
+        4,
+        3
+       ]
+      ],
+      "check": "lambda a, b, c: a + b + c == 9",
+      "text": "R3C4 + R4C4 + R5C4 = 9"
+     },
+     {
+      "cells": [
+       [
+        3,
+        1
+       ],
+       [
+        3,
+        2
+       ],
+       [
+        3,
+        3
+       ]
+      ],
+      "check": "lambda a, b, c: a + b + c == 6",
+      "text": "R4C2 + R4C3 + R4C4 = 6"
+     },
+     {
+      "cells": [
+       [
+        4,
+        1
+       ],
+       [
+        4,
+        2
+       ],
+       [
+        4,
+        3
+       ]
+      ],
+      "check": "lambda a, b, c: a + b + c == 10",
+      "text": "R5C2 + R5C3 + R5C4 = 10"
+     }
+    ],
+    "level": 4,
+    "n_clues": 6,
+    "frac_false_clues": 0.0,
+    "counts": {
+     "UP": 75,
+     "GAC": 14,
+     "FL1": 33,
+     "FL2": 3
+    }
+   },
+   {
+    "status": "ok",
+    "grid": [
+     [
+      1,
+      4,
+      5,
+      3,
+      2
+     ],
+     [
+      5,
+      2,
+      4,
+      1,
+      3
+     ],
+     [
+      3,
+      5,
+      2,
+      4,
+      1
+     ],
+     [
+      4,
+      3,
+      1,
+      2,
+      5
+     ],
+     [
+      2,
+      1,
+      3,
+      5,
+      4
+     ]
+    ],
+    "clues": [
+     {
+      "cells": [
+       [
+        0,
+        2
+       ],
+       [
+        0,
+        3
+       ],
+       [
+        0,
+        4
+       ]
+      ],
+      "check": "lambda a, b, c: a + b + c == 10",
+      "text": "R1C3 + R1C4 + R1C5 = 10"
+     },
+     {
+      "cells": [
+       [
+        1,
+        4
+       ],
+       [
+        2,
+        4
+       ],
+       [
+        3,
+        4
+       ]
+      ],
+      "check": "lambda a, b, c: a + b + c == 9",
+      "text": "R2C5 + R3C5 + R4C5 = 9"
+     },
+     {
+      "cells": [
+       [
+        2,
+        1
+       ],
+       [
+        2,
+        2
+       ]
+      ],
+      "check": "lambda a, b: a + b == 7",
+      "text": "R3C2 + R3C3 = 7"
+     },
+     {
+      "cells": [
+       [
+        2,
+        3
+       ],
+       [
+        3,
+        3
+       ],
+       [
+        4,
+        3
+       ]
+      ],
+      "check": "lambda a, b, c: a + b + c == 11",
+      "text": "R3C4 + R4C4 + R5C4 = 11"
+     },
+     {
+      "cells": [
+       [
+        3,
+        1
+       ],
+       [
+        3,
+        2
+       ]
+      ],
+      "check": "lambda a, b: a + b == 4",
+      "text": "R4C2 + R4C3 = 4"
+     },
+     {
+      "cells": [
+       [
+        3,
+        2
+       ],
+       [
+        3,
+        3
+       ],
+       [
+        3,
+        4
+       ]
+      ],
+      "check": "lambda a, b, c: a + b + c == 8",
+      "text": "R4C3 + R4C4 + R4C5 = 8"
+     },
+     {
+      "cells": [
+       [
+        3,
+        3
+       ],
+       [
+        3,
+        4
+       ]
+      ],
+      "check": "lambda a, b: a < b",
+      "text": "R4C4 < R4C5"
+     }
+    ],
+    "level": 3,
+    "n_clues": 7,
+    "frac_false_clues": 0.0,
+    "counts": {
+     "UP": 64,
+     "GAC": 29,
+     "FL1": 32,
+     "FL2": 0
+    }
+   },
+   {
+    "status": "ok",
+    "grid": [
+     [
+      5,
+      2,
+      1,
+      3,
+      4
+     ],
+     [
+      4,
+      5,
+      3,
+      2,
+      1
+     ],
+     [
+      2,
+      1,
+      4,
+      5,
+      3
+     ],
+     [
+      1,
+      3,
+      2,
+      4,
+      5
+     ],
+     [
+      3,
+      4,
+      5,
+      1,
+      2
+     ]
+    ],
+    "clues": [
+     {
+      "cells": [
+       [
+        0,
+        0
+       ],
+       [
+        0,
+        1
+       ],
+       [
+        0,
+        2
+       ]
+      ],
+      "check": "lambda a, b, c: (a < b and b < c) or (a > b and b > c)",
+      "text": "R1C2 is the median of R1C1, R1C2, R1C3"
+     },
+     {
+      "cells": [
+       [
+        0,
+        0
+       ],
+       [
+        0,
+        1
+       ],
+       [
+        0,
+        2
+       ]
+      ],
+      "check": "lambda a, b, c: a + b + c == 8",
+      "text": "R1C1 + R1C2 + R1C3 = 8"
+     },
+     {
+      "cells": [
+       [
+        0,
+        4
+       ],
+       [
+        1,
+        4
+       ],
+       [
+        2,
+        4
+       ]
+      ],
+      "check": "lambda a, b, c: a + b + c == 8",
+      "text": "R1C5 + R2C5 + R3C5 = 8"
+     },
+     {
+      "cells": [
+       [
+        1,
+        0
+       ],
+       [
+        2,
+        0
+       ],
+       [
+        3,
+        0
+       ]
+      ],
+      "check": "lambda a, b, c: (a < b and b < c) or (a > b and b > c)",
+      "text": "R3C1 is the median of R2C1, R3C1, R4C1"
+     },
+     {
+      "cells": [
+       [
+        2,
+        1
+       ],
+       [
+        2,
+        2
+       ],
+       [
+        2,
+        3
+       ]
+      ],
+      "check": "lambda a, b, c: (a < b and b < c) or (a > b and b > c)",
+      "text": "R3C3 is the median of R3C2, R3C3, R3C4"
+     },
+     {
+      "cells": [
+       [
+        2,
+        2
+       ],
+       [
+        2,
+        3
+       ]
+      ],
+      "check": "lambda a, b: a < b",
+      "text": "R3C3 < R3C4"
+     },
+     {
+      "cells": [
+       [
+        3,
+        3
+       ],
+       [
+        3,
+        4
+       ]
+      ],
+      "check": "lambda a, b: a + b == 9",
+      "text": "R4C4 + R4C5 = 9"
+     },
+     {
+      "cells": [
+       [
+        4,
+        1
+       ],
+       [
+        4,
+        2
+       ]
+      ],
+      "check": "lambda a, b: a < b",
+      "text": "R5C2 < R5C3"
+     }
+    ],
+    "level": 4,
+    "n_clues": 8,
+    "frac_false_clues": 0.0,
+    "counts": {
+     "UP": 45,
+     "GAC": 27,
+     "FL1": 52,
+     "FL2": 1
+    }
+   },
+   {
+    "status": "ok",
+    "grid": [
+     [
+      1,
+      2,
+      3,
+      4,
+      5
+     ],
+     [
+      5,
+      4,
+      2,
+      3,
+      1
+     ],
+     [
+      2,
+      5,
+      4,
+      1,
+      3
+     ],
+     [
+      4,
+      3,
+      1,
+      5,
+      2
+     ],
+     [
+      3,
+      1,
+      5,
+      2,
+      4
+     ]
+    ],
+    "clues": [
+     {
+      "cells": [
+       [
+        1,
+        0
+       ],
+       [
+        1,
+        1
+       ]
+      ],
+      "check": "lambda a, b: a + b == 9",
+      "text": "R2C1 + R2C2 = 9"
+     },
+     {
+      "cells": [
+       [
+        1,
+        2
+       ],
+       [
+        2,
+        2
+       ]
+      ],
+      "check": "lambda a, b: a + b == 6",
+      "text": "R2C3 + R3C3 = 6"
+     },
+     {
+      "cells": [
+       [
+        2,
+        1
+       ],
+       [
+        2,
+        2
+       ],
+       [
+        2,
+        3
+       ]
+      ],
+      "check": "lambda a, b, c: a + b + c == 10",
+      "text": "R3C2 + R3C3 + R3C4 = 10"
+     },
+     {
+      "cells": [
+       [
+        3,
+        1
+       ],
+       [
+        3,
+        2
+       ]
+      ],
+      "check": "lambda a, b: a + b == 4",
+      "text": "R4C2 + R4C3 = 4"
+     },
+     {
+      "cells": [
+       [
+        3,
+        1
+       ],
+       [
+        4,
+        1
+       ]
+      ],
+      "check": "lambda a, b: a > b",
+      "text": "R4C2 > R5C2"
+     },
+     {
+      "cells": [
+       [
+        3,
+        3
+       ],
+       [
+        4,
+        3
+       ]
+      ],
+      "check": "lambda a, b: a > b",
+      "text": "R4C4 > R5C4"
+     },
+     {
+      "cells": [
+       [
+        4,
+        0
+       ],
+       [
+        4,
+        1
+       ],
+       [
+        4,
+        2
+       ]
+      ],
+      "check": "lambda a, b, c: a + b + c == 9",
+      "text": "R5C1 + R5C2 + R5C3 = 9"
+     }
+    ],
+    "level": 3,
+    "n_clues": 7,
+    "frac_false_clues": 0.0,
+    "counts": {
+     "UP": 58,
+     "GAC": 34,
+     "FL1": 33,
+     "FL2": 0
+    }
+   },
+   {
+    "status": "ok",
+    "grid": [
+     [
+      3,
+      2,
+      4,
+      1,
+      5
+     ],
+     [
+      2,
+      3,
+      1,
+      5,
+      4
+     ],
+     [
+      5,
+      1,
+      3,
+      4,
+      2
+     ],
+     [
+      1,
+      4,
+      5,
+      2,
+      3
+     ],
+     [
+      4,
+      5,
+      2,
+      3,
+      1
+     ]
+    ],
+    "clues": [
+     {
+      "cells": [
+       [
+        0,
+        1
+       ],
+       [
+        1,
+        1
+       ],
+       [
+        2,
+        1
+       ]
+      ],
+      "check": "lambda a, b, c: not ((a < b and b < c) or (a > b and b > c))",
+      "text": "R2C2 is NOT the median of R1C2, R2C2, R3C2"
+     },
+     {
+      "cells": [
+       [
+        0,
+        4
+       ],
+       [
+        1,
+        4
+       ]
+      ],
+      "check": "lambda a, b: a > b",
+      "text": "R1C5 > R2C5"
+     },
+     {
+      "cells": [
+       [
+        1,
+        0
+       ],
+       [
+        1,
+        1
+       ]
+      ],
+      "check": "lambda a, b: a + b == 5",
+      "text": "R2C1 + R2C2 = 5"
+     },
+     {
+      "cells": [
+       [
+        1,
+        2
+       ],
+       [
+        2,
+        2
+       ]
+      ],
+      "check": "lambda a, b: a + b == 4",
+      "text": "R2C3 + R3C3 = 4"
+     },
+     {
+      "cells": [
+       [
+        2,
+        1
+       ],
+       [
+        2,
+        2
+       ],
+       [
+        2,
+        3
+       ]
+      ],
+      "check": "lambda a, b, c: a + b + c == 8",
+      "text": "R3C2 + R3C3 + R3C4 = 8"
+     },
+     {
+      "cells": [
+       [
+        3,
+        0
+       ],
+       [
+        4,
+        0
+       ]
+      ],
+      "check": "lambda a, b: a + b == 5",
+      "text": "R4C1 + R5C1 = 5"
+     },
+     {
+      "cells": [
+       [
+        3,
+        3
+       ],
+       [
+        3,
+        4
+       ]
+      ],
+      "check": "lambda a, b: a + b == 5",
+      "text": "R4C4 + R4C5 = 5"
+     }
+    ],
+    "level": 4,
+    "n_clues": 7,
+    "frac_false_clues": 0.0,
+    "counts": {
+     "UP": 85,
+     "GAC": 26,
+     "FL1": 10,
+     "FL2": 4
+    }
+   },
+   {
+    "status": "ok",
+    "grid": [
+     [
+      5,
+      2,
+      3,
+      4,
+      1
+     ],
+     [
+      1,
+      3,
+      4,
+      5,
+      2
+     ],
+     [
+      2,
+      1,
+      5,
+      3,
+      4
+     ],
+     [
+      3,
+      4,
+      1,
+      2,
+      5
+     ],
+     [
+      4,
+      5,
+      2,
+      1,
+      3
+     ]
+    ],
+    "clues": [
+     {
+      "cells": [
+       [
+        1,
+        0
+       ],
+       [
+        2,
+        0
+       ]
+      ],
+      "check": "lambda a, b: a + b == 3",
+      "text": "R2C1 + R3C1 = 3"
+     },
+     {
+      "cells": [
+       [
+        1,
+        2
+       ],
+       [
+        2,
+        2
+       ]
+      ],
+      "check": "lambda a, b: a + b == 9",
+      "text": "R2C3 + R3C3 = 9"
+     },
+     {
+      "cells": [
+       [
+        1,
+        3
+       ],
+       [
+        1,
+        4
+       ]
+      ],
+      "check": "lambda a, b: a > b",
+      "text": "R2C4 > R2C5"
+     },
+     {
+      "cells": [
+       [
+        1,
+        4
+       ],
+       [
+        2,
+        4
+       ],
+       [
+        3,
+        4
+       ]
+      ],
+      "check": "lambda a, b, c: a + b + c == 11",
+      "text": "R2C5 + R3C5 + R4C5 = 11"
+     },
+     {
+      "cells": [
+       [
+        2,
+        1
+       ],
+       [
+        3,
+        1
+       ],
+       [
+        4,
+        1
+       ]
+      ],
+      "check": "lambda a, b, c: (a < b and b < c) or (a > b and b > c)",
+      "text": "R4C2 is the median of R3C2, R4C2, R5C2"
+     },
+     {
+      "cells": [
+       [
+        3,
+        0
+       ],
+       [
+        3,
+        1
+       ],
+       [
+        3,
+        2
+       ]
+      ],
+      "check": "lambda a, b, c: a + b + c == 8",
+      "text": "R4C1 + R4C2 + R4C3 = 8"
+     }
+    ],
+    "level": 4,
+    "n_clues": 6,
+    "frac_false_clues": 0.0,
+    "counts": {
+     "UP": 47,
+     "GAC": 33,
+     "FL1": 43,
+     "FL2": 2
+    }
+   },
+   {
+    "status": "ok",
+    "grid": [
+     [
+      2,
+      4,
+      1,
+      3,
+      5
+     ],
+     [
+      5,
+      3,
+      2,
+      4,
+      1
+     ],
+     [
+      4,
+      1,
+      3,
+      5,
+      2
+     ],
+     [
+      1,
+      5,
+      4,
+      2,
+      3
+     ],
+     [
+      3,
+      2,
+      5,
+      1,
+      4
+     ]
+    ],
+    "clues": [
+     {
+      "cells": [
+       [
+        0,
+        1
+       ],
+       [
+        1,
+        1
+       ]
+      ],
+      "check": "lambda a, b: a + b == 7",
+      "text": "R1C2 + R2C2 = 7"
+     },
+     {
+      "cells": [
+       [
+        0,
+        3
+       ],
+       [
+        0,
+        4
+       ]
+      ],
+      "check": "lambda a, b: a + b == 8",
+      "text": "R1C4 + R1C5 = 8"
+     },
+     {
+      "cells": [
+       [
+        0,
+        4
+       ],
+       [
+        1,
+        4
+       ],
+       [
+        2,
+        4
+       ]
+      ],
+      "check": "lambda a, b, c: not ((a < b and b < c) or (a > b and b > c))",
+      "text": "R2C5 is NOT the median of R1C5, R2C5, R3C5"
+     },
+     {
+      "cells": [
+       [
+        1,
+        3
+       ],
+       [
+        1,
+        4
+       ]
+      ],
+      "check": "lambda a, b: a + b == 5",
+      "text": "R2C4 + R2C5 = 5"
+     },
+     {
+      "cells": [
+       [
+        1,
+        3
+       ],
+       [
+        2,
+        3
+       ],
+       [
+        3,
+        3
+       ]
+      ],
+      "check": "lambda a, b, c: not ((a < b and b < c) or (a > b and b > c))",
+      "text": "R3C4 is NOT the median of R2C4, R3C4, R4C4"
+     },
+     {
+      "cells": [
+       [
+        1,
+        4
+       ],
+       [
+        2,
+        4
+       ]
+      ],
+      "check": "lambda a, b: a + b == 3",
+      "text": "R2C5 + R3C5 = 3"
+     },
+     {
+      "cells": [
+       [
+        2,
+        0
+       ],
+       [
+        3,
+        0
+       ]
+      ],
+      "check": "lambda a, b: a + b == 5",
+      "text": "R3C1 + R4C1 = 5"
+     },
+     {
+      "cells": [
+       [
+        3,
+        0
+       ],
+       [
+        3,
+        1
+       ],
+       [
+        3,
+        2
+       ]
+      ],
+      "check": "lambda a, b, c: not ((a < b and b < c) or (a > b and b > c))",
+      "text": "R4C2 is NOT the median of R4C1, R4C2, R4C3"
+     }
+    ],
+    "level": 3,
+    "n_clues": 8,
+    "frac_false_clues": 0.0,
+    "counts": {
+     "UP": 60,
+     "GAC": 25,
+     "FL1": 40,
+     "FL2": 0
+    }
+   },
+   {
+    "status": "ok",
+    "grid": [
+     [
+      3,
+      5,
+      4,
+      2,
+      1
+     ],
+     [
+      5,
+      2,
+      3,
+      1,
+      4
+     ],
+     [
+      1,
+      4,
+      2,
+      3,
+      5
+     ],
+     [
+      2,
+      1,
+      5,
+      4,
+      3
+     ],
+     [
+      4,
+      3,
+      1,
+      5,
+      2
+     ]
+    ],
+    "clues": [
+     {
+      "cells": [
+       [
+        0,
+        1
+       ],
+       [
+        0,
+        2
+       ],
+       [
+        0,
+        3
+       ]
+      ],
+      "check": "lambda a, b, c: (a < b and b < c) or (a > b and b > c)",
+      "text": "R1C3 is the median of R1C2, R1C3, R1C4"
+     },
+     {
+      "cells": [
+       [
+        0,
+        1
+       ],
+       [
+        1,
+        1
+       ]
+      ],
+      "check": "lambda a, b: a + b == 7",
+      "text": "R1C2 + R2C2 = 7"
+     },
+     {
+      "cells": [
+       [
+        1,
+        0
+       ],
+       [
+        2,
+        0
+       ],
+       [
+        3,
+        0
+       ]
+      ],
+      "check": "lambda a, b, c: a + b + c == 8",
+      "text": "R2C1 + R3C1 + R4C1 = 8"
+     },
+     {
+      "cells": [
+       [
+        1,
+        3
+       ],
+       [
+        2,
+        3
+       ],
+       [
+        3,
+        3
+       ]
+      ],
+      "check": "lambda a, b, c: a + b + c == 8",
+      "text": "R2C4 + R3C4 + R4C4 = 8"
+     },
+     {
+      "cells": [
+       [
+        2,
+        0
+       ],
+       [
+        2,
+        1
+       ]
+      ],
+      "check": "lambda a, b: a + b == 5",
+      "text": "R3C1 + R3C2 = 5"
+     },
+     {
+      "cells": [
+       [
+        2,
+        2
+       ],
+       [
+        3,
+        2
+       ]
+      ],
+      "check": "lambda a, b: a < b",
+      "text": "R3C3 < R4C3"
+     },
+     {
+      "cells": [
+       [
+        3,
+        3
+       ],
+       [
+        3,
+        4
+       ]
+      ],
+      "check": "lambda a, b: a > b",
+      "text": "R4C4 > R4C5"
+     },
+     {
+      "cells": [
+       [
+        4,
+        2
+       ],
+       [
+        4,
+        3
+       ]
+      ],
+      "check": "lambda a, b: a + b == 6",
+      "text": "R5C3 + R5C4 = 6"
+     }
+    ],
+    "level": 4,
+    "n_clues": 8,
+    "frac_false_clues": 0.0,
+    "counts": {
+     "UP": 59,
+     "GAC": 22,
+     "FL1": 37,
+     "FL2": 7
+    }
+   },
+   {
+    "status": "ok",
+    "grid": [
+     [
+      3,
+      1,
+      4,
+      5,
+      2
+     ],
+     [
+      4,
+      2,
+      5,
+      1,
+      3
+     ],
+     [
+      1,
+      5,
+      2,
+      3,
+      4
+     ],
+     [
+      5,
+      4,
+      3,
+      2,
+      1
+     ],
+     [
+      2,
+      3,
+      1,
+      4,
+      5
+     ]
+    ],
+    "clues": [
+     {
+      "cells": [
+       [
+        0,
+        0
+       ],
+       [
+        0,
+        1
+       ]
+      ],
+      "check": "lambda a, b: a + b == 4",
+      "text": "R1C1 + R1C2 = 4"
+     },
+     {
+      "cells": [
+       [
+        0,
+        4
+       ],
+       [
+        1,
+        4
+       ]
+      ],
+      "check": "lambda a, b: a < b",
+      "text": "R1C5 < R2C5"
+     },
+     {
+      "cells": [
+       [
+        2,
+        0
+       ],
+       [
+        3,
+        0
+       ]
+      ],
+      "check": "lambda a, b: a + b == 6",
+      "text": "R3C1 + R4C1 = 6"
+     },
+     {
+      "cells": [
+       [
+        2,
+        1
+       ],
+       [
+        3,
+        1
+       ]
+      ],
+      "check": "lambda a, b: a + b == 9",
+      "text": "R3C2 + R4C2 = 9"
+     },
+     {
+      "cells": [
+       [
+        2,
+        4
+       ],
+       [
+        3,
+        4
+       ],
+       [
+        4,
+        4
+       ]
+      ],
+      "check": "lambda a, b, c: a + b + c == 10",
+      "text": "R3C5 + R4C5 + R5C5 = 10"
+     },
+     {
+      "cells": [
+       [
+        3,
+        0
+       ],
+       [
+        3,
+        1
+       ],
+       [
+        3,
+        2
+       ]
+      ],
+      "check": "lambda a, b, c: (a < b and b < c) or (a > b and b > c)",
+      "text": "R4C2 is the median of R4C1, R4C2, R4C3"
+     },
+     {
+      "cells": [
+       [
+        3,
+        2
+       ],
+       [
+        4,
+        2
+       ]
+      ],
+      "check": "lambda a, b: a + b == 4",
+      "text": "R4C3 + R5C3 = 4"
+     }
+    ],
+    "level": 3,
+    "n_clues": 7,
+    "frac_false_clues": 0.0,
+    "counts": {
+     "UP": 74,
+     "GAC": 24,
+     "FL1": 27,
+     "FL2": 0
+    }
+   }
+  ],
+  "compiled": true,
+  "n_ok": 12,
+  "levels": [
+   3,
+   3,
+   3,
+   3,
+   4,
+   4,
+   4,
+   4,
+   4,
+   4,
+   4,
+   4
+  ]
+ },
+ {
+  "name": "Shifted Rows",
+  "rules_text": "Fill the 5x5 grid with digits 1-5 so that every row contains each digit exactly once. Cells that are vertically adjacent must hold different digits (columns may repeat digits further apart). Clues give the distance between neighbours or summarise a 2x2 block.",
+  "clue_text": "A clue names two adjacent cells with their absolute difference, or names a 2x2 block with its total or its largest digit.",
+  "code": "GRID = (5, 5, 5)\n\ndef rules(g):\n    for i in range(g.R):\n        g.alldiff([(i, j) for j in range(g.C)])\n    for i in range(g.R - 1):\n        for j in range(g.C):\n            g.table([(i, j), (i + 1, j)], lambda a, b: a != b)\n\ndef clues(sol):\n    R = len(sol)\n    C = len(sol[0])\n    out = []\n    def nm(p):\n        return 'R' + str(p[0] + 1) + 'C' + str(p[1] + 1)\n    for r in range(R):\n        for c in range(C):\n            for d in ((0, 1), (1, 0)):\n                p2 = (r + d[0], c + d[1])\n                if p2[0] < R and p2[1] < C:\n                    a = sol[r][c]\n                    b = sol[p2[0]][p2[1]]\n                    pc = [(r, c), p2]\n                    out.append({'cells': pc, 'check': 'lambda a, b: abs(a - b) == ' + str(abs(a - b)), 'text': '|' + nm((r, c)) + ' - ' + nm(p2) + '| = ' + str(abs(a - b))})\n                    if a < b:\n                        out.append({'cells': pc, 'check': 'lambda a, b: a < b', 'text': nm((r, c)) + ' < ' + nm(p2)})\n                    elif a > b:\n                        out.append({'cells': pc, 'check': 'lambda a, b: a > b', 'text': nm((r, c)) + ' > ' + nm(p2)})\n            if r + 1 < R and c + 1 < C:\n                bc = [(r, c), (r, c + 1), (r + 1, c), (r + 1, c + 1)]\n                v = [sol[p[0]][p[1]] for p in bc]\n                out.append({'cells': bc, 'check': 'lambda a, b, c, d: a + b + c + d == ' + str(sum(v)), 'text': '2x2 block at ' + nm((r, c)) + ' sums to ' + str(sum(v))})\n                out.append({'cells': bc, 'check': 'lambda a, b, c, d: max(a, b, c, d) == ' + str(max(v)), 'text': '2x2 block at ' + nm((r, c)) + ' has largest digit ' + str(max(v))})\n    return out\n",
+  "instances": [
+   {
+    "status": "ok",
+    "grid": [
+     [
+      5,
+      3,
+      1,
+      2,
+      4
+     ],
+     [
+      3,
+      4,
+      2,
+      1,
+      5
+     ],
+     [
+      4,
+      1,
+      5,
+      2,
+      3
+     ],
+     [
+      3,
+      2,
+      4,
+      5,
+      1
+     ],
+     [
+      5,
+      3,
+      1,
+      2,
+      4
+     ]
+    ],
+    "clues": [
+     {
+      "cells": [
+       [
+        0,
+        1
+       ],
+       [
+        1,
+        1
+       ]
+      ],
+      "check": "lambda a, b: abs(a - b) == 1",
+      "text": "|R1C2 - R2C2| = 1"
+     },
+     {
+      "cells": [
+       [
+        0,
+        1
+       ],
+       [
+        0,
+        2
+       ],
+       [
+        1,
+        1
+       ],
+       [
+        1,
+        2
+       ]
+      ],
+      "check": "lambda a, b, c, d: max(a, b, c, d) == 4",
+      "text": "2x2 block at R1C2 has largest digit 4"
+     },
+     {
+      "cells": [
+       [
+        0,
+        3
+       ],
+       [
+        0,
+        4
+       ]
+      ],
+      "check": "lambda a, b: a < b",
+      "text": "R1C4 < R1C5"
+     },
+     {
+      "cells": [
+       [
+        1,
+        2
+       ],
+       [
+        2,
+        2
+       ]
+      ],
+      "check": "lambda a, b: abs(a - b) == 3",
+      "text": "|R2C3 - R3C3| = 3"
+     },
+     {
+      "cells": [
+       [
+        1,
+        2
+       ],
+       [
+        1,
+        3
+       ],
+       [
+        2,
+        2
+       ],
+       [
+        2,
+        3
+       ]
+      ],
+      "check": "lambda a, b, c, d: max(a, b, c, d) == 5",
+      "text": "2x2 block at R2C3 has largest digit 5"
+     },
+     {
+      "cells": [
+       [
+        1,
+        3
+       ],
+       [
+        2,
+        3
+       ]
+      ],
+      "check": "lambda a, b: abs(a - b) == 1",
+      "text": "|R2C4 - R3C4| = 1"
+     },
+     {
+      "cells": [
+       [
+        1,
+        3
+       ],
+       [
+        1,
+        4
+       ],
+       [
+        2,
+        3
+       ],
+       [
+        2,
+        4
+       ]
+      ],
+      "check": "lambda a, b, c, d: a + b + c + d == 11",
+      "text": "2x2 block at R2C4 sums to 11"
+     },
+     {
+      "cells": [
+       [
+        2,
+        0
+       ],
+       [
+        2,
+        1
+       ]
+      ],
+      "check": "lambda a, b: abs(a - b) == 3",
+      "text": "|R3C1 - R3C2| = 3"
+     },
+     {
+      "cells": [
+       [
+        2,
+        1
+       ],
+       [
+        2,
+        2
+       ],
+       [
+        3,
+        1
+       ],
+       [
+        3,
+        2
+       ]
+      ],
+      "check": "lambda a, b, c, d: a + b + c + d == 12",
+      "text": "2x2 block at R3C2 sums to 12"
+     },
+     {
+      "cells": [
+       [
+        3,
+        0
+       ],
+       [
+        3,
+        1
+       ],
+       [
+        4,
+        0
+       ],
+       [
+        4,
+        1
+       ]
+      ],
+      "check": "lambda a, b, c, d: a + b + c + d == 13",
+      "text": "2x2 block at R4C1 sums to 13"
+     },
+     {
+      "cells": [
+       [
+        3,
+        2
+       ],
+       [
+        3,
+        3
+       ]
+      ],
+      "check": "lambda a, b: a < b",
+      "text": "R4C3 < R4C4"
+     },
+     {
+      "cells": [
+       [
+        3,
+        3
+       ],
+       [
+        4,
+        3
+       ]
+      ],
+      "check": "lambda a, b: abs(a - b) == 3",
+      "text": "|R4C4 - R5C4| = 3"
+     },
+     {
+      "cells": [
+       [
+        4,
+        0
+       ],
+       [
+        4,
+        1
+       ]
+      ],
+      "check": "lambda a, b: abs(a - b) == 2",
+      "text": "|R5C1 - R5C2| = 2"
+     },
+     {
+      "cells": [
+       [
+        4,
+        2
+       ],
+       [
+        4,
+        3
+       ]
+      ],
+      "check": "lambda a, b: a < b",
+      "text": "R5C3 < R5C4"
+     }
+    ],
+    "level": 3,
+    "n_clues": 14,
+    "frac_false_clues": 0.0,
+    "counts": {
+     "UP": 66,
+     "GAC": 33,
+     "FL1": 26,
+     "FL2": 0
+    }
+   },
+   {
+    "status": "ok",
+    "grid": [
+     [
+      5,
+      1,
+      2,
+      4,
+      3
+     ],
+     [
+      4,
+      2,
+      5,
+      3,
+      1
+     ],
+     [
+      3,
+      1,
+      4,
+      5,
+      2
+     ],
+     [
+      1,
+      4,
+      2,
+      3,
+      5
+     ],
+     [
+      5,
+      2,
+      3,
+      4,
+      1
+     ]
+    ],
+    "clues": [
+     {
+      "cells": [
+       [
+        0,
+        1
+       ],
+       [
+        0,
+        2
+       ],
+       [
+        1,
+        1
+       ],
+       [
+        1,
+        2
+       ]
+      ],
+      "check": "lambda a, b, c, d: a + b + c + d == 10",
+      "text": "2x2 block at R1C2 sums to 10"
+     },
+     {
+      "cells": [
+       [
+        0,
+        3
+       ],
+       [
+        0,
+        4
+       ]
+      ],
+      "check": "lambda a, b: a > b",
+      "text": "R1C4 > R1C5"
+     },
+     {
+      "cells": [
+       [
+        0,
+        3
+       ],
+       [
+        1,
+        3
+       ]
+      ],
+      "check": "lambda a, b: abs(a - b) == 1",
+      "text": "|R1C4 - R2C4| = 1"
+     },
+     {
+      "cells": [
+       [
+        1,
+        2
+       ],
+       [
+        2,
+        2
+       ]
+      ],
+      "check": "lambda a, b: abs(a - b) == 1",
+      "text": "|R2C3 - R3C3| = 1"
+     },
+     {
+      "cells": [
+       [
+        1,
+        3
+       ],
+       [
+        1,
+        4
+       ],
+       [
+        2,
+        3
+       ],
+       [
+        2,
+        4
+       ]
+      ],
+      "check": "lambda a, b, c, d: a + b + c + d == 11",
+      "text": "2x2 block at R2C4 sums to 11"
+     },
+     {
+      "cells": [
+       [
+        2,
+        0
+       ],
+       [
+        2,
+        1
+       ],
+       [
+        3,
+        0
+       ],
+       [
+        3,
+        1
+       ]
+      ],
+      "check": "lambda a, b, c, d: max(a, b, c, d) == 4",
+      "text": "2x2 block at R3C1 has largest digit 4"
+     },
+     {
+      "cells": [
+       [
+        2,
+        1
+       ],
+       [
+        2,
+        2
+       ]
+      ],
+      "check": "lambda a, b: abs(a - b) == 3",
+      "text": "|R3C2 - R3C3| = 3"
+     },
+     {
+      "cells": [
+       [
+        2,
+        1
+       ],
+       [
+        2,
+        2
+       ]
+      ],
+      "check": "lambda a, b: a < b",
+      "text": "R3C2 < R3C3"
+     },
+     {
+      "cells": [
+       [
+        2,
+        3
+       ],
+       [
+        3,
+        3
+       ]
+      ],
+      "check": "lambda a, b: abs(a - b) == 2",
+      "text": "|R3C4 - R4C4| = 2"
+     },
+     {
+      "cells": [
+       [
+        2,
+        4
+       ],
+       [
+        3,
+        4
+       ]
+      ],
+      "check": "lambda a, b: abs(a - b) == 3",
+      "text": "|R3C5 - R4C5| = 3"
+     },
+     {
+      "cells": [
+       [
+        3,
+        0
+       ],
+       [
+        4,
+        0
+       ]
+      ],
+      "check": "lambda a, b: abs(a - b) == 4",
+      "text": "|R4C1 - R5C1| = 4"
+     },
+     {
+      "cells": [
+       [
+        3,
+        1
+       ],
+       [
+        3,
+        2
+       ],
+       [
+        4,
+        1
+       ],
+       [
+        4,
+        2
+       ]
+      ],
+      "check": "lambda a, b, c, d: a + b + c + d == 11",
+      "text": "2x2 block at R4C2 sums to 11"
+     },
+     {
+      "cells": [
+       [
+        4,
+        2
+       ],
+       [
+        4,
+        3
+       ]
+      ],
+      "check": "lambda a, b: a < b",
+      "text": "R5C3 < R5C4"
+     }
+    ],
+    "level": 4,
+    "n_clues": 13,
+    "frac_false_clues": 0.0,
+    "counts": {
+     "UP": 53,
+     "GAC": 35,
+     "FL1": 30,
+     "FL2": 7
+    }
+   },
+   {
+    "status": "ok",
+    "grid": [
+     [
+      1,
+      5,
+      4,
+      2,
+      3
+     ],
+     [
+      2,
+      4,
+      3,
+      1,
+      5
+     ],
+     [
+      3,
+      1,
+      5,
+      4,
+      2
+     ],
+     [
+      2,
+      4,
+      1,
+      3,
+      5
+     ],
+     [
+      3,
+      2,
+      5,
+      1,
+      4
+     ]
+    ],
+    "clues": [
+     {
+      "cells": [
+       [
+        0,
+        0
+       ],
+       [
+        0,
+        1
+       ]
+      ],
+      "check": "lambda a, b: a < b",
+      "text": "R1C1 < R1C2"
+     },
+     {
+      "cells": [
+       [
+        0,
+        2
+       ],
+       [
+        0,
+        3
+       ],
+       [
+        1,
+        2
+       ],
+       [
+        1,
+        3
+       ]
+      ],
+      "check": "lambda a, b, c, d: max(a, b, c, d) == 4",
+      "text": "2x2 block at R1C3 has largest digit 4"
+     },
+     {
+      "cells": [
+       [
+        0,
+        3
+       ],
+       [
+        1,
+        3
+       ]
+      ],
+      "check": "lambda a, b: abs(a - b) == 1",
+      "text": "|R1C4 - R2C4| = 1"
+     },
+     {
+      "cells": [
+       [
+        0,
+        3
+       ],
+       [
+        0,
+        4
+       ],
+       [
+        1,
+        3
+       ],
+       [
+        1,
+        4
+       ]
+      ],
+      "check": "lambda a, b, c, d: a + b + c + d == 11",
+      "text": "2x2 block at R1C4 sums to 11"
+     },
+     {
+      "cells": [
+       [
+        1,
+        0
+       ],
+       [
+        1,
+        1
+       ]
+      ],
+      "check": "lambda a, b: abs(a - b) == 2",
+      "text": "|R2C1 - R2C2| = 2"
+     },
+     {
+      "cells": [
+       [
+        1,
+        0
+       ],
+       [
+        2,
+        0
+       ]
+      ],
+      "check": "lambda a, b: a < b",
+      "text": "R2C1 < R3C1"
+     },
+     {
+      "cells": [
+       [
+        1,
+        0
+       ],
+       [
+        1,
+        1
+       ],
+       [
+        2,
+        0
+       ],
+       [
+        2,
+        1
+       ]
+      ],
+      "check": "lambda a, b, c, d: max(a, b, c, d) == 4",
+      "text": "2x2 block at R2C1 has largest digit 4"
+     },
+     {
+      "cells": [
+       [
+        1,
+        1
+       ],
+       [
+        1,
+        2
+       ]
+      ],
+      "check": "lambda a, b: a > b",
+      "text": "R2C2 > R2C3"
+     },
+     {
+      "cells": [
+       [
+        1,
+        3
+       ],
+       [
+        2,
+        3
+       ]
+      ],
+      "check": "lambda a, b: abs(a - b) == 3",
+      "text": "|R2C4 - R3C4| = 3"
+     },
+     {
+      "cells": [
+       [
+        2,
+        0
+       ],
+       [
+        2,
+        1
+       ]
+      ],
+      "check": "lambda a, b: abs(a - b) == 2",
+      "text": "|R3C1 - R3C2| = 2"
+     },
+     {
+      "cells": [
+       [
+        3,
+        1
+       ],
+       [
+        4,
+        1
+       ]
+      ],
+      "check": "lambda a, b: a > b",
+      "text": "R4C2 > R5C2"
+     },
+     {
+      "cells": [
+       [
+        3,
+        2
+       ],
+       [
+        4,
+        2
+       ]
+      ],
+      "check": "lambda a, b: abs(a - b) == 4",
+      "text": "|R4C3 - R5C3| = 4"
+     },
+     {
+      "cells": [
+       [
+        3,
+        3
+       ],
+       [
+        4,
+        3
+       ]
+      ],
+      "check": "lambda a, b: abs(a - b) == 2",
+      "text": "|R4C4 - R5C4| = 2"
+     },
+     {
+      "cells": [
+       [
+        3,
+        4
+       ],
+       [
+        4,
+        4
+       ]
+      ],
+      "check": "lambda a, b: abs(a - b) == 1",
+      "text": "|R4C5 - R5C5| = 1"
+     },
+     {
+      "cells": [
+       [
+        4,
+        3
+       ],
+       [
+        4,
+        4
+       ]
+      ],
+      "check": "lambda a, b: abs(a - b) == 3",
+      "text": "|R5C4 - R5C5| = 3"
+     }
+    ],
+    "level": 3,
+    "n_clues": 15,
+    "frac_false_clues": 0.0,
+    "counts": {
+     "UP": 59,
+     "GAC": 34,
+     "FL1": 32,
+     "FL2": 0
+    }
+   },
+   {
+    "status": "ok",
+    "grid": [
+     [
+      4,
+      1,
+      2,
+      5,
+      3
+     ],
+     [
+      2,
+      3,
+      4,
+      1,
+      5
+     ],
+     [
+      5,
+      2,
+      3,
+      4,
+      1
+     ],
+     [
+      4,
+      3,
+      1,
+      2,
+      5
+     ],
+     [
+      5,
+      2,
+      4,
+      1,
+      3
+     ]
+    ],
+    "clues": [
+     {
+      "cells": [
+       [
+        0,
+        0
+       ],
+       [
+        0,
+        1
+       ]
+      ],
+      "check": "lambda a, b: abs(a - b) == 3",
+      "text": "|R1C1 - R1C2| = 3"
+     },
+     {
+      "cells": [
+       [
+        0,
+        1
+       ],
+       [
+        0,
+        2
+       ]
+      ],
+      "check": "lambda a, b: abs(a - b) == 1",
+      "text": "|R1C2 - R1C3| = 1"
+     },
+     {
+      "cells": [
+       [
+        0,
+        3
+       ],
+       [
+        0,
+        4
+       ],
+       [
+        1,
+        3
+       ],
+       [
+        1,
+        4
+       ]
+      ],
+      "check": "lambda a, b, c, d: a + b + c + d == 14",
+      "text": "2x2 block at R1C4 sums to 14"
+     },
+     {
+      "cells": [
+       [
+        1,
+        2
+       ],
+       [
+        1,
+        3
+       ]
+      ],
+      "check": "lambda a, b: abs(a - b) == 3",
+      "text": "|R2C3 - R2C4| = 3"
+     },
+     {
+      "cells": [
+       [
+        1,
+        3
+       ],
+       [
+        1,
+        4
+       ]
+      ],
+      "check": "lambda a, b: abs(a - b) == 4",
+      "text": "|R2C4 - R2C5| = 4"
+     },
+     {
+      "cells": [
+       [
+        2,
+        0
+       ],
+       [
+        2,
+        1
+       ],
+       [
+        3,
+        0
+       ],
+       [
+        3,
+        1
+       ]
+      ],
+      "check": "lambda a, b, c, d: a + b + c + d == 14",
+      "text": "2x2 block at R3C1 sums to 14"
+     },
+     {
+      "cells": [
+       [
+        2,
+        1
+       ],
+       [
+        3,
+        1
+       ]
+      ],
+      "check": "lambda a, b: a < b",
+      "text": "R3C2 < R4C2"
+     },
+     {
+      "cells": [
+       [
+        3,
+        1
+       ],
+       [
+        3,
+        2
+       ],
+       [
+        4,
+        1
+       ],
+       [
+        4,
+        2
+       ]
+      ],
+      "check": "lambda a, b, c, d: a + b + c + d == 10",
+      "text": "2x2 block at R4C2 sums to 10"
+     },
+     {
+      "cells": [
+       [
+        3,
+        2
+       ],
+       [
+        4,
+        2
+       ]
+      ],
+      "check": "lambda a, b: abs(a - b) == 3",
+      "text": "|R4C3 - R5C3| = 3"
+     },
+     {
+      "cells": [
+       [
+        3,
+        2
+       ],
+       [
+        3,
+        3
+       ],
+       [
+        4,
+        2
+       ],
+       [
+        4,
+        3
+       ]
+      ],
+      "check": "lambda a, b, c, d: max(a, b, c, d) == 4",
+      "text": "2x2 block at R4C3 has largest digit 4"
+     },
+     {
+      "cells": [
+       [
+        3,
+        3
+       ],
+       [
+        3,
+        4
+       ]
+      ],
+      "check": "lambda a, b: abs(a - b) == 3",
+      "text": "|R4C4 - R4C5| = 3"
+     },
+     {
+      "cells": [
+       [
+        4,
+        2
+       ],
+       [
+        4,
+        3
+       ]
+      ],
+      "check": "lambda a, b: abs(a - b) == 3",
+      "text": "|R5C3 - R5C4| = 3"
+     }
+    ],
+    "level": 3,
+    "n_clues": 12,
+    "frac_false_clues": 0.0,
+    "counts": {
+     "UP": 57,
+     "GAC": 48,
+     "FL1": 20,
+     "FL2": 0
+    }
+   },
+   {
+    "status": "ok",
+    "grid": [
+     [
+      4,
+      3,
+      2,
+      1,
+      5
+     ],
+     [
+      5,
+      1,
+      3,
+      4,
+      2
+     ],
+     [
+      4,
+      3,
+      5,
+      2,
+      1
+     ],
+     [
+      2,
+      1,
+      3,
+      5,
+      4
+     ],
+     [
+      1,
+      2,
+      4,
+      3,
+      5
+     ]
+    ],
+    "clues": [
+     {
+      "cells": [
+       [
+        0,
+        1
+       ],
+       [
+        0,
+        2
+       ],
+       [
+        1,
+        1
+       ],
+       [
+        1,
+        2
+       ]
+      ],
+      "check": "lambda a, b, c, d: max(a, b, c, d) == 3",
+      "text": "2x2 block at R1C2 has largest digit 3"
+     },
+     {
+      "cells": [
+       [
+        0,
+        3
+       ],
+       [
+        0,
+        4
+       ]
+      ],
+      "check": "lambda a, b: a < b",
+      "text": "R1C4 < R1C5"
+     },
+     {
+      "cells": [
+       [
+        0,
+        3
+       ],
+       [
+        0,
+        4
+       ],
+       [
+        1,
+        3
+       ],
+       [
+        1,
+        4
+       ]
+      ],
+      "check": "lambda a, b, c, d: a + b + c + d == 12",
+      "text": "2x2 block at R1C4 sums to 12"
+     },
+     {
+      "cells": [
+       [
+        1,
+        0
+       ],
+       [
+        1,
+        1
+       ]
+      ],
+      "check": "lambda a, b: abs(a - b) == 4",
+      "text": "|R2C1 - R2C2| = 4"
+     },
+     {
+      "cells": [
+       [
+        1,
+        2
+       ],
+       [
+        2,
+        2
+       ]
+      ],
+      "check": "lambda a, b: a < b",
+      "text": "R2C3 < R3C3"
+     },
+     {
+      "cells": [
+       [
+        1,
+        3
+       ],
+       [
+        2,
+        3
+       ]
+      ],
+      "check": "lambda a, b: abs(a - b) == 2",
+      "text": "|R2C4 - R3C4| = 2"
+     },
+     {
+      "cells": [
+       [
+        2,
+        0
+       ],
+       [
+        3,
+        0
+       ]
+      ],
+      "check": "lambda a, b: abs(a - b) == 2",
+      "text": "|R3C1 - R4C1| = 2"
+     },
+     {
+      "cells": [
+       [
+        3,
+        0
+       ],
+       [
+        3,
+        1
+       ],
+       [
+        4,
+        0
+       ],
+       [
+        4,
+        1
+       ]
+      ],
+      "check": "lambda a, b, c, d: a + b + c + d == 6",
+      "text": "2x2 block at R4C1 sums to 6"
+     },
+     {
+      "cells": [
+       [
+        3,
+        3
+       ],
+       [
+        3,
+        4
+       ]
+      ],
+      "check": "lambda a, b: abs(a - b) == 1",
+      "text": "|R4C4 - R4C5| = 1"
+     },
+     {
+      "cells": [
+       [
+        3,
+        3
+       ],
+       [
+        4,
+        3
+       ]
+      ],
+      "check": "lambda a, b: a > b",
+      "text": "R4C4 > R5C4"
+     },
+     {
+      "cells": [
+       [
+        4,
+        1
+       ],
+       [
+        4,
+        2
+       ]
+      ],
+      "check": "lambda a, b: abs(a - b) == 2",
+      "text": "|R5C2 - R5C3| = 2"
+     }
+    ],
+    "level": 4,
+    "n_clues": 11,
+    "frac_false_clues": 0.0,
+    "counts": {
+     "UP": 59,
+     "GAC": 36,
+     "FL1": 27,
+     "FL2": 3
+    }
+   },
+   {
+    "status": "ok",
+    "grid": [
+     [
+      4,
+      5,
+      2,
+      3,
+      1
+     ],
+     [
+      5,
+      3,
+      4,
+      1,
+      2
+     ],
+     [
+      2,
+      5,
+      3,
+      4,
+      1
+     ],
+     [
+      5,
+      4,
+      1,
+      3,
+      2
+     ],
+     [
+      2,
+      1,
+      5,
+      4,
+      3
+     ]
+    ],
+    "clues": [
+     {
+      "cells": [
+       [
+        0,
+        1
+       ],
+       [
+        0,
+        2
+       ],
+       [
+        1,
+        1
+       ],
+       [
+        1,
+        2
+       ]
+      ],
+      "check": "lambda a, b, c, d: a + b + c + d == 14",
+      "text": "2x2 block at R1C2 sums to 14"
+     },
+     {
+      "cells": [
+       [
+        0,
+        2
+       ],
+       [
+        0,
+        3
+       ],
+       [
+        1,
+        2
+       ],
+       [
+        1,
+        3
+       ]
+      ],
+      "check": "lambda a, b, c, d: a + b + c + d == 10",
+      "text": "2x2 block at R1C3 sums to 10"
+     },
+     {
+      "cells": [
+       [
+        0,
+        3
+       ],
+       [
+        0,
+        4
+       ]
+      ],
+      "check": "lambda a, b: a > b",
+      "text": "R1C4 > R1C5"
+     },
+     {
+      "cells": [
+       [
+        1,
+        0
+       ],
+       [
+        1,
+        1
+       ]
+      ],
+      "check": "lambda a, b: abs(a - b) == 2",
+      "text": "|R2C1 - R2C2| = 2"
+     },
+     {
+      "cells": [
+       [
+        1,
+        1
+       ],
+       [
+        1,
+        2
+       ],
+       [
+        2,
+        1
+       ],
+       [
+        2,
+        2
+       ]
+      ],
+      "check": "lambda a, b, c, d: a + b + c + d == 15",
+      "text": "2x2 block at R2C2 sums to 15"
+     },
+     {
+      "cells": [
+       [
+        1,
+        3
+       ],
+       [
+        1,
+        4
+       ],
+       [
+        2,
+        3
+       ],
+       [
+        2,
+        4
+       ]
+      ],
+      "check": "lambda a, b, c, d: max(a, b, c, d) == 4",
+      "text": "2x2 block at R2C4 has largest digit 4"
+     },
+     {
+      "cells": [
+       [
+        2,
+        3
+       ],
+       [
+        2,
+        4
+       ],
+       [
+        3,
+        3
+       ],
+       [
+        3,
+        4
+       ]
+      ],
+      "check": "lambda a, b, c, d: a + b + c + d == 10",
+      "text": "2x2 block at R3C4 sums to 10"
+     },
+     {
+      "cells": [
+       [
+        3,
+        0
+       ],
+       [
+        3,
+        1
+       ]
+      ],
+      "check": "lambda a, b: abs(a - b) == 1",
+      "text": "|R4C1 - R4C2| = 1"
+     },
+     {
+      "cells": [
+       [
+        3,
+        0
+       ],
+       [
+        4,
+        0
+       ]
+      ],
+      "check": "lambda a, b: abs(a - b) == 3",
+      "text": "|R4C1 - R5C1| = 3"
+     },
+     {
+      "cells": [
+       [
+        3,
+        1
+       ],
+       [
+        3,
+        2
+       ],
+       [
+        4,
+        1
+       ],
+       [
+        4,
+        2
+       ]
+      ],
+      "check": "lambda a, b, c, d: a + b + c + d == 11",
+      "text": "2x2 block at R4C2 sums to 11"
+     },
+     {
+      "cells": [
+       [
+        3,
+        1
+       ],
+       [
+        3,
+        2
+       ],
+       [
+        4,
+        1
+       ],
+       [
+        4,
+        2
+       ]
+      ],
+      "check": "lambda a, b, c, d: max(a, b, c, d) == 5",
+      "text": "2x2 block at R4C2 has largest digit 5"
+     },
+     {
+      "cells": [
+       [
+        3,
+        3
+       ],
+       [
+        3,
+        4
+       ]
+      ],
+      "check": "lambda a, b: a > b",
+      "text": "R4C4 > R4C5"
+     }
+    ],
+    "level": 4,
+    "n_clues": 12,
+    "frac_false_clues": 0.0,
+    "counts": {
+     "UP": 54,
+     "GAC": 25,
+     "FL1": 28,
+     "FL2": 18
+    }
+   },
+   {
+    "status": "ok",
+    "grid": [
+     [
+      1,
+      3,
+      2,
+      5,
+      4
+     ],
+     [
+      3,
+      1,
+      4,
+      2,
+      5
+     ],
+     [
+      1,
+      4,
+      2,
+      5,
+      3
+     ],
+     [
+      4,
+      5,
+      3,
+      1,
+      2
+     ],
+     [
+      5,
+      3,
+      1,
+      2,
+      4
+     ]
+    ],
+    "clues": [
+     {
+      "cells": [
+       [
+        0,
+        0
+       ],
+       [
+        0,
+        1
+       ],
+       [
+        1,
+        0
+       ],
+       [
+        1,
+        1
+       ]
+      ],
+      "check": "lambda a, b, c, d: a + b + c + d == 8",
+      "text": "2x2 block at R1C1 sums to 8"
+     },
+     {
+      "cells": [
+       [
+        0,
+        2
+       ],
+       [
+        1,
+        2
+       ]
+      ],
+      "check": "lambda a, b: a < b",
+      "text": "R1C3 < R2C3"
+     },
+     {
+      "cells": [
+       [
+        1,
+        0
+       ],
+       [
+        2,
+        0
+       ]
+      ],
+      "check": "lambda a, b: abs(a - b) == 2",
+      "text": "|R2C1 - R3C1| = 2"
+     },
+     {
+      "cells": [
+       [
+        1,
+        1
+       ],
+       [
+        2,
+        1
+       ]
+      ],
+      "check": "lambda a, b: abs(a - b) == 3",
+      "text": "|R2C2 - R3C2| = 3"
+     },
+     {
+      "cells": [
+       [
+        1,
+        1
+       ],
+       [
+        1,
+        2
+       ],
+       [
+        2,
+        1
+       ],
+       [
+        2,
+        2
+       ]
+      ],
+      "check": "lambda a, b, c, d: a + b + c + d == 11",
+      "text": "2x2 block at R2C2 sums to 11"
+     },
+     {
+      "cells": [
+       [
+        1,
+        1
+       ],
+       [
+        1,
+        2
+       ],
+       [
+        2,
+        1
+       ],
+       [
+        2,
+        2
+       ]
+      ],
+      "check": "lambda a, b, c, d: max(a, b, c, d) == 4",
+      "text": "2x2 block at R2C2 has largest digit 4"
+     },
+     {
+      "cells": [
+       [
+        2,
+        0
+       ],
+       [
+        3,
+        0
+       ]
+      ],
+      "check": "lambda a, b: a < b",
+      "text": "R3C1 < R4C1"
+     },
+     {
+      "cells": [
+       [
+        2,
+        3
+       ],
+       [
+        2,
+        4
+       ]
+      ],
+      "check": "lambda a, b: a > b",
+      "text": "R3C4 > R3C5"
+     },
+     {
+      "cells": [
+       [
+        3,
+        2
+       ],
+       [
+        3,
+        3
+       ],
+       [
+        4,
+        2
+       ],
+       [
+        4,
+        3
+       ]
+      ],
+      "check": "lambda a, b, c, d: a + b + c + d == 7",
+      "text": "2x2 block at R4C3 sums to 7"
+     },
+     {
+      "cells": [
+       [
+        3,
+        4
+       ],
+       [
+        4,
+        4
+       ]
+      ],
+      "check": "lambda a, b: abs(a - b) == 2",
+      "text": "|R4C5 - R5C5| = 2"
+     },
+     {
+      "cells": [
+       [
+        4,
+        0
+       ],
+       [
+        4,
+        1
+       ]
+      ],
+      "check": "lambda a, b: abs(a - b) == 2",
+      "text": "|R5C1 - R5C2| = 2"
+     },
+     {
+      "cells": [
+       [
+        4,
+        2
+       ],
+       [
+        4,
+        3
+       ]
+      ],
+      "check": "lambda a, b: a < b",
+      "text": "R5C3 < R5C4"
+     }
+    ],
+    "level": 4,
+    "n_clues": 12,
+    "frac_false_clues": 0.0,
+    "counts": {
+     "UP": 40,
+     "GAC": 34,
+     "FL1": 50,
+     "FL2": 1
+    }
+   },
+   {
+    "status": "ok",
+    "grid": [
+     [
+      5,
+      2,
+      1,
+      4,
+      3
+     ],
+     [
+      2,
+      3,
+      5,
+      1,
+      4
+     ],
+     [
+      3,
+      5,
+      2,
+      4,
+      1
+     ],
+     [
+      5,
+      1,
+      3,
+      2,
+      4
+     ],
+     [
+      2,
+      4,
+      5,
+      3,
+      1
+     ]
+    ],
+    "clues": [
+     {
+      "cells": [
+       [
+        0,
+        1
+       ],
+       [
+        1,
+        1
+       ]
+      ],
+      "check": "lambda a, b: abs(a - b) == 1",
+      "text": "|R1C2 - R2C2| = 1"
+     },
+     {
+      "cells": [
+       [
+        0,
+        2
+       ],
+       [
+        1,
+        2
+       ]
+      ],
+      "check": "lambda a, b: abs(a - b) == 4",
+      "text": "|R1C3 - R2C3| = 4"
+     },
+     {
+      "cells": [
+       [
+        0,
+        2
+       ],
+       [
+        0,
+        3
+       ],
+       [
+        1,
+        2
+       ],
+       [
+        1,
+        3
+       ]
+      ],
+      "check": "lambda a, b, c, d: a + b + c + d == 11",
+      "text": "2x2 block at R1C3 sums to 11"
+     },
+     {
+      "cells": [
+       [
+        0,
+        3
+       ],
+       [
+        0,
+        4
+       ],
+       [
+        1,
+        3
+       ],
+       [
+        1,
+        4
+       ]
+      ],
+      "check": "lambda a, b, c, d: max(a, b, c, d) == 4",
+      "text": "2x2 block at R1C4 has largest digit 4"
+     },
+     {
+      "cells": [
+       [
+        1,
+        0
+       ],
+       [
+        1,
+        1
+       ],
+       [
+        2,
+        0
+       ],
+       [
+        2,
+        1
+       ]
+      ],
+      "check": "lambda a, b, c, d: a + b + c + d == 13",
+      "text": "2x2 block at R2C1 sums to 13"
+     },
+     {
+      "cells": [
+       [
+        1,
+        1
+       ],
+       [
+        1,
+        2
+       ],
+       [
+        2,
+        1
+       ],
+       [
+        2,
+        2
+       ]
+      ],
+      "check": "lambda a, b, c, d: a + b + c + d == 15",
+      "text": "2x2 block at R2C2 sums to 15"
+     },
+     {
+      "cells": [
+       [
+        2,
+        0
+       ],
+       [
+        2,
+        1
+       ],
+       [
+        3,
+        0
+       ],
+       [
+        3,
+        1
+       ]
+      ],
+      "check": "lambda a, b, c, d: a + b + c + d == 14",
+      "text": "2x2 block at R3C1 sums to 14"
+     },
+     {
+      "cells": [
+       [
+        2,
+        3
+       ],
+       [
+        2,
+        4
+       ]
+      ],
+      "check": "lambda a, b: abs(a - b) == 3",
+      "text": "|R3C4 - R3C5| = 3"
+     },
+     {
+      "cells": [
+       [
+        3,
+        0
+       ],
+       [
+        3,
+        1
+       ],
+       [
+        4,
+        0
+       ],
+       [
+        4,
+        1
+       ]
+      ],
+      "check": "lambda a, b, c, d: a + b + c + d == 12",
+      "text": "2x2 block at R4C1 sums to 12"
+     },
+     {
+      "cells": [
+       [
+        3,
+        2
+       ],
+       [
+        4,
+        2
+       ]
+      ],
+      "check": "lambda a, b: abs(a - b) == 2",
+      "text": "|R4C3 - R5C3| = 2"
+     },
+     {
+      "cells": [
+       [
+        3,
+        2
+       ],
+       [
+        3,
+        3
+       ],
+       [
+        4,
+        2
+       ],
+       [
+        4,
+        3
+       ]
+      ],
+      "check": "lambda a, b, c, d: a + b + c + d == 13",
+      "text": "2x2 block at R4C3 sums to 13"
+     },
+     {
+      "cells": [
+       [
+        4,
+        1
+       ],
+       [
+        4,
+        2
+       ]
+      ],
+      "check": "lambda a, b: abs(a - b) == 1",
+      "text": "|R5C2 - R5C3| = 1"
+     },
+     {
+      "cells": [
+       [
+        4,
+        2
+       ],
+       [
+        4,
+        3
+       ]
+      ],
+      "check": "lambda a, b: a > b",
+      "text": "R5C3 > R5C4"
+     }
+    ],
+    "level": 4,
+    "n_clues": 13,
+    "frac_false_clues": 0.0,
+    "counts": {
+     "UP": 59,
+     "GAC": 27,
+     "FL1": 25,
+     "FL2": 14
+    }
+   },
+   {
+    "status": "ok",
+    "grid": [
+     [
+      5,
+      2,
+      4,
+      3,
+      1
+     ],
+     [
+      1,
+      3,
+      2,
+      5,
+      4
+     ],
+     [
+      2,
+      5,
+      3,
+      4,
+      1
+     ],
+     [
+      5,
+      3,
+      2,
+      1,
+      4
+     ],
+     [
+      1,
+      4,
+      3,
+      2,
+      5
+     ]
+    ],
+    "clues": [
+     {
+      "cells": [
+       [
+        0,
+        0
+       ],
+       [
+        1,
+        0
+       ]
+      ],
+      "check": "lambda a, b: abs(a - b) == 4",
+      "text": "|R1C1 - R2C1| = 4"
+     },
+     {
+      "cells": [
+       [
+        0,
+        1
+       ],
+       [
+        1,
+        1
+       ]
+      ],
+      "check": "lambda a, b: abs(a - b) == 1",
+      "text": "|R1C2 - R2C2| = 1"
+     },
+     {
+      "cells": [
+       [
+        0,
+        2
+       ],
+       [
+        0,
+        3
+       ],
+       [
+        1,
+        2
+       ],
+       [
+        1,
+        3
+       ]
+      ],
+      "check": "lambda a, b, c, d: a + b + c + d == 14",
+      "text": "2x2 block at R1C3 sums to 14"
+     },
+     {
+      "cells": [
+       [
+        0,
+        3
+       ],
+       [
+        0,
+        4
+       ],
+       [
+        1,
+        3
+       ],
+       [
+        1,
+        4
+       ]
+      ],
+      "check": "lambda a, b, c, d: a + b + c + d == 13",
+      "text": "2x2 block at R1C4 sums to 13"
+     },
+     {
+      "cells": [
+       [
+        1,
+        0
+       ],
+       [
+        2,
+        0
+       ]
+      ],
+      "check": "lambda a, b: abs(a - b) == 1",
+      "text": "|R2C1 - R3C1| = 1"
+     },
+     {
+      "cells": [
+       [
+        1,
+        1
+       ],
+       [
+        1,
+        2
+       ]
+      ],
+      "check": "lambda a, b: a > b",
+      "text": "R2C2 > R2C3"
+     },
+     {
+      "cells": [
+       [
+        2,
+        1
+       ],
+       [
+        2,
+        2
+       ],
+       [
+        3,
+        1
+       ],
+       [
+        3,
+        2
+       ]
+      ],
+      "check": "lambda a, b, c, d: a + b + c + d == 13",
+      "text": "2x2 block at R3C2 sums to 13"
+     },
+     {
+      "cells": [
+       [
+        3,
+        0
+       ],
+       [
+        3,
+        1
+       ]
+      ],
+      "check": "lambda a, b: a > b",
+      "text": "R4C1 > R4C2"
+     },
+     {
+      "cells": [
+       [
+        3,
+        0
+       ],
+       [
+        4,
+        0
+       ]
+      ],
+      "check": "lambda a, b: abs(a - b) == 4",
+      "text": "|R4C1 - R5C1| = 4"
+     },
+     {
+      "cells": [
+       [
+        3,
+        2
+       ],
+       [
+        3,
+        3
+       ],
+       [
+        4,
+        2
+       ],
+       [
+        4,
+        3
+       ]
+      ],
+      "check": "lambda a, b, c, d: a + b + c + d == 8",
+      "text": "2x2 block at R4C3 sums to 8"
+     },
+     {
+      "cells": [
+       [
+        4,
+        2
+       ],
+       [
+        4,
+        3
+       ]
+      ],
+      "check": "lambda a, b: a > b",
+      "text": "R5C3 > R5C4"
+     }
+    ],
+    "level": 4,
+    "n_clues": 11,
+    "frac_false_clues": 0.0,
+    "counts": {
+     "UP": 56,
+     "GAC": 46,
+     "FL1": 17,
+     "FL2": 6
+    }
+   },
+   {
+    "status": "ok",
+    "grid": [
+     [
+      5,
+      2,
+      4,
+      1,
+      3
+     ],
+     [
+      1,
+      3,
+      2,
+      4,
+      5
+     ],
+     [
+      4,
+      1,
+      5,
+      2,
+      3
+     ],
+     [
+      1,
+      3,
+      4,
+      5,
+      2
+     ],
+     [
+      4,
+      2,
+      1,
+      3,
+      5
+     ]
+    ],
+    "clues": [
+     {
+      "cells": [
+       [
+        0,
+        0
+       ],
+       [
+        0,
+        1
+       ],
+       [
+        1,
+        0
+       ],
+       [
+        1,
+        1
+       ]
+      ],
+      "check": "lambda a, b, c, d: a + b + c + d == 11",
+      "text": "2x2 block at R1C1 sums to 11"
+     },
+     {
+      "cells": [
+       [
+        0,
+        1
+       ],
+       [
+        1,
+        1
+       ]
+      ],
+      "check": "lambda a, b: a < b",
+      "text": "R1C2 < R2C2"
+     },
+     {
+      "cells": [
+       [
+        0,
+        2
+       ],
+       [
+        1,
+        2
+       ]
+      ],
+      "check": "lambda a, b: abs(a - b) == 2",
+      "text": "|R1C3 - R2C3| = 2"
+     },
+     {
+      "cells": [
+       [
+        0,
+        2
+       ],
+       [
+        1,
+        2
+       ]
+      ],
+      "check": "lambda a, b: a > b",
+      "text": "R1C3 > R2C3"
+     },
+     {
+      "cells": [
+       [
+        0,
+        2
+       ],
+       [
+        0,
+        3
+       ],
+       [
+        1,
+        2
+       ],
+       [
+        1,
+        3
+       ]
+      ],
+      "check": "lambda a, b, c, d: a + b + c + d == 11",
+      "text": "2x2 block at R1C3 sums to 11"
+     },
+     {
+      "cells": [
+       [
+        1,
+        0
+       ],
+       [
+        1,
+        1
+       ],
+       [
+        2,
+        0
+       ],
+       [
+        2,
+        1
+       ]
+      ],
+      "check": "lambda a, b, c, d: max(a, b, c, d) == 4",
+      "text": "2x2 block at R2C1 has largest digit 4"
+     },
+     {
+      "cells": [
+       [
+        1,
+        1
+       ],
+       [
+        2,
+        1
+       ]
+      ],
+      "check": "lambda a, b: abs(a - b) == 2",
+      "text": "|R2C2 - R3C2| = 2"
+     },
+     {
+      "cells": [
+       [
+        1,
+        4
+       ],
+       [
+        2,
+        4
+       ]
+      ],
+      "check": "lambda a, b: abs(a - b) == 2",
+      "text": "|R2C5 - R3C5| = 2"
+     },
+     {
+      "cells": [
+       [
+        2,
+        1
+       ],
+       [
+        2,
+        2
+       ]
+      ],
+      "check": "lambda a, b: abs(a - b) == 4",
+      "text": "|R3C2 - R3C3| = 4"
+     },
+     {
+      "cells": [
+       [
+        3,
+        0
+       ],
+       [
+        4,
+        0
+       ]
+      ],
+      "check": "lambda a, b: abs(a - b) == 3",
+      "text": "|R4C1 - R5C1| = 3"
+     },
+     {
+      "cells": [
+       [
+        3,
+        0
+       ],
+       [
+        3,
+        1
+       ],
+       [
+        4,
+        0
+       ],
+       [
+        4,
+        1
+       ]
+      ],
+      "check": "lambda a, b, c, d: max(a, b, c, d) == 4",
+      "text": "2x2 block at R4C1 has largest digit 4"
+     },
+     {
+      "cells": [
+       [
+        3,
+        1
+       ],
+       [
+        3,
+        2
+       ],
+       [
+        4,
+        1
+       ],
+       [
+        4,
+        2
+       ]
+      ],
+      "check": "lambda a, b, c, d: max(a, b, c, d) == 4",
+      "text": "2x2 block at R4C2 has largest digit 4"
+     },
+     {
+      "cells": [
+       [
+        3,
+        2
+       ],
+       [
+        4,
+        2
+       ]
+      ],
+      "check": "lambda a, b: abs(a - b) == 3",
+      "text": "|R4C3 - R5C3| = 3"
+     },
+     {
+      "cells": [
+       [
+        4,
+        3
+       ],
+       [
+        4,
+        4
+       ]
+      ],
+      "check": "lambda a, b: abs(a - b) == 2",
+      "text": "|R5C4 - R5C5| = 2"
+     }
+    ],
+    "level": 3,
+    "n_clues": 14,
+    "frac_false_clues": 0.0,
+    "counts": {
+     "UP": 62,
+     "GAC": 52,
+     "FL1": 11,
+     "FL2": 0
+    }
+   },
+   {
+    "status": "ok",
+    "grid": [
+     [
+      2,
+      4,
+      1,
+      3,
+      5
+     ],
+     [
+      3,
+      5,
+      2,
+      4,
+      1
+     ],
+     [
+      2,
+      3,
+      5,
+      1,
+      4
+     ],
+     [
+      5,
+      4,
+      2,
+      3,
+      1
+     ],
+     [
+      4,
+      1,
+      3,
+      5,
+      2
+     ]
+    ],
+    "clues": [
+     {
+      "cells": [
+       [
+        0,
+        0
+       ],
+       [
+        0,
+        1
+       ]
+      ],
+      "check": "lambda a, b: abs(a - b) == 2",
+      "text": "|R1C1 - R1C2| = 2"
+     },
+     {
+      "cells": [
+       [
+        0,
+        1
+       ],
+       [
+        0,
+        2
+       ]
+      ],
+      "check": "lambda a, b: abs(a - b) == 3",
+      "text": "|R1C2 - R1C3| = 3"
+     },
+     {
+      "cells": [
+       [
+        0,
+        3
+       ],
+       [
+        0,
+        4
+       ]
+      ],
+      "check": "lambda a, b: a < b",
+      "text": "R1C4 < R1C5"
+     },
+     {
+      "cells": [
+       [
+        0,
+        3
+       ],
+       [
+        1,
+        3
+       ]
+      ],
+      "check": "lambda a, b: abs(a - b) == 1",
+      "text": "|R1C4 - R2C4| = 1"
+     },
+     {
+      "cells": [
+       [
+        1,
+        0
+       ],
+       [
+        2,
+        0
+       ]
+      ],
+      "check": "lambda a, b: abs(a - b) == 1",
+      "text": "|R2C1 - R3C1| = 1"
+     },
+     {
+      "cells": [
+       [
+        1,
+        0
+       ],
+       [
+        2,
+        0
+       ]
+      ],
+      "check": "lambda a, b: a > b",
+      "text": "R2C1 > R3C1"
+     },
+     {
+      "cells": [
+       [
+        1,
+        3
+       ],
+       [
+        1,
+        4
+       ],
+       [
+        2,
+        3
+       ],
+       [
+        2,
+        4
+       ]
+      ],
+      "check": "lambda a, b, c, d: a + b + c + d == 10",
+      "text": "2x2 block at R2C4 sums to 10"
+     },
+     {
+      "cells": [
+       [
+        2,
+        0
+       ],
+       [
+        2,
+        1
+       ],
+       [
+        3,
+        0
+       ],
+       [
+        3,
+        1
+       ]
+      ],
+      "check": "lambda a, b, c, d: a + b + c + d == 14",
+      "text": "2x2 block at R3C1 sums to 14"
+     },
+     {
+      "cells": [
+       [
+        2,
+        1
+       ],
+       [
+        2,
+        2
+       ],
+       [
+        3,
+        1
+       ],
+       [
+        3,
+        2
+       ]
+      ],
+      "check": "lambda a, b, c, d: a + b + c + d == 14",
+      "text": "2x2 block at R3C2 sums to 14"
+     },
+     {
+      "cells": [
+       [
+        3,
+        1
+       ],
+       [
+        4,
+        1
+       ]
+      ],
+      "check": "lambda a, b: abs(a - b) == 3",
+      "text": "|R4C2 - R5C2| = 3"
+     },
+     {
+      "cells": [
+       [
+        3,
+        1
+       ],
+       [
+        3,
+        2
+       ],
+       [
+        4,
+        1
+       ],
+       [
+        4,
+        2
+       ]
+      ],
+      "check": "lambda a, b, c, d: a + b + c + d == 10",
+      "text": "2x2 block at R4C2 sums to 10"
+     },
+     {
+      "cells": [
+       [
+        3,
+        3
+       ],
+       [
+        3,
+        4
+       ]
+      ],
+      "check": "lambda a, b: a > b",
+      "text": "R4C4 > R4C5"
+     },
+     {
+      "cells": [
+       [
+        3,
+        3
+       ],
+       [
+        4,
+        3
+       ]
+      ],
+      "check": "lambda a, b: a < b",
+      "text": "R4C4 < R5C4"
+     },
+     {
+      "cells": [
+       [
+        4,
+        3
+       ],
+       [
+        4,
+        4
+       ]
+      ],
+      "check": "lambda a, b: abs(a - b) == 3",
+      "text": "|R5C4 - R5C5| = 3"
+     }
+    ],
+    "level": 3,
+    "n_clues": 14,
+    "frac_false_clues": 0.0,
+    "counts": {
+     "UP": 58,
+     "GAC": 41,
+     "FL1": 26,
+     "FL2": 0
+    }
+   },
+   {
+    "status": "ok",
+    "grid": [
+     [
+      1,
+      5,
+      3,
+      4,
+      2
+     ],
+     [
+      5,
+      1,
+      2,
+      3,
+      4
+     ],
+     [
+      1,
+      2,
+      3,
+      4,
+      5
+     ],
+     [
+      4,
+      5,
+      1,
+      3,
+      2
+     ],
+     [
+      3,
+      4,
+      2,
+      1,
+      5
+     ]
+    ],
+    "clues": [
+     {
+      "cells": [
+       [
+        0,
+        1
+       ],
+       [
+        0,
+        2
+       ]
+      ],
+      "check": "lambda a, b: abs(a - b) == 2",
+      "text": "|R1C2 - R1C3| = 2"
+     },
+     {
+      "cells": [
+       [
+        0,
+        2
+       ],
+       [
+        1,
+        2
+       ]
+      ],
+      "check": "lambda a, b: abs(a - b) == 1",
+      "text": "|R1C3 - R2C3| = 1"
+     },
+     {
+      "cells": [
+       [
+        0,
+        3
+       ],
+       [
+        0,
+        4
+       ]
+      ],
+      "check": "lambda a, b: abs(a - b) == 2",
+      "text": "|R1C4 - R1C5| = 2"
+     },
+     {
+      "cells": [
+       [
+        0,
+        4
+       ],
+       [
+        1,
+        4
+       ]
+      ],
+      "check": "lambda a, b: abs(a - b) == 2",
+      "text": "|R1C5 - R2C5| = 2"
+     },
+     {
+      "cells": [
+       [
+        1,
+        0
+       ],
+       [
+        2,
+        0
+       ]
+      ],
+      "check": "lambda a, b: abs(a - b) == 4",
+      "text": "|R2C1 - R3C1| = 4"
+     },
+     {
+      "cells": [
+       [
+        1,
+        1
+       ],
+       [
+        1,
+        2
+       ],
+       [
+        2,
+        1
+       ],
+       [
+        2,
+        2
+       ]
+      ],
+      "check": "lambda a, b, c, d: a + b + c + d == 8",
+      "text": "2x2 block at R2C2 sums to 8"
+     },
+     {
+      "cells": [
+       [
+        1,
+        2
+       ],
+       [
+        1,
+        3
+       ],
+       [
+        2,
+        2
+       ],
+       [
+        2,
+        3
+       ]
+      ],
+      "check": "lambda a, b, c, d: max(a, b, c, d) == 4",
+      "text": "2x2 block at R2C3 has largest digit 4"
+     },
+     {
+      "cells": [
+       [
+        3,
+        0
+       ],
+       [
+        3,
+        1
+       ]
+      ],
+      "check": "lambda a, b: a < b",
+      "text": "R4C1 < R4C2"
+     },
+     {
+      "cells": [
+       [
+        3,
+        0
+       ],
+       [
+        4,
+        0
+       ]
+      ],
+      "check": "lambda a, b: a > b",
+      "text": "R4C1 > R5C1"
+     },
+     {
+      "cells": [
+       [
+        3,
+        2
+       ],
+       [
+        3,
+        3
+       ],
+       [
+        4,
+        2
+       ],
+       [
+        4,
+        3
+       ]
+      ],
+      "check": "lambda a, b, c, d: a + b + c + d == 7",
+      "text": "2x2 block at R4C3 sums to 7"
+     },
+     {
+      "cells": [
+       [
+        3,
+        3
+       ],
+       [
+        3,
+        4
+       ]
+      ],
+      "check": "lambda a, b: a > b",
+      "text": "R4C4 > R4C5"
+     }
+    ],
+    "level": 4,
+    "n_clues": 11,
+    "frac_false_clues": 0.0,
+    "counts": {
+     "UP": 68,
+     "GAC": 46,
+     "FL1": 5,
+     "FL2": 6
+    }
+   }
+  ],
+  "compiled": true,
+  "n_ok": 12,
+  "levels": [
+   3,
+   3,
+   3,
+   3,
+   3,
+   4,
+   4,
+   4,
+   4,
+   4,
+   4,
+   4
+  ]
+ },
+ {
+  "name": "Mirror Sum Latin",
+  "rules_text": "Fill the 4x4 grid with digits 1-4 so that no digit repeats in any row or column. For every pair of cells mirrored across the main diagonal (R1C2 with R2C1, and so on), the two digits must not add up to 5. Clues compare or add neighbouring cells, or the two cells of a mirror pair.",
+  "clue_text": "A clue names two cells (adjacent or mirrored) and says their sum, or which is larger.",
+  "code": "GRID = (4, 4, 4)\n\ndef rules(g):\n    for i in range(g.R):\n        g.alldiff([(i, j) for j in range(g.C)])\n    for j in range(g.C):\n        g.alldiff([(i, j) for i in range(g.R)])\n    for i in range(g.R):\n        for j in range(i + 1, g.C):\n            g.table([(i, j), (j, i)], lambda a, b: a + b != 5)\n\ndef clues(sol):\n    R = len(sol)\n    C = len(sol[0])\n    out = []\n    def nm(p):\n        return 'R' + str(p[0] + 1) + 'C' + str(p[1] + 1)\n    pairs = []\n    for r in range(R):\n        for c in range(C):\n            for d in ((0, 1), (1, 0)):\n                p2 = (r + d[0], c + d[1])\n                if p2[0] < R and p2[1] < C:\n                    pairs.append(((r, c), p2))\n            if c > r:\n                pairs.append(((r, c), (c, r)))\n    for p, q in pairs:\n        a = sol[p[0]][p[1]]\n        b = sol[q[0]][q[1]]\n        pc = [p, q]\n        out.append({'cells': pc, 'check': 'lambda a, b: a + b == ' + str(a + b), 'text': nm(p) + ' + ' + nm(q) + ' = ' + str(a + b)})\n        if a < b:\n            out.append({'cells': pc, 'check': 'lambda a, b: a < b', 'text': nm(p) + ' < ' + nm(q)})\n        elif a > b:\n            out.append({'cells': pc, 'check': 'lambda a, b: a > b', 'text': nm(p) + ' > ' + nm(q)})\n    return out\n",
+  "instances": [
+   {
+    "status": "ok",
+    "grid": [
+     [
+      1,
+      2,
+      3,
+      4
+     ],
+     [
+      2,
+      4,
+      1,
+      3
+     ],
+     [
+      3,
+      1,
+      4,
+      2
+     ],
+     [
+      4,
+      3,
+      2,
+      1
+     ]
+    ],
+    "clues": [
+     {
+      "cells": [
+       [
+        0,
+        0
+       ],
+       [
+        1,
+        0
+       ]
+      ],
+      "check": "lambda a, b: a < b",
+      "text": "R1C1 < R2C1"
+     },
+     {
+      "cells": [
+       [
+        0,
+        1
+       ],
+       [
+        1,
+        1
+       ]
+      ],
+      "check": "lambda a, b: a < b",
+      "text": "R1C2 < R2C2"
+     },
+     {
+      "cells": [
+       [
+        2,
+        2
+       ],
+       [
+        3,
+        2
+       ]
+      ],
+      "check": "lambda a, b: a + b == 6",
+      "text": "R3C3 + R4C3 = 6"
+     }
+    ],
+    "level": 3,
+    "n_clues": 3,
+    "frac_false_clues": 0.0,
+    "counts": {
+     "UP": 32,
+     "GAC": 10,
+     "FL1": 22,
+     "FL2": 0
+    }
+   },
+   {
+    "status": "ok",
+    "grid": [
+     [
+      1,
+      3,
+      2,
+      4
+     ],
+     [
+      3,
+      1,
+      4,
+      2
+     ],
+     [
+      4,
+      2,
+      3,
+      1
+     ],
+     [
+      2,
+      4,
+      1,
+      3
+     ]
+    ],
+    "clues": [
+     {
+      "cells": [
+       [
+        0,
+        1
+       ],
+       [
+        1,
+        1
+       ]
+      ],
+      "check": "lambda a, b: a > b",
+      "text": "R1C2 > R2C2"
+     },
+     {
+      "cells": [
+       [
+        1,
+        2
+       ],
+       [
+        1,
+        3
+       ]
+      ],
+      "check": "lambda a, b: a + b == 6",
+      "text": "R2C3 + R2C4 = 6"
+     },
+     {
+      "cells": [
+       [
+        1,
+        3
+       ],
+       [
+        3,
+        1
+       ]
+      ],
+      "check": "lambda a, b: a + b == 6",
+      "text": "R2C4 + R4C2 = 6"
+     },
+     {
+      "cells": [
+       [
+        2,
+        1
+       ],
+       [
+        2,
+        2
+       ]
+      ],
+      "check": "lambda a, b: a < b",
+      "text": "R3C2 < R3C3"
+     }
+    ],
+    "level": 3,
+    "n_clues": 4,
+    "frac_false_clues": 0.0,
+    "counts": {
+     "UP": 42,
+     "GAC": 7,
+     "FL1": 15,
+     "FL2": 0
+    }
+   },
+   {
+    "status": "ok",
+    "grid": [
+     [
+      4,
+      1,
+      3,
+      2
+     ],
+     [
+      1,
+      4,
+      2,
+      3
+     ],
+     [
+      3,
+      2,
+      1,
+      4
+     ],
+     [
+      2,
+      3,
+      4,
+      1
+     ]
+    ],
+    "clues": [
+     {
+      "cells": [
+       [
+        1,
+        0
+       ],
+       [
+        2,
+        0
+       ]
+      ],
+      "check": "lambda a, b: a < b",
+      "text": "R2C1 < R3C1"
+     },
+     {
+      "cells": [
+       [
+        1,
+        1
+       ],
+       [
+        2,
+        1
+       ]
+      ],
+      "check": "lambda a, b: a + b == 6",
+      "text": "R2C2 + R3C2 = 6"
+     },
+     {
+      "cells": [
+       [
+        2,
+        0
+       ],
+       [
+        3,
+        0
+       ]
+      ],
+      "check": "lambda a, b: a + b == 5",
+      "text": "R3C1 + R4C1 = 5"
+     },
+     {
+      "cells": [
+       [
+        2,
+        3
+       ],
+       [
+        3,
+        3
+       ]
+      ],
+      "check": "lambda a, b: a > b",
+      "text": "R3C4 > R4C4"
+     }
+    ],
+    "level": 3,
+    "n_clues": 4,
+    "frac_false_clues": 0.0,
+    "counts": {
+     "UP": 36,
+     "GAC": 7,
+     "FL1": 21,
+     "FL2": 0
+    }
+   },
+   {
+    "status": "ok",
+    "grid": [
+     [
+      3,
+      2,
+      1,
+      4
+     ],
+     [
+      2,
+      1,
+      4,
+      3
+     ],
+     [
+      1,
+      4,
+      3,
+      2
+     ],
+     [
+      4,
+      3,
+      2,
+      1
+     ]
+    ],
+    "clues": [
+     {
+      "cells": [
+       [
+        0,
+        0
+       ],
+       [
+        1,
+        0
+       ]
+      ],
+      "check": "lambda a, b: a + b == 5",
+      "text": "R1C1 + R2C1 = 5"
+     },
+     {
+      "cells": [
+       [
+        1,
+        0
+       ],
+       [
+        2,
+        0
+       ]
+      ],
+      "check": "lambda a, b: a + b == 3",
+      "text": "R2C1 + R3C1 = 3"
+     },
+     {
+      "cells": [
+       [
+        2,
+        1
+       ],
+       [
+        2,
+        2
+       ]
+      ],
+      "check": "lambda a, b: a > b",
+      "text": "R3C2 > R3C3"
+     },
+     {
+      "cells": [
+       [
+        2,
+        1
+       ],
+       [
+        3,
+        1
+       ]
+      ],
+      "check": "lambda a, b: a + b == 7",
+      "text": "R3C2 + R4C2 = 7"
+     }
+    ],
+    "level": 3,
+    "n_clues": 4,
+    "frac_false_clues": 0.0,
+    "counts": {
+     "UP": 16,
+     "GAC": 25,
+     "FL1": 23,
+     "FL2": 0
+    }
+   },
+   {
+    "status": "ok",
+    "grid": [
+     [
+      4,
+      3,
+      1,
+      2
+     ],
+     [
+      3,
+      1,
+      2,
+      4
+     ],
+     [
+      1,
+      2,
+      4,
+      3
+     ],
+     [
+      2,
+      4,
+      3,
+      1
+     ]
+    ],
+    "clues": [
+     {
+      "cells": [
+       [
+        0,
+        0
+       ],
+       [
+        1,
+        0
+       ]
+      ],
+      "check": "lambda a, b: a > b",
+      "text": "R1C1 > R2C1"
+     },
+     {
+      "cells": [
+       [
+        1,
+        1
+       ],
+       [
+        1,
+        2
+       ]
+      ],
+      "check": "lambda a, b: a < b",
+      "text": "R2C2 < R2C3"
+     },
+     {
+      "cells": [
+       [
+        1,
+        2
+       ],
+       [
+        2,
+        1
+       ]
+      ],
+      "check": "lambda a, b: a + b == 4",
+      "text": "R2C3 + R3C2 = 4"
+     },
+     {
+      "cells": [
+       [
+        2,
+        0
+       ],
+       [
+        3,
+        0
+       ]
+      ],
+      "check": "lambda a, b: a + b == 3",
+      "text": "R3C1 + R4C1 = 3"
+     }
+    ],
+    "level": 2,
+    "n_clues": 4,
+    "frac_false_clues": 0.0,
+    "counts": {
+     "UP": 54,
+     "GAC": 10,
+     "FL1": 0,
+     "FL2": 0
+    }
+   },
+   {
+    "status": "ok",
+    "grid": [
+     [
+      2,
+      3,
+      4,
+      1
+     ],
+     [
+      1,
+      4,
+      3,
+      2
+     ],
+     [
+      4,
+      1,
+      2,
+      3
+     ],
+     [
+      3,
+      2,
+      1,
+      4
+     ]
+    ],
+    "clues": [
+     {
+      "cells": [
+       [
+        2,
+        1
+       ],
+       [
+        2,
+        2
+       ]
+      ],
+      "check": "lambda a, b: a + b == 3",
+      "text": "R3C2 + R3C3 = 3"
+     },
+     {
+      "cells": [
+       [
+        2,
+        3
+       ],
+       [
+        3,
+        2
+       ]
+      ],
+      "check": "lambda a, b: a + b == 4",
+      "text": "R3C4 + R4C3 = 4"
+     },
+     {
+      "cells": [
+       [
+        3,
+        0
+       ],
+       [
+        3,
+        1
+       ]
+      ],
+      "check": "lambda a, b: a + b == 5",
+      "text": "R4C1 + R4C2 = 5"
+     }
+    ],
+    "level": 3,
+    "n_clues": 3,
+    "frac_false_clues": 0.0,
+    "counts": {
+     "UP": 49,
+     "GAC": 7,
+     "FL1": 8,
+     "FL2": 0
+    }
+   },
+   {
+    "status": "ok",
+    "grid": [
+     [
+      1,
+      4,
+      3,
+      2
+     ],
+     [
+      3,
+      2,
+      1,
+      4
+     ],
+     [
+      4,
+      1,
+      2,
+      3
+     ],
+     [
+      2,
+      3,
+      4,
+      1
+     ]
+    ],
+    "clues": [
+     {
+      "cells": [
+       [
+        0,
+        3
+       ],
+       [
+        1,
+        3
+       ]
+      ],
+      "check": "lambda a, b: a + b == 6",
+      "text": "R1C4 + R2C4 = 6"
+     },
+     {
+      "cells": [
+       [
+        2,
+        1
+       ],
+       [
+        3,
+        1
+       ]
+      ],
+      "check": "lambda a, b: a + b == 4",
+      "text": "R3C2 + R4C2 = 4"
+     },
+     {
+      "cells": [
+       [
+        3,
+        0
+       ],
+       [
+        3,
+        1
+       ]
+      ],
+      "check": "lambda a, b: a < b",
+      "text": "R4C1 < R4C2"
+     }
+    ],
+    "level": 3,
+    "n_clues": 3,
+    "frac_false_clues": 0.0,
+    "counts": {
+     "UP": 25,
+     "GAC": 8,
+     "FL1": 31,
+     "FL2": 0
+    }
+   },
+   {
+    "status": "ok",
+    "grid": [
+     [
+      1,
+      2,
+      3,
+      4
+     ],
+     [
+      2,
+      1,
+      4,
+      3
+     ],
+     [
+      3,
+      4,
+      2,
+      1
+     ],
+     [
+      4,
+      3,
+      1,
+      2
+     ]
+    ],
+    "clues": [
+     {
+      "cells": [
+       [
+        1,
+        0
+       ],
+       [
+        1,
+        1
+       ]
+      ],
+      "check": "lambda a, b: a > b",
+      "text": "R2C1 > R2C2"
+     },
+     {
+      "cells": [
+       [
+        1,
+        1
+       ],
+       [
+        1,
+        2
+       ]
+      ],
+      "check": "lambda a, b: a + b == 5",
+      "text": "R2C2 + R2C3 = 5"
+     },
+     {
+      "cells": [
+       [
+        2,
+        1
+       ],
+       [
+        2,
+        2
+       ]
+      ],
+      "check": "lambda a, b: a + b == 6",
+      "text": "R3C2 + R3C3 = 6"
+     },
+     {
+      "cells": [
+       [
+        2,
+        2
+       ],
+       [
+        2,
+        3
+       ]
+      ],
+      "check": "lambda a, b: a + b == 3",
+      "text": "R3C3 + R3C4 = 3"
+     }
+    ],
+    "level": 2,
+    "n_clues": 4,
+    "frac_false_clues": 0.0,
+    "counts": {
+     "UP": 56,
+     "GAC": 8,
+     "FL1": 0,
+     "FL2": 0
+    }
+   },
+   {
+    "status": "ok",
+    "grid": [
+     [
+      3,
+      1,
+      2,
+      4
+     ],
+     [
+      1,
+      4,
+      3,
+      2
+     ],
+     [
+      2,
+      3,
+      4,
+      1
+     ],
+     [
+      4,
+      2,
+      1,
+      3
+     ]
+    ],
+    "clues": [
+     {
+      "cells": [
+       [
+        2,
+        0
+       ],
+       [
+        2,
+        1
+       ]
+      ],
+      "check": "lambda a, b: a + b == 5",
+      "text": "R3C1 + R3C2 = 5"
+     },
+     {
+      "cells": [
+       [
+        2,
+        0
+       ],
+       [
+        3,
+        0
+       ]
+      ],
+      "check": "lambda a, b: a + b == 6",
+      "text": "R3C1 + R4C1 = 6"
+     },
+     {
+      "cells": [
+       [
+        2,
+        3
+       ],
+       [
+        3,
+        2
+       ]
+      ],
+      "check": "lambda a, b: a + b == 2",
+      "text": "R3C4 + R4C3 = 2"
+     }
+    ],
+    "level": 3,
+    "n_clues": 3,
+    "frac_false_clues": 0.0,
+    "counts": {
+     "UP": 33,
+     "GAC": 11,
+     "FL1": 20,
+     "FL2": 0
+    }
+   },
+   {
+    "status": "ok",
+    "grid": [
+     [
+      3,
+      1,
+      2,
+      4
+     ],
+     [
+      1,
+      3,
+      4,
+      2
+     ],
+     [
+      4,
+      2,
+      3,
+      1
+     ],
+     [
+      2,
+      4,
+      1,
+      3
+     ]
+    ],
+    "clues": [
+     {
+      "cells": [
+       [
+        0,
+        1
+       ],
+       [
+        0,
+        2
+       ]
+      ],
+      "check": "lambda a, b: a + b == 3",
+      "text": "R1C2 + R1C3 = 3"
+     },
+     {
+      "cells": [
+       [
+        1,
+        3
+       ],
+       [
+        2,
+        3
+       ]
+      ],
+      "check": "lambda a, b: a > b",
+      "text": "R2C4 > R3C4"
+     },
+     {
+      "cells": [
+       [
+        2,
+        0
+       ],
+       [
+        2,
+        1
+       ]
+      ],
+      "check": "lambda a, b: a > b",
+      "text": "R3C1 > R3C2"
+     }
+    ],
+    "level": 3,
+    "n_clues": 3,
+    "frac_false_clues": 0.0,
+    "counts": {
+     "UP": 32,
+     "GAC": 12,
+     "FL1": 20,
+     "FL2": 0
+    }
+   },
+   {
+    "status": "ok",
+    "grid": [
+     [
+      3,
+      4,
+      1,
+      2
+     ],
+     [
+      2,
+      1,
+      4,
+      3
+     ],
+     [
+      1,
+      2,
+      3,
+      4
+     ],
+     [
+      4,
+      3,
+      2,
+      1
+     ]
+    ],
+    "clues": [
+     {
+      "cells": [
+       [
+        1,
+        0
+       ],
+       [
+        1,
+        1
+       ]
+      ],
+      "check": "lambda a, b: a + b == 3",
+      "text": "R2C1 + R2C2 = 3"
+     },
+     {
+      "cells": [
+       [
+        1,
+        0
+       ],
+       [
+        2,
+        0
+       ]
+      ],
+      "check": "lambda a, b: a + b == 3",
+      "text": "R2C1 + R3C1 = 3"
+     },
+     {
+      "cells": [
+       [
+        1,
+        3
+       ],
+       [
+        2,
+        3
+       ]
+      ],
+      "check": "lambda a, b: a < b",
+      "text": "R2C4 < R3C4"
+     }
+    ],
+    "level": 3,
+    "n_clues": 3,
+    "frac_false_clues": 0.0,
+    "counts": {
+     "UP": 35,
+     "GAC": 12,
+     "FL1": 17,
+     "FL2": 0
+    }
+   },
+   {
+    "status": "ok",
+    "grid": [
+     [
+      4,
+      1,
+      3,
+      2
+     ],
+     [
+      2,
+      4,
+      1,
+      3
+     ],
+     [
+      3,
+      2,
+      4,
+      1
+     ],
+     [
+      1,
+      3,
+      2,
+      4
+     ]
+    ],
+    "clues": [
+     {
+      "cells": [
+       [
+        2,
+        0
+       ],
+       [
+        3,
+        0
+       ]
+      ],
+      "check": "lambda a, b: a > b",
+      "text": "R3C1 > R4C1"
+     },
+     {
+      "cells": [
+       [
+        2,
+        1
+       ],
+       [
+        2,
+        2
+       ]
+      ],
+      "check": "lambda a, b: a + b == 6",
+      "text": "R3C2 + R3C3 = 6"
+     },
+     {
+      "cells": [
+       [
+        3,
+        0
+       ],
+       [
+        3,
+        1
+       ]
+      ],
+      "check": "lambda a, b: a + b == 4",
+      "text": "R4C1 + R4C2 = 4"
+     }
+    ],
+    "level": 3,
+    "n_clues": 3,
+    "frac_false_clues": 0.0,
+    "counts": {
+     "UP": 46,
+     "GAC": 5,
+     "FL1": 13,
+     "FL2": 0
+    }
+   }
+  ],
+  "compiled": true,
+  "n_ok": 12,
+  "levels": [
+   2,
+   2,
+   3,
+   3,
+   3,
+   3,
+   3,
+   3,
+   3,
+   3,
+   3,
+   3
+  ]
+ },
+ {
+  "name": "Knight Strangers",
+  "rules_text": "Fill the 5x5 grid with digits 1-5 so that no digit repeats in any row or column. Additionally, two cells a chess knight's move apart must hold different digits. Clues describe sums and differences of adjacent cells.",
+  "clue_text": "A clue names two orthogonally adjacent cells with their sum, their absolute difference, or which is smaller.",
+  "code": "GRID = (5, 5, 5)\n\ndef rules(g):\n    for i in range(g.R):\n        g.alldiff([(i, j) for j in range(g.C)])\n    for j in range(g.C):\n        g.alldiff([(i, j) for i in range(g.R)])\n    for i in range(g.R):\n        for j in range(g.C):\n            for d in ((1, 2), (2, 1), (1, -2), (2, -1)):\n                i2 = i + d[0]\n                j2 = j + d[1]\n                if 0 <= i2 < g.R and 0 <= j2 < g.C:\n                    g.table([(i, j), (i2, j2)], lambda a, b: a != b)\n\ndef clues(sol):\n    R = len(sol)\n    C = len(sol[0])\n    out = []\n    def nm(p):\n        return 'R' + str(p[0] + 1) + 'C' + str(p[1] + 1)\n    for r in range(R):\n        for c in range(C):\n            for d in ((0, 1), (1, 0)):\n                p2 = (r + d[0], c + d[1])\n                if p2[0] < R and p2[1] < C:\n                    a = sol[r][c]\n                    b = sol[p2[0]][p2[1]]\n                    pc = [(r, c), p2]\n                    out.append({'cells': pc, 'check': 'lambda a, b: a + b == ' + str(a + b), 'text': nm((r, c)) + ' + ' + nm(p2) + ' = ' + str(a + b)})\n                    out.append({'cells': pc, 'check': 'lambda a, b: abs(a - b) == ' + str(abs(a - b)), 'text': '|' + nm((r, c)) + ' - ' + nm(p2) + '| = ' + str(abs(a - b))})\n                    if a < b:\n                        out.append({'cells': pc, 'check': 'lambda a, b: a < b', 'text': nm((r, c)) + ' < ' + nm(p2)})\n                    else:\n                        out.append({'cells': pc, 'check': 'lambda a, b: a > b', 'text': nm((r, c)) + ' > ' + nm(p2)})\n    return out\n",
+  "instances": [
+   {
+    "status": "ok",
+    "grid": [
+     [
+      3,
+      1,
+      2,
+      5,
+      4
+     ],
+     [
+      1,
+      2,
+      5,
+      4,
+      3
+     ],
+     [
+      2,
+      5,
+      4,
+      3,
+      1
+     ],
+     [
+      5,
+      4,
+      3,
+      1,
+      2
+     ],
+     [
+      4,
+      3,
+      1,
+      2,
+      5
+     ]
+    ],
+    "clues": [
+     {
+      "cells": [
+       [
+        0,
+        1
+       ],
+       [
+        0,
+        2
+       ]
+      ],
+      "check": "lambda a, b: a < b",
+      "text": "R1C2 < R1C3"
+     },
+     {
+      "cells": [
+       [
+        0,
+        3
+       ],
+       [
+        0,
+        4
+       ]
+      ],
+      "check": "lambda a, b: abs(a - b) == 1",
+      "text": "|R1C4 - R1C5| = 1"
+     },
+     {
+      "cells": [
+       [
+        2,
+        1
+       ],
+       [
+        2,
+        2
+       ]
+      ],
+      "check": "lambda a, b: a + b == 9",
+      "text": "R3C2 + R3C3 = 9"
+     },
+     {
+      "cells": [
+       [
+        3,
+        0
+       ],
+       [
+        3,
+        1
+       ]
+      ],
+      "check": "lambda a, b: a > b",
+      "text": "R4C1 > R4C2"
+     },
+     {
+      "cells": [
+       [
+        3,
+        2
+       ],
+       [
+        4,
+        2
+       ]
+      ],
+      "check": "lambda a, b: abs(a - b) == 2",
+      "text": "|R4C3 - R5C3| = 2"
+     }
+    ],
+    "level": 3,
+    "n_clues": 5,
+    "frac_false_clues": 0.0,
+    "counts": {
+     "UP": 63,
+     "GAC": 29,
+     "FL1": 33,
+     "FL2": 0
+    }
+   },
+   {
+    "status": "ok",
+    "grid": [
+     [
+      5,
+      4,
+      3,
+      2,
+      1
+     ],
+     [
+      4,
+      3,
+      2,
+      1,
+      5
+     ],
+     [
+      3,
+      2,
+      1,
+      5,
+      4
+     ],
+     [
+      2,
+      1,
+      5,
+      4,
+      3
+     ],
+     [
+      1,
+      5,
+      4,
+      3,
+      2
+     ]
+    ],
+    "clues": [
+     {
+      "cells": [
+       [
+        1,
+        2
+       ],
+       [
+        1,
+        3
+       ]
+      ],
+      "check": "lambda a, b: a + b == 3",
+      "text": "R2C3 + R2C4 = 3"
+     },
+     {
+      "cells": [
+       [
+        1,
+        2
+       ],
+       [
+        2,
+        2
+       ]
+      ],
+      "check": "lambda a, b: a > b",
+      "text": "R2C3 > R3C3"
+     },
+     {
+      "cells": [
+       [
+        3,
+        2
+       ],
+       [
+        4,
+        2
+       ]
+      ],
+      "check": "lambda a, b: a + b == 9",
+      "text": "R4C3 + R5C3 = 9"
+     },
+     {
+      "cells": [
+       [
+        3,
+        3
+       ],
+       [
+        4,
+        3
+       ]
+      ],
+      "check": "lambda a, b: a + b == 7",
+      "text": "R4C4 + R5C4 = 7"
+     }
+    ],
+    "level": 3,
+    "n_clues": 4,
+    "frac_false_clues": 0.0,
+    "counts": {
+     "UP": 71,
+     "GAC": 17,
+     "FL1": 37,
+     "FL2": 0
+    }
+   },
+   {
+    "status": "ok",
+    "grid": [
+     [
+      2,
+      5,
+      4,
+      1,
+      3
+     ],
+     [
+      5,
+      4,
+      1,
+      3,
+      2
+     ],
+     [
+      4,
+      1,
+      3,
+      2,
+      5
+     ],
+     [
+      1,
+      3,
+      2,
+      5,
+      4
+     ],
+     [
+      3,
+      2,
+      5,
+      4,
+      1
+     ]
+    ],
+    "clues": [
+     {
+      "cells": [
+       [
+        0,
+        3
+       ],
+       [
+        1,
+        3
+       ]
+      ],
+      "check": "lambda a, b: a < b",
+      "text": "R1C4 < R2C4"
+     },
+     {
+      "cells": [
+       [
+        1,
+        3
+       ],
+       [
+        1,
+        4
+       ]
+      ],
+      "check": "lambda a, b: a > b",
+      "text": "R2C4 > R2C5"
+     },
+     {
+      "cells": [
+       [
+        2,
+        0
+       ],
+       [
+        2,
+        1
+       ]
+      ],
+      "check": "lambda a, b: abs(a - b) == 3",
+      "text": "|R3C1 - R3C2| = 3"
+     },
+     {
+      "cells": [
+       [
+        4,
+        0
+       ],
+       [
+        4,
+        1
+       ]
+      ],
+      "check": "lambda a, b: abs(a - b) == 1",
+      "text": "|R5C1 - R5C2| = 1"
+     },
+     {
+      "cells": [
+       [
+        4,
+        3
+       ],
+       [
+        4,
+        4
+       ]
+      ],
+      "check": "lambda a, b: a + b == 5",
+      "text": "R5C4 + R5C5 = 5"
+     }
+    ],
+    "level": 3,
+    "n_clues": 5,
+    "frac_false_clues": 0.0,
+    "counts": {
+     "UP": 62,
+     "GAC": 13,
+     "FL1": 50,
+     "FL2": 0
+    }
+   },
+   {
+    "status": "ok",
+    "grid": [
+     [
+      3,
+      2,
+      1,
+      5,
+      4
+     ],
+     [
+      2,
+      1,
+      5,
+      4,
+      3
+     ],
+     [
+      1,
+      5,
+      4,
+      3,
+      2
+     ],
+     [
+      5,
+      4,
+      3,
+      2,
+      1
+     ],
+     [
+      4,
+      3,
+      2,
+      1,
+      5
+     ]
+    ],
+    "clues": [
+     {
+      "cells": [
+       [
+        1,
+        1
+       ],
+       [
+        1,
+        2
+       ]
+      ],
+      "check": "lambda a, b: abs(a - b) == 4",
+      "text": "|R2C2 - R2C3| = 4"
+     },
+     {
+      "cells": [
+       [
+        2,
+        1
+       ],
+       [
+        3,
+        1
+       ]
+      ],
+      "check": "lambda a, b: abs(a - b) == 1",
+      "text": "|R3C2 - R4C2| = 1"
+     },
+     {
+      "cells": [
+       [
+        4,
+        2
+       ],
+       [
+        4,
+        3
+       ]
+      ],
+      "check": "lambda a, b: a + b == 3",
+      "text": "R5C3 + R5C4 = 3"
+     }
+    ],
+    "level": 3,
+    "n_clues": 3,
+    "frac_false_clues": 0.0,
+    "counts": {
+     "UP": 56,
+     "GAC": 24,
+     "FL1": 45,
+     "FL2": 0
+    }
+   },
+   {
+    "status": "ok",
+    "grid": [
+     [
+      4,
+      1,
+      3,
+      2,
+      5
+     ],
+     [
+      5,
+      4,
+      1,
+      3,
+      2
+     ],
+     [
+      2,
+      5,
+      4,
+      1,
+      3
+     ],
+     [
+      3,
+      2,
+      5,
+      4,
+      1
+     ],
+     [
+      1,
+      3,
+      2,
+      5,
+      4
+     ]
+    ],
+    "clues": [
+     {
+      "cells": [
+       [
+        1,
+        1
+       ],
+       [
+        1,
+        2
+       ]
+      ],
+      "check": "lambda a, b: a + b == 5",
+      "text": "R2C2 + R2C3 = 5"
+     },
+     {
+      "cells": [
+       [
+        3,
+        0
+       ],
+       [
+        3,
+        1
+       ]
+      ],
+      "check": "lambda a, b: a > b",
+      "text": "R4C1 > R4C2"
+     },
+     {
+      "cells": [
+       [
+        4,
+        3
+       ],
+       [
+        4,
+        4
+       ]
+      ],
+      "check": "lambda a, b: a + b == 9",
+      "text": "R5C4 + R5C5 = 9"
+     }
+    ],
+    "level": 3,
+    "n_clues": 3,
+    "frac_false_clues": 0.0,
+    "counts": {
+     "UP": 74,
+     "GAC": 18,
+     "FL1": 33,
+     "FL2": 0
+    }
+   },
+   {
+    "status": "ok",
+    "grid": [
+     [
+      1,
+      3,
+      4,
+      2,
+      5
+     ],
+     [
+      5,
+      1,
+      3,
+      4,
+      2
+     ],
+     [
+      2,
+      5,
+      1,
+      3,
+      4
+     ],
+     [
+      4,
+      2,
+      5,
+      1,
+      3
+     ],
+     [
+      3,
+      4,
+      2,
+      5,
+      1
+     ]
+    ],
+    "clues": [
+     {
+      "cells": [
+       [
+        2,
+        0
+       ],
+       [
+        3,
+        0
+       ]
+      ],
+      "check": "lambda a, b: a + b == 6",
+      "text": "R3C1 + R4C1 = 6"
+     },
+     {
+      "cells": [
+       [
+        2,
+        2
+       ],
+       [
+        3,
+        2
+       ]
+      ],
+      "check": "lambda a, b: a + b == 6",
+      "text": "R3C3 + R4C3 = 6"
+     },
+     {
+      "cells": [
+       [
+        3,
+        0
+       ],
+       [
+        4,
+        0
+       ]
+      ],
+      "check": "lambda a, b: a > b",
+      "text": "R4C1 > R5C1"
+     },
+     {
+      "cells": [
+       [
+        3,
+        2
+       ],
+       [
+        3,
+        3
+       ]
+      ],
+      "check": "lambda a, b: abs(a - b) == 4",
+      "text": "|R4C3 - R4C4| = 4"
+     },
+     {
+      "cells": [
+       [
+        3,
+        2
+       ],
+       [
+        4,
+        2
+       ]
+      ],
+      "check": "lambda a, b: a > b",
+      "text": "R4C3 > R5C3"
+     }
+    ],
+    "level": 3,
+    "n_clues": 5,
+    "frac_false_clues": 0.0,
+    "counts": {
+     "UP": 90,
+     "GAC": 11,
+     "FL1": 24,
+     "FL2": 0
+    }
+   },
+   {
+    "status": "ok",
+    "grid": [
+     [
+      5,
+      4,
+      2,
+      1,
+      3
+     ],
+     [
+      3,
+      5,
+      4,
+      2,
+      1
+     ],
+     [
+      1,
+      3,
+      5,
+      4,
+      2
+     ],
+     [
+      2,
+      1,
+      3,
+      5,
+      4
+     ],
+     [
+      4,
+      2,
+      1,
+      3,
+      5
+     ]
+    ],
+    "clues": [
+     {
+      "cells": [
+       [
+        0,
+        3
+       ],
+       [
+        1,
+        3
+       ]
+      ],
+      "check": "lambda a, b: a + b == 3",
+      "text": "R1C4 + R2C4 = 3"
+     },
+     {
+      "cells": [
+       [
+        2,
+        3
+       ],
+       [
+        2,
+        4
+       ]
+      ],
+      "check": "lambda a, b: a + b == 6",
+      "text": "R3C4 + R3C5 = 6"
+     },
+     {
+      "cells": [
+       [
+        2,
+        4
+       ],
+       [
+        3,
+        4
+       ]
+      ],
+      "check": "lambda a, b: abs(a - b) == 2",
+      "text": "|R3C5 - R4C5| = 2"
+     },
+     {
+      "cells": [
+       [
+        3,
+        2
+       ],
+       [
+        3,
+        3
+       ]
+      ],
+      "check": "lambda a, b: a < b",
+      "text": "R4C3 < R4C4"
+     }
+    ],
+    "level": 3,
+    "n_clues": 4,
+    "frac_false_clues": 0.0,
+    "counts": {
+     "UP": 76,
+     "GAC": 16,
+     "FL1": 33,
+     "FL2": 0
+    }
+   },
+   {
+    "status": "ok",
+    "grid": [
+     [
+      5,
+      1,
+      4,
+      2,
+      3
+     ],
+     [
+      1,
+      4,
+      2,
+      3,
+      5
+     ],
+     [
+      4,
+      2,
+      3,
+      5,
+      1
+     ],
+     [
+      2,
+      3,
+      5,
+      1,
+      4
+     ],
+     [
+      3,
+      5,
+      1,
+      4,
+      2
+     ]
+    ],
+    "clues": [
+     {
+      "cells": [
+       [
+        2,
+        0
+       ],
+       [
+        3,
+        0
+       ]
+      ],
+      "check": "lambda a, b: a > b",
+      "text": "R3C1 > R4C1"
+     },
+     {
+      "cells": [
+       [
+        3,
+        0
+       ],
+       [
+        4,
+        0
+       ]
+      ],
+      "check": "lambda a, b: abs(a - b) == 1",
+      "text": "|R4C1 - R5C1| = 1"
+     },
+     {
+      "cells": [
+       [
+        4,
+        0
+       ],
+       [
+        4,
+        1
+       ]
+      ],
+      "check": "lambda a, b: a + b == 8",
+      "text": "R5C1 + R5C2 = 8"
+     }
+    ],
+    "level": 3,
+    "n_clues": 3,
+    "frac_false_clues": 0.0,
+    "counts": {
+     "UP": 94,
+     "GAC": 8,
+     "FL1": 23,
+     "FL2": 0
+    }
+   },
+   {
+    "status": "ok",
+    "grid": [
+     [
+      4,
+      5,
+      2,
+      1,
+      3
+     ],
+     [
+      3,
+      4,
+      5,
+      2,
+      1
+     ],
+     [
+      1,
+      3,
+      4,
+      5,
+      2
+     ],
+     [
+      2,
+      1,
+      3,
+      4,
+      5
+     ],
+     [
+      5,
+      2,
+      1,
+      3,
+      4
+     ]
+    ],
+    "clues": [
+     {
+      "cells": [
+       [
+        1,
+        3
+       ],
+       [
+        2,
+        3
+       ]
+      ],
+      "check": "lambda a, b: abs(a - b) == 3",
+      "text": "|R2C4 - R3C4| = 3"
+     },
+     {
+      "cells": [
+       [
+        2,
+        2
+       ],
+       [
+        3,
+        2
+       ]
+      ],
+      "check": "lambda a, b: a > b",
+      "text": "R3C3 > R4C3"
+     },
+     {
+      "cells": [
+       [
+        2,
+        3
+       ],
+       [
+        3,
+        3
+       ]
+      ],
+      "check": "lambda a, b: a + b == 9",
+      "text": "R3C4 + R4C4 = 9"
+     },
+     {
+      "cells": [
+       [
+        3,
+        1
+       ],
+       [
+        4,
+        1
+       ]
+      ],
+      "check": "lambda a, b: a < b",
+      "text": "R4C2 < R5C2"
+     }
+    ],
+    "level": 3,
+    "n_clues": 4,
+    "frac_false_clues": 0.0,
+    "counts": {
+     "UP": 78,
+     "GAC": 17,
+     "FL1": 30,
+     "FL2": 0
+    }
+   },
+   {
+    "status": "ok",
+    "grid": [
+     [
+      4,
+      3,
+      1,
+      2,
+      5
+     ],
+     [
+      5,
+      4,
+      3,
+      1,
+      2
+     ],
+     [
+      2,
+      5,
+      4,
+      3,
+      1
+     ],
+     [
+      1,
+      2,
+      5,
+      4,
+      3
+     ],
+     [
+      3,
+      1,
+      2,
+      5,
+      4
+     ]
+    ],
+    "clues": [
+     {
+      "cells": [
+       [
+        1,
+        2
+       ],
+       [
+        1,
+        3
+       ]
+      ],
+      "check": "lambda a, b: a + b == 4",
+      "text": "R2C3 + R2C4 = 4"
+     },
+     {
+      "cells": [
+       [
+        3,
+        4
+       ],
+       [
+        4,
+        4
+       ]
+      ],
+      "check": "lambda a, b: abs(a - b) == 1",
+      "text": "|R4C5 - R5C5| = 1"
+     },
+     {
+      "cells": [
+       [
+        4,
+        3
+       ],
+       [
+        4,
+        4
+       ]
+      ],
+      "check": "lambda a, b: a + b == 9",
+      "text": "R5C4 + R5C5 = 9"
+     }
+    ],
+    "level": 3,
+    "n_clues": 3,
+    "frac_false_clues": 0.0,
+    "counts": {
+     "UP": 76,
+     "GAC": 18,
+     "FL1": 31,
+     "FL2": 0
+    }
+   },
+   {
+    "status": "ok",
+    "grid": [
+     [
+      5,
+      1,
+      4,
+      2,
+      3
+     ],
+     [
+      1,
+      4,
+      2,
+      3,
+      5
+     ],
+     [
+      4,
+      2,
+      3,
+      5,
+      1
+     ],
+     [
+      2,
+      3,
+      5,
+      1,
+      4
+     ],
+     [
+      3,
+      5,
+      1,
+      4,
+      2
+     ]
+    ],
+    "clues": [
+     {
+      "cells": [
+       [
+        1,
+        1
+       ],
+       [
+        2,
+        1
+       ]
+      ],
+      "check": "lambda a, b: abs(a - b) == 2",
+      "text": "|R2C2 - R3C2| = 2"
+     },
+     {
+      "cells": [
+       [
+        1,
+        2
+       ],
+       [
+        2,
+        2
+       ]
+      ],
+      "check": "lambda a, b: a + b == 5",
+      "text": "R2C3 + R3C3 = 5"
+     },
+     {
+      "cells": [
+       [
+        2,
+        3
+       ],
+       [
+        2,
+        4
+       ]
+      ],
+      "check": "lambda a, b: a > b",
+      "text": "R3C4 > R3C5"
+     },
+     {
+      "cells": [
+       [
+        3,
+        2
+       ],
+       [
+        4,
+        2
+       ]
+      ],
+      "check": "lambda a, b: abs(a - b) == 4",
+      "text": "|R4C3 - R5C3| = 4"
+     }
+    ],
+    "level": 3,
+    "n_clues": 4,
+    "frac_false_clues": 0.0,
+    "counts": {
+     "UP": 50,
+     "GAC": 17,
+     "FL1": 58,
+     "FL2": 0
+    }
+   },
+   {
+    "status": "ok",
+    "grid": [
+     [
+      5,
+      2,
+      3,
+      4,
+      1
+     ],
+     [
+      1,
+      5,
+      2,
+      3,
+      4
+     ],
+     [
+      4,
+      1,
+      5,
+      2,
+      3
+     ],
+     [
+      3,
+      4,
+      1,
+      5,
+      2
+     ],
+     [
+      2,
+      3,
+      4,
+      1,
+      5
+     ]
+    ],
+    "clues": [
+     {
+      "cells": [
+       [
+        0,
+        0
+       ],
+       [
+        1,
+        0
+       ]
+      ],
+      "check": "lambda a, b: a + b == 6",
+      "text": "R1C1 + R2C1 = 6"
+     },
+     {
+      "cells": [
+       [
+        1,
+        3
+       ],
+       [
+        2,
+        3
+       ]
+      ],
+      "check": "lambda a, b: a > b",
+      "text": "R2C4 > R3C4"
+     },
+     {
+      "cells": [
+       [
+        2,
+        2
+       ],
+       [
+        3,
+        2
+       ]
+      ],
+      "check": "lambda a, b: a > b",
+      "text": "R3C3 > R4C3"
+     },
+     {
+      "cells": [
+       [
+        2,
+        3
+       ],
+       [
+        2,
+        4
+       ]
+      ],
+      "check": "lambda a, b: a + b == 5",
+      "text": "R3C4 + R3C5 = 5"
+     }
+    ],
+    "level": 3,
+    "n_clues": 4,
+    "frac_false_clues": 0.0,
+    "counts": {
+     "UP": 50,
+     "GAC": 5,
+     "FL1": 70,
+     "FL2": 0
+    }
+   }
+  ],
+  "compiled": true,
+  "n_ok": 12,
+  "levels": [
+   3,
+   3,
+   3,
+   3,
+   3,
+   3,
+   3,
+   3,
+   3,
+   3,
+   3,
+   3
+  ]
+ },
+ {
+  "name": "No Gaps of Two",
+  "rules_text": "Fill the 5x5 grid with digits 1-5 so that no digit repeats in any row or column. Any two orthogonally adjacent cells must not differ by exactly 2. Clues give totals of short line segments or the 2x2 block maximum.",
+  "clue_text": "A clue lists two or three consecutive cells in a line with their total, or a 2x2 block with its smallest digit.",
+  "code": "GRID = (5, 5, 5)\n\ndef rules(g):\n    for i in range(g.R):\n        g.alldiff([(i, j) for j in range(g.C)])\n    for j in range(g.C):\n        g.alldiff([(i, j) for i in range(g.R)])\n    for i in range(g.R):\n        for j in range(g.C):\n            if j + 1 < g.C:\n                g.table([(i, j), (i, j + 1)], lambda a, b: abs(a - b) != 2)\n            if i + 1 < g.R:\n                g.table([(i, j), (i + 1, j)], lambda a, b: abs(a - b) != 2)\n\ndef clues(sol):\n    R = len(sol)\n    C = len(sol[0])\n    out = []\n    def nm(p):\n        return 'R' + str(p[0] + 1) + 'C' + str(p[1] + 1)\n    for r in range(R):\n        for c in range(C):\n            for d in ((0, 1), (1, 0)):\n                p2 = (r + d[0], c + d[1])\n                p3 = (r + 2 * d[0], c + 2 * d[1])\n                if p2[0] < R and p2[1] < C:\n                    a = sol[r][c]\n                    b = sol[p2[0]][p2[1]]\n                    out.append({'cells': [(r, c), p2], 'check': 'lambda a, b: a + b == ' + str(a + b), 'text': nm((r, c)) + ' + ' + nm(p2) + ' = ' + str(a + b)})\n                    if a < b:\n                        out.append({'cells': [(r, c), p2], 'check': 'lambda a, b: a < b', 'text': nm((r, c)) + ' < ' + nm(p2)})\n                    else:\n                        out.append({'cells': [(r, c), p2], 'check': 'lambda a, b: a > b', 'text': nm((r, c)) + ' > ' + nm(p2)})\n                    if p3[0] < R and p3[1] < C:\n                        e = sol[p3[0]][p3[1]]\n                        out.append({'cells': [(r, c), p2, p3], 'check': 'lambda a, b, c: a + b + c == ' + str(a + b + e), 'text': nm((r, c)) + ' + ' + nm(p2) + ' + ' + nm(p3) + ' = ' + str(a + b + e)})\n            if r + 1 < R and c + 1 < C:\n                bc = [(r, c), (r, c + 1), (r + 1, c), (r + 1, c + 1)]\n                v = [sol[p[0]][p[1]] for p in bc]\n                out.append({'cells': bc, 'check': 'lambda a, b, c, d: min(a, b, c, d) == ' + str(min(v)), 'text': '2x2 block at ' + nm((r, c)) + ' has smallest digit ' + str(min(v))})\n    return out\n",
+  "instances": [
+   {
+    "status": "ok",
+    "grid": [
+     [
+      2,
+      1,
+      5,
+      4,
+      3
+     ],
+     [
+      3,
+      2,
+      1,
+      5,
+      4
+     ],
+     [
+      4,
+      3,
+      2,
+      1,
+      5
+     ],
+     [
+      5,
+      4,
+      3,
+      2,
+      1
+     ],
+     [
+      1,
+      5,
+      4,
+      3,
+      2
+     ]
+    ],
+    "clues": [
+     {
+      "cells": [
+       [
+        2,
+        1
+       ],
+       [
+        2,
+        2
+       ],
+       [
+        3,
+        1
+       ],
+       [
+        3,
+        2
+       ]
+      ],
+      "check": "lambda a, b, c, d: min(a, b, c, d) == 2",
+      "text": "2x2 block at R3C2 has smallest digit 2"
+     },
+     {
+      "cells": [
+       [
+        2,
+        2
+       ],
+       [
+        2,
+        3
+       ]
+      ],
+      "check": "lambda a, b: a > b",
+      "text": "R3C3 > R3C4"
+     },
+     {
+      "cells": [
+       [
+        2,
+        2
+       ],
+       [
+        3,
+        2
+       ]
+      ],
+      "check": "lambda a, b: a < b",
+      "text": "R3C3 < R4C3"
+     }
+    ],
+    "level": 3,
+    "n_clues": 3,
+    "frac_false_clues": 0.0,
+    "counts": {
+     "UP": 92,
+     "GAC": 8,
+     "FL1": 25,
+     "FL2": 0
+    }
+   },
+   {
+    "status": "ok",
+    "grid": [
+     [
+      5,
+      2,
+      3,
+      4,
+      1
+     ],
+     [
+      1,
+      5,
+      2,
+      3,
+      4
+     ],
+     [
+      4,
+      1,
+      5,
+      2,
+      3
+     ],
+     [
+      3,
+      4,
+      1,
+      5,
+      2
+     ],
+     [
+      2,
+      3,
+      4,
+      1,
+      5
+     ]
+    ],
+    "clues": [
+     {
+      "cells": [
+       [
+        0,
+        1
+       ],
+       [
+        0,
+        2
+       ],
+       [
+        0,
+        3
+       ]
+      ],
+      "check": "lambda a, b, c: a + b + c == 9",
+      "text": "R1C2 + R1C3 + R1C4 = 9"
+     },
+     {
+      "cells": [
+       [
+        1,
+        2
+       ],
+       [
+        2,
+        2
+       ]
+      ],
+      "check": "lambda a, b: a < b",
+      "text": "R2C3 < R3C3"
+     },
+     {
+      "cells": [
+       [
+        3,
+        1
+       ],
+       [
+        4,
+        1
+       ]
+      ],
+      "check": "lambda a, b: a + b == 7",
+      "text": "R4C2 + R5C2 = 7"
+     }
+    ],
+    "level": 3,
+    "n_clues": 3,
+    "frac_false_clues": 0.0,
+    "counts": {
+     "UP": 82,
+     "GAC": 4,
+     "FL1": 39,
+     "FL2": 0
+    }
+   },
+   {
+    "status": "ok",
+    "grid": [
+     [
+      2,
+      3,
+      4,
+      1,
+      5
+     ],
+     [
+      3,
+      4,
+      1,
+      5,
+      2
+     ],
+     [
+      4,
+      1,
+      5,
+      2,
+      3
+     ],
+     [
+      1,
+      5,
+      2,
+      3,
+      4
+     ],
+     [
+      5,
+      2,
+      3,
+      4,
+      1
+     ]
+    ],
+    "clues": [
+     {
+      "cells": [
+       [
+        0,
+        0
+       ],
+       [
+        1,
+        0
+       ],
+       [
+        2,
+        0
+       ]
+      ],
+      "check": "lambda a, b, c: a + b + c == 9",
+      "text": "R1C1 + R2C1 + R3C1 = 9"
+     },
+     {
+      "cells": [
+       [
+        0,
+        1
+       ],
+       [
+        0,
+        2
+       ],
+       [
+        0,
+        3
+       ]
+      ],
+      "check": "lambda a, b, c: a + b + c == 8",
+      "text": "R1C2 + R1C3 + R1C4 = 8"
+     },
+     {
+      "cells": [
+       [
+        1,
+        0
+       ],
+       [
+        2,
+        0
+       ],
+       [
+        3,
+        0
+       ]
+      ],
+      "check": "lambda a, b, c: a + b + c == 8",
+      "text": "R2C1 + R3C1 + R4C1 = 8"
+     }
+    ],
+    "level": 4,
+    "n_clues": 3,
+    "frac_false_clues": 0.0,
+    "counts": {
+     "UP": 32,
+     "GAC": 23,
+     "FL1": 69,
+     "FL2": 1
+    }
+   },
+   {
+    "status": "ok",
+    "grid": [
+     [
+      2,
+      3,
+      4,
+      1,
+      5
+     ],
+     [
+      3,
+      4,
+      1,
+      5,
+      2
+     ],
+     [
+      4,
+      1,
+      5,
+      2,
+      3
+     ],
+     [
+      1,
+      5,
+      2,
+      3,
+      4
+     ],
+     [
+      5,
+      2,
+      3,
+      4,
+      1
+     ]
+    ],
+    "clues": [
+     {
+      "cells": [
+       [
+        0,
+        1
+       ],
+       [
+        0,
+        2
+       ]
+      ],
+      "check": "lambda a, b: a < b",
+      "text": "R1C2 < R1C3"
+     },
+     {
+      "cells": [
+       [
+        0,
+        4
+       ],
+       [
+        1,
+        4
+       ],
+       [
+        2,
+        4
+       ]
+      ],
+      "check": "lambda a, b, c: a + b + c == 10",
+      "text": "R1C5 + R2C5 + R3C5 = 10"
+     },
+     {
+      "cells": [
+       [
+        3,
+        2
+       ],
+       [
+        4,
+        2
+       ]
+      ],
+      "check": "lambda a, b: a + b == 5",
+      "text": "R4C3 + R5C3 = 5"
+     },
+     {
+      "cells": [
+       [
+        4,
+        1
+       ],
+       [
+        4,
+        2
+       ]
+      ],
+      "check": "lambda a, b: a < b",
+      "text": "R5C2 < R5C3"
+     }
+    ],
+    "level": 3,
+    "n_clues": 4,
+    "frac_false_clues": 0.0,
+    "counts": {
+     "UP": 65,
+     "GAC": 8,
+     "FL1": 52,
+     "FL2": 0
+    }
+   },
+   {
+    "status": "ok",
+    "grid": [
+     [
+      1,
+      2,
+      3,
+      4,
+      5
+     ],
+     [
+      5,
+      1,
+      2,
+      3,
+      4
+     ],
+     [
+      4,
+      5,
+      1,
+      2,
+      3
+     ],
+     [
+      3,
+      4,
+      5,
+      1,
+      2
+     ],
+     [
+      2,
+      3,
+      4,
+      5,
+      1
+     ]
+    ],
+    "clues": [
+     {
+      "cells": [
+       [
+        1,
+        3
+       ],
+       [
+        2,
+        3
+       ]
+      ],
+      "check": "lambda a, b: a + b == 5",
+      "text": "R2C4 + R3C4 = 5"
+     },
+     {
+      "cells": [
+       [
+        2,
+        1
+       ],
+       [
+        2,
+        2
+       ],
+       [
+        2,
+        3
+       ]
+      ],
+      "check": "lambda a, b, c: a + b + c == 8",
+      "text": "R3C2 + R3C3 + R3C4 = 8"
+     },
+     {
+      "cells": [
+       [
+        2,
+        2
+       ],
+       [
+        2,
+        3
+       ],
+       [
+        2,
+        4
+       ]
+      ],
+      "check": "lambda a, b, c: a + b + c == 6",
+      "text": "R3C3 + R3C4 + R3C5 = 6"
+     }
+    ],
+    "level": 3,
+    "n_clues": 3,
+    "frac_false_clues": 0.0,
+    "counts": {
+     "UP": 93,
+     "GAC": 4,
+     "FL1": 28,
+     "FL2": 0
+    }
+   },
+   {
+    "status": "ok",
+    "grid": [
+     [
+      4,
+      5,
+      1,
+      2,
+      3
+     ],
+     [
+      3,
+      4,
+      5,
+      1,
+      2
+     ],
+     [
+      2,
+      3,
+      4,
+      5,
+      1
+     ],
+     [
+      1,
+      2,
+      3,
+      4,
+      5
+     ],
+     [
+      5,
+      1,
+      2,
+      3,
+      4
+     ]
+    ],
+    "clues": [
+     {
+      "cells": [
+       [
+        1,
+        2
+       ],
+       [
+        1,
+        3
+       ]
+      ],
+      "check": "lambda a, b: a + b == 6",
+      "text": "R2C3 + R2C4 = 6"
+     },
+     {
+      "cells": [
+       [
+        1,
+        4
+       ],
+       [
+        2,
+        4
+       ]
+      ],
+      "check": "lambda a, b: a + b == 3",
+      "text": "R2C5 + R3C5 = 3"
+     }
+    ],
+    "level": 3,
+    "n_clues": 2,
+    "frac_false_clues": 0.0,
+    "counts": {
+     "UP": 93,
+     "GAC": 12,
+     "FL1": 20,
+     "FL2": 0
+    }
+   },
+   {
+    "status": "ok",
+    "grid": [
+     [
+      3,
+      2,
+      1,
+      5,
+      4
+     ],
+     [
+      2,
+      1,
+      5,
+      4,
+      3
+     ],
+     [
+      1,
+      5,
+      4,
+      3,
+      2
+     ],
+     [
+      5,
+      4,
+      3,
+      2,
+      1
+     ],
+     [
+      4,
+      3,
+      2,
+      1,
+      5
+     ]
+    ],
+    "clues": [
+     {
+      "cells": [
+       [
+        0,
+        1
+       ],
+       [
+        0,
+        2
+       ],
+       [
+        0,
+        3
+       ]
+      ],
+      "check": "lambda a, b, c: a + b + c == 8",
+      "text": "R1C2 + R1C3 + R1C4 = 8"
+     },
+     {
+      "cells": [
+       [
+        1,
+        1
+       ],
+       [
+        2,
+        1
+       ]
+      ],
+      "check": "lambda a, b: a < b",
+      "text": "R2C2 < R3C2"
+     },
+     {
+      "cells": [
+       [
+        1,
+        2
+       ],
+       [
+        2,
+        2
+       ],
+       [
+        3,
+        2
+       ]
+      ],
+      "check": "lambda a, b, c: a + b + c == 12",
+      "text": "R2C3 + R3C3 + R4C3 = 12"
+     }
+    ],
+    "level": 4,
+    "n_clues": 3,
+    "frac_false_clues": 0.0,
+    "counts": {
+     "UP": 50,
+     "GAC": 5,
+     "FL1": 68,
+     "FL2": 2
+    }
+   },
+   {
+    "status": "ok",
+    "grid": [
+     [
+      2,
+      3,
+      4,
+      1,
+      5
+     ],
+     [
+      5,
+      2,
+      3,
+      4,
+      1
+     ],
+     [
+      1,
+      5,
+      2,
+      3,
+      4
+     ],
+     [
+      4,
+      1,
+      5,
+      2,
+      3
+     ],
+     [
+      3,
+      4,
+      1,
+      5,
+      2
+     ]
+    ],
+    "clues": [
+     {
+      "cells": [
+       [
+        0,
+        3
+       ],
+       [
+        0,
+        4
+       ]
+      ],
+      "check": "lambda a, b: a < b",
+      "text": "R1C4 < R1C5"
+     },
+     {
+      "cells": [
+       [
+        2,
+        0
+       ],
+       [
+        2,
+        1
+       ],
+       [
+        2,
+        2
+       ]
+      ],
+      "check": "lambda a, b, c: a + b + c == 8",
+      "text": "R3C1 + R3C2 + R3C3 = 8"
+     },
+     {
+      "cells": [
+       [
+        2,
+        4
+       ],
+       [
+        3,
+        4
+       ],
+       [
+        4,
+        4
+       ]
+      ],
+      "check": "lambda a, b, c: a + b + c == 9",
+      "text": "R3C5 + R4C5 + R5C5 = 9"
+     }
+    ],
+    "level": 4,
+    "n_clues": 3,
+    "frac_false_clues": 0.0,
+    "counts": {
+     "UP": 75,
+     "GAC": 23,
+     "FL1": 26,
+     "FL2": 1
+    }
+   },
+   {
+    "status": "ok",
+    "grid": [
+     [
+      4,
+      3,
+      2,
+      1,
+      5
+     ],
+     [
+      5,
+      4,
+      3,
+      2,
+      1
+     ],
+     [
+      1,
+      5,
+      4,
+      3,
+      2
+     ],
+     [
+      2,
+      1,
+      5,
+      4,
+      3
+     ],
+     [
+      3,
+      2,
+      1,
+      5,
+      4
+     ]
+    ],
+    "clues": [
+     {
+      "cells": [
+       [
+        0,
+        4
+       ],
+       [
+        1,
+        4
+       ]
+      ],
+      "check": "lambda a, b: a + b == 6",
+      "text": "R1C5 + R2C5 = 6"
+     },
+     {
+      "cells": [
+       [
+        1,
+        0
+       ],
+       [
+        1,
+        1
+       ],
+       [
+        2,
+        0
+       ],
+       [
+        2,
+        1
+       ]
+      ],
+      "check": "lambda a, b, c, d: min(a, b, c, d) == 1",
+      "text": "2x2 block at R2C1 has smallest digit 1"
+     },
+     {
+      "cells": [
+       [
+        1,
+        1
+       ],
+       [
+        1,
+        2
+       ],
+       [
+        2,
+        1
+       ],
+       [
+        2,
+        2
+       ]
+      ],
+      "check": "lambda a, b, c, d: min(a, b, c, d) == 3",
+      "text": "2x2 block at R2C2 has smallest digit 3"
+     }
+    ],
+    "level": 3,
+    "n_clues": 3,
+    "frac_false_clues": 0.0,
+    "counts": {
+     "UP": 40,
+     "GAC": 19,
+     "FL1": 66,
+     "FL2": 0
+    }
+   },
+   {
+    "status": "ok",
+    "grid": [
+     [
+      4,
+      3,
+      2,
+      5,
+      1
+     ],
+     [
+      1,
+      4,
+      3,
+      2,
+      5
+     ],
+     [
+      5,
+      1,
+      4,
+      3,
+      2
+     ],
+     [
+      2,
+      5,
+      1,
+      4,
+      3
+     ],
+     [
+      3,
+      2,
+      5,
+      1,
+      4
+     ]
+    ],
+    "clues": [
+     {
+      "cells": [
+       [
+        0,
+        2
+       ],
+       [
+        1,
+        2
+       ]
+      ],
+      "check": "lambda a, b: a < b",
+      "text": "R1C3 < R2C3"
+     },
+     {
+      "cells": [
+       [
+        1,
+        1
+       ],
+       [
+        2,
+        1
+       ]
+      ],
+      "check": "lambda a, b: a > b",
+      "text": "R2C2 > R3C2"
+     },
+     {
+      "cells": [
+       [
+        4,
+        1
+       ],
+       [
+        4,
+        2
+       ]
+      ],
+      "check": "lambda a, b: a + b == 7",
+      "text": "R5C2 + R5C3 = 7"
+     }
+    ],
+    "level": 3,
+    "n_clues": 3,
+    "frac_false_clues": 0.0,
+    "counts": {
+     "UP": 74,
+     "GAC": 6,
+     "FL1": 45,
+     "FL2": 0
+    }
+   },
+   {
+    "status": "ok",
+    "grid": [
+     [
+      4,
+      3,
+      2,
+      5,
+      1
+     ],
+     [
+      3,
+      2,
+      5,
+      1,
+      4
+     ],
+     [
+      2,
+      5,
+      1,
+      4,
+      3
+     ],
+     [
+      5,
+      1,
+      4,
+      3,
+      2
+     ],
+     [
+      1,
+      4,
+      3,
+      2,
+      5
+     ]
+    ],
+    "clues": [
+     {
+      "cells": [
+       [
+        0,
+        4
+       ],
+       [
+        1,
+        4
+       ]
+      ],
+      "check": "lambda a, b: a + b == 5",
+      "text": "R1C5 + R2C5 = 5"
+     },
+     {
+      "cells": [
+       [
+        2,
+        3
+       ],
+       [
+        3,
+        3
+       ]
+      ],
+      "check": "lambda a, b: a > b",
+      "text": "R3C4 > R4C4"
+     },
+     {
+      "cells": [
+       [
+        2,
+        4
+       ],
+       [
+        3,
+        4
+       ]
+      ],
+      "check": "lambda a, b: a > b",
+      "text": "R3C5 > R4C5"
+     }
+    ],
+    "level": 3,
+    "n_clues": 3,
+    "frac_false_clues": 0.0,
+    "counts": {
+     "UP": 39,
+     "GAC": 6,
+     "FL1": 80,
+     "FL2": 0
+    }
+   },
+   {
+    "status": "ok",
+    "grid": [
+     [
+      1,
+      5,
+      4,
+      3,
+      2
+     ],
+     [
+      2,
+      1,
+      5,
+      4,
+      3
+     ],
+     [
+      3,
+      2,
+      1,
+      5,
+      4
+     ],
+     [
+      4,
+      3,
+      2,
+      1,
+      5
+     ],
+     [
+      5,
+      4,
+      3,
+      2,
+      1
+     ]
+    ],
+    "clues": [
+     {
+      "cells": [
+       [
+        1,
+        4
+       ],
+       [
+        2,
+        4
+       ],
+       [
+        3,
+        4
+       ]
+      ],
+      "check": "lambda a, b, c: a + b + c == 12",
+      "text": "R2C5 + R3C5 + R4C5 = 12"
+     },
+     {
+      "cells": [
+       [
+        3,
+        0
+       ],
+       [
+        3,
+        1
+       ]
+      ],
+      "check": "lambda a, b: a > b",
+      "text": "R4C1 > R4C2"
+     },
+     {
+      "cells": [
+       [
+        3,
+        1
+       ],
+       [
+        3,
+        2
+       ],
+       [
+        4,
+        1
+       ],
+       [
+        4,
+        2
+       ]
+      ],
+      "check": "lambda a, b, c, d: min(a, b, c, d) == 2",
+      "text": "2x2 block at R4C2 has smallest digit 2"
+     }
+    ],
+    "level": 3,
+    "n_clues": 3,
+    "frac_false_clues": 0.0,
+    "counts": {
+     "UP": 72,
+     "GAC": 10,
+     "FL1": 43,
+     "FL2": 0
+    }
+   }
+  ],
+  "compiled": true,
+  "n_ok": 12,
+  "levels": [
+   3,
+   3,
+   3,
+   3,
+   3,
+   3,
+   3,
+   3,
+   3,
+   4,
+   4,
+   4
+  ]
+ }
+]

@@ -1,0 +1,32 @@
+{"answers": [
+{"id": "zebra-01412", "answer": {
+"1": {"nationality": "Norwegian", "drink": "water", "pet": "cat", "hobby": "chess"},
+"2": {"nationality": "German", "drink": "tea", "pet": "rabbit", "hobby": "painting"},
+"3": {"nationality": "Swede", "drink": "coffee", "pet": "horse", "hobby": "golf"},
+"4": {"nationality": "Spaniard", "drink": "juice", "pet": "dog", "hobby": "hiking"},
+"5": {"nationality": "Brit", "drink": "cocoa", "pet": "bird", "hobby": "tennis"}}},
+{"id": "zebra-00383", "answer": {
+"1": {"color": "green", "drink": "coffee", "hobby": "painting", "pet": "dog"},
+"2": {"color": "blue", "drink": "juice", "hobby": "hiking", "pet": "rabbit"},
+"3": {"color": "red", "drink": "cocoa", "hobby": "cooking", "pet": "bird"},
+"4": {"color": "yellow", "drink": "milk", "hobby": "golf", "pet": "cat"},
+"5": {"color": "purple", "drink": "tea", "hobby": "chess", "pet": "fish"}}},
+{"id": "zebra-00618", "answer": {
+"1": {"job": "lawyer", "drink": "milk", "nationality": "Dane", "pet": "cat"},
+"2": {"job": "baker", "drink": "cocoa", "nationality": "Swede", "pet": "fish"},
+"3": {"job": "doctor", "drink": "juice", "nationality": "German", "pet": "horse"},
+"4": {"job": "pilot", "drink": "tea", "nationality": "Norwegian", "pet": "rabbit"},
+"5": {"job": "teacher", "drink": "water", "nationality": "Brit", "pet": "dog"}}},
+{"id": "zebra-01380-L1aug", "answer": {
+"1": {"color": "yellow", "hobby": "golf", "job": "farmer", "pet": "cat"},
+"2": {"color": "white", "hobby": "cooking", "job": "baker", "pet": "bird"},
+"3": {"color": "red", "hobby": "painting", "job": "doctor", "pet": "rabbit"},
+"4": {"color": "green", "hobby": "hiking", "job": "teacher", "pet": "horse"},
+"5": {"color": "blue", "hobby": "tennis", "job": "pilot", "pet": "dog"}}},
+{"id": "zebra-00414-L1aug", "answer": {
+"1": {"job": "doctor", "hobby": "cooking", "color": "green", "nationality": "German"},
+"2": {"job": "farmer", "hobby": "hiking", "color": "blue", "nationality": "Brit"},
+"3": {"job": "lawyer", "hobby": "golf", "color": "red", "nationality": "Dane"},
+"4": {"job": "baker", "hobby": "tennis", "color": "white", "nationality": "Swede"},
+"5": {"job": "pilot", "hobby": "painting", "color": "yellow", "nationality": "Spaniard"}}}
+]}

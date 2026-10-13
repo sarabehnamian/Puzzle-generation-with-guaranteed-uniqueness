@@ -1,0 +1,675 @@
+{
+ "genre": "Median Line Latin",
+ "instances": [
+  {
+   "status": "ok",
+   "grid": [
+    [
+     4,
+     3,
+     1,
+     2,
+     5
+    ],
+    [
+     3,
+     5,
+     4,
+     1,
+     2
+    ],
+    [
+     1,
+     2,
+     5,
+     4,
+     3
+    ],
+    [
+     2,
+     4,
+     3,
+     5,
+     1
+    ],
+    [
+     5,
+     1,
+     2,
+     3,
+     4
+    ]
+   ],
+   "clues": [
+    {
+     "cells": [
+      [
+       0,
+       0
+      ],
+      [
+       0,
+       1
+      ],
+      [
+       0,
+       2
+      ]
+     ],
+     "check": "lambda a, b, c: a + b + c == 8",
+     "text": "R1C1 + R1C2 + R1C3 = 8"
+    },
+    {
+     "cells": [
+      [
+       0,
+       2
+      ],
+      [
+       0,
+       3
+      ],
+      [
+       0,
+       4
+      ]
+     ],
+     "check": "lambda a, b, c: (a < b and b < c) or (a > b and b > c)",
+     "text": "R1C4 is the median of R1C3, R1C4, R1C5"
+    },
+    {
+     "cells": [
+      [
+       1,
+       3
+      ],
+      [
+       2,
+       3
+      ],
+      [
+       3,
+       3
+      ]
+     ],
+     "check": "lambda a, b, c: a + b + c == 10",
+     "text": "R2C4 + R3C4 + R4C4 = 10"
+    },
+    {
+     "cells": [
+      [
+       2,
+       1
+      ],
+      [
+       3,
+       1
+      ]
+     ],
+     "check": "lambda a, b: a + b == 6",
+     "text": "R3C2 + R4C2 = 6"
+    },
+    {
+     "cells": [
+      [
+       2,
+       3
+      ],
+      [
+       2,
+       4
+      ]
+     ],
+     "check": "lambda a, b: a > b",
+     "text": "R3C4 > R3C5"
+    },
+    {
+     "cells": [
+      [
+       3,
+       2
+      ],
+      [
+       4,
+       2
+      ]
+     ],
+     "check": "lambda a, b: a + b == 5",
+     "text": "R4C3 + R5C3 = 5"
+    },
+    {
+     "cells": [
+      [
+       3,
+       4
+      ],
+      [
+       4,
+       4
+      ]
+     ],
+     "check": "lambda a, b: a + b == 5",
+     "text": "R4C5 + R5C5 = 5"
+    },
+    {
+     "cells": [
+      [
+       4,
+       2
+      ],
+      [
+       4,
+       3
+      ],
+      [
+       4,
+       4
+      ]
+     ],
+     "check": "lambda a, b, c: a + b + c == 9",
+     "text": "R5C3 + R5C4 + R5C5 = 9"
+    }
+   ],
+   "level": 4,
+   "n_clues": 8,
+   "frac_false_clues": 0.0,
+   "counts": {
+    "UP": 59,
+    "GAC": 26,
+    "FL1": 37,
+    "FL2": 3
+   }
+  },
+  {
+   "status": "ok",
+   "grid": [
+    [
+     5,
+     4,
+     2,
+     3,
+     1
+    ],
+    [
+     2,
+     1,
+     4,
+     5,
+     3
+    ],
+    [
+     3,
+     5,
+     1,
+     2,
+     4
+    ],
+    [
+     1,
+     3,
+     5,
+     4,
+     2
+    ],
+    [
+     4,
+     2,
+     3,
+     1,
+     5
+    ]
+   ],
+   "clues": [
+    {
+     "cells": [
+      [
+       0,
+       0
+      ],
+      [
+       0,
+       1
+      ],
+      [
+       0,
+       2
+      ]
+     ],
+     "check": "lambda a, b, c: (a < b and b < c) or (a > b and b > c)",
+     "text": "R1C2 is the median of R1C1, R1C2, R1C3"
+    },
+    {
+     "cells": [
+      [
+       0,
+       2
+      ],
+      [
+       1,
+       2
+      ],
+      [
+       2,
+       2
+      ]
+     ],
+     "check": "lambda a, b, c: a + b + c == 7",
+     "text": "R1C3 + R2C3 + R3C3 = 7"
+    },
+    {
+     "cells": [
+      [
+       0,
+       3
+      ],
+      [
+       1,
+       3
+      ]
+     ],
+     "check": "lambda a, b: a < b",
+     "text": "R1C4 < R2C4"
+    },
+    {
+     "cells": [
+      [
+       1,
+       0
+      ],
+      [
+       2,
+       0
+      ]
+     ],
+     "check": "lambda a, b: a + b == 5",
+     "text": "R2C1 + R3C1 = 5"
+    },
+    {
+     "cells": [
+      [
+       1,
+       3
+      ],
+      [
+       2,
+       3
+      ]
+     ],
+     "check": "lambda a, b: a + b == 7",
+     "text": "R2C4 + R3C4 = 7"
+    },
+    {
+     "cells": [
+      [
+       3,
+       2
+      ],
+      [
+       3,
+       3
+      ]
+     ],
+     "check": "lambda a, b: a + b == 9",
+     "text": "R4C3 + R4C4 = 9"
+    },
+    {
+     "cells": [
+      [
+       4,
+       1
+      ],
+      [
+       4,
+       2
+      ],
+      [
+       4,
+       3
+      ]
+     ],
+     "check": "lambda a, b, c: not ((a < b and b < c) or (a > b and b > c))",
+     "text": "R5C3 is NOT the median of R5C2, R5C3, R5C4"
+    }
+   ],
+   "level": 4,
+   "n_clues": 7,
+   "frac_false_clues": 0.0,
+   "counts": {
+    "UP": 84,
+    "GAC": 29,
+    "FL1": 5,
+    "FL2": 7
+   }
+  },
+  {
+   "status": "ok",
+   "grid": [
+    [
+     3,
+     5,
+     1,
+     2,
+     4
+    ],
+    [
+     1,
+     2,
+     3,
+     4,
+     5
+    ],
+    [
+     4,
+     1,
+     2,
+     5,
+     3
+    ],
+    [
+     5,
+     3,
+     4,
+     1,
+     2
+    ],
+    [
+     2,
+     4,
+     5,
+     3,
+     1
+    ]
+   ],
+   "clues": [
+    {
+     "cells": [
+      [
+       0,
+       0
+      ],
+      [
+       1,
+       0
+      ],
+      [
+       2,
+       0
+      ]
+     ],
+     "check": "lambda a, b, c: a + b + c == 8",
+     "text": "R1C1 + R2C1 + R3C1 = 8"
+    },
+    {
+     "cells": [
+      [
+       0,
+       2
+      ],
+      [
+       0,
+       3
+      ]
+     ],
+     "check": "lambda a, b: a + b == 3",
+     "text": "R1C3 + R1C4 = 3"
+    },
+    {
+     "cells": [
+      [
+       1,
+       1
+      ],
+      [
+       1,
+       2
+      ],
+      [
+       1,
+       3
+      ]
+     ],
+     "check": "lambda a, b, c: a + b + c == 9",
+     "text": "R2C2 + R2C3 + R2C4 = 9"
+    },
+    {
+     "cells": [
+      [
+       1,
+       4
+      ],
+      [
+       2,
+       4
+      ],
+      [
+       3,
+       4
+      ]
+     ],
+     "check": "lambda a, b, c: a + b + c == 10",
+     "text": "R2C5 + R3C5 + R4C5 = 10"
+    },
+    {
+     "cells": [
+      [
+       3,
+       0
+      ],
+      [
+       4,
+       0
+      ]
+     ],
+     "check": "lambda a, b: a > b",
+     "text": "R4C1 > R5C1"
+    },
+    {
+     "cells": [
+      [
+       3,
+       1
+      ],
+      [
+       3,
+       2
+      ]
+     ],
+     "check": "lambda a, b: a < b",
+     "text": "R4C2 < R4C3"
+    },
+    {
+     "cells": [
+      [
+       3,
+       1
+      ],
+      [
+       4,
+       1
+      ]
+     ],
+     "check": "lambda a, b: a + b == 7",
+     "text": "R4C2 + R5C2 = 7"
+    },
+    {
+     "cells": [
+      [
+       3,
+       3
+      ],
+      [
+       3,
+       4
+      ]
+     ],
+     "check": "lambda a, b: a < b",
+     "text": "R4C4 < R4C5"
+    }
+   ],
+   "level": 4,
+   "n_clues": 8,
+   "frac_false_clues": 0.0,
+   "counts": {
+    "UP": 64,
+    "GAC": 23,
+    "FL1": 36,
+    "FL2": 2
+   }
+  },
+  {
+   "status": "ok",
+   "grid": [
+    [
+     4,
+     3,
+     2,
+     1,
+     5
+    ],
+    [
+     1,
+     4,
+     3,
+     5,
+     2
+    ],
+    [
+     3,
+     5,
+     4,
+     2,
+     1
+    ],
+    [
+     5,
+     2,
+     1,
+     3,
+     4
+    ],
+    [
+     2,
+     1,
+     5,
+     4,
+     3
+    ]
+   ],
+   "clues": [
+    {
+     "cells": [
+      [
+       0,
+       0
+      ],
+      [
+       0,
+       1
+      ],
+      [
+       0,
+       2
+      ]
+     ],
+     "check": "lambda a, b, c: a + b + c == 9",
+     "text": "R1C1 + R1C2 + R1C3 = 9"
+    },
+    {
+     "cells": [
+      [
+       0,
+       1
+      ],
+      [
+       0,
+       2
+      ],
+      [
+       0,
+       3
+      ]
+     ],
+     "check": "lambda a, b, c: a + b + c == 6",
+     "text": "R1C2 + R1C3 + R1C4 = 6"
+    },
+    {
+     "cells": [
+      [
+       2,
+       0
+      ],
+      [
+       2,
+       1
+      ]
+     ],
+     "check": "lambda a, b: a + b == 8",
+     "text": "R3C1 + R3C2 = 8"
+    },
+    {
+     "cells": [
+      [
+       2,
+       3
+      ],
+      [
+       3,
+       3
+      ],
+      [
+       4,
+       3
+      ]
+     ],
+     "check": "lambda a, b, c: a + b + c == 9",
+     "text": "R3C4 + R4C4 + R5C4 = 9"
+    },
+    {
+     "cells": [
+      [
+       3,
+       1
+      ],
+      [
+       3,
+       2
+      ],
+      [
+       3,
+       3
+      ]
+     ],
+     "check": "lambda a, b, c: a + b + c == 6",
+     "text": "R4C2 + R4C3 + R4C4 = 6"
+    },
+    {
+     "cells": [
+      [
+       4,
+       1
+      ],
+      [
+       4,
+       2
+      ],
+      [
+       4,
+       3
+      ]
+     ],
+     "check": "lambda a, b, c: a + b + c == 10",
+     "text": "R5C2 + R5C3 + R5C4 = 10"
+    }
+   ],
+   "level": 4,
+   "n_clues": 6,
+   "frac_false_clues": 0.0,
+   "counts": {
+    "UP": 75,
+    "GAC": 14,
+    "FL1": 33,
+    "FL2": 3
+   }
+  }
+ ]
+}

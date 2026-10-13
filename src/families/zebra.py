@@ -16,44 +16,44 @@ FAMILY = "zebra"
 
 CATEGORIES = {
     "color": {
-        "values": ["red", "green", "blue", "yellow", "white", "purple"],
+        "values": ["red", "green", "blue", "yellow", "white", "purple", "orange", "grey"],
         "np": ["the person in the {v} house", "the occupant of the {v} house", "whoever lives in the {v} house"],
         "vp": "lives in the {v} house", "neg": "does not live in the {v} house",
         "base": "live in the {v} house",
     },
     "nationality": {
-        "values": ["Brit", "Swede", "Dane", "Norwegian", "German", "Spaniard"],
+        "values": ["Brit", "Swede", "Dane", "Norwegian", "German", "Spaniard", "Italian", "Finn"],
         "np": ["the {v}"],
         "vp": "is the {v}", "neg": "is not the {v}",
         "base": "be the {v}",
     },
     "pet": {
-        "values": ["dog", "cat", "bird", "fish", "horse", "rabbit"],
+        "values": ["dog", "cat", "bird", "fish", "horse", "rabbit", "turtle", "hamster"],
         "np": ["the person who keeps the {v}", "the {v} owner", "the owner of the {v}"],
         "vp": "keeps the {v}", "neg": "does not keep the {v}",
         "base": "keep the {v}",
     },
     "drink": {
-        "values": ["tea", "coffee", "milk", "water", "juice", "cocoa"],
+        "values": ["tea", "coffee", "milk", "water", "juice", "cocoa", "lemonade", "cider"],
         "np": ["the person who drinks {v}", "the {v} drinker"],
         "vp": "drinks {v}", "neg": "does not drink {v}",
         "base": "drink {v}",
     },
     "hobby": {
-        "values": ["chess", "tennis", "painting", "hiking", "cooking", "golf"],
+        "values": ["chess", "tennis", "painting", "hiking", "cooking", "golf", "fishing", "knitting"],
         "np": ["the person who enjoys {v}", "the {v} enthusiast"],
         "vp": "enjoys {v}", "neg": "does not enjoy {v}",
         "base": "enjoy {v}",
     },
     "job": {
-        "values": ["teacher", "doctor", "baker", "pilot", "farmer", "lawyer"],
+        "values": ["teacher", "doctor", "baker", "pilot", "farmer", "lawyer", "nurse", "chef"],
         "np": ["the {v}"],
         "vp": "works as the {v}", "neg": "is not the {v}",
         "base": "work as the {v}",
     },
 }
 
-ORD = {1: "first", 2: "second", 3: "third", 4: "fourth", 5: "fifth", 6: "sixth"}
+ORD = {1: "first", 2: "second", 3: "third", 4: "fourth", 5: "fifth", 6: "sixth", 7: "seventh", 8: "eighth"}
 
 TYPE_WEIGHTS = {
     "same": 3.0, "not_same": 1.5, "at": 1.2, "not_at": 1.0, "left_of": 1.5,
@@ -296,7 +296,7 @@ def random_solution(rng: random.Random, n: int, k: int):
     cats = rng.sample(list(CATEGORIES), k)
     out_cats, pos = {}, {}
     for c in cats:
-        vals = rng.sample(CATEGORIES[c]["values"], n)
+        vals = rng.sample(CATEGORIES[c]["values"][:max(6, n)], n)  # first 6 values for n <= 6 (bank reproducibility)
         out_cats[c] = vals
         perm = list(range(1, n + 1))
         rng.shuffle(perm)
@@ -353,9 +353,10 @@ def _true_clues(spec):
 
 def clue_pool(rng: random.Random, spec, size=260, hard=False):
     true = _true_clues(spec)
-    for t in true:
-        rng.shuffle(true[t])
     tw = dict(TYPE_WEIGHTS, **(HARD_EXTRA_WEIGHTS if hard else {}))
+    for t in true:
+        if t in tw:   # shuffle only the active types (keeps the random stream of earlier banks)
+            rng.shuffle(true[t])
     types = [t for t in tw if true[t]]
     weights = [tw[t] for t in types]
     pool, seen = [], set()

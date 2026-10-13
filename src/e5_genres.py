@@ -19,7 +19,8 @@ CFG = json.loads((ROOT / "configs" / "config.json").read_text())
 OUT = ROOT / "results" / "e5"
 SAFE = {"abs": abs, "min": min, "max": max, "sum": sum, "len": len, "set": set, "sorted": sorted,
         "all": all, "any": any, "range": range, "list": list, "tuple": tuple, "True": True,
-        "False": False, "None": None, "enumerate": enumerate, "zip": zip, "int": int}
+        "False": False, "None": None, "enumerate": enumerate, "zip": zip, "int": int, "str": str,
+        "dict": dict, "map": map, "filter": filter, "reversed": reversed, "bool": bool, "float": float}
 
 
 def _guard(src):
@@ -141,5 +142,56 @@ def run(n_instances=12):
     (OUT / "genres.json").write_text(json.dumps(report, indent=1))
 
 
+
+
+def genre_text(g, inst):
+    R = len(inst["grid"])
+    C = len(inst["grid"][0])
+    lines = [f"Puzzle genre: {g['name']}.", g["rules_text"], "", f"Grid: {R} rows x {C} columns; cells are named RrCc.",
+             "Clues:"]
+    lines += [f"- {c['text']}" for c in inst["clues"]]
+    return "\n".join(lines)
+
+
+def prepare_solve(genre_name="Median Line Latin", k=4):
+    from .prompts import SOLVER_HEAD
+    G = json.loads((OUT / "genres.json").read_text())
+    g = [x for x in G if x["name"] == genre_name][0]
+    insts = [i for i in g["instances"] if i.get("status") == "ok"]
+    insts = sorted(insts, key=lambda i: -i["level"])[:k]
+    blocks = []
+    for j, inst in enumerate(insts):
+        blocks.append(f"## Puzzle genre-{j}\n\n{genre_text(g, inst)}\n\nAnswer format for this puzzle: "
+                      '{"grid": ["<row 1 digits>", ...]} -- each row as a string of digits.\n')
+    for m in ("haiku", "sonnet", "opus"):
+        llm.write_task("e5_solve", f"e5_solve_{m}", m, SOLVER_HEAD, "\n".join(blocks),
+                       [f"genre-{j}" for j in range(len(insts))])
+    (OUT / "solve_items.json").write_text(json.dumps({"genre": genre_name, "instances": insts}, indent=1))
+
+
+def score_solve():
+    items = json.loads((OUT / "solve_items.json").read_text())
+    rows = []
+    for rec in llm.manifest("e5_solve"):
+        res = llm.read_output(rec) or {}
+        got = {a.get("id"): a.get("answer") for a in res.get("answers", []) if isinstance(a, dict)}
+        for j, inst in enumerate(items["instances"]):
+            ans = got.get(f"genre-{j}")
+            rows_ = (ans or {}).get("grid") if isinstance(ans, dict) else None
+            grid = inst["grid"]
+            cells = [(r, c) for r in range(len(grid)) for c in range(len(grid[0]))]
+            ok = 0
+            if isinstance(rows_, list):
+                for r, c in cells:
+                    try:
+                        ok += int(str(rows_[r])[c]) == grid[r][c]
+                    except (IndexError, ValueError):
+                        pass
+            rows.append({"model": rec["model"], "puzzle": j, "level": inst["level"],
+                         "cell_acc": ok / len(cells), "exact": ok == len(cells)})
+    (OUT / "solve_scores.json").write_text(json.dumps(rows, indent=1))
+    return rows
+
+
 if __name__ == "__main__":
-    {"prepare": prepare, "run": run}[sys.argv[1]]()
+    print({"prepare": prepare, "run": run, "prepare_solve": prepare_solve, "score_solve": score_solve}[sys.argv[1]]())

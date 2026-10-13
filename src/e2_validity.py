@@ -343,3 +343,85 @@ if __name__ == "__main__":
     cmd = sys.argv[1]
     if cmd == "prepare_gen":
         prepare_gen()
+
+
+# ------------------------------------------------------------------ summary
+WIKI_MASK = "xx..x....x..xxx....xx....x.x...x...xx..x.x..xx...x...x.x....xx....xxx..x....x..xx"
+
+
+def _mask(rows):
+    return "".join("x" if ch.isdigit() and ch != "0" else "." for row in rows for ch in str(row))
+
+
+def summarize():
+    """Validity before/after each loop stage plus redundancy, level and duplication."""
+    from .csp import CNF
+    from .generate import minimize
+    from .grading import grade, redundancy
+    OUT.mkdir(parents=True, exist_ok=True)
+    rows = evaluate("e2_gen", "e2_enc")
+    repaired = {}
+    for k, st, enc in (("repair1", "e2_repair1", "e2_rep1enc"),):
+        if llm.manifest(st):
+            repaired[k] = evaluate(st, enc if llm.manifest(f"{enc}_encA") else None)
+    recs = []
+    for uid, r in sorted(rows.items()):
+        rec = {k: r.get(k) for k in ("uid", "family", "parsed", "valid", "unique", "matches_intended", "level",
+                                     "fair", "n_solutions", "n_clues", "encoding", "feedback")}
+        rec["intended_violates"] = len(r.get("intended_violates") or [])
+        for k, rr in repaired.items():
+            if uid in rr:
+                rec[f"{k}_valid"] = rr[uid]["valid"]
+        if r.get("unique"):
+            spec = r["spec"]
+            csp, sol = get(spec["family"]).build_csp(spec)
+            cnf = CNF(csp)
+            ids = list(range(len(csp.clues)))
+            rec["redundancy"] = redundancy(cnf, ids)
+            # the solver loop: minimise the LLM's puzzle in a fixed random order
+            order = list(ids)
+            random.Random(f"{CFG['seed']}-{uid}").shuffle(order)
+            mini = minimize(cnf, sol, ids, order)
+            rec["n_clues_min"] = len(mini)
+            rec["level_min"] = grade(cnf, clue_ids=mini).level
+        recs.append(rec)
+    raws = raw_puzzles("e2_gen")
+    dup = {}
+    for fam in ("sudoku", "futoshiki"):
+        key = "grid" if fam == "sudoku" else "givens"
+        masks = [_mask(p.get(key) or []) for u, p in raws.items() if u.startswith(fam)]
+        import collections
+        c = collections.Counter(masks)
+        dup[fam] = {"n": len(masks), "distinct_masks": len(c), "largest_mask_group": max(c.values()) if c else 0}
+    sud = [p for u, p in raws.items() if u.startswith("sudoku")]
+    dup["sudoku"]["wikipedia_mask"] = sum(_mask(p["grid"]) == WIKI_MASK for p in sud)
+    dup["sudoku"]["wikipedia_identical"] = sum(
+        [str(r) for r in p["grid"]] == ["53..7....", "6..195...", ".98....6.", "8...6...3", "4..8.3..1",
+                                       "7...2...6", ".6....28.", "...419..5", "....8..79"] for p in sud)
+    (OUT / "records.jsonl").write_text("".join(json.dumps(r) + "\n" for r in recs))
+    summ = {"by_family": {}, "duplication": dup}
+    import statistics as st
+    for fam in FAMS:
+        rs = [r for r in recs if r["family"] == fam]
+        if not rs:
+            continue
+        ok = [r for r in rs if r.get("unique")]
+        summ["by_family"][fam] = {
+            "n": len(rs), "parsed": sum(bool(r["parsed"]) for r in rs),
+            "unique": sum(bool(r.get("unique")) for r in rs),
+            "matches_intended": sum(bool(r.get("matches_intended")) for r in rs),
+            "valid_raw": sum(bool(r["valid"]) for r in rs),
+            "valid_after_repair1": sum(bool(r["valid"] or r.get("repair1_valid")) for r in rs),
+            "encoding_disputed": sum(1 for r in rs if r.get("encoding") not in (None, "agreed")),
+            "levels": {str(l): sum(1 for r in ok if r.get("level") == l) for l in range(1, 6)},
+            "levels_after_min": {str(l): sum(1 for r in ok if r.get("level_min") == l) for l in range(1, 6)},
+            "redundancy_mean": st.mean([r["redundancy"] for r in ok]) if ok else None,
+            "clues_mean": st.mean([r["n_clues"] for r in ok]) if ok else None,
+            "clues_min_mean": st.mean([r["n_clues_min"] for r in ok]) if ok else None,
+        }
+    (OUT / "summary.json").write_text(json.dumps(summ, indent=1))
+    return summ
+
+
+if __name__ == "__main__" and sys.argv[1] == "summarize":
+    print(json.dumps(summarize(), indent=1))

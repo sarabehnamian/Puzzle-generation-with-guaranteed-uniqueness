@@ -1,0 +1,8 @@
+{"variants": [
+{"parent": "e4b-g0-04", "ops": [{"op": "remove", "clue": 25}, {"op": "replace", "clue": 18, "with": {"type": "not_at", "args": ["rabbit", 5]}}, {"op": "replace", "clue": 23, "with": {"type": "end", "args": ["hiking"]}}], "idea": "Replace direct position clues with weaker negative or end clues."},
+{"parent": "e4b-g0-04", "ops": [{"op": "replace", "clue": 18, "with": {"type": "not_next_to", "args": ["rabbit", "bird"]}}, {"op": "replace", "clue": 25, "with": {"type": "before", "args": ["cooking", "painting"]}}], "idea": "Turn absolute positions into relative and negative clues."},
+{"parent": "e4b-g0-07", "ops": [{"op": "replace", "clue": 4, "with": {"type": "not_at", "args": ["pilot", 5]}}, {"op": "replace", "clue": 16, "with": {"type": "end", "args": ["doctor"]}}, {"op": "remove", "clue": 10}], "idea": "Remove or weaken the house 1 and 4 anchors."},
+{"parent": "e4b-g0-07", "ops": [{"op": "replace", "clue": 10, "with": {"type": "end", "args": ["cooking"]}}, {"op": "replace", "clue": 4, "with": {"type": "before", "args": ["pilot", "lawyer"]}}, {"op": "remove", "clue": 16}], "idea": "Replace fixed positions with end and ordering clues."},
+{"parent": "e4b-g0-03", "ops": [{"op": "replace", "clue": 2, "with": {"type": "not_at", "args": ["blue", 1]}}, {"op": "replace", "clue": 8, "with": {"type": "end", "args": ["purple"]}}], "idea": "Weaken the two direct color position clues."},
+{"parent": "e4b-g0-03", "ops": [{"op": "replace", "clue": 2, "with": {"type": "gap2", "args": ["blue", "white"]}}, {"op": "replace", "clue": 8, "with": {"type": "not_at", "args": ["purple", 3]}}, {"op": "remove", "clue": 26}], "idea": "Use relative gap and negative clues and drop a direct link."}
+]}
