@@ -19,31 +19,37 @@ CATEGORIES = {
         "values": ["red", "green", "blue", "yellow", "white", "purple"],
         "np": ["the person in the {v} house", "the occupant of the {v} house", "whoever lives in the {v} house"],
         "vp": "lives in the {v} house", "neg": "does not live in the {v} house",
+        "base": "live in the {v} house",
     },
     "nationality": {
         "values": ["Brit", "Swede", "Dane", "Norwegian", "German", "Spaniard"],
         "np": ["the {v}"],
         "vp": "is the {v}", "neg": "is not the {v}",
+        "base": "be the {v}",
     },
     "pet": {
         "values": ["dog", "cat", "bird", "fish", "horse", "rabbit"],
         "np": ["the person who keeps the {v}", "the {v} owner", "the owner of the {v}"],
         "vp": "keeps the {v}", "neg": "does not keep the {v}",
+        "base": "keep the {v}",
     },
     "drink": {
         "values": ["tea", "coffee", "milk", "water", "juice", "cocoa"],
         "np": ["the person who drinks {v}", "the {v} drinker"],
         "vp": "drinks {v}", "neg": "does not drink {v}",
+        "base": "drink {v}",
     },
     "hobby": {
         "values": ["chess", "tennis", "painting", "hiking", "cooking", "golf"],
         "np": ["the person who enjoys {v}", "the {v} enthusiast"],
         "vp": "enjoys {v}", "neg": "does not enjoy {v}",
+        "base": "enjoy {v}",
     },
     "job": {
         "values": ["teacher", "doctor", "baker", "pilot", "farmer", "lawyer"],
         "np": ["the {v}"],
         "vp": "works as the {v}", "neg": "is not the {v}",
+        "base": "work as the {v}",
     },
 }
 
@@ -53,6 +59,8 @@ TYPE_WEIGHTS = {
     "same": 3.0, "not_same": 1.5, "at": 1.2, "not_at": 1.0, "left_of": 1.5,
     "next_to": 1.5, "not_next_to": 1.0, "before": 1.2, "gap2": 1.0, "end": 0.5, "or": 1.0,
 }
+# extra compound clue types used only in the "hard" text style
+HARD_EXTRA_WEIGHTS = {"neither": 1.0, "between": 1.0}
 
 
 def _cat_of(spec):
@@ -87,6 +95,10 @@ def expr_for(ctype, args, n):
         return f"Or({q[0]} == 1, {q[0]} == {n})"
     if ctype == "or":
         return f"Or({q[0]} == {q[1]}, {q[0]} == {q[2]})"
+    if ctype == "neither":
+        return f"And({q[0]} != {q[2]}, {q[1]} != {q[2]})"
+    if ctype == "between":
+        return f"Or(And({q[0]} < {q[2]}, {q[2]} < {q[1]}), And({q[1]} < {q[2]}, {q[2]} < {q[0]}))"
     raise ValueError(ctype)
 
 
@@ -167,6 +179,66 @@ def render_clue(spec, clue, rng):
     raise ValueError(t)
 
 
+def _base(spec, v):
+    c = _cat_of(spec)[norm(v)]
+    return CATEGORIES[c]["base"].format(v=_orig(spec)[norm(v)])
+
+
+def _from_right(n, k):
+    j = n + 1 - k
+    return "rightmost" if j == 1 else f"{ORD[j]} house from the right"
+
+
+def render_clue_hard(spec, clue, rng):
+    """Indirect phrasings: neighbour descriptions, counting from the right,
+    negated orderings, conditionals and compound clues."""
+    t, a = clue["type"], clue["args"]
+    n = spec["n"]
+    cat = _cat_of(spec)
+    if t == "same":
+        return _cap(f"{_np(spec, a[0], rng)} and {_np(spec, a[1], rng)} are one and the same person.")
+    if t == "not_same":
+        return _cap(f"{_np(spec, a[0], rng)} is not the same person as {_np(spec, a[1], rng)}.")
+    if t in ("at", "not_at"):
+        k = a[1]
+        fr = _from_right(n, k)
+        place = "the rightmost house" if fr == "rightmost" else f"the {fr}"
+        if t == "at":
+            opts = [f"{_np(spec, a[0], rng)} lives in {place}.",
+                    f"Exactly {k - 1} house{'s' if k - 1 != 1 else ''} lie{'' if k - 1 != 1 else 's'} to the left of the home of {_np(spec, a[0], rng)}."]
+            return _cap(rng.choice(opts))
+        return _cap(f"{_np(spec, a[0], rng)} does not live in {place}.")
+    if t == "left_of":
+        opts = [f"The left-hand neighbour of {_np(spec, a[1], rng)} {_vp(spec, a[0])}.",
+                f"The right-hand neighbour of {_np(spec, a[0], rng)} {_vp(spec, a[1])}."]
+        return _cap(rng.choice(opts))
+    if t == "next_to":
+        x, y = (a[0], a[1]) if rng.random() < 0.5 else (a[1], a[0])
+        return _cap(f"One of the neighbours of {_np(spec, x, rng)} {_vp(spec, y)}.")
+    if t == "not_next_to":
+        x, y = (a[0], a[1]) if rng.random() < 0.5 else (a[1], a[0])
+        opts = [f"None of the neighbours of {_np(spec, x, rng)} {_vp(spec, y)}.",
+                f"At least one house separates {_np(spec, x, rng)} from {_np(spec, y, rng)}."]
+        return _cap(rng.choice(opts))
+    if t == "before":
+        if cat[norm(a[0])] == cat[norm(a[1])]:
+            return _cap(f"{_np(spec, a[0], rng)} does not live to the right of {_np(spec, a[1], rng)}.")
+        return _cap(f"{_np(spec, a[1], rng)} lives further to the right than {_np(spec, a[0], rng)}.")
+    if t == "gap2":
+        opts = [f"{_np(spec, a[0], rng)} lives two doors away from {_np(spec, a[1], rng)}.",
+                f"Exactly one house separates {_np(spec, a[0], rng)} from {_np(spec, a[1], rng)}."]
+        return _cap(rng.choice(opts))
+    if t == "end":
+        return _cap(f"{_np(spec, a[0], rng)} has only one neighbour.")
+    if t == "or":
+        return _cap(f"If {_np(spec, a[0], rng)} {_vp(spec, a[1], neg=True)}, then that person {_vp(spec, a[2])}.")
+    if t == "neither":
+        return _cap(f"Neither {_np(spec, a[0], rng)} nor {_np(spec, a[1], rng)} {_vp(spec, a[2])}.")
+    if t == "between":
+        return _cap(f"{_np(spec, a[2], rng)} lives somewhere between {_np(spec, a[0], rng)} and {_np(spec, a[1], rng)}.")
+    raise ValueError(t)
+
+
 def header(spec):
     n = spec["n"]
     lines = [f"There are {n} houses in a row, numbered 1 to {n} from left to right. "
@@ -238,7 +310,7 @@ def _true_clues(spec):
     pos = spec["solution"]
     cat = _cat_of(spec)
     vals = list(pos)
-    out = {t: [] for t in TYPE_WEIGHTS}
+    out = {t: [] for t in list(TYPE_WEIGHTS) + list(HARD_EXTRA_WEIGHTS)}
     for a, b in itertools.permutations(vals, 2):
         diffcat = cat[a] != cat[b]
         pa, pb = pos[a], pos[b]
@@ -261,6 +333,12 @@ def _true_clues(spec):
                 out["not_at"].append((a, k))
         if pos[a] in (1, n):
             out["end"].append((a,))
+    for a, b, c in itertools.permutations(vals, 3):
+        pa, pb, pc = pos[a], pos[b], pos[c]
+        if a < b and cat[c] not in (cat[a], cat[b]) and pa != pc and pb != pc and pa != pb:
+            out["neither"].append((a, b, c))
+        if a < b and min(pa, pb) < pc < max(pa, pb):
+            out["between"].append((a, b, c))
     for a in vals:
         for c2 in spec["cats"]:
             if c2 == cat[a]:
@@ -273,12 +351,13 @@ def _true_clues(spec):
     return out
 
 
-def clue_pool(rng: random.Random, spec, size=260):
+def clue_pool(rng: random.Random, spec, size=260, hard=False):
     true = _true_clues(spec)
     for t in true:
         rng.shuffle(true[t])
-    types = [t for t in TYPE_WEIGHTS if true[t]]
-    weights = [TYPE_WEIGHTS[t] for t in types]
+    tw = dict(TYPE_WEIGHTS, **(HARD_EXTRA_WEIGHTS if hard else {}))
+    types = [t for t in tw if true[t]]
+    weights = [tw[t] for t in types]
     pool, seen = [], set()
     tries = 0
     while len(pool) < size and tries < size * 20:
@@ -295,9 +374,10 @@ def clue_pool(rng: random.Random, spec, size=260):
     return pool
 
 
-def make_texts(spec, rng):
+def make_texts(spec, rng, style="plain"):
+    f = render_clue_hard if style == "hard" else render_clue
     for c in spec["clues"]:
-        c["text"] = render_clue(spec, c, rng)
+        c["text"] = f(spec, c, rng)
 
 
 # --------------------------------------------------------------------------

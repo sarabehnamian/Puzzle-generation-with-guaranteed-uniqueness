@@ -1,0 +1,2 @@
+{"stage": "e4_eval_g0", "call_id": "e4_eval_g0_haiku_000", "model": "haiku", "items": ["evo-g0-05", "evo-g0-03", "evo-g0-04", "evo-g0-07", "evo-g0-06"], "task": "data/llm_tasks/e4_eval_g0/e4_eval_g0_haiku_000.md", "out": "data/llm_tasks/e4_eval_g0/e4_eval_g0_haiku_000.out.json"}
+{"stage": "e4_eval_g0", "call_id": "e4_eval_g0_haiku_001", "model": "haiku", "items": ["evo-g0-01", "evo-g0-00", "evo-g0-02"], "task": "data/llm_tasks/e4_eval_g0/e4_eval_g0_haiku_001.md", "out": "data/llm_tasks/e4_eval_g0/e4_eval_g0_haiku_001.out.json"}

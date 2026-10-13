@@ -17,13 +17,13 @@ class Zebra:
     score = staticmethod(_z.score)
 
     @staticmethod
-    def random_spec(rng, n=5, k=4):
+    def random_spec(rng, n=5, k=4, style="plain"):
         cats, pos = _z.random_solution(rng, n, k)
-        return {"family": "zebra", "n": n, "cats": cats, "solution": pos}
+        return {"family": "zebra", "n": n, "cats": cats, "solution": pos, "style": style}
 
     @staticmethod
     def clue_pool(rng, spec):
-        return _z.clue_pool(rng, spec)
+        return _z.clue_pool(rng, spec, hard=spec.get("style") == "hard")
 
     @staticmethod
     def removal_order(rng, pool):
@@ -34,7 +34,7 @@ class Zebra:
     @staticmethod
     def finalize(rng, spec):
         rng.shuffle(spec["clues"])
-        _z.make_texts(spec, rng)
+        _z.make_texts(spec, rng, spec.get("style", "plain"))
 
 
 for _F in (Sudoku, Killer, Futoshiki):

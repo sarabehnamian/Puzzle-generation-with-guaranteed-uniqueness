@@ -1,0 +1,124 @@
+{
+  "seed": 20261013,
+  "bank": {
+    "zebra": {
+      "n_puzzles": 1500,
+      "params": {
+        "n": 5,
+        "k": 4
+      }
+    },
+    "sudoku": {
+      "n_puzzles": 1500,
+      "params": {
+        "n": 9,
+        "box": [
+          3,
+          3
+        ]
+      }
+    },
+    "killer": {
+      "n_puzzles": 1500,
+      "params": {
+        "n": 6,
+        "box": [
+          2,
+          3
+        ]
+      }
+    },
+    "futoshiki": {
+      "n_puzzles": 1500,
+      "params": {
+        "n": 5
+      }
+    },
+    "zebra_hard": {
+      "n_puzzles": 300,
+      "family": "zebra",
+      "params": {
+        "n": 5,
+        "k": 4,
+        "style": "hard"
+      }
+    },
+    "sudoku_x": {
+      "n_puzzles": 8000,
+      "family": "sudoku",
+      "params": {
+        "n": 9,
+        "box": [
+          3,
+          3
+        ]
+      }
+    }
+  },
+  "e1": {
+    "styles": {
+      "plain": {
+        "bank": "zebra",
+        "ids": [
+          0,
+          100
+        ]
+      },
+      "hard": {
+        "bank": "zebra_hard",
+        "ids": [
+          0,
+          100
+        ]
+      },
+      "paraphrase": {
+        "bank": "zebra",
+        "ids": [
+          100,
+          200
+        ]
+      }
+    },
+    "batch": 10,
+    "encoders": {
+      "A": "sonnet",
+      "B": "sonnet",
+      "C": "haiku"
+    },
+    "paraphrase_model": "sonnet"
+  },
+  "e2": {
+    "per_family": {
+      "zebra": 40,
+      "sudoku": 20,
+      "killer": 20,
+      "futoshiki": 20
+    },
+    "batch": 10,
+    "generator_model": "sonnet"
+  },
+  "e3": {
+    "per_level_per_family": 8,
+    "batch": 5,
+    "solver_models": [
+      "haiku",
+      "sonnet",
+      "opus"
+    ]
+  },
+  "e4": {
+    "population": 8,
+    "generations": 6,
+    "children_per_parent": 2,
+    "train_solver": "haiku",
+    "heldout_solvers": [
+      "sonnet",
+      "opus"
+    ],
+    "mutator_model": "sonnet",
+    "max_level": 3
+  },
+  "bootstrap": {
+    "n_boot": 2000
+  }
+}
