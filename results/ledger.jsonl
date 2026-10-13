@@ -220,3 +220,5 @@
 {"stage": "e3_solve", "call_id": "e3_killer_opus_003", "model": "opus", "model_id": "claude-opus-5-5", "subagent_tokens": 83027, "tool_uses": 3, "duration_ms": 286080, "ts": "2026-10-13T20:09:14"}
 {"stage": "e3_solve", "call_id": "e3_sudoku_opus_000", "model": "opus", "model_id": "claude-opus-5-5", "subagent_tokens": 94895, "tool_uses": 3, "duration_ms": 385491, "ts": "2026-10-13T20:09:14"}
 {"stage": "e3_solve", "call_id": "e3_killer_opus_005", "model": "opus", "model_id": "claude-opus-5-5", "subagent_tokens": 63775, "tool_uses": 3, "duration_ms": 132121, "ts": "2026-10-13T20:09:36"}
+{"stage": "e3_solve", "call_id": "e3_killer_opus_007", "model": "opus", "model_id": "claude-opus-5-5", "subagent_tokens": 51744, "tool_uses": 3, "duration_ms": 51467, "ts": "2026-10-13T20:10:07"}
+{"stage": "e3_solve", "call_id": "e3_sudoku_opus_003", "model": "opus", "model_id": "claude-opus-5-5", "subagent_tokens": 101744, "tool_uses": 3, "duration_ms": 434833, "ts": "2026-10-13T20:10:07"}
