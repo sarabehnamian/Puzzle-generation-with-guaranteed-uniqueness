@@ -1,0 +1,190 @@
+{
+ "n_ledger": 230,
+ "n_matched": 229,
+ "tool_counts": {
+  "Read": 229,
+  "Write": 235,
+  "SubagentHandback": 229,
+  "mcp__claude-code-remote__list_events": 1,
+  "mcp__claude-code-remote__send_message": 4,
+  "mcp__claude-code-remote__get_session": 1,
+  "mcp__claude-code-remote__list_sessions": 1,
+  "mcp__claude-code-remote__read_documentation": 1,
+  "mcp__claude-code-remote__list_triggers": 1,
+  "Edit": 1
+ },
+ "n_with_forbidden_tool": 10,
+ "n_ledger_over_3": 14,
+ "over_3_explained": [
+  {
+   "call_id": "e1_encC_000",
+   "ledger_tool_uses": 4,
+   "tools": {
+    "Read": 1,
+    "Write": 1,
+    "mcp__claude-code-remote__list_events": 1,
+    "SubagentHandback": 1
+   },
+   "forbidden": [
+    "mcp__claude-code-remote__list_events"
+   ]
+  },
+  {
+   "call_id": "e4_eval_g1_haiku_000",
+   "ledger_tool_uses": 4,
+   "tools": {
+    "Read": 1,
+    "Write": 1,
+    "mcp__claude-code-remote__send_message": 1,
+    "SubagentHandback": 1
+   },
+   "forbidden": [
+    "mcp__claude-code-remote__send_message"
+   ]
+  },
+  {
+   "call_id": "e1_encC_022",
+   "ledger_tool_uses": 4,
+   "tools": {
+    "Read": 1,
+    "Write": 1,
+    "mcp__claude-code-remote__get_session": 1,
+    "SubagentHandback": 1
+   },
+   "forbidden": [
+    "mcp__claude-code-remote__get_session"
+   ]
+  },
+  {
+   "call_id": "e4_eval_g1_haiku_001",
+   "ledger_tool_uses": 4,
+   "tools": {
+    "Read": 1,
+    "Write": 1,
+    "mcp__claude-code-remote__list_sessions": 1,
+    "SubagentHandback": 1
+   },
+   "forbidden": [
+    "mcp__claude-code-remote__list_sessions"
+   ]
+  },
+  {
+   "call_id": "e3_futoshiki_haiku_003",
+   "ledger_tool_uses": 4,
+   "tools": {
+    "Read": 1,
+    "Write": 1,
+    "mcp__claude-code-remote__send_message": 1,
+    "SubagentHandback": 1
+   },
+   "forbidden": [
+    "mcp__claude-code-remote__send_message"
+   ]
+  },
+  {
+   "call_id": "e4b_eval_g1_haiku_004",
+   "ledger_tool_uses": 4,
+   "tools": {
+    "Read": 1,
+    "Write": 1,
+    "mcp__claude-code-remote__read_documentation": 1,
+    "SubagentHandback": 1
+   },
+   "forbidden": [
+    "mcp__claude-code-remote__read_documentation"
+   ]
+  },
+  {
+   "call_id": "e4b_eval_g1_haiku_001",
+   "ledger_tool_uses": 4,
+   "tools": {
+    "Read": 1,
+    "Write": 1,
+    "mcp__claude-code-remote__list_triggers": 1,
+    "SubagentHandback": 1
+   },
+   "forbidden": [
+    "mcp__claude-code-remote__list_triggers"
+   ]
+  },
+  {
+   "call_id": "probe76_haiku_000",
+   "ledger_tool_uses": 4,
+   "tools": {
+    "Read": 1,
+    "Write": 1,
+    "mcp__claude-code-remote__send_message": 1,
+    "SubagentHandback": 1
+   },
+   "forbidden": [
+    "mcp__claude-code-remote__send_message"
+   ]
+  },
+  {
+   "call_id": "e3_sudoku_sonnet_004",
+   "ledger_tool_uses": 4,
+   "tools": {
+    "Read": 1,
+    "Write": 1,
+    "Edit": 1,
+    "SubagentHandback": 1
+   },
+   "forbidden": [
+    "Edit"
+   ]
+  },
+  {
+   "call_id": "e3_sudoku_sonnet_000",
+   "ledger_tool_uses": 4,
+   "tools": {
+    "Read": 1,
+    "Write": 2,
+    "SubagentHandback": 1
+   },
+   "forbidden": []
+  },
+  {
+   "call_id": "e2_repair1_sudoku_0",
+   "ledger_tool_uses": 4,
+   "tools": {
+    "Read": 1,
+    "Write": 2,
+    "SubagentHandback": 1
+   },
+   "forbidden": []
+  },
+  {
+   "call_id": "e4b_eval_g2_haiku_000",
+   "ledger_tool_uses": 4,
+   "tools": {
+    "Read": 1,
+    "Write": 1,
+    "mcp__claude-code-remote__send_message": 1,
+    "SubagentHandback": 1
+   },
+   "forbidden": [
+    "mcp__claude-code-remote__send_message"
+   ]
+  },
+  {
+   "call_id": "e3_futoshiki_sonnet_002",
+   "ledger_tool_uses": 4,
+   "tools": {
+    "Read": 1,
+    "Write": 2,
+    "SubagentHandback": 1
+   },
+   "forbidden": []
+  },
+  {
+   "call_id": "e3_sudoku_haiku_001",
+   "ledger_tool_uses": 7,
+   "tools": {
+    "Read": 1,
+    "Write": 5,
+    "SubagentHandback": 1
+   },
+   "forbidden": []
+  }
+ ]
+}

@@ -36,6 +36,7 @@ def summary():
     for r in L:
         _, _, usd = estimate(r)
         exp = r["stage"].split("_")[0]
+        exp = "probe" if exp.startswith("probe") else ("e4" if exp.startswith("e4") else exp)
         for d, k in ((by_stage, exp), (by_model, r["model"])):
             d[k]["calls"] += 1
             d[k]["tokens"] += r["subagent_tokens"]
