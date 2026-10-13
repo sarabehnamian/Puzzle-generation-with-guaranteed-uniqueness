@@ -238,3 +238,4 @@
 {"stage": "e3_solve", "call_id": "e3_sudoku_haiku_003", "model": "haiku", "model_id": "claude-haiku-5-5", "subagent_tokens": 174545, "tool_uses": 3, "duration_ms": 1390343, "ts": "2026-10-13T20:13:04"}
 {"stage": "e4b_heldout", "call_id": "e4b_heldout_haiku_001", "model": "haiku", "model_id": "claude-haiku-5-5", "subagent_tokens": 121697, "tool_uses": 4, "duration_ms": 217757, "ts": "2026-10-13T20:14:13"}
 {"stage": "e3_solve", "call_id": "e3_killer_haiku_002", "model": "haiku", "model_id": "claude-haiku-5-5", "subagent_tokens": 216518, "tool_uses": 4, "duration_ms": 1554584, "ts": "2026-10-13T20:15:50"}
+{"stage": "e4s_eval_g0", "call_id": "e4s_eval_g0_haiku_000", "model": "haiku", "model_id": "claude-haiku-5-5", "subagent_tokens": 200685, "tool_uses": 5, "duration_ms": 1023602, "ts": "2026-10-13T20:19:11"}
