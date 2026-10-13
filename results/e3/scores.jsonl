@@ -68,7 +68,7 @@
 {"id": "killer-01196-L1aug", "model": "haiku", "answered": true, "cell_acc": 1.0, "exact": true, "family": "killer", "level": 1, "source": "augmented"}
 {"id": "killer-00538", "model": "haiku", "answered": true, "cell_acc": 1.0, "exact": true, "family": "killer", "level": 4, "source": "minimal"}
 {"id": "killer-00163", "model": "haiku", "answered": true, "cell_acc": 1.0, "exact": true, "family": "killer", "level": 5, "source": "minimal"}
-{"id": "killer-00017", "model": "haiku", "answered": true, "cell_acc": 0.2777777777777778, "exact": false, "family": "killer", "level": 5, "source": "minimal"}
+{"id": "killer-00017", "model": "haiku", "answered": true, "cell_acc": 1.0, "exact": true, "family": "killer", "level": 5, "source": "minimal"}
 {"id": "killer-00559", "model": "haiku", "answered": true, "cell_acc": 1.0, "exact": true, "family": "killer", "level": 3, "source": "minimal"}
 {"id": "killer-00706-L1aug", "model": "haiku", "answered": true, "cell_acc": 1.0, "exact": true, "family": "killer", "level": 1, "source": "augmented"}
 {"id": "killer-00048", "model": "haiku", "answered": true, "cell_acc": 1.0, "exact": true, "family": "killer", "level": 2, "source": "minimal"}
