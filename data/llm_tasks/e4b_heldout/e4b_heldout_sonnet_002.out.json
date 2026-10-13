@@ -1,0 +1,8 @@
+{"answers": [{"id": "e4b-g1-00", "answer": {
+"1": {"pet": "bird", "drink": "milk", "color": "green", "nationality": "Dane", "job": "doctor", "hobby": "hiking"},
+"2": {"pet": "dog", "drink": "juice", "color": "red", "nationality": "Norwegian", "job": "teacher", "hobby": "tennis"},
+"3": {"pet": "cat", "drink": "cocoa", "color": "blue", "nationality": "Swede", "job": "farmer", "hobby": "cooking"},
+"4": {"pet": "rabbit", "drink": "tea", "color": "yellow", "nationality": "Brit", "job": "baker", "hobby": "chess"},
+"5": {"pet": "fish", "drink": "water", "color": "white", "nationality": "Spaniard", "job": "lawyer", "hobby": "painting"},
+"6": {"pet": "horse", "drink": "coffee", "color": "purple", "nationality": "German", "job": "pilot", "hobby": "golf"}
+}}]}
