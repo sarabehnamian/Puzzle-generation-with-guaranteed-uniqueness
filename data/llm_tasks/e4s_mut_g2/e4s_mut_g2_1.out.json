@@ -1,0 +1,8 @@
+{"variants": [
+{"parent": "e4s-g0-01", "ops": [{"op": "remove", "cell": "R1C4"}, {"op": "remove", "cell": "R8C3"}, {"op": "remove", "cell": "R3C3"}], "idea": "Remove givens in the top box and bottom-left to cut easy singles and lengthen chains."},
+{"parent": "e4s-g0-01", "ops": [{"op": "remove", "cell": "R2C7"}, {"op": "remove", "cell": "R9C1"}, {"op": "remove", "cell": "R5C8"}, {"op": "remove", "cell": "R4C8"}], "idea": "Fewer givens spread out so no unit is nearly complete."},
+{"parent": "e4s-g1-04", "ops": [{"op": "remove", "cell": "R4C9"}, {"op": "remove", "cell": "R4C8"}, {"op": "remove", "cell": "R8C7"}, {"op": "remove", "cell": "R8C4"}], "idea": "Strip the nearly complete row 4 and row 8 so easy singles vanish."},
+{"parent": "e4s-g1-04", "ops": [{"op": "remove", "cell": "R4C7"}, {"op": "remove", "cell": "R3C5"}, {"op": "remove", "cell": "R9C5"}, {"op": "remove", "cell": "R6C6"}, {"op": "remove", "cell": "R5C8"}], "idea": "Remove central givens to force deeper deductions across boxes."},
+{"parent": "e4s-g0-02", "ops": [{"op": "remove", "cell": "R8C5"}, {"op": "remove", "cell": "R4C9"}, {"op": "remove", "cell": "R3C7"}], "idea": "Remove a few givens that give quick singles in rows 8, 4 and 3."},
+{"parent": "e4s-g0-02", "ops": [{"op": "remove", "cell": "R5C8"}, {"op": "remove", "cell": "R9C7"}, {"op": "remove", "cell": "R1C9"}, {"op": "remove", "cell": "R6C4"}], "idea": "Fewer givens on the right side and center to lengthen logic chains."}
+]}

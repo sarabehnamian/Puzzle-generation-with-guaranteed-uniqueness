@@ -1,0 +1,12 @@
+{"variants":[
+{"parent":"e4s-g1-08","ops":[{"op":"remove","cell":"R6C9"},{"op":"remove","cell":"R6C8"},{"op":"remove","cell":"R3C4"},{"op":"remove","cell":"R8C3"}],"idea":"Break the nearly complete row 6 and box 3 to remove easy singles."},
+{"parent":"e4s-g1-08","ops":[{"op":"remove","cell":"R2C3"},{"op":"remove","cell":"R7C2"},{"op":"remove","cell":"R9C7"},{"op":"remove","cell":"R4C4"},{"op":"remove","cell":"R1C9"}],"idea":"Fewer givens spread across all regions so no unit is close to complete."},
+{"parent":"e4s-g1-09","ops":[{"op":"remove","cell":"R6C9"},{"op":"remove","cell":"R6C8"},{"op":"remove","cell":"R3C7"},{"op":"remove","cell":"R9C8"}],"idea":"Remove clustered givens in the bottom-right so singles are scarce."},
+{"parent":"e4s-g1-09","ops":[{"op":"remove","cell":"R5C2"},{"op":"remove","cell":"R7C5"},{"op":"remove","cell":"R9C4"},{"op":"remove","cell":"R2C8"},{"op":"remove","cell":"R8C6"}],"idea":"Strip givens that feed column and box singles to force longer chains."},
+{"parent":"e4s-g1-06","ops":[{"op":"remove","cell":"R1C6"},{"op":"remove","cell":"R3C6"},{"op":"remove","cell":"R6C8"},{"op":"remove","cell":"R8C9"}],"idea":"Thin out column 6 and the right side to reduce direct deductions."},
+{"parent":"e4s-g1-06","ops":[{"op":"remove","cell":"R2C2"},{"op":"remove","cell":"R7C2"},{"op":"remove","cell":"R5C8"},{"op":"remove","cell":"R9C1"},{"op":"remove","cell":"R4C7"}],"idea":"Remove givens across many units so fewer houses are near-complete."},
+{"parent":"e4s-g1-10","ops":[{"op":"remove","cell":"R6C1"},{"op":"remove","cell":"R6C3"},{"op":"remove","cell":"R7C9"},{"op":"remove","cell":"R7C3"}],"idea":"Break the dense row 6 and row 7 givens that make singles easy."},
+{"parent":"e4s-g1-10","ops":[{"op":"remove","cell":"R6C8"},{"op":"remove","cell":"R6C6"},{"op":"remove","cell":"R9C2"},{"op":"remove","cell":"R2C4"},{"op":"remove","cell":"R3C9"}],"idea":"Fewer givens with remaining ones spread thin across the grid."},
+{"parent":"e4s-g0-00","ops":[{"op":"remove","cell":"R4C3"},{"op":"remove","cell":"R6C3"},{"op":"remove","cell":"R3C3"},{"op":"remove","cell":"R7C6"}],"idea":"Empty column 3 of most givens so it offers no easy placements."},
+{"parent":"e4s-g0-00","ops":[{"op":"remove","cell":"R4C6"},{"op":"remove","cell":"R5C4"},{"op":"remove","cell":"R7C9"},{"op":"remove","cell":"R9C8"},{"op":"remove","cell":"R1C4"}],"idea":"Remove givens in middle boxes to lengthen deduction chains."}
+]}
