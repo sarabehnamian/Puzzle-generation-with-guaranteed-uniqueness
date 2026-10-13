@@ -33,7 +33,7 @@ On plain template text no encoder made an error: 0 of 3$\times$\EOnePlainClues c
 \setlength{\tabcolsep}{4pt}
 \begin{tabular}{lrcccccc}
 \toprule
- & & \multicolumn{3}{c}{wrong single encoding} & \multicolumn{3}{c}{dual check: disagree (caught/with error)} \\
+ & & \multicolumn{3}{c}{wrong single encoding} & \multicolumn{3}{c}{dual check: disagree (caught/with err.)} \\
 \cmidrule(lr){3-5}\cmidrule(lr){6-8}
 Text & $n$ & Sonnet A & Sonnet B & Haiku C & A--B & A--C & B--C \\
 \midrule
@@ -49,17 +49,17 @@ Text & $n$ & Sonnet A & Sonnet B & Haiku C & A--B & A--C & B--C \\
 \label{fig:example}
 \end{figure*}
 
-\begin{figure}[t]
+\begin{figure*}[t]
 \centering
-\includegraphics[width=\columnwidth]{../figures/fig2_faithfulness.pdf}
+\includegraphics[width=0.85\textwidth]{../figures/fig2_faithfulness.pdf}
 \caption{E1. (a) Share of puzzles with a wrong single encoding, with 95\% bootstrap intervals. (b) For each encoder, how its wrong encodings were detected: by disagreement with its partner encoding, or only because the wrongly encoded puzzle no longer had a unique solution. No wrong encoding escaped both checks.}
 \label{fig:e1}
-\end{figure}
+\end{figure*}
 
 \paragraph{Detection.} The dual check flagged every puzzle on which exactly one encoder of a pair was wrong. It missed the errors that both encoders shared: on paraphrased text the two Sonnet encodings disagreed on no puzzle at all, although both were wrong on the same 7. Each of those wrong encodings, however, made the encoded puzzle lose its unique solution, so the uniqueness check rejected it. Across all 299 puzzles and all three encoders, no wrong encoding passed both checks (Figure~\ref{fig:e1}b). Uniqueness works as a second detector because a minimal puzzle has no slack: changing the meaning of one clue almost always either removes the intended solution or admits a second one.
 
 \paragraph{Audit.}\label{sec:audit} We read every clue-level error by hand (\texttt{results/e1/audit.md}). There were four groups.
-(i) \emph{An ambiguous template of our own} (\EOneTaxTooStrong clue encodings per encoder): ``At least one house separates X and Y'' was generated for ``X and Y are not neighbours'' ($|p_X-p_Y|\neq1$, which allows the same house), and all three encoders read it as $|p_X-p_Y|\ge2$. Their reading is the natural one; the template is wrong. Because the clue is still true of the solution, no answer changed, and neither check can see the error; only the formal ground truth revealed it.
+(i) \emph{An ambiguous template of our own} (\EOneTaxTooStrong clues, each misread by all three encoders): ``At least one house separates X and Y'' was generated for ``X and Y are not neighbours'' ($|p_X-p_Y|\neq1$, which allows the same house), and all three encoders read it as $|p_X-p_Y|\ge2$. Their reading is the natural one; the template is wrong. Because the clue is still true of the solution, no answer changed, and neither check can see the error; only the formal ground truth revealed it.
 (ii) \emph{Counting from the right}: ``the fourth house from the right'' encoded as house~4 (Haiku 5 clues, Sonnet~B 1).
 (iii) \emph{Direction flips}: ``the left-hand neighbour of the German drinks juice'' encoded with the German on the left (2 clues).
 (iv) \emph{Paraphrase drift}: Sonnet, asked to keep the meaning exactly, rewrote ``exactly one house between X and Y'' as ``two houses separate X and Y'' in 7 puzzles. The encoders then encoded what the text said. This is an error of the text, not of the encoding, and dual encoding by construction cannot catch it.
@@ -75,6 +75,7 @@ The puzzles were, however, easy and redundant (Figure~\ref{fig:e2}). All 20 Sudo
 \caption{E2. Validity, level and redundancy of 100 puzzles written by Sonnet. ``Valid'' = parses, unique, matches the stated solution and fair (L1--L3). Levels are given as L1/L2/L3 counts before and after solver minimisation.}
 \label{tab:e2}
 \small
+\setlength{\tabcolsep}{4pt}
 \begin{tabular}{lrrrrrccrc}
 \toprule
 Family & $n$ & unique & as stated & valid & after repair & levels (LLM) & levels (min.) & redundancy & clues \\
@@ -84,12 +85,12 @@ Family & $n$ & unique & as stated & valid & after repair & levels (LLM) & levels
 \end{tabular}
 \end{table*}
 
-\begin{figure}[t]
+\begin{figure*}[t]
 \centering
-\includegraphics[width=\columnwidth]{../figures/fig3_validity.pdf}
+\includegraphics[width=0.85\textwidth]{../figures/fig3_validity.pdf}
 \caption{E2. (a) Ladder levels of the LLM-written puzzles, of the same puzzles after solver minimisation, and of the pipeline's own bank. (b) Fraction of clues that can each be removed without losing uniqueness; the pipeline's puzzles have none by construction.}
 \label{fig:e2}
-\end{figure}
+\end{figure*}
 
 \subsection{E3: the ladder, solver effort and LLM accuracy}
 

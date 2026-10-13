@@ -113,7 +113,7 @@ def main():
     for k, d in E1["taxonomy"].items():
         for cat, n in d.items():
             tax[cat] += n
-    put("EOneTaxTooStrong", f"{tax.get('too strong (other)', 0)}")
+    put("EOneTaxTooStrong", f"{E1['taxonomy']['hard|A'].get('too strong (other)', 0)}")
 
     # ---- E2 --------------------------------------------------------------
     E2 = J("e2/summary.json")

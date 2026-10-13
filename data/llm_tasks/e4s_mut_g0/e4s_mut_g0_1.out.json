@@ -1,0 +1,8 @@
+{"variants": [
+{"parent":"e4s-g0-04","ops":[{"op":"remove","cell":"R6C3"},{"op":"remove","cell":"R6C9"},{"op":"remove","cell":"R3C2"}],"idea":"Break the nearly complete row 6 and box 1 so easy singles disappear."},
+{"parent":"e4s-g0-04","ops":[{"op":"remove","cell":"R7C9"},{"op":"remove","cell":"R3C1"},{"op":"remove","cell":"R9C6"}],"idea":"Remove givens from dense spots to lengthen deduction chains."},
+{"parent":"e4s-g0-03","ops":[{"op":"remove","cell":"R6C8"},{"op":"remove","cell":"R5C9"},{"op":"remove","cell":"R8C8"}],"idea":"Thin out the right side where rows 5 and 6 are nearly complete."},
+{"parent":"e4s-g0-03","ops":[{"op":"remove","cell":"R3C4"},{"op":"remove","cell":"R9C6"},{"op":"remove","cell":"R2C3"}],"idea":"Remove givens that give easy singles in the top-left box and the bottom row."},
+{"parent":"e4s-g0-07","ops":[{"op":"remove","cell":"R2C4"},{"op":"remove","cell":"R2C6"},{"op":"remove","cell":"R8C3"}],"idea":"Break the nearly complete row 2 and row 8."},
+{"parent":"e4s-g0-07","ops":[{"op":"remove","cell":"R2C5"},{"op":"remove","cell":"R4C2"},{"op":"remove","cell":"R8C2"},{"op":"remove","cell":"R6C9"}],"idea":"Fewer givens with no row or box close to complete."}
+]}
