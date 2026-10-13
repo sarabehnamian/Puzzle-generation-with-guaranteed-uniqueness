@@ -1,0 +1,8 @@
+{"variants": [
+{"parent": "e4s-g1-09", "ops": [{"op":"remove","cell":"R6C8"},{"op":"remove","cell":"R6C9"},{"op":"remove","cell":"R9C8"}], "idea": "Strip the nearly complete row 6 and the bottom-right clues so singles vanish."},
+{"parent": "e4s-g1-09", "ops": [{"op":"remove","cell":"R5C5"},{"op":"remove","cell":"R3C6"},{"op":"remove","cell":"R8C3"},{"op":"remove","cell":"R4C2"}], "idea": "Remove central and box-anchoring givens to force longer deduction chains."},
+{"parent": "e4s-g0-01", "ops": [{"op":"remove","cell":"R1C4"},{"op":"remove","cell":"R5C8"},{"op":"remove","cell":"R8C7"},{"op":"remove","cell":"R9C1"}], "idea": "Remove one given from different regions to leave fewer easy singles."},
+{"parent": "e4s-g0-01", "ops": [{"op":"remove","cell":"R2C5"},{"op":"remove","cell":"R4C8"},{"op":"remove","cell":"R6C4"},{"op":"remove","cell":"R8C3"},{"op":"remove","cell":"R3C7"}], "idea": "Fewer givens spread out so no unit is close to complete."},
+{"parent": "e4s-g0-02", "ops": [{"op":"remove","cell":"R8C5"},{"op":"remove","cell":"R5C5"},{"op":"remove","cell":"R1C9"},{"op":"remove","cell":"R9C8"}], "idea": "Remove the central column clues and corner clues to require deeper elimination."},
+{"parent": "e4s-g0-02", "ops": [{"op":"remove","cell":"R4C9"},{"op":"remove","cell":"R3C7"},{"op":"remove","cell":"R8C4"},{"op":"remove","cell":"R2C6"},{"op":"remove","cell":"R7C1"}], "idea": "Thin out givens across boxes so every step needs multi-constraint reasoning."}
+]}

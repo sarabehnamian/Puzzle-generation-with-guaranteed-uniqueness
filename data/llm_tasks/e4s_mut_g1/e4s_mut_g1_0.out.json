@@ -1,0 +1,12 @@
+{"variants": [
+{"parent":"e4s-g1-08","ops":[{"op":"remove","cell":"R6C8"},{"op":"remove","cell":"R6C9"},{"op":"remove","cell":"R7C2"},{"op":"remove","cell":"R3C3"}],"idea":"Thin out nearly complete row 6 and row 7 so singles vanish."},
+{"parent":"e4s-g1-08","ops":[{"op":"remove","cell":"R3C4"},{"op":"remove","cell":"R7C9"},{"op":"remove","cell":"R9C1"},{"op":"remove","cell":"R2C3"}],"idea":"Remove givens across boxes to reduce easy singles and force longer chains."},
+{"parent":"e4s-g1-06","ops":[{"op":"remove","cell":"R1C6"},{"op":"remove","cell":"R2C2"},{"op":"remove","cell":"R7C2"},{"op":"remove","cell":"R6C8"}],"idea":"Remove givens from dense rows and boxes to cut naked singles."},
+{"parent":"e4s-g1-06","ops":[{"op":"remove","cell":"R3C9"},{"op":"remove","cell":"R8C9"},{"op":"remove","cell":"R5C7"},{"op":"remove","cell":"R9C1"}],"idea":"Fewer givens with none of the lines nearly complete."},
+{"parent":"e4s-g1-10","ops":[{"op":"remove","cell":"R6C2"},{"op":"remove","cell":"R6C3"},{"op":"remove","cell":"R7C3"},{"op":"remove","cell":"R7C9"}],"idea":"Dismantle the near-complete rows 6 and 7."},
+{"parent":"e4s-g1-10","ops":[{"op":"remove","cell":"R6C6"},{"op":"remove","cell":"R7C4"},{"op":"remove","cell":"R2C4"},{"op":"remove","cell":"R9C6"}],"idea":"Remove column 4 and 6 givens that make singles easy."},
+{"parent":"e4s-g0-00","ops":[{"op":"remove","cell":"R4C7"},{"op":"remove","cell":"R7C9"},{"op":"remove","cell":"R3C1"},{"op":"remove","cell":"R9C8"}],"idea":"Fewer givens so deductions need more candidate tracking."},
+{"parent":"e4s-g0-00","ops":[{"op":"remove","cell":"R5C8"},{"op":"remove","cell":"R6C6"},{"op":"remove","cell":"R3C5"},{"op":"remove","cell":"R4C2"}],"idea":"Remove givens in the central band to lengthen the logic chains."},
+{"parent":"e4s-g1-04","ops":[{"op":"remove","cell":"R4C8"},{"op":"remove","cell":"R4C9"},{"op":"remove","cell":"R8C5"},{"op":"remove","cell":"R9C5"}],"idea":"Open up the nearly full row 4 and the bottom band."},
+{"parent":"e4s-g1-04","ops":[{"op":"remove","cell":"R4C7"},{"op":"remove","cell":"R3C7"},{"op":"remove","cell":"R8C6"},{"op":"remove","cell":"R9C8"}],"idea":"Remove givens in columns 7 and 8 to weaken easy singles."}
+]}
