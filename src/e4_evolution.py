@@ -349,5 +349,51 @@ def step():
         step()
 
 
+def heldout():
+    """Re-solve the initial and final populations with fresh calls of every model."""
+    st = load()
+    assert st and st["phase"] == "done", "evolution not finished"
+    init_ids = st["history"][0]["ids"]
+    final_ids = st["history"][-1]["ids"]
+    ids = list(dict.fromkeys(init_ids + final_ids))
+    items = [(i, st["all"][i]["spec"]) for i in ids]
+    stage = f"{RUN}_heldout"
+    if not llm.manifest(stage):
+        for m in [E4["train_solver"]] + E4["heldout_solvers"]:
+            make_tasks(stage, items, m, 4, f"{CFG['seed']}-{RUN}-heldout-{m}")
+        print("wrote held-out tasks", stage)
+        return
+    if llm.pending(stage):
+        print("waiting for", stage, len(llm.pending(stage)))
+        return
+    from .families import get as _get
+    got = collect(stage)
+    rows = []
+    for i in ids:
+        spec = st["all"][i]["spec"]
+        for m in [E4["train_solver"]] + E4["heldout_solvers"]:
+            ans = got.get((i, m))
+            s = _get(spec["family"]).score(spec, ans) if ans is not None else {"cell_acc": 0.0, "exact": False}
+            rows.append({"id": i, "model": m, "initial": i in init_ids, "final": i in final_ids,
+                         "level": st["all"][i].get("level"), "cell_acc": s["cell_acc"], "exact": s["exact"],
+                         "answered": ans is not None})
+    out = ROOT / "results" / RUN
+    out.mkdir(parents=True, exist_ok=True)
+    with open(out / "heldout.jsonl", "w") as f:
+        for r in rows:
+            f.write(json.dumps(r) + "\n")
+    summ = {}
+    for grp in ("initial", "final"):
+        for m in [E4["train_solver"]] + E4["heldout_solvers"]:
+            rr = [r for r in rows if r[grp] and r["model"] == m]
+            summ[f"{grp}|{m}"] = {"n": len(rr), "exact": sum(r["exact"] for r in rr) / max(1, len(rr)),
+                                  "cell_acc": sum(r["cell_acc"] for r in rr) / max(1, len(rr))}
+    (out / "heldout_summary.json").write_text(json.dumps(summ, indent=1))
+    print(json.dumps(summ, indent=1))
+
+
 if __name__ == "__main__":
-    step()
+    if "heldout" in sys.argv:
+        heldout()
+    else:
+        step()
