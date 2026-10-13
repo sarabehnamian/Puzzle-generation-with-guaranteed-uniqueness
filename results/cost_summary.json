@@ -1,9 +1,10 @@
 {
  "total": {
-  "calls": 240,
-  "tokens": 16775705,
-  "usd": 44.6570742,
-  "tool_use_violations": 16
+  "calls": 244,
+  "tokens": 17334196,
+  "api_estimate_usd": 25.659184199999995,
+  "usd": 45.0439202,
+  "tool_use_violations": 18
  },
  "by_experiment": {
   "probe": {
@@ -22,9 +23,9 @@
    "usd": 10.997652200000003
   },
   "e4": {
-   "calls": 35,
-   "tokens": 2480253,
-   "usd": 2.6002358999999995
+   "calls": 39,
+   "tokens": 3038744,
+   "usd": 2.9870819
   },
   "e2": {
    "calls": 20,
@@ -44,14 +45,14 @@
  },
  "by_model": {
   "haiku": {
-   "calls": 81,
-   "tokens": 6597838,
-   "usd": 1.6001782
+   "calls": 83,
+   "tokens": 7057558,
+   "usd": 1.7894822
   },
   "sonnet": {
-   "calls": 130,
-   "tokens": 8192578,
-   "usd": 27.125196000000003
+   "calls": 132,
+   "tokens": 8291349,
+   "usd": 27.322738
   },
   "opus": {
    "calls": 29,

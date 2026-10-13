@@ -41,7 +41,16 @@ def summary():
             d[k]["calls"] += 1
             d[k]["tokens"] += r["subagent_tokens"]
             d[k]["usd"] += usd
-    tot = {"calls": len(L), "tokens": sum(r["subagent_tokens"] for r in L),
+    # what the same calls would cost through the API, without the subagent harness
+    # overhead: task file as input, the rest of the reported tokens beyond the overhead as output
+    api = 0.0
+    for r in L:
+        tin, tout = PRICE[r["model"]]
+        tp = ROOT / "data" / "llm_tasks" / r["stage"] / f"{r['call_id']}.md"
+        task = len(tp.read_text()) // 4 if tp.exists() else 0
+        out_tok = max(0, r["subagent_tokens"] - OVERHEAD - task)
+        api += (task * tin + out_tok * tout) / 1e6
+    tot = {"calls": len(L), "tokens": sum(r["subagent_tokens"] for r in L), "api_estimate_usd": api,
            "usd": sum(estimate(r)[2] for r in L),
            "tool_use_violations": sum(1 for r in L if r["tool_uses"] > 3)}
     out = {"total": tot, "by_experiment": by_stage, "by_model": by_model,

@@ -88,11 +88,14 @@ def main():
         for lev, rs in sorted(by.items()):
             for r in rs[:EXTRA_PER_LEVEL]:
                 items.append((r["id"], r["spec"], "bank"))
-    st = ROOT / "data" / CFG["e4"].get("run", "e4") / "state.json"
-    if st.exists():
-        s = json.loads(st.read_text())
-        for p in s["pop"]:
-            items.append((p["id"], p["spec"], "e4-evolved-final"))
+    for key in ("e4", "e4s"):
+        st = ROOT / "data" / CFG[key].get("run", key) / "state.json"
+        if st.exists():
+            s = json.loads(st.read_text())
+            if s.get("phase") != "done":
+                continue
+            for p in s["pop"]:
+                items.append((p["id"], p["spec"], "e4-evolved-final"))
     with Pool(4) as pool:
         built = pool.map(build_item, items, chunksize=2)
     with (OUT / "puzzles.jsonl").open("w") as f:

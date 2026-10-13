@@ -343,6 +343,10 @@ if __name__ == "__main__":
     cmd = sys.argv[1]
     if cmd == "prepare_gen":
         prepare_gen()
+    elif cmd == "prepare_enc":            # dual encodings of the zebra puzzles
+        prepare_enc("e2_gen", "e2_enc")
+    elif cmd == "prepare_repair1":        # one round of solver feedback
+        prepare_repair(evaluate("e2_gen", "e2_enc"), "e2_repair1")
 
 
 # ------------------------------------------------------------------ summary

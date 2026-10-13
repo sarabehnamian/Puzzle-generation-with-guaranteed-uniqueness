@@ -45,6 +45,7 @@ def main():
     put("NViolations", f"{C['total']['tool_use_violations']}")
     put("TokensM", f"{C['total']['tokens'] / 1e6:.1f}")
     put("CostUSD", f"{C['total']['usd']:.0f}")
+    put("CostAPI", f"{C['total']['api_estimate_usd']:.0f}")
     for m in MODELS:
         d = C["by_model"].get(m, {"calls": 0, "usd": 0, "tokens": 0})
         put(f"Calls{MNAME[m]}", f"{d['calls']}")

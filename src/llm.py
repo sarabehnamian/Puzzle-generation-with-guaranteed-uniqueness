@@ -133,6 +133,9 @@ if __name__ == "__main__":
             if int(tu) > 3:
                 print("WARNING: tool_uses > 3 for", cid)
         print("logged", len(sys.argv) - 3)
+    elif cmd == "api":
+        # run all pending calls of a stage through the Messages API (needs ANTHROPIC_API_KEY)
+        run_api(sys.argv[2])
     elif cmd == "total":
         L = ledger()
         print(len(L), "calls,", sum(r["subagent_tokens"] for r in L), "tokens")
