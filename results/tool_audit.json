@@ -1,20 +1,20 @@
 {
- "n_ledger": 230,
- "n_matched": 229,
+ "n_ledger": 240,
+ "n_matched": 239,
  "tool_counts": {
-  "Read": 229,
-  "Write": 235,
-  "SubagentHandback": 229,
+  "Read": 239,
+  "Write": 246,
+  "SubagentHandback": 239,
   "mcp__claude-code-remote__list_events": 1,
   "mcp__claude-code-remote__send_message": 4,
   "mcp__claude-code-remote__get_session": 1,
-  "mcp__claude-code-remote__list_sessions": 1,
+  "mcp__claude-code-remote__list_sessions": 2,
   "mcp__claude-code-remote__read_documentation": 1,
   "mcp__claude-code-remote__list_triggers": 1,
   "Edit": 1
  },
- "n_with_forbidden_tool": 10,
- "n_ledger_over_3": 14,
+ "n_with_forbidden_tool": 11,
+ "n_ledger_over_3": 16,
  "over_3_explained": [
   {
    "call_id": "e1_encC_000",
@@ -182,6 +182,29 @@
    "tools": {
     "Read": 1,
     "Write": 5,
+    "SubagentHandback": 1
+   },
+   "forbidden": []
+  },
+  {
+   "call_id": "e4b_heldout_haiku_001",
+   "ledger_tool_uses": 4,
+   "tools": {
+    "Read": 1,
+    "Write": 1,
+    "mcp__claude-code-remote__list_sessions": 1,
+    "SubagentHandback": 1
+   },
+   "forbidden": [
+    "mcp__claude-code-remote__list_sessions"
+   ]
+  },
+  {
+   "call_id": "e3_killer_haiku_002",
+   "ledger_tool_uses": 4,
+   "tools": {
+    "Read": 1,
+    "Write": 2,
     "SubagentHandback": 1
    },
    "forbidden": []
