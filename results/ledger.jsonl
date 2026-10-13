@@ -208,3 +208,4 @@
 {"stage": "e3_solve", "call_id": "e3_killer_opus_000", "model": "opus", "model_id": "claude-opus-5-5", "subagent_tokens": 62526, "tool_uses": 3, "duration_ms": 128615, "ts": "2026-10-13T20:05:46"}
 {"stage": "e3_solve", "call_id": "e3_killer_sonnet_003", "model": "sonnet", "model_id": "claude-sonnet-5-5", "subagent_tokens": 109040, "tool_uses": 3, "duration_ms": 374961, "ts": "2026-10-13T20:06:00"}
 {"stage": "e3_solve", "call_id": "e3_killer_opus_001", "model": "opus", "model_id": "claude-opus-5-5", "subagent_tokens": 72878, "tool_uses": 3, "duration_ms": 206838, "ts": "2026-10-13T20:06:58"}
+{"stage": "e3_solve", "call_id": "e3_futoshiki_opus_002", "model": "opus", "model_id": "claude-opus-5-5", "subagent_tokens": 59801, "tool_uses": 3, "duration_ms": 102152, "ts": "2026-10-13T20:07:10"}
