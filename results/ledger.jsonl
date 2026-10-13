@@ -254,3 +254,4 @@
 {"stage": "e4s_eval_g2", "call_id": "e4s_eval_g2_haiku_001", "model": "haiku", "model_id": "claude-haiku-5-5", "subagent_tokens": 116720, "tool_uses": 3, "duration_ms": 252031, "ts": "2026-10-13T20:43:18"}
 {"stage": "e4s_eval_g2", "call_id": "e4s_eval_g2_haiku_005", "model": "haiku", "model_id": "claude-haiku-5-5", "subagent_tokens": 124633, "tool_uses": 3, "duration_ms": 279479, "ts": "2026-10-13T20:43:48"}
 {"stage": "e4s_eval_g2", "call_id": "e4s_eval_g2_haiku_004", "model": "haiku", "model_id": "claude-haiku-5-5", "subagent_tokens": 125318, "tool_uses": 6, "duration_ms": 751642, "ts": "2026-10-13T20:51:41"}
+{"stage": "e4s_eval_g2", "call_id": "e4s_eval_g2_haiku_003", "model": "haiku", "model_id": "claude-haiku-5-5", "subagent_tokens": 128416, "tool_uses": 3, "duration_ms": 762774, "ts": "2026-10-13T20:51:47"}
