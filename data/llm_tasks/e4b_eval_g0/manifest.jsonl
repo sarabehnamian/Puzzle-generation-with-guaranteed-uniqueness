@@ -1,0 +1,2 @@
+{"stage": "e4b_eval_g0", "call_id": "e4b_eval_g0_haiku_000", "model": "haiku", "items": ["e4b-g0-03", "e4b-g0-00", "e4b-g0-07", "e4b-g0-04"], "task": "data/llm_tasks/e4b_eval_g0/e4b_eval_g0_haiku_000.md", "out": "data/llm_tasks/e4b_eval_g0/e4b_eval_g0_haiku_000.out.json"}
+{"stage": "e4b_eval_g0", "call_id": "e4b_eval_g0_haiku_001", "model": "haiku", "items": ["e4b-g0-05", "e4b-g0-06", "e4b-g0-02", "e4b-g0-01"], "task": "data/llm_tasks/e4b_eval_g0/e4b_eval_g0_haiku_001.md", "out": "data/llm_tasks/e4b_eval_g0/e4b_eval_g0_haiku_001.out.json"}

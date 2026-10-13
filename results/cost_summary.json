@@ -1,0 +1,64 @@
+{
+ "total": {
+  "calls": 100,
+  "tokens": 5913129,
+  "usd": 12.4623606,
+  "tool_use_violations": 1
+ },
+ "by_experiment": {
+  "probe": {
+   "calls": 1,
+   "tokens": 50225,
+   "usd": 0.0051125
+  },
+  "pilot": {
+   "calls": 4,
+   "tokens": 232757,
+   "usd": 0.6119699999999999
+  },
+  "e1": {
+   "calls": 87,
+   "tokens": 5169476,
+   "usd": 10.862049000000004
+  },
+  "e4": {
+   "calls": 4,
+   "tokens": 224157,
+   "usd": 0.2254411
+  },
+  "e2": {
+   "calls": 4,
+   "tokens": 236514,
+   "usd": 0.7577879999999999
+  }
+ },
+ "by_model": {
+  "haiku": {
+   "calls": 20,
+   "tokens": 1267434,
+   "usd": 0.20717860000000002
+  },
+  "sonnet": {
+   "calls": 80,
+   "tokens": 4645695,
+   "usd": 12.255182000000001
+  }
+ },
+ "assumptions": {
+  "prices_per_mtok": {
+   "haiku": [
+    0.1,
+    0.5
+   ],
+   "sonnet": [
+    2.0,
+    10.0
+   ],
+   "opus": [
+    4.0,
+    20.0
+   ]
+  },
+  "fixed_overhead_tokens_as_input": 50000
+ }
+}

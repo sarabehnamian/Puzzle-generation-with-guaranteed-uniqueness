@@ -1,0 +1,15 @@
+{"id": "zebra-01412", "model": "haiku", "answered": true, "cell_acc": 1.0, "exact": true, "family": "zebra", "level": 2, "source": "minimal"}
+{"id": "zebra-00383", "model": "haiku", "answered": true, "cell_acc": 1.0, "exact": true, "family": "zebra", "level": 4, "source": "minimal"}
+{"id": "zebra-00618", "model": "haiku", "answered": true, "cell_acc": 1.0, "exact": true, "family": "zebra", "level": 2, "source": "minimal"}
+{"id": "zebra-01380-L1aug", "model": "haiku", "answered": true, "cell_acc": 1.0, "exact": true, "family": "zebra", "level": 1, "source": "augmented"}
+{"id": "zebra-00414-L1aug", "model": "haiku", "answered": true, "cell_acc": 1.0, "exact": true, "family": "zebra", "level": 1, "source": "augmented"}
+{"id": "zebra-00478", "model": "haiku", "answered": true, "cell_acc": 1.0, "exact": true, "family": "zebra", "level": 3, "source": "minimal"}
+{"id": "zebra-01103-L1aug", "model": "haiku", "answered": true, "cell_acc": 1.0, "exact": true, "family": "zebra", "level": 1, "source": "augmented"}
+{"id": "zebra-00704-L1aug", "model": "haiku", "answered": true, "cell_acc": 1.0, "exact": true, "family": "zebra", "level": 1, "source": "augmented"}
+{"id": "zebra-00369", "model": "haiku", "answered": true, "cell_acc": 1.0, "exact": true, "family": "zebra", "level": 3, "source": "minimal"}
+{"id": "zebra-00829", "model": "haiku", "answered": true, "cell_acc": 1.0, "exact": true, "family": "zebra", "level": 4, "source": "minimal"}
+{"id": "zebra-00668", "model": "haiku", "answered": true, "cell_acc": 1.0, "exact": true, "family": "zebra", "level": 4, "source": "minimal"}
+{"id": "zebra-01132", "model": "haiku", "answered": true, "cell_acc": 1.0, "exact": true, "family": "zebra", "level": 2, "source": "minimal"}
+{"id": "zebra-00647", "model": "haiku", "answered": true, "cell_acc": 1.0, "exact": true, "family": "zebra", "level": 3, "source": "minimal"}
+{"id": "zebra-01137", "model": "haiku", "answered": true, "cell_acc": 1.0, "exact": true, "family": "zebra", "level": 2, "source": "minimal"}
+{"id": "zebra-01459", "model": "haiku", "answered": true, "cell_acc": 1.0, "exact": true, "family": "zebra", "level": 2, "source": "minimal"}

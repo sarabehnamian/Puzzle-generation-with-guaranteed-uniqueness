@@ -1,0 +1,499 @@
+{
+ "n_puzzles": 299,
+ "styles": {
+  "plain": {
+   "n": 100,
+   "n_clues": 1369,
+   "A": {
+    "puzzle_error": [
+     0.0,
+     0.0,
+     0.0
+    ],
+    "answer_error": [
+     0.0,
+     0.0,
+     0.0
+    ],
+    "clue_errors": 0,
+    "clue_error_rate": 0.0,
+    "invalid": 0,
+    "wrong_but_not_unique": 0
+   },
+   "B": {
+    "puzzle_error": [
+     0.0,
+     0.0,
+     0.0
+    ],
+    "answer_error": [
+     0.0,
+     0.0,
+     0.0
+    ],
+    "clue_errors": 0,
+    "clue_error_rate": 0.0,
+    "invalid": 0,
+    "wrong_but_not_unique": 0
+   },
+   "C": {
+    "puzzle_error": [
+     0.0,
+     0.0,
+     0.0
+    ],
+    "answer_error": [
+     0.0,
+     0.0,
+     0.0
+    ],
+    "clue_errors": 0,
+    "clue_error_rate": 0.0,
+    "invalid": 0,
+    "wrong_but_not_unique": 0
+   },
+   "AB": {
+    "disagreement": [
+     0.0,
+     0.0,
+     0.0
+    ],
+    "n_with_error": 0,
+    "detected": 0,
+    "undetected_shared_error": 0
+   },
+   "AC": {
+    "disagreement": [
+     0.0,
+     0.0,
+     0.0
+    ],
+    "n_with_error": 0,
+    "detected": 0,
+    "undetected_shared_error": 0
+   },
+   "BC": {
+    "disagreement": [
+     0.0,
+     0.0,
+     0.0
+    ],
+    "n_with_error": 0,
+    "detected": 0,
+    "undetected_shared_error": 0
+   }
+  },
+  "hard": {
+   "n": 100,
+   "n_clues": 1343,
+   "A": {
+    "puzzle_error": [
+     0.0,
+     0.0,
+     0.0
+    ],
+    "answer_error": [
+     0.0,
+     0.0,
+     0.0
+    ],
+    "clue_errors": 15,
+    "clue_error_rate": 0.011169024571854059,
+    "invalid": 0,
+    "wrong_but_not_unique": 0
+   },
+   "B": {
+    "puzzle_error": [
+     0.02,
+     0.0,
+     0.05
+    ],
+    "answer_error": [
+     0.02,
+     0.0,
+     0.05
+    ],
+    "clue_errors": 17,
+    "clue_error_rate": 0.012658227848101266,
+    "invalid": 0,
+    "wrong_but_not_unique": 2
+   },
+   "C": {
+    "puzzle_error": [
+     0.06,
+     0.02,
+     0.11
+    ],
+    "answer_error": [
+     0.06,
+     0.02,
+     0.11
+    ],
+    "clue_errors": 21,
+    "clue_error_rate": 0.01563663440059568,
+    "invalid": 0,
+    "wrong_but_not_unique": 5
+   },
+   "AB": {
+    "disagreement": [
+     0.02,
+     0.0,
+     0.05
+    ],
+    "n_with_error": 2,
+    "detected": 2,
+    "undetected_shared_error": 0
+   },
+   "AC": {
+    "disagreement": [
+     0.06,
+     0.02,
+     0.11
+    ],
+    "n_with_error": 6,
+    "detected": 6,
+    "undetected_shared_error": 0
+   },
+   "BC": {
+    "disagreement": [
+     0.06,
+     0.02,
+     0.11
+    ],
+    "n_with_error": 7,
+    "detected": 6,
+    "undetected_shared_error": 1
+   }
+  },
+  "paraphrase": {
+   "n": 99,
+   "n_clues": 1349,
+   "A": {
+    "puzzle_error": [
+     0.0707070707070707,
+     0.030303030303030304,
+     0.12121212121212122
+    ],
+    "answer_error": [
+     0.0707070707070707,
+     0.030303030303030304,
+     0.12121212121212122
+    ],
+    "clue_errors": 7,
+    "clue_error_rate": 0.005189028910303929,
+    "invalid": 0,
+    "wrong_but_not_unique": 7
+   },
+   "B": {
+    "puzzle_error": [
+     0.0707070707070707,
+     0.030303030303030304,
+     0.12121212121212122
+    ],
+    "answer_error": [
+     0.0707070707070707,
+     0.030303030303030304,
+     0.12121212121212122
+    ],
+    "clue_errors": 7,
+    "clue_error_rate": 0.005189028910303929,
+    "invalid": 0,
+    "wrong_but_not_unique": 7
+   },
+   "C": {
+    "puzzle_error": [
+     0.08080808080808081,
+     0.030303030303030304,
+     0.13131313131313133
+    ],
+    "answer_error": [
+     0.08080808080808081,
+     0.030303030303030304,
+     0.13131313131313133
+    ],
+    "clue_errors": 8,
+    "clue_error_rate": 0.005930318754633061,
+    "invalid": 0,
+    "wrong_but_not_unique": 8
+   },
+   "AB": {
+    "disagreement": [
+     0.0,
+     0.0,
+     0.0
+    ],
+    "n_with_error": 7,
+    "detected": 0,
+    "undetected_shared_error": 7
+   },
+   "AC": {
+    "disagreement": [
+     0.010101010101010102,
+     0.0,
+     0.030303030303030304
+    ],
+    "n_with_error": 8,
+    "detected": 1,
+    "undetected_shared_error": 7
+   },
+   "BC": {
+    "disagreement": [
+     0.010101010101010102,
+     0.0,
+     0.030303030303030304
+    ],
+    "n_with_error": 8,
+    "detected": 1,
+    "undetected_shared_error": 7
+   }
+  },
+  "all": {
+   "n": 299,
+   "n_clues": 4061,
+   "A": {
+    "puzzle_error": [
+     0.023411371237458192,
+     0.006688963210702341,
+     0.043478260869565216
+    ],
+    "answer_error": [
+     0.023411371237458192,
+     0.006688963210702341,
+     0.043478260869565216
+    ],
+    "clue_errors": 22,
+    "clue_error_rate": 0.005417384880571288,
+    "invalid": 0,
+    "wrong_but_not_unique": 7
+   },
+   "B": {
+    "puzzle_error": [
+     0.030100334448160536,
+     0.013377926421404682,
+     0.05016722408026756
+    ],
+    "answer_error": [
+     0.030100334448160536,
+     0.013377926421404682,
+     0.05016722408026756
+    ],
+    "clue_errors": 24,
+    "clue_error_rate": 0.005909874415168678,
+    "invalid": 0,
+    "wrong_but_not_unique": 9
+   },
+   "C": {
+    "puzzle_error": [
+     0.046822742474916385,
+     0.023411371237458192,
+     0.0703177257525079
+    ],
+    "answer_error": [
+     0.046822742474916385,
+     0.023411371237458192,
+     0.0703177257525079
+    ],
+    "clue_errors": 29,
+    "clue_error_rate": 0.007141098251662152,
+    "invalid": 0,
+    "wrong_but_not_unique": 13
+   },
+   "AB": {
+    "disagreement": [
+     0.006688963210702341,
+     0.0,
+     0.016722408026755852
+    ],
+    "n_with_error": 9,
+    "detected": 2,
+    "undetected_shared_error": 7
+   },
+   "AC": {
+    "disagreement": [
+     0.023411371237458192,
+     0.006688963210702341,
+     0.04013377926421405
+    ],
+    "n_with_error": 14,
+    "detected": 7,
+    "undetected_shared_error": 7
+   },
+   "BC": {
+    "disagreement": [
+     0.023411371237458192,
+     0.006688963210702341,
+     0.04021739130434737
+    ],
+    "n_with_error": 15,
+    "detected": 7,
+    "undetected_shared_error": 8
+   }
+  }
+ },
+ "taxonomy": {
+  "hard|A": {
+   "too strong (other)": 15
+  },
+  "hard|B": {
+   "too strong (other)": 15,
+   "wrong house number/ordinal": 1,
+   "direction flipped": 1
+  },
+  "hard|C": {
+   "too strong (other)": 15,
+   "wrong house number/ordinal": 6
+  },
+  "paraphrase|C": {
+   "direction flipped": 1,
+   "'one house between' misread": 7
+  },
+  "paraphrase|A": {
+   "'one house between' misread": 7
+  },
+  "paraphrase|B": {
+   "'one house between' misread": 7
+  }
+ },
+ "error_rate_by_clue_type": {
+  "plain|left_of": {
+   "errors": 0,
+   "encodings": 801
+  },
+  "plain|next_to": {
+   "errors": 0,
+   "encodings": 588
+  },
+  "plain|same": {
+   "errors": 0,
+   "encodings": 813
+  },
+  "plain|at": {
+   "errors": 0,
+   "encodings": 459
+  },
+  "plain|gap2": {
+   "errors": 0,
+   "encodings": 453
+  },
+  "plain|not_at": {
+   "errors": 0,
+   "encodings": 45
+  },
+  "plain|or": {
+   "errors": 0,
+   "encodings": 357
+  },
+  "plain|not_same": {
+   "errors": 0,
+   "encodings": 69
+  },
+  "plain|before": {
+   "errors": 0,
+   "encodings": 282
+  },
+  "plain|end": {
+   "errors": 0,
+   "encodings": 114
+  },
+  "plain|not_next_to": {
+   "errors": 0,
+   "encodings": 126
+  },
+  "hard|between": {
+   "errors": 0,
+   "encodings": 375
+  },
+  "hard|gap2": {
+   "errors": 0,
+   "encodings": 381
+  },
+  "hard|at": {
+   "errors": 5,
+   "encodings": 357
+  },
+  "hard|left_of": {
+   "errors": 1,
+   "encodings": 657
+  },
+  "hard|next_to": {
+   "errors": 0,
+   "encodings": 474
+  },
+  "hard|or": {
+   "errors": 0,
+   "encodings": 327
+  },
+  "hard|before": {
+   "errors": 0,
+   "encodings": 210
+  },
+  "hard|same": {
+   "errors": 0,
+   "encodings": 768
+  },
+  "hard|neither": {
+   "errors": 0,
+   "encodings": 126
+  },
+  "hard|not_same": {
+   "errors": 0,
+   "encodings": 78
+  },
+  "hard|not_next_to": {
+   "errors": 45,
+   "encodings": 141
+  },
+  "hard|not_at": {
+   "errors": 2,
+   "encodings": 51
+  },
+  "hard|end": {
+   "errors": 0,
+   "encodings": 84
+  },
+  "paraphrase|next_to": {
+   "errors": 0,
+   "encodings": 582
+  },
+  "paraphrase|at": {
+   "errors": 0,
+   "encodings": 396
+  },
+  "paraphrase|before": {
+   "errors": 0,
+   "encodings": 276
+  },
+  "paraphrase|left_of": {
+   "errors": 1,
+   "encodings": 789
+  },
+  "paraphrase|gap2": {
+   "errors": 21,
+   "encodings": 498
+  },
+  "paraphrase|same": {
+   "errors": 0,
+   "encodings": 840
+  },
+  "paraphrase|or": {
+   "errors": 0,
+   "encodings": 291
+  },
+  "paraphrase|not_next_to": {
+   "errors": 0,
+   "encodings": 123
+  },
+  "paraphrase|not_same": {
+   "errors": 0,
+   "encodings": 96
+  },
+  "paraphrase|not_at": {
+   "errors": 0,
+   "encodings": 48
+  },
+  "paraphrase|end": {
+   "errors": 0,
+   "encodings": 108
+  }
+ }
+}

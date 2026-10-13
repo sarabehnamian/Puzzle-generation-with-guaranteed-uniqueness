@@ -1,0 +1,1 @@
+{"stage": "e5_genre", "call_id": "e5_genre_0", "model": "sonnet", "items": ["genres"], "task": "data/llm_tasks/e5_genre/e5_genre_0.md", "out": "data/llm_tasks/e5_genre/e5_genre_0.out.json"}

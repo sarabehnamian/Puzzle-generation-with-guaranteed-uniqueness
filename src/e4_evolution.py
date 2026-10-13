@@ -29,7 +29,8 @@ from .solve_stage import collect, make_tasks
 ROOT = Path(__file__).resolve().parents[1]
 CFG = json.loads((ROOT / "configs" / "config.json").read_text())
 E4 = CFG["e4"]
-DATA = ROOT / "data" / "e4"
+RUN = E4.get("run", "e4")
+DATA = ROOT / "data" / RUN
 STATE = DATA / "state.json"
 TYPES = set(Z.TYPE_WEIGHTS)
 
@@ -55,15 +56,15 @@ def certify(spec):
 
 
 def init():
-    rng = random.Random(f"{CFG['seed']}-e4-init")
+    rng = random.Random(f"{CFG['seed']}-{RUN}-init")
     pop = []
     i = 0
     while len(pop) < E4["population"]:
-        spec = generate("zebra", rng, {"n": 5, "k": 4})
+        spec = generate("zebra", rng, E4.get("params", {"n": 5, "k": 4}))
         i += 1
         lev = certify(spec)
         if lev == 3:
-            pop.append({"id": f"evo-g0-{len(pop):02d}", "spec": spec, "born": 0, "parent": None,
+            pop.append({"id": f"{RUN}-g0-{len(pop):02d}", "spec": spec, "born": 0, "parent": None,
                         "level": lev, "evals": []})
     st = {"gen": 0, "phase": "eval", "pop": pop, "all": {p["id"]: p for p in pop}, "history": []}
     save(st)
@@ -186,10 +187,10 @@ def step():
     st = load() or init()
     g = st["gen"]
     if st["phase"] == "eval":
-        stage = f"e4_eval_g{g}"
+        stage = f"{RUN}_eval_g{g}"
         if not llm.manifest(stage):
             items = [(p["id"], p["spec"]) for p in st["pop"]]
-            make_tasks(stage, items, E4["train_solver"], 5, f"{CFG['seed']}-e4-{g}")
+            make_tasks(stage, items, E4["train_solver"], 4, f"{CFG['seed']}-{RUN}-{g}")
             print("wrote eval tasks", stage)
             save(st)
             return
@@ -217,7 +218,7 @@ def step():
         st["phase"] = "mutate"
         save(st)
     if st["phase"] == "mutate":
-        stage = f"e4_mut_g{g}"
+        stage = f"{RUN}_mut_g{g}"
         if not llm.manifest(stage):
             C = E4["children_per_parent"]
             per_call = 5
@@ -225,13 +226,13 @@ def step():
                 chunk = st["pop"][b:b + per_call]
                 blocks = "\n".join(mutation_block(p, [p["answers"][str(g)]]) for p in chunk)
                 llm.write_task(stage, f"{stage}_{b // per_call}", E4["mutator_model"],
-                               MUTATE.replace("{C}", str(C)), blocks, [p["id"] for p in chunk])
+                               MUTATE.replace("{C}", str(C)).replace("5-house", f"{E4.get('params', {}).get('n', 5)}-house").replace("house 1 or house 5", f"house 1 or house {E4.get('params', {}).get('n', 5)}"), blocks, [p["id"] for p in chunk])
             print("wrote mutation tasks", stage)
             return
         if llm.pending(stage):
             print("waiting for", stage)
             return
-        rng = random.Random(f"{CFG['seed']}-e4-children-{g}")
+        rng = random.Random(f"{CFG['seed']}-{RUN}-children-{g}")
         parents = {p["id"]: p for p in st["pop"]}
         kids = []
         log = []
@@ -247,7 +248,7 @@ def step():
                          "idea": v.get("idea")}
                 if out:
                     cs, lev, added = out
-                    kid = {"id": f"evo-g{g + 1}-{len(kids):02d}", "spec": cs, "born": g + 1,
+                    kid = {"id": f"{RUN}-g{g + 1}-{len(kids):02d}", "spec": cs, "born": g + 1,
                            "parent": par["id"], "level": lev, "evals": [], "repair_added": added,
                            "idea": v.get("idea")}
                     kids.append(kid)

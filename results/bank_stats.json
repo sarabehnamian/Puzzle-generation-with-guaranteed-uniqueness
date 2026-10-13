@@ -1,0 +1,68 @@
+{
+ "futoshiki": {
+  "n": 1500,
+  "levels": {
+   "2": 619,
+   "3": 881
+  },
+  "clues_mean": 10.113333333333333,
+  "all_unique_sat": true,
+  "all_unique_cpsat": true
+ },
+ "killer": {
+  "n": 1500,
+  "levels": {
+   "2": 582,
+   "3": 600,
+   "4": 314,
+   "5": 4
+  },
+  "clues_mean": 8.437333333333333,
+  "all_unique_sat": true,
+  "all_unique_cpsat": true
+ },
+ "sudoku": {
+  "n": 1500,
+  "levels": {
+   "1": 738,
+   "2": 214,
+   "3": 548
+  },
+  "clues_mean": 24.276666666666667,
+  "all_unique_sat": true,
+  "all_unique_cpsat": true
+ },
+ "sudoku_x": {
+  "n": 8000,
+  "levels": {
+   "1": 3859,
+   "2": 1110,
+   "3": 3031
+  },
+  "clues_mean": 24.292375,
+  "all_unique_sat": true,
+  "all_unique_cpsat": true
+ },
+ "zebra": {
+  "n": 1500,
+  "levels": {
+   "2": 360,
+   "3": 967,
+   "4": 173
+  },
+  "clues_mean": 13.572666666666667,
+  "all_unique_sat": true,
+  "all_unique_cpsat": true
+ },
+ "zebra_hard": {
+  "n": 300,
+  "levels": {
+   "2": 57,
+   "3": 198,
+   "4": 45
+  },
+  "clues_mean": 13.23,
+  "all_unique_sat": true,
+  "all_unique_cpsat": true
+ }
+}

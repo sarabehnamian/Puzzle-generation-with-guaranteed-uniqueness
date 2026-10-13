@@ -1,0 +1,2 @@
+{"stage": "e4_mut_g1", "call_id": "e4_mut_g1_0", "model": "sonnet", "items": ["evo-g0-00", "evo-g0-06", "evo-g0-03", "evo-g1-02", "evo-g0-01"], "task": "data/llm_tasks/e4_mut_g1/e4_mut_g1_0.md", "out": "data/llm_tasks/e4_mut_g1/e4_mut_g1_0.out.json"}
+{"stage": "e4_mut_g1", "call_id": "e4_mut_g1_1", "model": "sonnet", "items": ["evo-g0-02", "evo-g0-04", "evo-g0-05"], "task": "data/llm_tasks/e4_mut_g1/e4_mut_g1_1.md", "out": "data/llm_tasks/e4_mut_g1/e4_mut_g1_1.out.json"}

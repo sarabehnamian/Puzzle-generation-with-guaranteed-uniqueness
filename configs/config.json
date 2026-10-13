@@ -116,7 +116,20 @@
       "opus"
     ],
     "mutator_model": "sonnet",
-    "max_level": 3
+    "max_level": 3,
+    "run": "e4b",
+    "params": {
+      "n": 6,
+      "k": 6
+    },
+    "pilot_run": {
+      "run": "e4",
+      "params": {
+        "n": 5,
+        "k": 4
+      },
+      "note": "abandoned after 2 generations: training solver made no errors on any of 30 individuals"
+    }
   },
   "bootstrap": {
     "n_boot": 2000

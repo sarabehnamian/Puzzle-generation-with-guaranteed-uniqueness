@@ -101,7 +101,12 @@ def collect(stage):
             continue
         for p in (res.get("puzzles") or []) if isinstance(res, dict) else []:
             if isinstance(p, dict) and "id" in p:
-                out[str(p["id"])] = p.get("constraints") or []
+                out[str(p["id"]).strip()] = p.get("constraints") or []
+    # some encoders drop the "style:" prefix of the id; bank ids are unique across styles
+    for k in list(out):
+        if ":" not in k:
+            for style in ("plain", "hard", "paraphrase"):
+                out.setdefault(f"{style}:{k}", out[k])
     return out
 
 
@@ -123,6 +128,11 @@ def confusions(clue, n):
     if t == "next_to":
         out += [("'next to' read as directional", E("left_of", a)),
                 ("'next to' read as directional", E("left_of", [a[1], a[0]]))]
+    if t == "not_next_to":
+        out.append(("generator template ambiguity ('at least one house separates' read as distance >= 2)",
+                    f'Abs(pos("{a[0]}") - pos("{a[1]}")) >= 2'))
+    if t in ("at", "not_at") and n + 1 - a[1] != a[1]:
+        out.append(("counting from the right read as counting from the left", E(t, [a[0], n + 1 - a[1]])))
     if t in ("not_same", "not_at", "not_next_to"):
         pos_t = {"not_same": "same", "not_at": "at", "not_next_to": "next_to"}[t]
         out.append(("negation dropped", E(pos_t, a)))
@@ -131,7 +141,7 @@ def confusions(clue, n):
         out.append(("spurious negation", E(neg_t, a)))
     if t in ("at", "not_at"):
         k = a[1]
-        for kk in (k - 1, k + 1, n + 1 - k):
+        for kk in (k - 1, k + 1):
             if 1 <= kk <= n and kk != k:
                 out.append(("wrong house number/ordinal", E(t, [a[0], kk])))
     if t == "gap2":
