@@ -1,0 +1,34 @@
+{"answers": [
+{"id": "e4b-g2-00", "answer": {
+"1": {"pet": "bird", "drink": "milk", "color": "green", "nationality": "Dane", "job": "doctor", "hobby": "hiking"},
+"2": {"pet": "dog", "drink": "juice", "color": "red", "nationality": "Norwegian", "job": "teacher", "hobby": "tennis"},
+"3": {"pet": "cat", "drink": "cocoa", "color": "blue", "nationality": "Swede", "job": "farmer", "hobby": "cooking"},
+"4": {"pet": "rabbit", "drink": "tea", "color": "yellow", "nationality": "Brit", "job": "baker", "hobby": "chess"},
+"5": {"pet": "fish", "drink": "water", "color": "white", "nationality": "Spaniard", "job": "lawyer", "hobby": "painting"},
+"6": {"pet": "horse", "drink": "coffee", "color": "purple", "nationality": "German", "job": "pilot", "hobby": "golf"}
+}},
+{"id": "e4b-g0-02", "answer": {
+"1": {"job": "lawyer", "hobby": "tennis", "pet": "fish", "color": "blue", "drink": "water", "nationality": "Spaniard"},
+"2": {"job": "teacher", "hobby": "hiking", "pet": "dog", "color": "purple", "drink": "juice", "nationality": "Norwegian"},
+"3": {"job": "doctor", "hobby": "cooking", "pet": "rabbit", "color": "yellow", "drink": "milk", "nationality": "Brit"},
+"4": {"job": "farmer", "hobby": "golf", "pet": "horse", "color": "green", "drink": "cocoa", "nationality": "Dane"},
+"5": {"job": "baker", "hobby": "chess", "pet": "cat", "color": "red", "drink": "tea", "nationality": "Swede"},
+"6": {"job": "pilot", "hobby": "painting", "pet": "bird", "color": "white", "drink": "coffee", "nationality": "German"}
+}},
+{"id": "e4b-g0-01", "answer": {
+"1": {"pet": "dog", "drink": "cocoa", "color": "yellow", "nationality": "Spaniard", "job": "pilot", "hobby": "hiking"},
+"2": {"pet": "rabbit", "drink": "juice", "color": "green", "nationality": "Swede", "job": "farmer", "hobby": "golf"},
+"3": {"pet": "bird", "drink": "milk", "color": "purple", "nationality": "German", "job": "doctor", "hobby": "cooking"},
+"4": {"pet": "cat", "drink": "coffee", "color": "blue", "nationality": "Norwegian", "job": "baker", "hobby": "chess"},
+"5": {"pet": "horse", "drink": "water", "color": "white", "nationality": "Brit", "job": "lawyer", "hobby": "tennis"},
+"6": {"pet": "fish", "drink": "tea", "color": "red", "nationality": "Dane", "job": "teacher", "hobby": "painting"}
+}},
+{"id": "e4b-g2-08", "answer": {
+"1": {"pet": "bird", "drink": "milk", "color": "blue", "nationality": "Spaniard", "job": "farmer", "hobby": "chess"},
+"2": {"pet": "fish", "drink": "cocoa", "color": "green", "nationality": "German", "job": "lawyer", "hobby": "cooking"},
+"3": {"pet": "dog", "drink": "water", "color": "yellow", "nationality": "Norwegian", "job": "teacher", "hobby": "painting"},
+"4": {"pet": "rabbit", "drink": "tea", "color": "purple", "nationality": "Brit", "job": "baker", "hobby": "golf"},
+"5": {"pet": "cat", "drink": "coffee", "color": "white", "nationality": "Swede", "job": "doctor", "hobby": "tennis"},
+"6": {"pet": "horse", "drink": "juice", "color": "red", "nationality": "Dane", "job": "pilot", "hobby": "hiking"}
+}}
+]}

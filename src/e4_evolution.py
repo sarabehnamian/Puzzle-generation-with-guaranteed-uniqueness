@@ -23,12 +23,15 @@ from .dsl import norm
 from .families import zebra as Z
 from .generate import complete_to_unique, generate
 from .grading import grade
-from .prompts import MUTATE
+from .prompts import MUTATE, MUTATE_SUDOKU
+FAMILY = None
 from .solve_stage import collect, make_tasks
 
 ROOT = Path(__file__).resolve().parents[1]
 CFG = json.loads((ROOT / "configs" / "config.json").read_text())
 E4 = CFG["e4"]
+if len(sys.argv) > 1 and sys.argv[1] in CFG:   # e.g. python -m src.e4_evolution e4s
+    E4 = CFG[sys.argv[1]]
 RUN = E4.get("run", "e4")
 DATA = ROOT / "data" / RUN
 STATE = DATA / "state.json"
@@ -47,7 +50,7 @@ def save(st):
 def certify(spec):
     from .families import get
     from .csp import count_solutions
-    csp, sol = get("zebra").build_csp(spec)
+    csp, sol = get(spec["family"]).build_csp(spec)
     cnf = CNF(csp)
     sols = count_solutions(cnf, limit=2)
     if len(sols) != 1:
@@ -60,7 +63,7 @@ def init():
     pop = []
     i = 0
     while len(pop) < E4["population"]:
-        spec = generate("zebra", rng, E4.get("params", {"n": 5, "k": 4}))
+        spec = generate(E4.get("family", "zebra"), rng, E4.get("params", {"n": 5, "k": 4}))
         i += 1
         lev = certify(spec)
         if lev == 3:
@@ -182,6 +185,77 @@ def mutation_block(ind, answers):
     return "\n".join(lines) + "\n"
 
 
+# ------------------------------------------------------------------ sudoku variant
+def _rc(s):
+    import re
+    m = re.search(r"R(\d)\s*C(\d)", str(s), re.I)
+    if not m:
+        raise ValueError(s)
+    return int(m.group(1)) - 1, int(m.group(2)) - 1
+
+
+def sudoku_block(ind, answers):
+    from .families import get as _get
+    spec = ind["spec"]
+    sol = spec["solution"]
+    lines = [f"## Puzzle {ind['id']}", "", _get("sudoku").render(spec), "", "Solution:"]
+    lines += ["".join(map(str, row)) for row in sol]
+    wrong = []
+    for ans in answers:
+        from .families.grids import parse_grid_answer
+        got = parse_grid_answer(9, ans) if ans else None
+        if got is None:
+            wrong.append("no answer given")
+            continue
+        wrong += [f"R{r + 1}C{c + 1} (wrote {got[r][c]}, correct {sol[r][c]})" for r in range(9) for c in range(9)
+                  if got[r][c] != sol[r][c]]
+    lines.append("Solver mistakes: " + ("; ".join(wrong[:30]) if wrong else "none - the solver got it fully right"))
+    return "\n".join(lines) + "\n"
+
+
+def apply_sudoku_ops(parent, ops):
+    spec = copy.deepcopy(parent)
+    giv = {tuple(c["cell"]) for c in spec["clues"]}
+    n_ok = 0
+    for op in ops or []:
+        try:
+            k = op.get("op")
+            if k == "remove":
+                giv.discard(_rc(op["cell"]))
+            elif k == "add":
+                giv.add(_rc(op["cell"]))
+            elif k == "move":
+                giv.discard(_rc(op["from"]))
+                giv.add(_rc(op["to"]))
+            else:
+                continue
+            n_ok += 1
+        except (KeyError, ValueError, AttributeError, TypeError):
+            continue
+    sol = spec["solution"]
+    spec["clues"] = [{"type": "given", "cell": [r, c], "value": sol[r][c]} for r, c in sorted(giv)]
+    return spec, n_ok
+
+
+def repair_sudoku(spec, rng):
+    from .families import get as _get
+    pool = _get("sudoku").clue_pool(rng, spec)
+    have = {tuple(c["cell"]) for c in spec["clues"]}
+    full = dict(spec, clues=spec["clues"] + [c for c in pool if tuple(c["cell"]) not in have])
+    csp, sol = _get("sudoku").build_csp(full)
+    cnf = CNF(csp)
+    k = len(spec["clues"])
+    ids = complete_to_unique(cnf, sol, list(range(k)), list(range(len(full["clues"]))), rng)
+    if ids is None:
+        return None
+    added = [full["clues"][i] for i in ids if i >= k]
+    spec = dict(spec, clues=sorted(spec["clues"] + added, key=lambda c: c["cell"]))
+    lev = certify(spec)
+    if lev is None or lev > E4["max_level"]:
+        return None
+    return spec, lev, len(added)
+
+
 # ------------------------------------------------------------------ state machine
 def step():
     st = load() or init()
@@ -200,7 +274,8 @@ def step():
         got = collect(stage)
         for p in st["pop"]:
             ans = got.get((p["id"], E4["train_solver"]))
-            s = Z.score(p["spec"], ans) if ans is not None else {"cell_acc": 0.0}
+            from .families import get as _get
+            s = _get(p["spec"]["family"]).score(p["spec"], ans) if ans is not None else {"cell_acc": 0.0}
             p["evals"].append(s["cell_acc"])
             p.setdefault("answers", {})[str(g)] = ans
             st["all"][p["id"]] = p
@@ -224,9 +299,14 @@ def step():
             per_call = 5
             for b in range(0, len(st["pop"]), per_call):
                 chunk = st["pop"][b:b + per_call]
-                blocks = "\n".join(mutation_block(p, [p["answers"][str(g)]]) for p in chunk)
-                llm.write_task(stage, f"{stage}_{b // per_call}", E4["mutator_model"],
-                               MUTATE.replace("{C}", str(C)).replace("5-house", f"{E4.get('params', {}).get('n', 5)}-house").replace("house 1 or house 5", f"house 1 or house {E4.get('params', {}).get('n', 5)}"), blocks, [p["id"] for p in chunk])
+                if E4.get("family", "zebra") == "sudoku":
+                    blocks = "\n".join(sudoku_block(p, [p["answers"][str(g)]]) for p in chunk)
+                    prompt = MUTATE_SUDOKU.replace("{C}", str(C))
+                else:
+                    blocks = "\n".join(mutation_block(p, [p["answers"][str(g)]]) for p in chunk)
+                    prompt = MUTATE.replace("{C}", str(C)).replace("5-house", f"{E4.get('params', {}).get('n', 5)}-house").replace("house 1 or house 5", f"house 1 or house {E4.get('params', {}).get('n', 5)}")
+                llm.write_task(stage, f"{stage}_{b // per_call}", E4["mutator_model"], prompt, blocks,
+                               [p["id"] for p in chunk])
             print("wrote mutation tasks", stage)
             return
         if llm.pending(stage):
@@ -242,8 +322,12 @@ def step():
                 par = parents.get(str(v.get("parent")))
                 if par is None:
                     continue
-                spec, n_ok = apply_ops(par["spec"], v.get("ops"), rng)
-                out = repair_and_check(spec, rng) if n_ok else None
+                if par["spec"]["family"] == "sudoku":
+                    spec, n_ok = apply_sudoku_ops(par["spec"], v.get("ops"))
+                    out = repair_sudoku(spec, rng) if n_ok else None
+                else:
+                    spec, n_ok = apply_ops(par["spec"], v.get("ops"), rng)
+                    out = repair_and_check(spec, rng) if n_ok else None
                 entry = {"parent": par["id"], "n_ops_applied": n_ok, "accepted": out is not None,
                          "idea": v.get("idea")}
                 if out:

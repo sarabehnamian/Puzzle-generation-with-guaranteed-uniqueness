@@ -374,8 +374,9 @@ def summarize():
                 rec[f"{k}_valid"] = rr[uid]["valid"]
         if r.get("unique"):
             spec = r["spec"]
-            csp, sol = get(spec["family"]).build_csp(spec)
+            csp, _ = get(spec["family"]).build_csp(spec)
             cnf = CNF(csp)
+            sol = count_solutions(cnf, limit=1)[0]   # the unique solution (may differ from the stated one)
             ids = list(range(len(csp.clues)))
             rec["redundancy"] = redundancy(cnf, ids)
             # the solver loop: minimise the LLM's puzzle in a fixed random order

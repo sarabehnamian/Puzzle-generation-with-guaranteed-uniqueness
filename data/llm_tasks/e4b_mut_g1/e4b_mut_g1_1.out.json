@@ -1,0 +1,8 @@
+{"variants": [
+{"parent": "e4b-g1-00", "ops": [{"op": "remove", "clue": 10}, {"op": "remove", "clue": 23}, {"op": "add", "clue": {"type": "not_next_to", "args": ["blue", "green"]}}, {"op": "add", "clue": {"type": "end", "args": ["milk"]}}], "idea": "Remove direct position clues and substitute negative and end clues."},
+{"parent": "e4b-g1-00", "ops": [{"op": "replace", "clue": 10, "with": {"type": "gap2", "args": ["blue", "green"]}}, {"op": "remove", "clue": 23}], "idea": "Turn absolute positions into relative gap clues."},
+{"parent": "e4b-g0-04", "ops": [{"op": "remove", "clue": 18}, {"op": "remove", "clue": 25}, {"op": "add", "clue": {"type": "before", "args": ["fish", "rabbit"]}}, {"op": "add", "clue": {"type": "not_next_to", "args": ["blue", "red"]}}], "idea": "Drop two fixed-position clues in favour of vaguer relative clues."},
+{"parent": "e4b-g0-04", "ops": [{"op": "replace", "clue": 23, "with": {"type": "end", "args": ["hiking"]}}, {"op": "replace", "clue": 18, "with": {"type": "gap2", "args": ["rabbit", "cooking"]}}], "idea": "Weaken exact positions to end and gap clues."},
+{"parent": "e4b-g0-07", "ops": [{"op": "remove", "clue": 4}, {"op": "remove", "clue": 16}, {"op": "add", "clue": {"type": "not_next_to", "args": ["doctor", "pilot"]}}, {"op": "add", "clue": {"type": "end", "args": ["doctor"]}}], "idea": "Remove two pinned jobs and use negative and end clues."},
+{"parent": "e4b-g0-07", "ops": [{"op": "replace", "clue": 10, "with": {"type": "end", "args": ["cooking"]}}, {"op": "replace", "clue": 4, "with": {"type": "not_next_to", "args": ["pilot", "teacher"]}}], "idea": "Replace absolute positions with end and negative clues."}
+]}

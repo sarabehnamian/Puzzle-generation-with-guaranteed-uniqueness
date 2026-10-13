@@ -1,0 +1,2 @@
+{"stage": "e2_repair1", "call_id": "e2_repair1_futoshiki_0", "model": "sonnet", "items": ["futoshiki/0/g2"], "task": "data/llm_tasks/e2_repair1/e2_repair1_futoshiki_0.md", "out": "data/llm_tasks/e2_repair1/e2_repair1_futoshiki_0.out.json"}
+{"stage": "e2_repair1", "call_id": "e2_repair1_sudoku_0", "model": "sonnet", "items": ["sudoku/0/g6"], "task": "data/llm_tasks/e2_repair1/e2_repair1_sudoku_0.md", "out": "data/llm_tasks/e2_repair1/e2_repair1_sudoku_0.out.json"}

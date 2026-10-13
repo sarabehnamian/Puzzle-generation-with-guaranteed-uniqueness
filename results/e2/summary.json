@@ -1,0 +1,122 @@
+{
+ "by_family": {
+  "zebra": {
+   "n": 40,
+   "parsed": 40,
+   "unique": 40,
+   "matches_intended": 40,
+   "valid_raw": 40,
+   "valid_after_repair1": 40,
+   "encoding_disputed": 0,
+   "levels": {
+    "1": 1,
+    "2": 37,
+    "3": 2,
+    "4": 0,
+    "5": 0
+   },
+   "levels_after_min": {
+    "1": 1,
+    "2": 25,
+    "3": 14,
+    "4": 0,
+    "5": 0
+   },
+   "redundancy_mean": 0.2939565365619932,
+   "clues_mean": 16.275,
+   "clues_min_mean": 14.1
+  },
+  "sudoku": {
+   "n": 20,
+   "parsed": 20,
+   "unique": 20,
+   "matches_intended": 19,
+   "valid_raw": 19,
+   "valid_after_repair1": 20,
+   "encoding_disputed": 0,
+   "levels": {
+    "1": 20,
+    "2": 0,
+    "3": 0,
+    "4": 0,
+    "5": 0
+   },
+   "levels_after_min": {
+    "1": 6,
+    "2": 9,
+    "3": 5,
+    "4": 0,
+    "5": 0
+   },
+   "redundancy_mean": 0.7333333333333333,
+   "clues_mean": 30,
+   "clues_min_mean": 22.25
+  },
+  "killer": {
+   "n": 20,
+   "parsed": 20,
+   "unique": 20,
+   "matches_intended": 20,
+   "valid_raw": 20,
+   "valid_after_repair1": 20,
+   "encoding_disputed": 0,
+   "levels": {
+    "1": 10,
+    "2": 10,
+    "3": 0,
+    "4": 0,
+    "5": 0
+   },
+   "levels_after_min": {
+    "1": 0,
+    "2": 17,
+    "3": 3,
+    "4": 0,
+    "5": 0
+   },
+   "redundancy_mean": 0.8353095975232199,
+   "clues_mean": 18.65,
+   "clues_min_mean": 10.05
+  },
+  "futoshiki": {
+   "n": 20,
+   "parsed": 20,
+   "unique": 19,
+   "matches_intended": 19,
+   "valid_raw": 19,
+   "valid_after_repair1": 20,
+   "encoding_disputed": 0,
+   "levels": {
+    "1": 1,
+    "2": 18,
+    "3": 0,
+    "4": 0,
+    "5": 0
+   },
+   "levels_after_min": {
+    "1": 0,
+    "2": 13,
+    "3": 6,
+    "4": 0,
+    "5": 0
+   },
+   "redundancy_mean": 0.7857536738423165,
+   "clues_mean": 15,
+   "clues_min_mean": 9.052631578947368
+  }
+ },
+ "duplication": {
+  "sudoku": {
+   "n": 20,
+   "distinct_masks": 8,
+   "largest_mask_group": 7,
+   "wikipedia_mask": 7,
+   "wikipedia_identical": 1
+  },
+  "futoshiki": {
+   "n": 20,
+   "distinct_masks": 20,
+   "largest_mask_group": 1
+  }
+ }
+}

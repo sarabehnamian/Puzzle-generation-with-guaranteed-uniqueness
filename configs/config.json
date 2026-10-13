@@ -108,7 +108,7 @@
   },
   "e4": {
     "population": 8,
-    "generations": 6,
+    "generations": 2,
     "children_per_parent": 2,
     "train_solver": "haiku",
     "heldout_solvers": [
@@ -129,9 +129,31 @@
         "k": 4
       },
       "note": "abandoned after 2 generations: training solver made no errors on any of 30 individuals"
-    }
+    },
+    "note": "zebra 6x6 run stopped after 3 evaluated generations: the training solver made no error on any individual"
   },
   "bootstrap": {
     "n_boot": 2000
+  },
+  "e4s": {
+    "run": "e4s",
+    "family": "sudoku",
+    "params": {
+      "n": 9,
+      "box": [
+        3,
+        3
+      ]
+    },
+    "population": 8,
+    "generations": 4,
+    "children_per_parent": 2,
+    "train_solver": "haiku",
+    "heldout_solvers": [
+      "sonnet",
+      "opus"
+    ],
+    "mutator_model": "sonnet",
+    "max_level": 3
   }
 }

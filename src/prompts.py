@@ -179,3 +179,25 @@ Output: write a single JSON object to the file {OUT} with this structure
 {"genres": [{"name": "<name>", "rules_text": "<rules a human solver would read, 2-5 sentences>",
              "clue_text": "<how clues are shown to the solver>", "code": "<python source>"}, ...]}
 """
+
+MUTATE_SUDOKU = """# Task: make fair Sudoku puzzles harder for language-model solvers
+
+Each 9x9 Sudoku below has a known unique solution. A language-model solver attempted it; its mistakes
+are listed. Propose {C} variants of each puzzle that you expect to be HARDER for a language-model
+solver while staying solvable by step-by-step logic (no guessing).
+
+You edit puzzles with operations on the given digits (the digit placed is always the solution digit):
+- {"op": "remove", "cell": "RrCc"}            remove a given
+- {"op": "add", "cell": "RrCc"}               add a given
+- {"op": "move", "from": "RrCc", "to": "RrCc"}  move a given to another cell
+Use 1 to 6 operations per variant. A program will add givens back if the result has more than one
+solution and will reject variants that need guessing, so focus on what makes the logic harder to
+follow (for example: fewer givens, givens spread so that no row/column/box is nearly complete,
+removing givens that make singles easy).
+
+Output: write a single JSON object to the file {OUT} with this structure
+{"variants": [{"parent": "<puzzle id>", "ops": [<op>, ...], "idea": "<one short sentence>"}, ...]}
+with {C} variants per puzzle.
+
+The puzzles follow.
+"""

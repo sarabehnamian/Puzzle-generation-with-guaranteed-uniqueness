@@ -1,6 +1,6 @@
 {
- "gen": 1,
- "phase": "mutate",
+ "gen": 2,
+ "phase": "done",
  "pop": [
   {
    "id": "e4b-g0-00",
@@ -311,6 +311,7 @@
    "level": 3,
    "evals": [
     1.0,
+    1.0,
     1.0
    ],
    "answers": {
@@ -412,6 +413,56 @@
       "nationality": "German",
       "job": "pilot",
       "hobby": "golf"
+     }
+    },
+    "2": {
+     "1": {
+      "pet": "bird",
+      "drink": "milk",
+      "color": "green",
+      "job": "doctor",
+      "hobby": "hiking",
+      "nationality": "Dane"
+     },
+     "2": {
+      "pet": "dog",
+      "drink": "juice",
+      "color": "red",
+      "job": "teacher",
+      "hobby": "tennis",
+      "nationality": "Norwegian"
+     },
+     "3": {
+      "pet": "cat",
+      "drink": "cocoa",
+      "color": "blue",
+      "job": "farmer",
+      "hobby": "cooking",
+      "nationality": "Swede"
+     },
+     "4": {
+      "pet": "rabbit",
+      "drink": "tea",
+      "color": "yellow",
+      "job": "baker",
+      "hobby": "chess",
+      "nationality": "Brit"
+     },
+     "5": {
+      "pet": "fish",
+      "drink": "water",
+      "color": "white",
+      "job": "lawyer",
+      "hobby": "painting",
+      "nationality": "Spaniard"
+     },
+     "6": {
+      "pet": "horse",
+      "drink": "coffee",
+      "color": "purple",
+      "job": "pilot",
+      "hobby": "golf",
+      "nationality": "German"
      }
     }
    }
@@ -726,6 +777,7 @@
    "level": 3,
    "evals": [
     1.0,
+    1.0,
     1.0
    ],
    "answers": {
@@ -780,6 +832,56 @@
      }
     },
     "1": {
+     "1": {
+      "job": "lawyer",
+      "hobby": "tennis",
+      "pet": "fish",
+      "color": "blue",
+      "drink": "water",
+      "nationality": "Spaniard"
+     },
+     "2": {
+      "job": "teacher",
+      "hobby": "hiking",
+      "pet": "dog",
+      "color": "purple",
+      "drink": "juice",
+      "nationality": "Norwegian"
+     },
+     "3": {
+      "job": "doctor",
+      "hobby": "cooking",
+      "pet": "rabbit",
+      "color": "yellow",
+      "drink": "milk",
+      "nationality": "Brit"
+     },
+     "4": {
+      "job": "farmer",
+      "hobby": "golf",
+      "pet": "horse",
+      "color": "green",
+      "drink": "cocoa",
+      "nationality": "Dane"
+     },
+     "5": {
+      "job": "baker",
+      "hobby": "chess",
+      "pet": "cat",
+      "color": "red",
+      "drink": "tea",
+      "nationality": "Swede"
+     },
+     "6": {
+      "job": "pilot",
+      "hobby": "painting",
+      "pet": "bird",
+      "color": "white",
+      "drink": "coffee",
+      "nationality": "German"
+     }
+    },
+    "2": {
      "1": {
       "job": "lawyer",
       "hobby": "tennis",
@@ -1142,6 +1244,7 @@
    "level": 3,
    "evals": [
     1.0,
+    1.0,
     1.0
    ],
    "answers": {
@@ -1243,6 +1346,56 @@
       "hobby": "tennis",
       "drink": "juice",
       "nationality": "Swede"
+     }
+    },
+    "2": {
+     "1": {
+      "pet": "bird",
+      "drink": "water",
+      "color": "white",
+      "nationality": "Brit",
+      "job": "lawyer",
+      "hobby": "painting"
+     },
+     "2": {
+      "pet": "horse",
+      "drink": "coffee",
+      "color": "purple",
+      "nationality": "Spaniard",
+      "job": "pilot",
+      "hobby": "golf"
+     },
+     "3": {
+      "pet": "fish",
+      "drink": "milk",
+      "color": "yellow",
+      "nationality": "Norwegian",
+      "job": "baker",
+      "hobby": "chess"
+     },
+     "4": {
+      "pet": "cat",
+      "drink": "cocoa",
+      "color": "blue",
+      "nationality": "German",
+      "job": "doctor",
+      "hobby": "hiking"
+     },
+     "5": {
+      "pet": "dog",
+      "drink": "tea",
+      "color": "red",
+      "nationality": "Dane",
+      "job": "teacher",
+      "hobby": "cooking"
+     },
+     "6": {
+      "pet": "rabbit",
+      "drink": "juice",
+      "color": "green",
+      "nationality": "Swede",
+      "job": "farmer",
+      "hobby": "tennis"
      }
     }
    }
@@ -1568,6 +1721,7 @@
    "level": 3,
    "evals": [
     1.0,
+    1.0,
     1.0
    ],
    "answers": {
@@ -1669,6 +1823,56 @@
       "job": "teacher",
       "drink": "tea",
       "color": "red"
+     }
+    },
+    "2": {
+     "1": {
+      "pet": "dog",
+      "drink": "cocoa",
+      "color": "yellow",
+      "nationality": "Spaniard",
+      "job": "pilot",
+      "hobby": "hiking"
+     },
+     "2": {
+      "pet": "rabbit",
+      "drink": "juice",
+      "color": "green",
+      "nationality": "Swede",
+      "job": "farmer",
+      "hobby": "golf"
+     },
+     "3": {
+      "pet": "bird",
+      "drink": "milk",
+      "color": "purple",
+      "nationality": "German",
+      "job": "doctor",
+      "hobby": "cooking"
+     },
+     "4": {
+      "pet": "cat",
+      "drink": "coffee",
+      "color": "blue",
+      "nationality": "Norwegian",
+      "job": "baker",
+      "hobby": "chess"
+     },
+     "5": {
+      "pet": "horse",
+      "drink": "water",
+      "color": "white",
+      "nationality": "Brit",
+      "job": "lawyer",
+      "hobby": "tennis"
+     },
+     "6": {
+      "pet": "fish",
+      "drink": "tea",
+      "color": "red",
+      "nationality": "Dane",
+      "job": "teacher",
+      "hobby": "painting"
      }
     }
    }
@@ -1992,6 +2196,7 @@
    "level": 3,
    "evals": [
     1.0,
+    1.0,
     1.0
    ],
    "answers": {
@@ -2093,6 +2298,56 @@
       "job": "doctor",
       "drink": "tea",
       "color": "green"
+     }
+    },
+    "2": {
+     "1": {
+      "color": "white",
+      "job": "baker",
+      "pet": "bird",
+      "hobby": "cooking",
+      "drink": "water",
+      "nationality": "Norwegian"
+     },
+     "2": {
+      "color": "yellow",
+      "job": "pilot",
+      "pet": "horse",
+      "hobby": "tennis",
+      "drink": "cocoa",
+      "nationality": "Spaniard"
+     },
+     "3": {
+      "color": "purple",
+      "job": "lawyer",
+      "pet": "dog",
+      "hobby": "golf",
+      "drink": "milk",
+      "nationality": "Swede"
+     },
+     "4": {
+      "color": "blue",
+      "job": "teacher",
+      "pet": "rabbit",
+      "hobby": "painting",
+      "drink": "juice",
+      "nationality": "German"
+     },
+     "5": {
+      "color": "red",
+      "job": "farmer",
+      "pet": "fish",
+      "hobby": "hiking",
+      "drink": "coffee",
+      "nationality": "Brit"
+     },
+     "6": {
+      "color": "green",
+      "job": "doctor",
+      "pet": "cat",
+      "hobby": "chess",
+      "drink": "tea",
+      "nationality": "Dane"
      }
     }
    }
@@ -2414,12 +2669,63 @@
    "parent": "e4b-g0-00",
    "level": 3,
    "evals": [
+    1.0,
     1.0
    ],
    "repair_added": 2,
    "idea": "Drop two absolute anchors and add a loose ordering clue.",
    "answers": {
     "1": {
+     "1": {
+      "pet": "bird",
+      "drink": "milk",
+      "color": "green",
+      "nationality": "Dane",
+      "job": "doctor",
+      "hobby": "hiking"
+     },
+     "2": {
+      "pet": "dog",
+      "drink": "juice",
+      "color": "red",
+      "nationality": "Norwegian",
+      "job": "teacher",
+      "hobby": "tennis"
+     },
+     "3": {
+      "pet": "cat",
+      "drink": "cocoa",
+      "color": "blue",
+      "nationality": "Swede",
+      "job": "farmer",
+      "hobby": "cooking"
+     },
+     "4": {
+      "pet": "rabbit",
+      "drink": "tea",
+      "color": "yellow",
+      "nationality": "Brit",
+      "job": "baker",
+      "hobby": "chess"
+     },
+     "5": {
+      "pet": "fish",
+      "drink": "water",
+      "color": "white",
+      "nationality": "Spaniard",
+      "job": "lawyer",
+      "hobby": "painting"
+     },
+     "6": {
+      "pet": "horse",
+      "drink": "coffee",
+      "color": "purple",
+      "nationality": "German",
+      "job": "pilot",
+      "hobby": "golf"
+     }
+    },
+    "2": {
      "1": {
       "pet": "bird",
       "drink": "milk",
@@ -2798,6 +3104,7 @@
    "level": 3,
    "evals": [
     1.0,
+    1.0,
     1.0
    ],
    "answers": {
@@ -2899,6 +3206,56 @@
       "hobby": "hiking",
       "drink": "juice",
       "nationality": "Dane"
+     }
+    },
+    "2": {
+     "1": {
+      "drink": "milk",
+      "hobby": "chess",
+      "job": "farmer",
+      "color": "blue",
+      "nationality": "Spaniard",
+      "pet": "bird"
+     },
+     "2": {
+      "drink": "cocoa",
+      "hobby": "cooking",
+      "job": "lawyer",
+      "color": "green",
+      "nationality": "German",
+      "pet": "fish"
+     },
+     "3": {
+      "drink": "water",
+      "hobby": "painting",
+      "job": "teacher",
+      "color": "yellow",
+      "nationality": "Norwegian",
+      "pet": "dog"
+     },
+     "4": {
+      "drink": "tea",
+      "hobby": "golf",
+      "job": "baker",
+      "color": "purple",
+      "nationality": "Brit",
+      "pet": "rabbit"
+     },
+     "5": {
+      "drink": "coffee",
+      "hobby": "tennis",
+      "job": "doctor",
+      "color": "white",
+      "nationality": "Swede",
+      "pet": "cat"
+     },
+     "6": {
+      "drink": "juice",
+      "hobby": "hiking",
+      "job": "pilot",
+      "color": "red",
+      "nationality": "Dane",
+      "pet": "horse"
      }
     }
    }
@@ -3229,6 +3586,7 @@
    "level": 3,
    "evals": [
     1.0,
+    1.0,
     1.0
    ],
    "answers": {
@@ -3283,6 +3641,56 @@
      }
     },
     "1": {
+     "1": {
+      "color": "red",
+      "job": "doctor",
+      "pet": "dog",
+      "hobby": "cooking",
+      "drink": "cocoa",
+      "nationality": "Norwegian"
+     },
+     "2": {
+      "color": "purple",
+      "job": "baker",
+      "pet": "horse",
+      "hobby": "chess",
+      "drink": "juice",
+      "nationality": "Spaniard"
+     },
+     "3": {
+      "color": "yellow",
+      "job": "farmer",
+      "pet": "cat",
+      "hobby": "tennis",
+      "drink": "water",
+      "nationality": "Brit"
+     },
+     "4": {
+      "color": "white",
+      "job": "pilot",
+      "pet": "fish",
+      "hobby": "golf",
+      "drink": "tea",
+      "nationality": "German"
+     },
+     "5": {
+      "color": "blue",
+      "job": "lawyer",
+      "pet": "bird",
+      "hobby": "painting",
+      "drink": "milk",
+      "nationality": "Dane"
+     },
+     "6": {
+      "color": "green",
+      "job": "teacher",
+      "pet": "rabbit",
+      "hobby": "hiking",
+      "drink": "coffee",
+      "nationality": "Swede"
+     }
+    },
+    "2": {
      "1": {
       "color": "red",
       "job": "doctor",
@@ -3645,6 +4053,7 @@
    "level": 3,
    "evals": [
     1.0,
+    1.0,
     1.0
    ],
    "answers": {
@@ -3746,6 +4155,56 @@
       "nationality": "German",
       "job": "pilot",
       "hobby": "golf"
+     }
+    },
+    "2": {
+     "1": {
+      "pet": "bird",
+      "drink": "milk",
+      "color": "green",
+      "job": "doctor",
+      "hobby": "hiking",
+      "nationality": "Dane"
+     },
+     "2": {
+      "pet": "dog",
+      "drink": "juice",
+      "color": "red",
+      "job": "teacher",
+      "hobby": "tennis",
+      "nationality": "Norwegian"
+     },
+     "3": {
+      "pet": "cat",
+      "drink": "cocoa",
+      "color": "blue",
+      "job": "farmer",
+      "hobby": "cooking",
+      "nationality": "Swede"
+     },
+     "4": {
+      "pet": "rabbit",
+      "drink": "tea",
+      "color": "yellow",
+      "job": "baker",
+      "hobby": "chess",
+      "nationality": "Brit"
+     },
+     "5": {
+      "pet": "fish",
+      "drink": "water",
+      "color": "white",
+      "job": "lawyer",
+      "hobby": "painting",
+      "nationality": "Spaniard"
+     },
+     "6": {
+      "pet": "horse",
+      "drink": "coffee",
+      "color": "purple",
+      "job": "pilot",
+      "hobby": "golf",
+      "nationality": "German"
      }
     }
    }
@@ -4071,6 +4530,7 @@
    "level": 3,
    "evals": [
     1.0,
+    1.0,
     1.0
    ],
    "answers": {
@@ -4172,6 +4632,56 @@
       "job": "teacher",
       "drink": "tea",
       "color": "red"
+     }
+    },
+    "2": {
+     "1": {
+      "pet": "dog",
+      "drink": "cocoa",
+      "color": "yellow",
+      "nationality": "Spaniard",
+      "job": "pilot",
+      "hobby": "hiking"
+     },
+     "2": {
+      "pet": "rabbit",
+      "drink": "juice",
+      "color": "green",
+      "nationality": "Swede",
+      "job": "farmer",
+      "hobby": "golf"
+     },
+     "3": {
+      "pet": "bird",
+      "drink": "milk",
+      "color": "purple",
+      "nationality": "German",
+      "job": "doctor",
+      "hobby": "cooking"
+     },
+     "4": {
+      "pet": "cat",
+      "drink": "coffee",
+      "color": "blue",
+      "nationality": "Norwegian",
+      "job": "baker",
+      "hobby": "chess"
+     },
+     "5": {
+      "pet": "horse",
+      "drink": "water",
+      "color": "white",
+      "nationality": "Brit",
+      "job": "lawyer",
+      "hobby": "tennis"
+     },
+     "6": {
+      "pet": "fish",
+      "drink": "tea",
+      "color": "red",
+      "nationality": "Dane",
+      "job": "teacher",
+      "hobby": "painting"
      }
     }
    }
@@ -4486,6 +4996,7 @@
    "level": 3,
    "evals": [
     1.0,
+    1.0,
     1.0
    ],
    "answers": {
@@ -4540,6 +5051,56 @@
      }
     },
     "1": {
+     "1": {
+      "job": "lawyer",
+      "hobby": "tennis",
+      "pet": "fish",
+      "color": "blue",
+      "drink": "water",
+      "nationality": "Spaniard"
+     },
+     "2": {
+      "job": "teacher",
+      "hobby": "hiking",
+      "pet": "dog",
+      "color": "purple",
+      "drink": "juice",
+      "nationality": "Norwegian"
+     },
+     "3": {
+      "job": "doctor",
+      "hobby": "cooking",
+      "pet": "rabbit",
+      "color": "yellow",
+      "drink": "milk",
+      "nationality": "Brit"
+     },
+     "4": {
+      "job": "farmer",
+      "hobby": "golf",
+      "pet": "horse",
+      "color": "green",
+      "drink": "cocoa",
+      "nationality": "Dane"
+     },
+     "5": {
+      "job": "baker",
+      "hobby": "chess",
+      "pet": "cat",
+      "color": "red",
+      "drink": "tea",
+      "nationality": "Swede"
+     },
+     "6": {
+      "job": "pilot",
+      "hobby": "painting",
+      "pet": "bird",
+      "color": "white",
+      "drink": "coffee",
+      "nationality": "German"
+     }
+    },
+    "2": {
      "1": {
       "job": "lawyer",
       "hobby": "tennis",
@@ -5361,6 +5922,7 @@
    "level": 3,
    "evals": [
     1.0,
+    1.0,
     1.0
    ],
    "answers": {
@@ -5462,6 +6024,56 @@
       "hobby": "hiking",
       "drink": "juice",
       "nationality": "Dane"
+     }
+    },
+    "2": {
+     "1": {
+      "drink": "milk",
+      "hobby": "chess",
+      "job": "farmer",
+      "color": "blue",
+      "nationality": "Spaniard",
+      "pet": "bird"
+     },
+     "2": {
+      "drink": "cocoa",
+      "hobby": "cooking",
+      "job": "lawyer",
+      "color": "green",
+      "nationality": "German",
+      "pet": "fish"
+     },
+     "3": {
+      "drink": "water",
+      "hobby": "painting",
+      "job": "teacher",
+      "color": "yellow",
+      "nationality": "Norwegian",
+      "pet": "dog"
+     },
+     "4": {
+      "drink": "tea",
+      "hobby": "golf",
+      "job": "baker",
+      "color": "purple",
+      "nationality": "Brit",
+      "pet": "rabbit"
+     },
+     "5": {
+      "drink": "coffee",
+      "hobby": "tennis",
+      "job": "doctor",
+      "color": "white",
+      "nationality": "Swede",
+      "pet": "cat"
+     },
+     "6": {
+      "drink": "juice",
+      "hobby": "hiking",
+      "job": "pilot",
+      "color": "red",
+      "nationality": "Dane",
+      "pet": "horse"
      }
     }
    }
@@ -5777,6 +6389,7 @@
    "level": 3,
    "evals": [
     1.0,
+    1.0,
     1.0
    ],
    "answers": {
@@ -5878,6 +6491,56 @@
       "hobby": "tennis",
       "drink": "juice",
       "nationality": "Swede"
+     }
+    },
+    "2": {
+     "1": {
+      "pet": "bird",
+      "drink": "water",
+      "color": "white",
+      "nationality": "Brit",
+      "job": "lawyer",
+      "hobby": "painting"
+     },
+     "2": {
+      "pet": "horse",
+      "drink": "coffee",
+      "color": "purple",
+      "nationality": "Spaniard",
+      "job": "pilot",
+      "hobby": "golf"
+     },
+     "3": {
+      "pet": "fish",
+      "drink": "milk",
+      "color": "yellow",
+      "nationality": "Norwegian",
+      "job": "baker",
+      "hobby": "chess"
+     },
+     "4": {
+      "pet": "cat",
+      "drink": "cocoa",
+      "color": "blue",
+      "nationality": "German",
+      "job": "doctor",
+      "hobby": "hiking"
+     },
+     "5": {
+      "pet": "dog",
+      "drink": "tea",
+      "color": "red",
+      "nationality": "Dane",
+      "job": "teacher",
+      "hobby": "cooking"
+     },
+     "6": {
+      "pet": "rabbit",
+      "drink": "juice",
+      "color": "green",
+      "nationality": "Swede",
+      "job": "farmer",
+      "hobby": "tennis"
      }
     }
    }
@@ -6201,6 +6864,7 @@
    "level": 3,
    "evals": [
     1.0,
+    1.0,
     1.0
    ],
    "answers": {
@@ -6302,6 +6966,56 @@
       "job": "doctor",
       "drink": "tea",
       "color": "green"
+     }
+    },
+    "2": {
+     "1": {
+      "color": "white",
+      "job": "baker",
+      "pet": "bird",
+      "hobby": "cooking",
+      "drink": "water",
+      "nationality": "Norwegian"
+     },
+     "2": {
+      "color": "yellow",
+      "job": "pilot",
+      "pet": "horse",
+      "hobby": "tennis",
+      "drink": "cocoa",
+      "nationality": "Spaniard"
+     },
+     "3": {
+      "color": "purple",
+      "job": "lawyer",
+      "pet": "dog",
+      "hobby": "golf",
+      "drink": "milk",
+      "nationality": "Swede"
+     },
+     "4": {
+      "color": "blue",
+      "job": "teacher",
+      "pet": "rabbit",
+      "hobby": "painting",
+      "drink": "juice",
+      "nationality": "German"
+     },
+     "5": {
+      "color": "red",
+      "job": "farmer",
+      "pet": "fish",
+      "hobby": "hiking",
+      "drink": "coffee",
+      "nationality": "Brit"
+     },
+     "6": {
+      "color": "green",
+      "job": "doctor",
+      "pet": "cat",
+      "hobby": "chess",
+      "drink": "tea",
+      "nationality": "Dane"
      }
     }
    }
@@ -6632,6 +7346,7 @@
    "level": 3,
    "evals": [
     1.0,
+    1.0,
     1.0
    ],
    "answers": {
@@ -6686,6 +7401,56 @@
      }
     },
     "1": {
+     "1": {
+      "color": "red",
+      "job": "doctor",
+      "pet": "dog",
+      "hobby": "cooking",
+      "drink": "cocoa",
+      "nationality": "Norwegian"
+     },
+     "2": {
+      "color": "purple",
+      "job": "baker",
+      "pet": "horse",
+      "hobby": "chess",
+      "drink": "juice",
+      "nationality": "Spaniard"
+     },
+     "3": {
+      "color": "yellow",
+      "job": "farmer",
+      "pet": "cat",
+      "hobby": "tennis",
+      "drink": "water",
+      "nationality": "Brit"
+     },
+     "4": {
+      "color": "white",
+      "job": "pilot",
+      "pet": "fish",
+      "hobby": "golf",
+      "drink": "tea",
+      "nationality": "German"
+     },
+     "5": {
+      "color": "blue",
+      "job": "lawyer",
+      "pet": "bird",
+      "hobby": "painting",
+      "drink": "milk",
+      "nationality": "Dane"
+     },
+     "6": {
+      "color": "green",
+      "job": "teacher",
+      "pet": "rabbit",
+      "hobby": "hiking",
+      "drink": "coffee",
+      "nationality": "Swede"
+     }
+    },
+    "2": {
      "1": {
       "color": "red",
       "job": "doctor",
@@ -7054,12 +7819,63 @@
    "parent": "e4b-g0-00",
    "level": 3,
    "evals": [
+    1.0,
     1.0
    ],
    "repair_added": 2,
    "idea": "Drop two absolute anchors and add a loose ordering clue.",
    "answers": {
     "1": {
+     "1": {
+      "pet": "bird",
+      "drink": "milk",
+      "color": "green",
+      "nationality": "Dane",
+      "job": "doctor",
+      "hobby": "hiking"
+     },
+     "2": {
+      "pet": "dog",
+      "drink": "juice",
+      "color": "red",
+      "nationality": "Norwegian",
+      "job": "teacher",
+      "hobby": "tennis"
+     },
+     "3": {
+      "pet": "cat",
+      "drink": "cocoa",
+      "color": "blue",
+      "nationality": "Swede",
+      "job": "farmer",
+      "hobby": "cooking"
+     },
+     "4": {
+      "pet": "rabbit",
+      "drink": "tea",
+      "color": "yellow",
+      "nationality": "Brit",
+      "job": "baker",
+      "hobby": "chess"
+     },
+     "5": {
+      "pet": "fish",
+      "drink": "water",
+      "color": "white",
+      "nationality": "Spaniard",
+      "job": "lawyer",
+      "hobby": "painting"
+     },
+     "6": {
+      "pet": "horse",
+      "drink": "coffee",
+      "color": "purple",
+      "nationality": "German",
+      "job": "pilot",
+      "hobby": "golf"
+     }
+    },
+    "2": {
      "1": {
       "pet": "bird",
       "drink": "milk",
@@ -11956,6 +12772,4764 @@
      }
     }
    }
+  },
+  "e4b-g2-00": {
+   "id": "e4b-g2-00",
+   "spec": {
+    "family": "zebra",
+    "n": 6,
+    "cats": {
+     "pet": [
+      "rabbit",
+      "dog",
+      "bird",
+      "cat",
+      "horse",
+      "fish"
+     ],
+     "drink": [
+      "milk",
+      "juice",
+      "water",
+      "coffee",
+      "cocoa",
+      "tea"
+     ],
+     "color": [
+      "blue",
+      "purple",
+      "yellow",
+      "red",
+      "white",
+      "green"
+     ],
+     "nationality": [
+      "Dane",
+      "Spaniard",
+      "German",
+      "Swede",
+      "Norwegian",
+      "Brit"
+     ],
+     "job": [
+      "doctor",
+      "baker",
+      "teacher",
+      "pilot",
+      "farmer",
+      "lawyer"
+     ],
+     "hobby": [
+      "chess",
+      "painting",
+      "cooking",
+      "golf",
+      "tennis",
+      "hiking"
+     ]
+    },
+    "solution": {
+     "rabbit": 4,
+     "dog": 2,
+     "bird": 1,
+     "cat": 3,
+     "horse": 6,
+     "fish": 5,
+     "milk": 1,
+     "juice": 2,
+     "water": 5,
+     "coffee": 6,
+     "cocoa": 3,
+     "tea": 4,
+     "blue": 3,
+     "purple": 6,
+     "yellow": 4,
+     "red": 2,
+     "white": 5,
+     "green": 1,
+     "dane": 1,
+     "spaniard": 5,
+     "german": 6,
+     "swede": 3,
+     "norwegian": 2,
+     "brit": 4,
+     "doctor": 1,
+     "baker": 4,
+     "teacher": 2,
+     "pilot": 6,
+     "farmer": 3,
+     "lawyer": 5,
+     "chess": 4,
+     "painting": 5,
+     "cooking": 3,
+     "golf": 6,
+     "tennis": 2,
+     "hiking": 1
+    },
+    "style": "plain",
+    "clues": [
+     {
+      "type": "next_to",
+      "args": [
+       "doctor",
+       "red"
+      ],
+      "expr": "Abs(pos(\"doctor\") - pos(\"red\")) == 1",
+      "text": "The doctor lives next to the person in the red house."
+     },
+     {
+      "type": "next_to",
+      "args": [
+       "cocoa",
+       "norwegian"
+      ],
+      "expr": "Abs(pos(\"cocoa\") - pos(\"norwegian\")) == 1",
+      "text": "The cocoa drinker and the Norwegian live in adjacent houses."
+     },
+     {
+      "type": "same",
+      "args": [
+       "dane",
+       "green"
+      ],
+      "expr": "pos(\"dane\") == pos(\"green\")",
+      "text": "The Dane lives in the green house."
+     },
+     {
+      "type": "before",
+      "args": [
+       "dane",
+       "chess"
+      ],
+      "expr": "pos(\"dane\") < pos(\"chess\")",
+      "text": "The Dane lives somewhere to the left of the person who enjoys chess."
+     },
+     {
+      "type": "same",
+      "args": [
+       "teacher",
+       "tennis"
+      ],
+      "expr": "pos(\"teacher\") == pos(\"tennis\")",
+      "text": "The tennis enthusiast works as the teacher."
+     },
+     {
+      "type": "left_of",
+      "args": [
+       "rabbit",
+       "painting"
+      ],
+      "expr": "pos(\"rabbit\") + 1 == pos(\"painting\")",
+      "text": "The rabbit owner lives in the house just left of the one where the painting enthusiast lives."
+     },
+     {
+      "type": "same",
+      "args": [
+       "green",
+       "hiking"
+      ],
+      "expr": "pos(\"green\") == pos(\"hiking\")",
+      "text": "The occupant of the green house enjoys hiking."
+     },
+     {
+      "type": "gap2",
+      "args": [
+       "tea",
+       "tennis"
+      ],
+      "expr": "Abs(pos(\"tea\") - pos(\"tennis\")) == 2",
+      "text": "There is exactly one house between the person who drinks tea and the tennis enthusiast."
+     },
+     {
+      "type": "next_to",
+      "args": [
+       "green",
+       "red"
+      ],
+      "expr": "Abs(pos(\"green\") - pos(\"red\")) == 1",
+      "text": "The occupant of the green house and the person in the red house live in adjacent houses."
+     },
+     {
+      "type": "next_to",
+      "args": [
+       "purple",
+       "spaniard"
+      ],
+      "expr": "Abs(pos(\"purple\") - pos(\"spaniard\")) == 1",
+      "text": "Whoever lives in the purple house and the Spaniard are neighbours."
+     },
+     {
+      "type": "before",
+      "args": [
+       "dog",
+       "tea"
+      ],
+      "expr": "pos(\"dog\") < pos(\"tea\")",
+      "text": "The dog owner lives in a lower-numbered house than the tea drinker."
+     },
+     {
+      "type": "next_to",
+      "args": [
+       "blue",
+       "red"
+      ],
+      "expr": "Abs(pos(\"blue\") - pos(\"red\")) == 1",
+      "text": "The occupant of the blue house and whoever lives in the red house are neighbours."
+     },
+     {
+      "type": "same",
+      "args": [
+       "bird",
+       "dane"
+      ],
+      "expr": "pos(\"bird\") == pos(\"dane\")",
+      "text": "The Dane keeps the bird."
+     },
+     {
+      "type": "left_of",
+      "args": [
+       "farmer",
+       "rabbit"
+      ],
+      "expr": "pos(\"farmer\") + 1 == pos(\"rabbit\")",
+      "text": "The rabbit owner lives immediately to the right of the farmer."
+     },
+     {
+      "type": "at",
+      "args": [
+       "water",
+       5
+      ],
+      "expr": "pos(\"water\") == 5",
+      "text": "The water drinker lives in the fifth house."
+     },
+     {
+      "type": "same",
+      "args": [
+       "horse",
+       "pilot"
+      ],
+      "expr": "pos(\"horse\") == pos(\"pilot\")",
+      "text": "The pilot keeps the horse."
+     },
+     {
+      "type": "left_of",
+      "args": [
+       "juice",
+       "cat"
+      ],
+      "expr": "pos(\"juice\") + 1 == pos(\"cat\")",
+      "text": "The owner of the cat lives immediately to the right of the person who drinks juice."
+     },
+     {
+      "type": "next_to",
+      "args": [
+       "baker",
+       "cocoa"
+      ],
+      "expr": "Abs(pos(\"baker\") - pos(\"cocoa\")) == 1",
+      "text": "The baker and the cocoa drinker are neighbours."
+     },
+     {
+      "type": "same",
+      "args": [
+       "chess",
+       "yellow"
+      ],
+      "expr": "pos(\"chess\") == pos(\"yellow\")",
+      "text": "Whoever lives in the yellow house enjoys chess."
+     },
+     {
+      "type": "gap2",
+      "args": [
+       "cat",
+       "lawyer"
+      ],
+      "expr": "Abs(pos(\"cat\") - pos(\"lawyer\")) == 2",
+      "text": "There is exactly one house between the cat owner and the lawyer."
+     },
+     {
+      "type": "at",
+      "args": [
+       "coffee",
+       6
+      ],
+      "expr": "pos(\"coffee\") == 6",
+      "text": "The person who drinks coffee lives in the sixth house."
+     },
+     {
+      "type": "gap2",
+      "args": [
+       "swede",
+       "white"
+      ],
+      "expr": "Abs(pos(\"swede\") - pos(\"white\")) == 2",
+      "text": "There is exactly one house between the Swede and the occupant of the white house."
+     },
+     {
+      "type": "same",
+      "args": [
+       "coffee",
+       "golf"
+      ],
+      "expr": "pos(\"coffee\") == pos(\"golf\")",
+      "text": "The person who drinks coffee enjoys golf."
+     },
+     {
+      "type": "or",
+      "args": [
+       "juice",
+       "norwegian",
+       "spaniard"
+      ],
+      "expr": "Or(pos(\"juice\") == pos(\"norwegian\"), pos(\"juice\") == pos(\"spaniard\"))",
+      "text": "The person who drinks juice either is the Norwegian or is the Spaniard."
+     },
+     {
+      "type": "same",
+      "args": [
+       "brit",
+       "tea"
+      ],
+      "expr": "pos(\"brit\") == pos(\"tea\")",
+      "text": "The tea drinker is the Brit."
+     }
+    ]
+   },
+   "born": 2,
+   "parent": "e4b-g0-00",
+   "level": 3,
+   "evals": [
+    1.0
+   ],
+   "repair_added": 2,
+   "idea": "Swap two direct position clues for a relative clue and a disjunction.",
+   "answers": {
+    "2": {
+     "1": {
+      "pet": "bird",
+      "drink": "milk",
+      "color": "green",
+      "nationality": "Dane",
+      "job": "doctor",
+      "hobby": "hiking"
+     },
+     "2": {
+      "pet": "dog",
+      "drink": "juice",
+      "color": "red",
+      "nationality": "Norwegian",
+      "job": "teacher",
+      "hobby": "tennis"
+     },
+     "3": {
+      "pet": "cat",
+      "drink": "cocoa",
+      "color": "blue",
+      "nationality": "Swede",
+      "job": "farmer",
+      "hobby": "cooking"
+     },
+     "4": {
+      "pet": "rabbit",
+      "drink": "tea",
+      "color": "yellow",
+      "nationality": "Brit",
+      "job": "baker",
+      "hobby": "chess"
+     },
+     "5": {
+      "pet": "fish",
+      "drink": "water",
+      "color": "white",
+      "nationality": "Spaniard",
+      "job": "lawyer",
+      "hobby": "painting"
+     },
+     "6": {
+      "pet": "horse",
+      "drink": "coffee",
+      "color": "purple",
+      "nationality": "German",
+      "job": "pilot",
+      "hobby": "golf"
+     }
+    }
+   }
+  },
+  "e4b-g2-01": {
+   "id": "e4b-g2-01",
+   "spec": {
+    "family": "zebra",
+    "n": 6,
+    "cats": {
+     "pet": [
+      "rabbit",
+      "dog",
+      "bird",
+      "cat",
+      "horse",
+      "fish"
+     ],
+     "drink": [
+      "milk",
+      "juice",
+      "water",
+      "coffee",
+      "cocoa",
+      "tea"
+     ],
+     "color": [
+      "blue",
+      "purple",
+      "yellow",
+      "red",
+      "white",
+      "green"
+     ],
+     "nationality": [
+      "Dane",
+      "Spaniard",
+      "German",
+      "Swede",
+      "Norwegian",
+      "Brit"
+     ],
+     "job": [
+      "doctor",
+      "baker",
+      "teacher",
+      "pilot",
+      "farmer",
+      "lawyer"
+     ],
+     "hobby": [
+      "chess",
+      "painting",
+      "cooking",
+      "golf",
+      "tennis",
+      "hiking"
+     ]
+    },
+    "solution": {
+     "rabbit": 4,
+     "dog": 2,
+     "bird": 1,
+     "cat": 3,
+     "horse": 6,
+     "fish": 5,
+     "milk": 1,
+     "juice": 2,
+     "water": 5,
+     "coffee": 6,
+     "cocoa": 3,
+     "tea": 4,
+     "blue": 3,
+     "purple": 6,
+     "yellow": 4,
+     "red": 2,
+     "white": 5,
+     "green": 1,
+     "dane": 1,
+     "spaniard": 5,
+     "german": 6,
+     "swede": 3,
+     "norwegian": 2,
+     "brit": 4,
+     "doctor": 1,
+     "baker": 4,
+     "teacher": 2,
+     "pilot": 6,
+     "farmer": 3,
+     "lawyer": 5,
+     "chess": 4,
+     "painting": 5,
+     "cooking": 3,
+     "golf": 6,
+     "tennis": 2,
+     "hiking": 1
+    },
+    "style": "plain",
+    "clues": [
+     {
+      "type": "same",
+      "args": [
+       "brit",
+       "tea"
+      ],
+      "expr": "pos(\"brit\") == pos(\"tea\")",
+      "text": "The person who drinks tea is the Brit."
+     },
+     {
+      "type": "gap2",
+      "args": [
+       "water",
+       "cocoa"
+      ],
+      "expr": "Abs(pos(\"water\") - pos(\"cocoa\")) == 2",
+      "text": "There is exactly one house between the water drinker and the person who drinks cocoa."
+     },
+     {
+      "type": "left_of",
+      "args": [
+       "juice",
+       "cat"
+      ],
+      "expr": "pos(\"juice\") + 1 == pos(\"cat\")",
+      "text": "The juice drinker lives directly to the left of the cat owner."
+     },
+     {
+      "type": "before",
+      "args": [
+       "dog",
+       "tea"
+      ],
+      "expr": "pos(\"dog\") < pos(\"tea\")",
+      "text": "The tea drinker lives somewhere to the right of the dog owner."
+     },
+     {
+      "type": "not_at",
+      "args": [
+       "milk",
+       5
+      ],
+      "expr": "pos(\"milk\") != 5",
+      "text": "The milk drinker does not live in the fifth house."
+     },
+     {
+      "type": "same",
+      "args": [
+       "green",
+       "hiking"
+      ],
+      "expr": "pos(\"green\") == pos(\"hiking\")",
+      "text": "Whoever lives in the green house enjoys hiking."
+     },
+     {
+      "type": "same",
+      "args": [
+       "bird",
+       "dane"
+      ],
+      "expr": "pos(\"bird\") == pos(\"dane\")",
+      "text": "The bird owner is the Dane."
+     },
+     {
+      "type": "end",
+      "args": [
+       "coffee"
+      ],
+      "expr": "Or(pos(\"coffee\") == 1, pos(\"coffee\") == 6)",
+      "text": "The person who drinks coffee lives in one of the two end houses."
+     },
+     {
+      "type": "same",
+      "args": [
+       "coffee",
+       "golf"
+      ],
+      "expr": "pos(\"coffee\") == pos(\"golf\")",
+      "text": "The person who enjoys golf drinks coffee."
+     },
+     {
+      "type": "next_to",
+      "args": [
+       "cocoa",
+       "norwegian"
+      ],
+      "expr": "Abs(pos(\"cocoa\") - pos(\"norwegian\")) == 1",
+      "text": "The cocoa drinker lives next to the Norwegian."
+     },
+     {
+      "type": "left_of",
+      "args": [
+       "rabbit",
+       "painting"
+      ],
+      "expr": "pos(\"rabbit\") + 1 == pos(\"painting\")",
+      "text": "The painting enthusiast lives immediately to the right of the person who keeps the rabbit."
+     },
+     {
+      "type": "left_of",
+      "args": [
+       "farmer",
+       "rabbit"
+      ],
+      "expr": "pos(\"farmer\") + 1 == pos(\"rabbit\")",
+      "text": "The farmer lives directly to the left of the person who keeps the rabbit."
+     },
+     {
+      "type": "gap2",
+      "args": [
+       "cat",
+       "lawyer"
+      ],
+      "expr": "Abs(pos(\"cat\") - pos(\"lawyer\")) == 2",
+      "text": "The cat owner and the lawyer live two houses apart."
+     },
+     {
+      "type": "at",
+      "args": [
+       "norwegian",
+       2
+      ],
+      "expr": "pos(\"norwegian\") == 2",
+      "text": "The Norwegian lives in house 2."
+     },
+     {
+      "type": "at",
+      "args": [
+       "blue",
+       3
+      ],
+      "expr": "pos(\"blue\") == 3",
+      "text": "Whoever lives in the blue house lives in house 3."
+     },
+     {
+      "type": "same",
+      "args": [
+       "horse",
+       "pilot"
+      ],
+      "expr": "pos(\"horse\") == pos(\"pilot\")",
+      "text": "The pilot keeps the horse."
+     },
+     {
+      "type": "next_to",
+      "args": [
+       "green",
+       "red"
+      ],
+      "expr": "Abs(pos(\"green\") - pos(\"red\")) == 1",
+      "text": "Whoever lives in the green house and the person in the red house are neighbours."
+     },
+     {
+      "type": "left_of",
+      "args": [
+       "tea",
+       "fish"
+      ],
+      "expr": "pos(\"tea\") + 1 == pos(\"fish\")",
+      "text": "The person who keeps the fish lives immediately to the right of the person who drinks tea."
+     },
+     {
+      "type": "at",
+      "args": [
+       "juice",
+       2
+      ],
+      "expr": "pos(\"juice\") == 2",
+      "text": "The juice drinker lives in the second house."
+     },
+     {
+      "type": "same",
+      "args": [
+       "teacher",
+       "tennis"
+      ],
+      "expr": "pos(\"teacher\") == pos(\"tennis\")",
+      "text": "The person who enjoys tennis works as the teacher."
+     },
+     {
+      "type": "gap2",
+      "args": [
+       "tea",
+       "tennis"
+      ],
+      "expr": "Abs(pos(\"tea\") - pos(\"tennis\")) == 2",
+      "text": "The person who drinks tea and the person who enjoys tennis live two houses apart."
+     },
+     {
+      "type": "gap2",
+      "args": [
+       "swede",
+       "white"
+      ],
+      "expr": "Abs(pos(\"swede\") - pos(\"white\")) == 2",
+      "text": "There is exactly one house between the Swede and the occupant of the white house."
+     },
+     {
+      "type": "gap2",
+      "args": [
+       "blue",
+       "doctor"
+      ],
+      "expr": "Abs(pos(\"blue\") - pos(\"doctor\")) == 2",
+      "text": "There is exactly one house between the occupant of the blue house and the doctor."
+     },
+     {
+      "type": "next_to",
+      "args": [
+       "purple",
+       "spaniard"
+      ],
+      "expr": "Abs(pos(\"purple\") - pos(\"spaniard\")) == 1",
+      "text": "Whoever lives in the purple house and the Spaniard live in adjacent houses."
+     },
+     {
+      "type": "same",
+      "args": [
+       "chess",
+       "yellow"
+      ],
+      "expr": "pos(\"chess\") == pos(\"yellow\")",
+      "text": "The chess enthusiast lives in the yellow house."
+     },
+     {
+      "type": "next_to",
+      "args": [
+       "doctor",
+       "red"
+      ],
+      "expr": "Abs(pos(\"doctor\") - pos(\"red\")) == 1",
+      "text": "The doctor lives next to whoever lives in the red house."
+     },
+     {
+      "type": "next_to",
+      "args": [
+       "baker",
+       "cocoa"
+      ],
+      "expr": "Abs(pos(\"baker\") - pos(\"cocoa\")) == 1",
+      "text": "The baker and the cocoa drinker live in adjacent houses."
+     }
+    ]
+   },
+   "born": 2,
+   "parent": "e4b-g0-00",
+   "level": 2,
+   "evals": [
+    1.0
+   ],
+   "repair_added": 4,
+   "idea": "Turn exact positions of water and coffee into relative and end clues.",
+   "answers": {
+    "2": {
+     "1": {
+      "drink": "milk",
+      "hobby": "hiking",
+      "job": "doctor",
+      "color": "green",
+      "nationality": "Dane",
+      "pet": "bird"
+     },
+     "2": {
+      "drink": "juice",
+      "hobby": "tennis",
+      "job": "teacher",
+      "color": "red",
+      "nationality": "Norwegian",
+      "pet": "dog"
+     },
+     "3": {
+      "drink": "cocoa",
+      "hobby": "cooking",
+      "job": "farmer",
+      "color": "blue",
+      "nationality": "Swede",
+      "pet": "cat"
+     },
+     "4": {
+      "drink": "tea",
+      "hobby": "chess",
+      "job": "baker",
+      "color": "yellow",
+      "nationality": "Brit",
+      "pet": "rabbit"
+     },
+     "5": {
+      "drink": "water",
+      "hobby": "painting",
+      "job": "lawyer",
+      "color": "white",
+      "nationality": "Spaniard",
+      "pet": "fish"
+     },
+     "6": {
+      "drink": "coffee",
+      "hobby": "golf",
+      "job": "pilot",
+      "color": "purple",
+      "nationality": "German",
+      "pet": "horse"
+     }
+    }
+   }
+  },
+  "e4b-g2-02": {
+   "id": "e4b-g2-02",
+   "spec": {
+    "family": "zebra",
+    "n": 6,
+    "cats": {
+     "job": [
+      "lawyer",
+      "farmer",
+      "baker",
+      "pilot",
+      "doctor",
+      "teacher"
+     ],
+     "hobby": [
+      "tennis",
+      "hiking",
+      "golf",
+      "chess",
+      "painting",
+      "cooking"
+     ],
+     "pet": [
+      "rabbit",
+      "bird",
+      "fish",
+      "cat",
+      "dog",
+      "horse"
+     ],
+     "color": [
+      "green",
+      "blue",
+      "white",
+      "yellow",
+      "red",
+      "purple"
+     ],
+     "drink": [
+      "cocoa",
+      "juice",
+      "milk",
+      "tea",
+      "coffee",
+      "water"
+     ],
+     "nationality": [
+      "Brit",
+      "Norwegian",
+      "German",
+      "Swede",
+      "Spaniard",
+      "Dane"
+     ]
+    },
+    "solution": {
+     "lawyer": 1,
+     "farmer": 4,
+     "baker": 5,
+     "pilot": 6,
+     "doctor": 3,
+     "teacher": 2,
+     "tennis": 1,
+     "hiking": 2,
+     "golf": 4,
+     "chess": 5,
+     "painting": 6,
+     "cooking": 3,
+     "rabbit": 3,
+     "bird": 6,
+     "fish": 1,
+     "cat": 5,
+     "dog": 2,
+     "horse": 4,
+     "green": 4,
+     "blue": 1,
+     "white": 6,
+     "yellow": 3,
+     "red": 5,
+     "purple": 2,
+     "cocoa": 4,
+     "juice": 2,
+     "milk": 3,
+     "tea": 5,
+     "coffee": 6,
+     "water": 1,
+     "brit": 3,
+     "norwegian": 2,
+     "german": 6,
+     "swede": 5,
+     "spaniard": 1,
+     "dane": 4
+    },
+    "style": "plain",
+    "clues": [
+     {
+      "type": "left_of",
+      "args": [
+       "rabbit",
+       "green"
+      ],
+      "expr": "pos(\"rabbit\") + 1 == pos(\"green\")",
+      "text": "Whoever lives in the green house lives immediately to the right of the owner of the rabbit."
+     },
+     {
+      "type": "left_of",
+      "args": [
+       "tennis",
+       "teacher"
+      ],
+      "expr": "pos(\"tennis\") + 1 == pos(\"teacher\")",
+      "text": "The tennis enthusiast lives in the house just left of the one where the teacher lives."
+     },
+     {
+      "type": "same",
+      "args": [
+       "juice",
+       "norwegian"
+      ],
+      "expr": "pos(\"juice\") == pos(\"norwegian\")",
+      "text": "The juice drinker is the Norwegian."
+     },
+     {
+      "type": "left_of",
+      "args": [
+       "horse",
+       "baker"
+      ],
+      "expr": "pos(\"horse\") + 1 == pos(\"baker\")",
+      "text": "The baker lives immediately to the right of the person who keeps the horse."
+     },
+     {
+      "type": "gap2",
+      "args": [
+       "farmer",
+       "white"
+      ],
+      "expr": "Abs(pos(\"farmer\") - pos(\"white\")) == 2",
+      "text": "There is exactly one house between the farmer and the occupant of the white house."
+     },
+     {
+      "type": "next_to",
+      "args": [
+       "dane",
+       "rabbit"
+      ],
+      "expr": "Abs(pos(\"dane\") - pos(\"rabbit\")) == 1",
+      "text": "The Dane lives next to the person who keeps the rabbit."
+     },
+     {
+      "type": "or",
+      "args": [
+       "purple",
+       "juice",
+       "tea"
+      ],
+      "expr": "Or(pos(\"purple\") == pos(\"juice\"), pos(\"purple\") == pos(\"tea\"))",
+      "text": "The person in the purple house either drinks juice or drinks tea."
+     },
+     {
+      "type": "same",
+      "args": [
+       "coffee",
+       "painting"
+      ],
+      "expr": "pos(\"coffee\") == pos(\"painting\")",
+      "text": "The painting enthusiast drinks coffee."
+     },
+     {
+      "type": "same",
+      "args": [
+       "hiking",
+       "norwegian"
+      ],
+      "expr": "pos(\"hiking\") == pos(\"norwegian\")",
+      "text": "The person who enjoys hiking is the Norwegian."
+     },
+     {
+      "type": "not_next_to",
+      "args": [
+       "blue",
+       "green"
+      ],
+      "expr": "Abs(pos(\"blue\") - pos(\"green\")) != 1",
+      "text": "The occupant of the blue house and the occupant of the green house are not neighbours."
+     },
+     {
+      "type": "same",
+      "args": [
+       "cocoa",
+       "golf"
+      ],
+      "expr": "pos(\"cocoa\") == pos(\"golf\")",
+      "text": "The cocoa drinker enjoys golf."
+     },
+     {
+      "type": "next_to",
+      "args": [
+       "cat",
+       "german"
+      ],
+      "expr": "Abs(pos(\"cat\") - pos(\"german\")) == 1",
+      "text": "The person who keeps the cat and the German are neighbours."
+     },
+     {
+      "type": "at",
+      "args": [
+       "bird",
+       6
+      ],
+      "expr": "pos(\"bird\") == 6",
+      "text": "The owner of the bird lives in house 6."
+     },
+     {
+      "type": "next_to",
+      "args": [
+       "bird",
+       "red"
+      ],
+      "expr": "Abs(pos(\"bird\") - pos(\"red\")) == 1",
+      "text": "The bird owner lives next to whoever lives in the red house."
+     },
+     {
+      "type": "left_of",
+      "args": [
+       "farmer",
+       "baker"
+      ],
+      "expr": "pos(\"farmer\") + 1 == pos(\"baker\")",
+      "text": "The baker lives immediately to the right of the farmer."
+     },
+     {
+      "type": "same",
+      "args": [
+       "fish",
+       "lawyer"
+      ],
+      "expr": "pos(\"fish\") == pos(\"lawyer\")",
+      "text": "The owner of the fish works as the lawyer."
+     },
+     {
+      "type": "end",
+      "args": [
+       "water"
+      ],
+      "expr": "Or(pos(\"water\") == 1, pos(\"water\") == 6)",
+      "text": "The person who drinks water lives at one end of the row."
+     },
+     {
+      "type": "left_of",
+      "args": [
+       "dog",
+       "milk"
+      ],
+      "expr": "pos(\"dog\") + 1 == pos(\"milk\")",
+      "text": "The milk drinker lives immediately to the right of the dog owner."
+     },
+     {
+      "type": "same",
+      "args": [
+       "brit",
+       "rabbit"
+      ],
+      "expr": "pos(\"brit\") == pos(\"rabbit\")",
+      "text": "The Brit keeps the rabbit."
+     },
+     {
+      "type": "left_of",
+      "args": [
+       "cooking",
+       "green"
+      ],
+      "expr": "pos(\"cooking\") + 1 == pos(\"green\")",
+      "text": "The person who enjoys cooking lives in the house just left of the one where whoever lives in the green house lives."
+     },
+     {
+      "type": "next_to",
+      "args": [
+       "chess",
+       "green"
+      ],
+      "expr": "Abs(pos(\"chess\") - pos(\"green\")) == 1",
+      "text": "The person who enjoys chess and the person in the green house live in adjacent houses."
+     },
+     {
+      "type": "next_to",
+      "args": [
+       "norwegian",
+       "rabbit"
+      ],
+      "expr": "Abs(pos(\"norwegian\") - pos(\"rabbit\")) == 1",
+      "text": "The Norwegian and the rabbit owner are neighbours."
+     },
+     {
+      "type": "same",
+      "args": [
+       "painting",
+       "pilot"
+      ],
+      "expr": "pos(\"painting\") == pos(\"pilot\")",
+      "text": "The person who enjoys painting works as the pilot."
+     },
+     {
+      "type": "same",
+      "args": [
+       "golf",
+       "green"
+      ],
+      "expr": "pos(\"golf\") == pos(\"green\")",
+      "text": "Whoever lives in the green house enjoys golf."
+     },
+     {
+      "type": "before",
+      "args": [
+       "yellow",
+       "swede"
+      ],
+      "expr": "pos(\"yellow\") < pos(\"swede\")",
+      "text": "Whoever lives in the yellow house lives somewhere to the left of the Swede."
+     }
+    ]
+   },
+   "born": 2,
+   "parent": "e4b-g0-02",
+   "level": 3,
+   "evals": [
+    1.0
+   ],
+   "repair_added": 2,
+   "idea": "Replace house-1 anchors with end and negative adjacency clues.",
+   "answers": {
+    "2": {
+     "1": {
+      "color": "blue",
+      "job": "lawyer",
+      "pet": "fish",
+      "hobby": "tennis",
+      "drink": "water",
+      "nationality": "Spaniard"
+     },
+     "2": {
+      "color": "purple",
+      "job": "teacher",
+      "pet": "dog",
+      "hobby": "hiking",
+      "drink": "juice",
+      "nationality": "Norwegian"
+     },
+     "3": {
+      "color": "yellow",
+      "job": "doctor",
+      "pet": "rabbit",
+      "hobby": "cooking",
+      "drink": "milk",
+      "nationality": "Brit"
+     },
+     "4": {
+      "color": "green",
+      "job": "farmer",
+      "pet": "horse",
+      "hobby": "golf",
+      "drink": "cocoa",
+      "nationality": "Dane"
+     },
+     "5": {
+      "color": "red",
+      "job": "baker",
+      "pet": "cat",
+      "hobby": "chess",
+      "drink": "tea",
+      "nationality": "Swede"
+     },
+     "6": {
+      "color": "white",
+      "job": "pilot",
+      "pet": "bird",
+      "hobby": "painting",
+      "drink": "coffee",
+      "nationality": "German"
+     }
+    }
+   }
+  },
+  "e4b-g2-03": {
+   "id": "e4b-g2-03",
+   "spec": {
+    "family": "zebra",
+    "n": 6,
+    "cats": {
+     "pet": [
+      "horse",
+      "fish",
+      "rabbit",
+      "dog",
+      "bird",
+      "cat"
+     ],
+     "hobby": [
+      "hiking",
+      "tennis",
+      "cooking",
+      "painting",
+      "chess",
+      "golf"
+     ],
+     "job": [
+      "doctor",
+      "farmer",
+      "teacher",
+      "lawyer",
+      "pilot",
+      "baker"
+     ],
+     "drink": [
+      "coffee",
+      "juice",
+      "water",
+      "cocoa",
+      "tea",
+      "milk"
+     ],
+     "color": [
+      "red",
+      "yellow",
+      "white",
+      "purple",
+      "blue",
+      "green"
+     ],
+     "nationality": [
+      "Swede",
+      "German",
+      "Norwegian",
+      "Brit",
+      "Dane",
+      "Spaniard"
+     ]
+    },
+    "solution": {
+     "horse": 5,
+     "fish": 6,
+     "rabbit": 2,
+     "dog": 1,
+     "bird": 3,
+     "cat": 4,
+     "hiking": 1,
+     "tennis": 5,
+     "cooking": 3,
+     "painting": 6,
+     "chess": 4,
+     "golf": 2,
+     "doctor": 3,
+     "farmer": 2,
+     "teacher": 6,
+     "lawyer": 5,
+     "pilot": 1,
+     "baker": 4,
+     "coffee": 4,
+     "juice": 2,
+     "water": 5,
+     "cocoa": 1,
+     "tea": 6,
+     "milk": 3,
+     "red": 6,
+     "yellow": 1,
+     "white": 5,
+     "purple": 3,
+     "blue": 4,
+     "green": 2,
+     "swede": 2,
+     "german": 3,
+     "norwegian": 4,
+     "brit": 5,
+     "dane": 6,
+     "spaniard": 1
+    },
+    "style": "plain",
+    "clues": [
+     {
+      "type": "gap2",
+      "args": [
+       "purple",
+       "white"
+      ],
+      "expr": "Abs(pos(\"purple\") - pos(\"white\")) == 2",
+      "text": "There is exactly one house between whoever lives in the purple house and the person in the white house."
+     },
+     {
+      "type": "at",
+      "args": [
+       "chess",
+       4
+      ],
+      "expr": "pos(\"chess\") == 4",
+      "text": "The person who enjoys chess lives in house 4."
+     },
+     {
+      "type": "or",
+      "args": [
+       "chess",
+       "cat",
+       "rabbit"
+      ],
+      "expr": "Or(pos(\"chess\") == pos(\"cat\"), pos(\"chess\") == pos(\"rabbit\"))",
+      "text": "The person who enjoys chess either keeps the cat or keeps the rabbit."
+     },
+     {
+      "type": "left_of",
+      "args": [
+       "norwegian",
+       "tennis"
+      ],
+      "expr": "pos(\"norwegian\") + 1 == pos(\"tennis\")",
+      "text": "The person who enjoys tennis lives immediately to the right of the Norwegian."
+     },
+     {
+      "type": "left_of",
+      "args": [
+       "bird",
+       "baker"
+      ],
+      "expr": "pos(\"bird\") + 1 == pos(\"baker\")",
+      "text": "The person who keeps the bird lives directly to the left of the baker."
+     },
+     {
+      "type": "same",
+      "args": [
+       "red",
+       "tea"
+      ],
+      "expr": "pos(\"red\") == pos(\"tea\")",
+      "text": "Whoever lives in the red house drinks tea."
+     },
+     {
+      "type": "same",
+      "args": [
+       "blue",
+       "norwegian"
+      ],
+      "expr": "pos(\"blue\") == pos(\"norwegian\")",
+      "text": "The Norwegian lives in the blue house."
+     },
+     {
+      "type": "left_of",
+      "args": [
+       "yellow",
+       "rabbit"
+      ],
+      "expr": "pos(\"yellow\") + 1 == pos(\"rabbit\")",
+      "text": "Whoever lives in the yellow house lives directly to the left of the rabbit owner."
+     },
+     {
+      "type": "at",
+      "args": [
+       "doctor",
+       3
+      ],
+      "expr": "pos(\"doctor\") == 3",
+      "text": "The doctor lives in house 3."
+     },
+     {
+      "type": "same",
+      "args": [
+       "tea",
+       "teacher"
+      ],
+      "expr": "pos(\"tea\") == pos(\"teacher\")",
+      "text": "The tea drinker works as the teacher."
+     },
+     {
+      "type": "or",
+      "args": [
+       "cooking",
+       "green",
+       "purple"
+      ],
+      "expr": "Or(pos(\"cooking\") == pos(\"green\"), pos(\"cooking\") == pos(\"purple\"))",
+      "text": "The cooking enthusiast either lives in the green house or lives in the purple house."
+     },
+     {
+      "type": "same",
+      "args": [
+       "pilot",
+       "spaniard"
+      ],
+      "expr": "pos(\"pilot\") == pos(\"spaniard\")",
+      "text": "The Spaniard works as the pilot."
+     },
+     {
+      "type": "end",
+      "args": [
+       "dane"
+      ],
+      "expr": "Or(pos(\"dane\") == 1, pos(\"dane\") == 6)",
+      "text": "The Dane lives in one of the two end houses."
+     },
+     {
+      "type": "at",
+      "args": [
+       "spaniard",
+       1
+      ],
+      "expr": "pos(\"spaniard\") == 1",
+      "text": "The Spaniard lives in house 1."
+     },
+     {
+      "type": "same",
+      "args": [
+       "golf",
+       "rabbit"
+      ],
+      "expr": "pos(\"golf\") == pos(\"rabbit\")",
+      "text": "The rabbit owner enjoys golf."
+     },
+     {
+      "type": "same",
+      "args": [
+       "bird",
+       "german"
+      ],
+      "expr": "pos(\"bird\") == pos(\"german\")",
+      "text": "The German keeps the bird."
+     },
+     {
+      "type": "same",
+      "args": [
+       "fish",
+       "tea"
+      ],
+      "expr": "pos(\"fish\") == pos(\"tea\")",
+      "text": "The person who keeps the fish drinks tea."
+     },
+     {
+      "type": "next_to",
+      "args": [
+       "coffee",
+       "white"
+      ],
+      "expr": "Abs(pos(\"coffee\") - pos(\"white\")) == 1",
+      "text": "The coffee drinker and the occupant of the white house live in adjacent houses."
+     },
+     {
+      "type": "same",
+      "args": [
+       "juice",
+       "rabbit"
+      ],
+      "expr": "pos(\"juice\") == pos(\"rabbit\")",
+      "text": "The person who drinks juice keeps the rabbit."
+     },
+     {
+      "type": "or",
+      "args": [
+       "green",
+       "doctor",
+       "farmer"
+      ],
+      "expr": "Or(pos(\"green\") == pos(\"doctor\"), pos(\"green\") == pos(\"farmer\"))",
+      "text": "The person in the green house either works as the doctor or works as the farmer."
+     },
+     {
+      "type": "left_of",
+      "args": [
+       "milk",
+       "norwegian"
+      ],
+      "expr": "pos(\"milk\") + 1 == pos(\"norwegian\")",
+      "text": "The Norwegian lives immediately to the right of the person who drinks milk."
+     },
+     {
+      "type": "gap2",
+      "args": [
+       "brit",
+       "german"
+      ],
+      "expr": "Abs(pos(\"brit\") - pos(\"german\")) == 2",
+      "text": "There is exactly one house between the Brit and the German."
+     },
+     {
+      "type": "before",
+      "args": [
+       "yellow",
+       "german"
+      ],
+      "expr": "pos(\"yellow\") < pos(\"german\")",
+      "text": "The occupant of the yellow house lives somewhere to the left of the German."
+     },
+     {
+      "type": "next_to",
+      "args": [
+       "horse",
+       "painting"
+      ],
+      "expr": "Abs(pos(\"horse\") - pos(\"painting\")) == 1",
+      "text": "The owner of the horse and the painting enthusiast live in adjacent houses."
+     },
+     {
+      "type": "next_to",
+      "args": [
+       "cocoa",
+       "rabbit"
+      ],
+      "expr": "Abs(pos(\"cocoa\") - pos(\"rabbit\")) == 1",
+      "text": "The person who drinks cocoa lives next to the rabbit owner."
+     }
+    ]
+   },
+   "born": 2,
+   "parent": "e4b-g0-01",
+   "level": 3,
+   "evals": [
+    1.0
+   ],
+   "repair_added": 1,
+   "idea": "Replace Brit and Dane positions with relative and end clues.",
+   "answers": {
+    "2": {
+     "1": {
+      "drink": "cocoa",
+      "hobby": "hiking",
+      "job": "pilot",
+      "color": "yellow",
+      "nationality": "Spaniard",
+      "pet": "dog"
+     },
+     "2": {
+      "drink": "juice",
+      "hobby": "golf",
+      "job": "farmer",
+      "color": "green",
+      "nationality": "Swede",
+      "pet": "rabbit"
+     },
+     "3": {
+      "drink": "milk",
+      "hobby": "cooking",
+      "job": "doctor",
+      "color": "purple",
+      "nationality": "German",
+      "pet": "bird"
+     },
+     "4": {
+      "drink": "coffee",
+      "hobby": "chess",
+      "job": "baker",
+      "color": "blue",
+      "nationality": "Norwegian",
+      "pet": "cat"
+     },
+     "5": {
+      "drink": "water",
+      "hobby": "tennis",
+      "job": "lawyer",
+      "color": "white",
+      "nationality": "Brit",
+      "pet": "horse"
+     },
+     "6": {
+      "drink": "tea",
+      "hobby": "painting",
+      "job": "teacher",
+      "color": "red",
+      "nationality": "Dane",
+      "pet": "fish"
+     }
+    }
+   }
+  },
+  "e4b-g2-04": {
+   "id": "e4b-g2-04",
+   "spec": {
+    "family": "zebra",
+    "n": 6,
+    "cats": {
+     "pet": [
+      "horse",
+      "fish",
+      "rabbit",
+      "dog",
+      "bird",
+      "cat"
+     ],
+     "hobby": [
+      "hiking",
+      "tennis",
+      "cooking",
+      "painting",
+      "chess",
+      "golf"
+     ],
+     "job": [
+      "doctor",
+      "farmer",
+      "teacher",
+      "lawyer",
+      "pilot",
+      "baker"
+     ],
+     "drink": [
+      "coffee",
+      "juice",
+      "water",
+      "cocoa",
+      "tea",
+      "milk"
+     ],
+     "color": [
+      "red",
+      "yellow",
+      "white",
+      "purple",
+      "blue",
+      "green"
+     ],
+     "nationality": [
+      "Swede",
+      "German",
+      "Norwegian",
+      "Brit",
+      "Dane",
+      "Spaniard"
+     ]
+    },
+    "solution": {
+     "horse": 5,
+     "fish": 6,
+     "rabbit": 2,
+     "dog": 1,
+     "bird": 3,
+     "cat": 4,
+     "hiking": 1,
+     "tennis": 5,
+     "cooking": 3,
+     "painting": 6,
+     "chess": 4,
+     "golf": 2,
+     "doctor": 3,
+     "farmer": 2,
+     "teacher": 6,
+     "lawyer": 5,
+     "pilot": 1,
+     "baker": 4,
+     "coffee": 4,
+     "juice": 2,
+     "water": 5,
+     "cocoa": 1,
+     "tea": 6,
+     "milk": 3,
+     "red": 6,
+     "yellow": 1,
+     "white": 5,
+     "purple": 3,
+     "blue": 4,
+     "green": 2,
+     "swede": 2,
+     "german": 3,
+     "norwegian": 4,
+     "brit": 5,
+     "dane": 6,
+     "spaniard": 1
+    },
+    "style": "plain",
+    "clues": [
+     {
+      "type": "same",
+      "args": [
+       "red",
+       "tea"
+      ],
+      "expr": "pos(\"red\") == pos(\"tea\")",
+      "text": "The person who drinks tea lives in the red house."
+     },
+     {
+      "type": "left_of",
+      "args": [
+       "yellow",
+       "rabbit"
+      ],
+      "expr": "pos(\"yellow\") + 1 == pos(\"rabbit\")",
+      "text": "The owner of the rabbit lives immediately to the right of the occupant of the yellow house."
+     },
+     {
+      "type": "next_to",
+      "args": [
+       "doctor",
+       "norwegian"
+      ],
+      "expr": "Abs(pos(\"doctor\") - pos(\"norwegian\")) == 1",
+      "text": "The doctor lives next to the Norwegian."
+     },
+     {
+      "type": "left_of",
+      "args": [
+       "norwegian",
+       "tennis"
+      ],
+      "expr": "pos(\"norwegian\") + 1 == pos(\"tennis\")",
+      "text": "The Norwegian lives directly to the left of the tennis enthusiast."
+     },
+     {
+      "type": "at",
+      "args": [
+       "dane",
+       6
+      ],
+      "expr": "pos(\"dane\") == 6",
+      "text": "The Dane lives in house 6."
+     },
+     {
+      "type": "same",
+      "args": [
+       "bird",
+       "german"
+      ],
+      "expr": "pos(\"bird\") == pos(\"german\")",
+      "text": "The German keeps the bird."
+     },
+     {
+      "type": "left_of",
+      "args": [
+       "bird",
+       "baker"
+      ],
+      "expr": "pos(\"bird\") + 1 == pos(\"baker\")",
+      "text": "The bird owner lives in the house just left of the one where the baker lives."
+     },
+     {
+      "type": "same",
+      "args": [
+       "golf",
+       "rabbit"
+      ],
+      "expr": "pos(\"golf\") == pos(\"rabbit\")",
+      "text": "The person who enjoys golf keeps the rabbit."
+     },
+     {
+      "type": "or",
+      "args": [
+       "chess",
+       "cat",
+       "rabbit"
+      ],
+      "expr": "Or(pos(\"chess\") == pos(\"cat\"), pos(\"chess\") == pos(\"rabbit\"))",
+      "text": "The person who enjoys chess either keeps the cat or keeps the rabbit."
+     },
+     {
+      "type": "or",
+      "args": [
+       "green",
+       "doctor",
+       "farmer"
+      ],
+      "expr": "Or(pos(\"green\") == pos(\"doctor\"), pos(\"green\") == pos(\"farmer\"))",
+      "text": "Whoever lives in the green house either works as the doctor or works as the farmer."
+     },
+     {
+      "type": "next_to",
+      "args": [
+       "cocoa",
+       "rabbit"
+      ],
+      "expr": "Abs(pos(\"cocoa\") - pos(\"rabbit\")) == 1",
+      "text": "The cocoa drinker and the rabbit owner live in adjacent houses."
+     },
+     {
+      "type": "same",
+      "args": [
+       "tea",
+       "teacher"
+      ],
+      "expr": "pos(\"tea\") == pos(\"teacher\")",
+      "text": "The person who drinks tea works as the teacher."
+     },
+     {
+      "type": "next_to",
+      "args": [
+       "coffee",
+       "white"
+      ],
+      "expr": "Abs(pos(\"coffee\") - pos(\"white\")) == 1",
+      "text": "The coffee drinker and the person in the white house are neighbours."
+     },
+     {
+      "type": "gap2",
+      "args": [
+       "purple",
+       "white"
+      ],
+      "expr": "Abs(pos(\"purple\") - pos(\"white\")) == 2",
+      "text": "Whoever lives in the purple house and the person in the white house live two houses apart."
+     },
+     {
+      "type": "at",
+      "args": [
+       "doctor",
+       3
+      ],
+      "expr": "pos(\"doctor\") == 3",
+      "text": "The doctor lives in the third house."
+     },
+     {
+      "type": "same",
+      "args": [
+       "juice",
+       "rabbit"
+      ],
+      "expr": "pos(\"juice\") == pos(\"rabbit\")",
+      "text": "The juice drinker keeps the rabbit."
+     },
+     {
+      "type": "or",
+      "args": [
+       "cooking",
+       "green",
+       "purple"
+      ],
+      "expr": "Or(pos(\"cooking\") == pos(\"green\"), pos(\"cooking\") == pos(\"purple\"))",
+      "text": "The person who enjoys cooking either lives in the green house or lives in the purple house."
+     },
+     {
+      "type": "same",
+      "args": [
+       "pilot",
+       "spaniard"
+      ],
+      "expr": "pos(\"pilot\") == pos(\"spaniard\")",
+      "text": "The pilot is the Spaniard."
+     },
+     {
+      "type": "left_of",
+      "args": [
+       "milk",
+       "norwegian"
+      ],
+      "expr": "pos(\"milk\") + 1 == pos(\"norwegian\")",
+      "text": "The Norwegian lives immediately to the right of the milk drinker."
+     },
+     {
+      "type": "before",
+      "args": [
+       "german",
+       "chess"
+      ],
+      "expr": "pos(\"german\") < pos(\"chess\")",
+      "text": "The person who enjoys chess lives somewhere to the right of the German."
+     },
+     {
+      "type": "next_to",
+      "args": [
+       "horse",
+       "painting"
+      ],
+      "expr": "Abs(pos(\"horse\") - pos(\"painting\")) == 1",
+      "text": "The owner of the horse and the painting enthusiast are neighbours."
+     },
+     {
+      "type": "at",
+      "args": [
+       "brit",
+       5
+      ],
+      "expr": "pos(\"brit\") == 5",
+      "text": "The Brit lives in the fifth house."
+     },
+     {
+      "type": "same",
+      "args": [
+       "fish",
+       "tea"
+      ],
+      "expr": "pos(\"fish\") == pos(\"tea\")",
+      "text": "The tea drinker keeps the fish."
+     },
+     {
+      "type": "before",
+      "args": [
+       "yellow",
+       "german"
+      ],
+      "expr": "pos(\"yellow\") < pos(\"german\")",
+      "text": "The person in the yellow house lives in a lower-numbered house than the German."
+     },
+     {
+      "type": "same",
+      "args": [
+       "blue",
+       "norwegian"
+      ],
+      "expr": "pos(\"blue\") == pos(\"norwegian\")",
+      "text": "Whoever lives in the blue house is the Norwegian."
+     }
+    ]
+   },
+   "born": 2,
+   "parent": "e4b-g0-01",
+   "level": 3,
+   "evals": [
+    1.0
+   ],
+   "repair_added": 1,
+   "idea": "Remove exact doctor and chess positions in favor of relative clues.",
+   "answers": {
+    "2": {
+     "1": {
+      "drink": "cocoa",
+      "hobby": "hiking",
+      "job": "pilot",
+      "color": "yellow",
+      "nationality": "Spaniard",
+      "pet": "dog"
+     },
+     "2": {
+      "drink": "juice",
+      "hobby": "golf",
+      "job": "farmer",
+      "color": "green",
+      "nationality": "Swede",
+      "pet": "rabbit"
+     },
+     "3": {
+      "drink": "milk",
+      "hobby": "cooking",
+      "job": "doctor",
+      "color": "purple",
+      "nationality": "German",
+      "pet": "bird"
+     },
+     "4": {
+      "drink": "coffee",
+      "hobby": "chess",
+      "job": "baker",
+      "color": "blue",
+      "nationality": "Norwegian",
+      "pet": "cat"
+     },
+     "5": {
+      "drink": "water",
+      "hobby": "tennis",
+      "job": "lawyer",
+      "color": "white",
+      "nationality": "Brit",
+      "pet": "horse"
+     },
+     "6": {
+      "drink": "tea",
+      "hobby": "painting",
+      "job": "teacher",
+      "color": "red",
+      "nationality": "Dane",
+      "pet": "fish"
+     }
+    }
+   }
+  },
+  "e4b-g2-05": {
+   "id": "e4b-g2-05",
+   "spec": {
+    "family": "zebra",
+    "n": 6,
+    "cats": {
+     "nationality": [
+      "Dane",
+      "Swede",
+      "Brit",
+      "Spaniard",
+      "German",
+      "Norwegian"
+     ],
+     "pet": [
+      "bird",
+      "rabbit",
+      "dog",
+      "horse",
+      "fish",
+      "cat"
+     ],
+     "hobby": [
+      "cooking",
+      "tennis",
+      "painting",
+      "golf",
+      "hiking",
+      "chess"
+     ],
+     "job": [
+      "teacher",
+      "baker",
+      "pilot",
+      "doctor",
+      "farmer",
+      "lawyer"
+     ],
+     "drink": [
+      "juice",
+      "coffee",
+      "milk",
+      "water",
+      "tea",
+      "cocoa"
+     ],
+     "color": [
+      "yellow",
+      "white",
+      "purple",
+      "blue",
+      "red",
+      "green"
+     ]
+    },
+    "solution": {
+     "dane": 6,
+     "swede": 3,
+     "brit": 5,
+     "spaniard": 2,
+     "german": 4,
+     "norwegian": 1,
+     "bird": 1,
+     "rabbit": 4,
+     "dog": 3,
+     "horse": 2,
+     "fish": 5,
+     "cat": 6,
+     "cooking": 1,
+     "tennis": 2,
+     "painting": 4,
+     "golf": 3,
+     "hiking": 5,
+     "chess": 6,
+     "teacher": 4,
+     "baker": 1,
+     "pilot": 2,
+     "doctor": 6,
+     "farmer": 5,
+     "lawyer": 3,
+     "juice": 4,
+     "coffee": 5,
+     "milk": 3,
+     "water": 1,
+     "tea": 6,
+     "cocoa": 2,
+     "yellow": 2,
+     "white": 1,
+     "purple": 3,
+     "blue": 4,
+     "red": 5,
+     "green": 6
+    },
+    "style": "plain",
+    "clues": [
+     {
+      "type": "before",
+      "args": [
+       "cocoa",
+       "coffee"
+      ],
+      "expr": "pos(\"cocoa\") < pos(\"coffee\")",
+      "text": "The coffee drinker lives somewhere to the right of the person who drinks cocoa."
+     },
+     {
+      "type": "gap2",
+      "args": [
+       "dane",
+       "rabbit"
+      ],
+      "expr": "Abs(pos(\"dane\") - pos(\"rabbit\")) == 2",
+      "text": "There is exactly one house between the Dane and the owner of the rabbit."
+     },
+     {
+      "type": "before",
+      "args": [
+       "yellow",
+       "green"
+      ],
+      "expr": "pos(\"yellow\") < pos(\"green\")",
+      "text": "The person in the yellow house lives somewhere to the left of whoever lives in the green house."
+     },
+     {
+      "type": "gap2",
+      "args": [
+       "teacher",
+       "tennis"
+      ],
+      "expr": "Abs(pos(\"teacher\") - pos(\"tennis\")) == 2",
+      "text": "The teacher and the person who enjoys tennis live two houses apart."
+     },
+     {
+      "type": "at",
+      "args": [
+       "brit",
+       5
+      ],
+      "expr": "pos(\"brit\") == 5",
+      "text": "The Brit lives in the fifth house."
+     },
+     {
+      "type": "next_to",
+      "args": [
+       "cooking",
+       "spaniard"
+      ],
+      "expr": "Abs(pos(\"cooking\") - pos(\"spaniard\")) == 1",
+      "text": "The person who enjoys cooking lives next to the Spaniard."
+     },
+     {
+      "type": "left_of",
+      "args": [
+       "hiking",
+       "cat"
+      ],
+      "expr": "pos(\"hiking\") + 1 == pos(\"cat\")",
+      "text": "The cat owner lives immediately to the right of the person who enjoys hiking."
+     },
+     {
+      "type": "gap2",
+      "args": [
+       "cocoa",
+       "teacher"
+      ],
+      "expr": "Abs(pos(\"cocoa\") - pos(\"teacher\")) == 2",
+      "text": "The person who drinks cocoa and the teacher live two houses apart."
+     },
+     {
+      "type": "next_to",
+      "args": [
+       "coffee",
+       "dane"
+      ],
+      "expr": "Abs(pos(\"coffee\") - pos(\"dane\")) == 1",
+      "text": "The person who drinks coffee and the Dane are neighbours."
+     },
+     {
+      "type": "same",
+      "args": [
+       "green",
+       "tea"
+      ],
+      "expr": "pos(\"green\") == pos(\"tea\")",
+      "text": "The tea drinker lives in the green house."
+     },
+     {
+      "type": "next_to",
+      "args": [
+       "fish",
+       "green"
+      ],
+      "expr": "Abs(pos(\"fish\") - pos(\"green\")) == 1",
+      "text": "The owner of the fish lives next to the person in the green house."
+     },
+     {
+      "type": "or",
+      "args": [
+       "cocoa",
+       "blue",
+       "yellow"
+      ],
+      "expr": "Or(pos(\"cocoa\") == pos(\"blue\"), pos(\"cocoa\") == pos(\"yellow\"))",
+      "text": "The cocoa drinker either lives in the blue house or lives in the yellow house."
+     },
+     {
+      "type": "left_of",
+      "args": [
+       "farmer",
+       "chess"
+      ],
+      "expr": "pos(\"farmer\") + 1 == pos(\"chess\")",
+      "text": "The farmer lives directly to the left of the chess enthusiast."
+     },
+     {
+      "type": "left_of",
+      "args": [
+       "norwegian",
+       "tennis"
+      ],
+      "expr": "pos(\"norwegian\") + 1 == pos(\"tennis\")",
+      "text": "The Norwegian lives directly to the left of the person who enjoys tennis."
+     },
+     {
+      "type": "gap2",
+      "args": [
+       "milk",
+       "coffee"
+      ],
+      "expr": "Abs(pos(\"milk\") - pos(\"coffee\")) == 2",
+      "text": "There is exactly one house between the milk drinker and the person who drinks coffee."
+     },
+     {
+      "type": "next_to",
+      "args": [
+       "blue",
+       "purple"
+      ],
+      "expr": "Abs(pos(\"blue\") - pos(\"purple\")) == 1",
+      "text": "The occupant of the blue house and the occupant of the purple house live in adjacent houses."
+     },
+     {
+      "type": "before",
+      "args": [
+       "bird",
+       "swede"
+      ],
+      "expr": "pos(\"bird\") < pos(\"swede\")",
+      "text": "The owner of the bird lives in a lower-numbered house than the Swede."
+     },
+     {
+      "type": "at",
+      "args": [
+       "swede",
+       3
+      ],
+      "expr": "pos(\"swede\") == 3",
+      "text": "The Swede lives in the third house."
+     },
+     {
+      "type": "at",
+      "args": [
+       "cat",
+       6
+      ],
+      "expr": "pos(\"cat\") == 6",
+      "text": "The person who keeps the cat lives in the last house."
+     },
+     {
+      "type": "same",
+      "args": [
+       "lawyer",
+       "swede"
+      ],
+      "expr": "pos(\"lawyer\") == pos(\"swede\")",
+      "text": "The lawyer is the Swede."
+     },
+     {
+      "type": "gap2",
+      "args": [
+       "painting",
+       "pilot"
+      ],
+      "expr": "Abs(pos(\"painting\") - pos(\"pilot\")) == 2",
+      "text": "The person who enjoys painting and the pilot live two houses apart."
+     },
+     {
+      "type": "same",
+      "args": [
+       "horse",
+       "yellow"
+      ],
+      "expr": "pos(\"horse\") == pos(\"yellow\")",
+      "text": "Whoever lives in the yellow house keeps the horse."
+     },
+     {
+      "type": "next_to",
+      "args": [
+       "doctor",
+       "red"
+      ],
+      "expr": "Abs(pos(\"doctor\") - pos(\"red\")) == 1",
+      "text": "The doctor and whoever lives in the red house live in adjacent houses."
+     },
+     {
+      "type": "not_next_to",
+      "args": [
+       "fish",
+       "pilot"
+      ],
+      "expr": "Abs(pos(\"fish\") - pos(\"pilot\")) != 1",
+      "text": "The person who keeps the fish and the pilot are not neighbours."
+     },
+     {
+      "type": "left_of",
+      "args": [
+       "juice",
+       "fish"
+      ],
+      "expr": "pos(\"juice\") + 1 == pos(\"fish\")",
+      "text": "The owner of the fish lives immediately to the right of the person who drinks juice."
+     },
+     {
+      "type": "same",
+      "args": [
+       "baker",
+       "cooking"
+      ],
+      "expr": "pos(\"baker\") == pos(\"cooking\")",
+      "text": "The cooking enthusiast works as the baker."
+     },
+     {
+      "type": "same",
+      "args": [
+       "pilot",
+       "yellow"
+      ],
+      "expr": "pos(\"pilot\") == pos(\"yellow\")",
+      "text": "Whoever lives in the yellow house works as the pilot."
+     },
+     {
+      "type": "left_of",
+      "args": [
+       "spaniard",
+       "purple"
+      ],
+      "expr": "pos(\"spaniard\") + 1 == pos(\"purple\")",
+      "text": "The person in the purple house lives immediately to the right of the Spaniard."
+     }
+    ]
+   },
+   "born": 2,
+   "parent": "e4b-g0-06",
+   "level": 2,
+   "evals": [
+    1.0
+   ],
+   "repair_added": 4,
+   "idea": "Replace blue and milk anchors with relative clues.",
+   "answers": {
+    "2": {
+     "1": {
+      "nationality": "Norwegian",
+      "color": "white",
+      "pet": "bird",
+      "hobby": "cooking",
+      "drink": "water",
+      "job": "baker"
+     },
+     "2": {
+      "nationality": "Spaniard",
+      "color": "yellow",
+      "pet": "horse",
+      "hobby": "tennis",
+      "drink": "cocoa",
+      "job": "pilot"
+     },
+     "3": {
+      "nationality": "Swede",
+      "color": "purple",
+      "pet": "dog",
+      "hobby": "golf",
+      "drink": "milk",
+      "job": "lawyer"
+     },
+     "4": {
+      "nationality": "German",
+      "color": "blue",
+      "pet": "rabbit",
+      "hobby": "painting",
+      "drink": "juice",
+      "job": "teacher"
+     },
+     "5": {
+      "nationality": "Brit",
+      "color": "red",
+      "pet": "fish",
+      "hobby": "hiking",
+      "drink": "coffee",
+      "job": "farmer"
+     },
+     "6": {
+      "nationality": "Dane",
+      "color": "green",
+      "pet": "cat",
+      "hobby": "chess",
+      "drink": "tea",
+      "job": "doctor"
+     }
+    }
+   }
+  },
+  "e4b-g2-06": {
+   "id": "e4b-g2-06",
+   "spec": {
+    "family": "zebra",
+    "n": 6,
+    "cats": {
+     "nationality": [
+      "Dane",
+      "Swede",
+      "Brit",
+      "Spaniard",
+      "German",
+      "Norwegian"
+     ],
+     "pet": [
+      "bird",
+      "rabbit",
+      "dog",
+      "horse",
+      "fish",
+      "cat"
+     ],
+     "hobby": [
+      "cooking",
+      "tennis",
+      "painting",
+      "golf",
+      "hiking",
+      "chess"
+     ],
+     "job": [
+      "teacher",
+      "baker",
+      "pilot",
+      "doctor",
+      "farmer",
+      "lawyer"
+     ],
+     "drink": [
+      "juice",
+      "coffee",
+      "milk",
+      "water",
+      "tea",
+      "cocoa"
+     ],
+     "color": [
+      "yellow",
+      "white",
+      "purple",
+      "blue",
+      "red",
+      "green"
+     ]
+    },
+    "solution": {
+     "dane": 6,
+     "swede": 3,
+     "brit": 5,
+     "spaniard": 2,
+     "german": 4,
+     "norwegian": 1,
+     "bird": 1,
+     "rabbit": 4,
+     "dog": 3,
+     "horse": 2,
+     "fish": 5,
+     "cat": 6,
+     "cooking": 1,
+     "tennis": 2,
+     "painting": 4,
+     "golf": 3,
+     "hiking": 5,
+     "chess": 6,
+     "teacher": 4,
+     "baker": 1,
+     "pilot": 2,
+     "doctor": 6,
+     "farmer": 5,
+     "lawyer": 3,
+     "juice": 4,
+     "coffee": 5,
+     "milk": 3,
+     "water": 1,
+     "tea": 6,
+     "cocoa": 2,
+     "yellow": 2,
+     "white": 1,
+     "purple": 3,
+     "blue": 4,
+     "red": 5,
+     "green": 6
+    },
+    "style": "plain",
+    "clues": [
+     {
+      "type": "before",
+      "args": [
+       "bird",
+       "swede"
+      ],
+      "expr": "pos(\"bird\") < pos(\"swede\")",
+      "text": "The owner of the bird lives in a lower-numbered house than the Swede."
+     },
+     {
+      "type": "before",
+      "args": [
+       "cocoa",
+       "coffee"
+      ],
+      "expr": "pos(\"cocoa\") < pos(\"coffee\")",
+      "text": "The person who drinks cocoa lives somewhere to the left of the person who drinks coffee."
+     },
+     {
+      "type": "at",
+      "args": [
+       "milk",
+       3
+      ],
+      "expr": "pos(\"milk\") == 3",
+      "text": "The milk drinker lives in the third house."
+     },
+     {
+      "type": "left_of",
+      "args": [
+       "norwegian",
+       "tennis"
+      ],
+      "expr": "pos(\"norwegian\") + 1 == pos(\"tennis\")",
+      "text": "The Norwegian lives directly to the left of the tennis enthusiast."
+     },
+     {
+      "type": "same",
+      "args": [
+       "horse",
+       "yellow"
+      ],
+      "expr": "pos(\"horse\") == pos(\"yellow\")",
+      "text": "The occupant of the yellow house keeps the horse."
+     },
+     {
+      "type": "left_of",
+      "args": [
+       "farmer",
+       "chess"
+      ],
+      "expr": "pos(\"farmer\") + 1 == pos(\"chess\")",
+      "text": "The farmer lives directly to the left of the person who enjoys chess."
+     },
+     {
+      "type": "before",
+      "args": [
+       "swede",
+       "brit"
+      ],
+      "expr": "pos(\"swede\") < pos(\"brit\")",
+      "text": "The Swede lives somewhere to the left of the Brit."
+     },
+     {
+      "type": "gap2",
+      "args": [
+       "dane",
+       "rabbit"
+      ],
+      "expr": "Abs(pos(\"dane\") - pos(\"rabbit\")) == 2",
+      "text": "The Dane and the rabbit owner live two houses apart."
+     },
+     {
+      "type": "gap2",
+      "args": [
+       "teacher",
+       "tennis"
+      ],
+      "expr": "Abs(pos(\"teacher\") - pos(\"tennis\")) == 2",
+      "text": "The teacher and the tennis enthusiast live two houses apart."
+     },
+     {
+      "type": "before",
+      "args": [
+       "yellow",
+       "green"
+      ],
+      "expr": "pos(\"yellow\") < pos(\"green\")",
+      "text": "Whoever lives in the green house lives somewhere to the right of the person in the yellow house."
+     },
+     {
+      "type": "same",
+      "args": [
+       "green",
+       "tea"
+      ],
+      "expr": "pos(\"green\") == pos(\"tea\")",
+      "text": "The tea drinker lives in the green house."
+     },
+     {
+      "type": "same",
+      "args": [
+       "german",
+       "painting"
+      ],
+      "expr": "pos(\"german\") == pos(\"painting\")",
+      "text": "The German enjoys painting."
+     },
+     {
+      "type": "at",
+      "args": [
+       "blue",
+       4
+      ],
+      "expr": "pos(\"blue\") == 4",
+      "text": "The person in the blue house lives in house 4."
+     },
+     {
+      "type": "left_of",
+      "args": [
+       "spaniard",
+       "purple"
+      ],
+      "expr": "pos(\"spaniard\") + 1 == pos(\"purple\")",
+      "text": "Whoever lives in the purple house lives immediately to the right of the Spaniard."
+     },
+     {
+      "type": "gap2",
+      "args": [
+       "painting",
+       "pilot"
+      ],
+      "expr": "Abs(pos(\"painting\") - pos(\"pilot\")) == 2",
+      "text": "The painting enthusiast and the pilot live two houses apart."
+     },
+     {
+      "type": "next_to",
+      "args": [
+       "doctor",
+       "red"
+      ],
+      "expr": "Abs(pos(\"doctor\") - pos(\"red\")) == 1",
+      "text": "The doctor and whoever lives in the red house are neighbours."
+     },
+     {
+      "type": "next_to",
+      "args": [
+       "farmer",
+       "rabbit"
+      ],
+      "expr": "Abs(pos(\"farmer\") - pos(\"rabbit\")) == 1",
+      "text": "The farmer lives next to the owner of the rabbit."
+     },
+     {
+      "type": "left_of",
+      "args": [
+       "juice",
+       "fish"
+      ],
+      "expr": "pos(\"juice\") + 1 == pos(\"fish\")",
+      "text": "The juice drinker lives in the house just left of the one where the fish owner lives."
+     },
+     {
+      "type": "end",
+      "args": [
+       "cat"
+      ],
+      "expr": "Or(pos(\"cat\") == 1, pos(\"cat\") == 6)",
+      "text": "The person who keeps the cat lives at one end of the row."
+     },
+     {
+      "type": "left_of",
+      "args": [
+       "hiking",
+       "cat"
+      ],
+      "expr": "pos(\"hiking\") + 1 == pos(\"cat\")",
+      "text": "The cat owner lives immediately to the right of the hiking enthusiast."
+     },
+     {
+      "type": "or",
+      "args": [
+       "cocoa",
+       "blue",
+       "yellow"
+      ],
+      "expr": "Or(pos(\"cocoa\") == pos(\"blue\"), pos(\"cocoa\") == pos(\"yellow\"))",
+      "text": "The person who drinks cocoa either lives in the blue house or lives in the yellow house."
+     },
+     {
+      "type": "same",
+      "args": [
+       "lawyer",
+       "swede"
+      ],
+      "expr": "pos(\"lawyer\") == pos(\"swede\")",
+      "text": "The lawyer is the Swede."
+     },
+     {
+      "type": "not_next_to",
+      "args": [
+       "fish",
+       "pilot"
+      ],
+      "expr": "Abs(pos(\"fish\") - pos(\"pilot\")) != 1",
+      "text": "The fish owner and the pilot are not neighbours."
+     },
+     {
+      "type": "at",
+      "args": [
+       "swede",
+       3
+      ],
+      "expr": "pos(\"swede\") == 3",
+      "text": "The Swede lives in house 3."
+     },
+     {
+      "type": "same",
+      "args": [
+       "baker",
+       "cooking"
+      ],
+      "expr": "pos(\"baker\") == pos(\"cooking\")",
+      "text": "The cooking enthusiast works as the baker."
+     },
+     {
+      "type": "gap2",
+      "args": [
+       "cocoa",
+       "teacher"
+      ],
+      "expr": "Abs(pos(\"cocoa\") - pos(\"teacher\")) == 2",
+      "text": "The person who drinks cocoa and the teacher live two houses apart."
+     }
+    ]
+   },
+   "born": 2,
+   "parent": "e4b-g0-06",
+   "level": 2,
+   "evals": [
+    1.0
+   ],
+   "repair_added": 2,
+   "idea": "Make Brit and cat positions indirect.",
+   "answers": {
+    "2": {
+     "1": {
+      "pet": "bird",
+      "drink": "water",
+      "color": "white",
+      "nationality": "Norwegian",
+      "job": "baker",
+      "hobby": "cooking"
+     },
+     "2": {
+      "pet": "horse",
+      "drink": "cocoa",
+      "color": "yellow",
+      "nationality": "Spaniard",
+      "job": "pilot",
+      "hobby": "tennis"
+     },
+     "3": {
+      "pet": "dog",
+      "drink": "milk",
+      "color": "purple",
+      "nationality": "Swede",
+      "job": "lawyer",
+      "hobby": "golf"
+     },
+     "4": {
+      "pet": "rabbit",
+      "drink": "juice",
+      "color": "blue",
+      "nationality": "German",
+      "job": "teacher",
+      "hobby": "painting"
+     },
+     "5": {
+      "pet": "fish",
+      "drink": "coffee",
+      "color": "red",
+      "nationality": "Brit",
+      "job": "farmer",
+      "hobby": "hiking"
+     },
+     "6": {
+      "pet": "cat",
+      "drink": "tea",
+      "color": "green",
+      "nationality": "Dane",
+      "job": "doctor",
+      "hobby": "chess"
+     }
+    }
+   }
+  },
+  "e4b-g2-07": {
+   "id": "e4b-g2-07",
+   "spec": {
+    "family": "zebra",
+    "n": 6,
+    "cats": {
+     "pet": [
+      "rabbit",
+      "dog",
+      "bird",
+      "cat",
+      "horse",
+      "fish"
+     ],
+     "drink": [
+      "milk",
+      "juice",
+      "water",
+      "coffee",
+      "cocoa",
+      "tea"
+     ],
+     "color": [
+      "blue",
+      "purple",
+      "yellow",
+      "red",
+      "white",
+      "green"
+     ],
+     "nationality": [
+      "Dane",
+      "Spaniard",
+      "German",
+      "Swede",
+      "Norwegian",
+      "Brit"
+     ],
+     "job": [
+      "doctor",
+      "baker",
+      "teacher",
+      "pilot",
+      "farmer",
+      "lawyer"
+     ],
+     "hobby": [
+      "chess",
+      "painting",
+      "cooking",
+      "golf",
+      "tennis",
+      "hiking"
+     ]
+    },
+    "solution": {
+     "rabbit": 4,
+     "dog": 2,
+     "bird": 1,
+     "cat": 3,
+     "horse": 6,
+     "fish": 5,
+     "milk": 1,
+     "juice": 2,
+     "water": 5,
+     "coffee": 6,
+     "cocoa": 3,
+     "tea": 4,
+     "blue": 3,
+     "purple": 6,
+     "yellow": 4,
+     "red": 2,
+     "white": 5,
+     "green": 1,
+     "dane": 1,
+     "spaniard": 5,
+     "german": 6,
+     "swede": 3,
+     "norwegian": 2,
+     "brit": 4,
+     "doctor": 1,
+     "baker": 4,
+     "teacher": 2,
+     "pilot": 6,
+     "farmer": 3,
+     "lawyer": 5,
+     "chess": 4,
+     "painting": 5,
+     "cooking": 3,
+     "golf": 6,
+     "tennis": 2,
+     "hiking": 1
+    },
+    "style": "plain",
+    "clues": [
+     {
+      "type": "same",
+      "args": [
+       "lawyer",
+       "white"
+      ],
+      "expr": "pos(\"lawyer\") == pos(\"white\")",
+      "text": "The lawyer lives in the white house."
+     },
+     {
+      "type": "left_of",
+      "args": [
+       "juice",
+       "cat"
+      ],
+      "expr": "pos(\"juice\") + 1 == pos(\"cat\")",
+      "text": "The cat owner lives immediately to the right of the juice drinker."
+     },
+     {
+      "type": "same",
+      "args": [
+       "chess",
+       "yellow"
+      ],
+      "expr": "pos(\"chess\") == pos(\"yellow\")",
+      "text": "The person who enjoys chess lives in the yellow house."
+     },
+     {
+      "type": "not_next_to",
+      "args": [
+       "blue",
+       "green"
+      ],
+      "expr": "Abs(pos(\"blue\") - pos(\"green\")) != 1",
+      "text": "The person in the blue house and the occupant of the green house are not neighbours."
+     },
+     {
+      "type": "same",
+      "args": [
+       "cat",
+       "cooking"
+      ],
+      "expr": "pos(\"cat\") == pos(\"cooking\")",
+      "text": "The person who enjoys cooking keeps the cat."
+     },
+     {
+      "type": "left_of",
+      "args": [
+       "rabbit",
+       "painting"
+      ],
+      "expr": "pos(\"rabbit\") + 1 == pos(\"painting\")",
+      "text": "The owner of the rabbit lives in the house just left of the one where the painting enthusiast lives."
+     },
+     {
+      "type": "before",
+      "args": [
+       "dog",
+       "tea"
+      ],
+      "expr": "pos(\"dog\") < pos(\"tea\")",
+      "text": "The person who drinks tea lives somewhere to the right of the dog owner."
+     },
+     {
+      "type": "next_to",
+      "args": [
+       "cocoa",
+       "norwegian"
+      ],
+      "expr": "Abs(pos(\"cocoa\") - pos(\"norwegian\")) == 1",
+      "text": "The cocoa drinker and the Norwegian are neighbours."
+     },
+     {
+      "type": "end",
+      "args": [
+       "milk"
+      ],
+      "expr": "Or(pos(\"milk\") == 1, pos(\"milk\") == 6)",
+      "text": "The person who drinks milk lives in one of the two end houses."
+     },
+     {
+      "type": "next_to",
+      "args": [
+       "green",
+       "red"
+      ],
+      "expr": "Abs(pos(\"green\") - pos(\"red\")) == 1",
+      "text": "The person in the green house and the occupant of the red house are neighbours."
+     },
+     {
+      "type": "same",
+      "args": [
+       "chess",
+       "tea"
+      ],
+      "expr": "pos(\"chess\") == pos(\"tea\")",
+      "text": "The person who enjoys chess drinks tea."
+     },
+     {
+      "type": "next_to",
+      "args": [
+       "cocoa",
+       "dog"
+      ],
+      "expr": "Abs(pos(\"cocoa\") - pos(\"dog\")) == 1",
+      "text": "The cocoa drinker lives next to the person who keeps the dog."
+     },
+     {
+      "type": "before",
+      "args": [
+       "milk",
+       "juice"
+      ],
+      "expr": "pos(\"milk\") < pos(\"juice\")",
+      "text": "The person who drinks juice lives somewhere to the right of the milk drinker."
+     },
+     {
+      "type": "left_of",
+      "args": [
+       "farmer",
+       "rabbit"
+      ],
+      "expr": "pos(\"farmer\") + 1 == pos(\"rabbit\")",
+      "text": "The owner of the rabbit lives immediately to the right of the farmer."
+     },
+     {
+      "type": "next_to",
+      "args": [
+       "purple",
+       "spaniard"
+      ],
+      "expr": "Abs(pos(\"purple\") - pos(\"spaniard\")) == 1",
+      "text": "Whoever lives in the purple house and the Spaniard live in adjacent houses."
+     },
+     {
+      "type": "same",
+      "args": [
+       "coffee",
+       "golf"
+      ],
+      "expr": "pos(\"coffee\") == pos(\"golf\")",
+      "text": "The coffee drinker enjoys golf."
+     },
+     {
+      "type": "gap2",
+      "args": [
+       "swede",
+       "white"
+      ],
+      "expr": "Abs(pos(\"swede\") - pos(\"white\")) == 2",
+      "text": "The Swede and whoever lives in the white house live two houses apart."
+     },
+     {
+      "type": "same",
+      "args": [
+       "brit",
+       "tea"
+      ],
+      "expr": "pos(\"brit\") == pos(\"tea\")",
+      "text": "The tea drinker is the Brit."
+     },
+     {
+      "type": "next_to",
+      "args": [
+       "doctor",
+       "red"
+      ],
+      "expr": "Abs(pos(\"doctor\") - pos(\"red\")) == 1",
+      "text": "The doctor and whoever lives in the red house are neighbours."
+     },
+     {
+      "type": "same",
+      "args": [
+       "bird",
+       "dane"
+      ],
+      "expr": "pos(\"bird\") == pos(\"dane\")",
+      "text": "The Dane keeps the bird."
+     },
+     {
+      "type": "gap2",
+      "args": [
+       "cat",
+       "lawyer"
+      ],
+      "expr": "Abs(pos(\"cat\") - pos(\"lawyer\")) == 2",
+      "text": "The owner of the cat and the lawyer live two houses apart."
+     },
+     {
+      "type": "same",
+      "args": [
+       "teacher",
+       "tennis"
+      ],
+      "expr": "pos(\"teacher\") == pos(\"tennis\")",
+      "text": "The person who enjoys tennis works as the teacher."
+     },
+     {
+      "type": "left_of",
+      "args": [
+       "painting",
+       "horse"
+      ],
+      "expr": "pos(\"painting\") + 1 == pos(\"horse\")",
+      "text": "The person who enjoys painting lives directly to the left of the horse owner."
+     },
+     {
+      "type": "gap2",
+      "args": [
+       "tea",
+       "tennis"
+      ],
+      "expr": "Abs(pos(\"tea\") - pos(\"tennis\")) == 2",
+      "text": "The person who drinks tea and the person who enjoys tennis live two houses apart."
+     },
+     {
+      "type": "next_to",
+      "args": [
+       "baker",
+       "cocoa"
+      ],
+      "expr": "Abs(pos(\"baker\") - pos(\"cocoa\")) == 1",
+      "text": "The baker and the person who drinks cocoa live in adjacent houses."
+     },
+     {
+      "type": "same",
+      "args": [
+       "horse",
+       "pilot"
+      ],
+      "expr": "pos(\"horse\") == pos(\"pilot\")",
+      "text": "The owner of the horse works as the pilot."
+     },
+     {
+      "type": "same",
+      "args": [
+       "green",
+       "hiking"
+      ],
+      "expr": "pos(\"green\") == pos(\"hiking\")",
+      "text": "The hiking enthusiast lives in the green house."
+     }
+    ]
+   },
+   "born": 2,
+   "parent": "e4b-g1-00",
+   "level": 3,
+   "evals": [
+    1.0
+   ],
+   "repair_added": 3,
+   "idea": "Remove direct position clues and substitute negative and end clues.",
+   "answers": {
+    "2": {
+     "1": {
+      "pet": "bird",
+      "drink": "milk",
+      "color": "green",
+      "nationality": "Dane",
+      "job": "doctor",
+      "hobby": "hiking"
+     },
+     "2": {
+      "pet": "dog",
+      "drink": "juice",
+      "color": "red",
+      "nationality": "Norwegian",
+      "job": "teacher",
+      "hobby": "tennis"
+     },
+     "3": {
+      "pet": "cat",
+      "drink": "cocoa",
+      "color": "blue",
+      "nationality": "Swede",
+      "job": "farmer",
+      "hobby": "cooking"
+     },
+     "4": {
+      "pet": "rabbit",
+      "drink": "tea",
+      "color": "yellow",
+      "nationality": "Brit",
+      "job": "baker",
+      "hobby": "chess"
+     },
+     "5": {
+      "pet": "fish",
+      "drink": "water",
+      "color": "white",
+      "nationality": "Spaniard",
+      "job": "lawyer",
+      "hobby": "painting"
+     },
+     "6": {
+      "pet": "horse",
+      "drink": "coffee",
+      "color": "purple",
+      "nationality": "German",
+      "job": "pilot",
+      "hobby": "golf"
+     }
+    }
+   }
+  },
+  "e4b-g2-08": {
+   "id": "e4b-g2-08",
+   "spec": {
+    "family": "zebra",
+    "n": 6,
+    "cats": {
+     "drink": [
+      "juice",
+      "milk",
+      "coffee",
+      "tea",
+      "water",
+      "cocoa"
+     ],
+     "hobby": [
+      "cooking",
+      "chess",
+      "painting",
+      "hiking",
+      "tennis",
+      "golf"
+     ],
+     "job": [
+      "teacher",
+      "farmer",
+      "doctor",
+      "lawyer",
+      "baker",
+      "pilot"
+     ],
+     "color": [
+      "red",
+      "white",
+      "green",
+      "blue",
+      "yellow",
+      "purple"
+     ],
+     "nationality": [
+      "Swede",
+      "Dane",
+      "Brit",
+      "German",
+      "Spaniard",
+      "Norwegian"
+     ],
+     "pet": [
+      "fish",
+      "cat",
+      "horse",
+      "bird",
+      "dog",
+      "rabbit"
+     ]
+    },
+    "solution": {
+     "juice": 6,
+     "milk": 1,
+     "coffee": 5,
+     "tea": 4,
+     "water": 3,
+     "cocoa": 2,
+     "cooking": 2,
+     "chess": 1,
+     "painting": 3,
+     "hiking": 6,
+     "tennis": 5,
+     "golf": 4,
+     "teacher": 3,
+     "farmer": 1,
+     "doctor": 5,
+     "lawyer": 2,
+     "baker": 4,
+     "pilot": 6,
+     "red": 6,
+     "white": 5,
+     "green": 2,
+     "blue": 1,
+     "yellow": 3,
+     "purple": 4,
+     "swede": 5,
+     "dane": 6,
+     "brit": 4,
+     "german": 2,
+     "spaniard": 1,
+     "norwegian": 3,
+     "fish": 2,
+     "cat": 5,
+     "horse": 6,
+     "bird": 1,
+     "dog": 3,
+     "rabbit": 4
+    },
+    "style": "plain",
+    "clues": [
+     {
+      "type": "same",
+      "args": [
+       "juice",
+       "red"
+      ],
+      "expr": "pos(\"juice\") == pos(\"red\")",
+      "text": "The juice drinker lives in the red house."
+     },
+     {
+      "type": "same",
+      "args": [
+       "doctor",
+       "swede"
+      ],
+      "expr": "pos(\"doctor\") == pos(\"swede\")",
+      "text": "The Swede works as the doctor."
+     },
+     {
+      "type": "before",
+      "args": [
+       "fish",
+       "rabbit"
+      ],
+      "expr": "pos(\"fish\") < pos(\"rabbit\")",
+      "text": "The rabbit owner lives somewhere to the right of the owner of the fish."
+     },
+     {
+      "type": "next_to",
+      "args": [
+       "green",
+       "yellow"
+      ],
+      "expr": "Abs(pos(\"green\") - pos(\"yellow\")) == 1",
+      "text": "The person in the green house and the occupant of the yellow house live in adjacent houses."
+     },
+     {
+      "type": "next_to",
+      "args": [
+       "baker",
+       "dog"
+      ],
+      "expr": "Abs(pos(\"baker\") - pos(\"dog\")) == 1",
+      "text": "The baker and the dog owner live in adjacent houses."
+     },
+     {
+      "type": "same",
+      "args": [
+       "horse",
+       "red"
+      ],
+      "expr": "pos(\"horse\") == pos(\"red\")",
+      "text": "Whoever lives in the red house keeps the horse."
+     },
+     {
+      "type": "same",
+      "args": [
+       "swede",
+       "white"
+      ],
+      "expr": "pos(\"swede\") == pos(\"white\")",
+      "text": "The Swede lives in the white house."
+     },
+     {
+      "type": "left_of",
+      "args": [
+       "cooking",
+       "norwegian"
+      ],
+      "expr": "pos(\"cooking\") + 1 == pos(\"norwegian\")",
+      "text": "The person who enjoys cooking lives directly to the left of the Norwegian."
+     },
+     {
+      "type": "same",
+      "args": [
+       "dog",
+       "teacher"
+      ],
+      "expr": "pos(\"dog\") == pos(\"teacher\")",
+      "text": "The dog owner works as the teacher."
+     },
+     {
+      "type": "at",
+      "args": [
+       "baker",
+       4
+      ],
+      "expr": "pos(\"baker\") == 4",
+      "text": "The baker lives in the fourth house."
+     },
+     {
+      "type": "at",
+      "args": [
+       "hiking",
+       6
+      ],
+      "expr": "pos(\"hiking\") == 6",
+      "text": "The person who enjoys hiking lives in the sixth house."
+     },
+     {
+      "type": "left_of",
+      "args": [
+       "fish",
+       "painting"
+      ],
+      "expr": "pos(\"fish\") + 1 == pos(\"painting\")",
+      "text": "The person who keeps the fish lives in the house just left of the one where the person who enjoys painting lives."
+     },
+     {
+      "type": "not_next_to",
+      "args": [
+       "blue",
+       "red"
+      ],
+      "expr": "Abs(pos(\"blue\") - pos(\"red\")) != 1",
+      "text": "The occupant of the blue house does not live next to the occupant of the red house."
+     },
+     {
+      "type": "gap2",
+      "args": [
+       "milk",
+       "yellow"
+      ],
+      "expr": "Abs(pos(\"milk\") - pos(\"yellow\")) == 2",
+      "text": "There is exactly one house between the person who drinks milk and the occupant of the yellow house."
+     },
+     {
+      "type": "before",
+      "args": [
+       "farmer",
+       "purple"
+      ],
+      "expr": "pos(\"farmer\") < pos(\"purple\")",
+      "text": "The farmer lives in a lower-numbered house than whoever lives in the purple house."
+     },
+     {
+      "type": "same",
+      "args": [
+       "green",
+       "lawyer"
+      ],
+      "expr": "pos(\"green\") == pos(\"lawyer\")",
+      "text": "The occupant of the green house works as the lawyer."
+     },
+     {
+      "type": "not_same",
+      "args": [
+       "fish",
+       "spaniard"
+      ],
+      "expr": "pos(\"fish\") != pos(\"spaniard\")",
+      "text": "The fish owner and the Spaniard are different people."
+     },
+     {
+      "type": "not_at",
+      "args": [
+       "water",
+       2
+      ],
+      "expr": "pos(\"water\") != 2",
+      "text": "The person who drinks water does not live in house 2."
+     },
+     {
+      "type": "next_to",
+      "args": [
+       "bird",
+       "german"
+      ],
+      "expr": "Abs(pos(\"bird\") - pos(\"german\")) == 1",
+      "text": "The owner of the bird and the German live in adjacent houses."
+     },
+     {
+      "type": "next_to",
+      "args": [
+       "coffee",
+       "juice"
+      ],
+      "expr": "Abs(pos(\"coffee\") - pos(\"juice\")) == 1",
+      "text": "The person who drinks coffee and the person who drinks juice are neighbours."
+     },
+     {
+      "type": "left_of",
+      "args": [
+       "tennis",
+       "hiking"
+      ],
+      "expr": "pos(\"tennis\") + 1 == pos(\"hiking\")",
+      "text": "The person who enjoys tennis lives in the house just left of the one where the person who enjoys hiking lives."
+     },
+     {
+      "type": "left_of",
+      "args": [
+       "tennis",
+       "red"
+      ],
+      "expr": "pos(\"tennis\") + 1 == pos(\"red\")",
+      "text": "The person in the red house lives immediately to the right of the tennis enthusiast."
+     },
+     {
+      "type": "same",
+      "args": [
+       "golf",
+       "tea"
+      ],
+      "expr": "pos(\"golf\") == pos(\"tea\")",
+      "text": "The tea drinker enjoys golf."
+     },
+     {
+      "type": "left_of",
+      "args": [
+       "milk",
+       "cocoa"
+      ],
+      "expr": "pos(\"milk\") + 1 == pos(\"cocoa\")",
+      "text": "The person who drinks milk lives directly to the left of the cocoa drinker."
+     },
+     {
+      "type": "gap2",
+      "args": [
+       "brit",
+       "red"
+      ],
+      "expr": "Abs(pos(\"brit\") - pos(\"red\")) == 2",
+      "text": "There is exactly one house between the Brit and whoever lives in the red house."
+     },
+     {
+      "type": "next_to",
+      "args": [
+       "coffee",
+       "dane"
+      ],
+      "expr": "Abs(pos(\"coffee\") - pos(\"dane\")) == 1",
+      "text": "The coffee drinker and the Dane live in adjacent houses."
+     },
+     {
+      "type": "left_of",
+      "args": [
+       "blue",
+       "green"
+      ],
+      "expr": "pos(\"blue\") + 1 == pos(\"green\")",
+      "text": "Whoever lives in the blue house lives in the house just left of the one where whoever lives in the green house lives."
+     },
+     {
+      "type": "same",
+      "args": [
+       "milk",
+       "spaniard"
+      ],
+      "expr": "pos(\"milk\") == pos(\"spaniard\")",
+      "text": "The Spaniard drinks milk."
+     },
+     {
+      "type": "left_of",
+      "args": [
+       "cat",
+       "red"
+      ],
+      "expr": "pos(\"cat\") + 1 == pos(\"red\")",
+      "text": "The person who keeps the cat lives in the house just left of the one where the person in the red house lives."
+     }
+    ]
+   },
+   "born": 2,
+   "parent": "e4b-g0-04",
+   "level": 3,
+   "evals": [
+    1.0
+   ],
+   "repair_added": 4,
+   "idea": "Drop two fixed-position clues in favour of vaguer relative clues.",
+   "answers": {
+    "2": {
+     "1": {
+      "pet": "bird",
+      "drink": "milk",
+      "color": "blue",
+      "nationality": "Spaniard",
+      "job": "farmer",
+      "hobby": "chess"
+     },
+     "2": {
+      "pet": "fish",
+      "drink": "cocoa",
+      "color": "green",
+      "nationality": "German",
+      "job": "lawyer",
+      "hobby": "cooking"
+     },
+     "3": {
+      "pet": "dog",
+      "drink": "water",
+      "color": "yellow",
+      "nationality": "Norwegian",
+      "job": "teacher",
+      "hobby": "painting"
+     },
+     "4": {
+      "pet": "rabbit",
+      "drink": "tea",
+      "color": "purple",
+      "nationality": "Brit",
+      "job": "baker",
+      "hobby": "golf"
+     },
+     "5": {
+      "pet": "cat",
+      "drink": "coffee",
+      "color": "white",
+      "nationality": "Swede",
+      "job": "doctor",
+      "hobby": "tennis"
+     },
+     "6": {
+      "pet": "horse",
+      "drink": "juice",
+      "color": "red",
+      "nationality": "Dane",
+      "job": "pilot",
+      "hobby": "hiking"
+     }
+    }
+   }
+  },
+  "e4b-g2-09": {
+   "id": "e4b-g2-09",
+   "spec": {
+    "family": "zebra",
+    "n": 6,
+    "cats": {
+     "drink": [
+      "juice",
+      "milk",
+      "coffee",
+      "tea",
+      "water",
+      "cocoa"
+     ],
+     "hobby": [
+      "cooking",
+      "chess",
+      "painting",
+      "hiking",
+      "tennis",
+      "golf"
+     ],
+     "job": [
+      "teacher",
+      "farmer",
+      "doctor",
+      "lawyer",
+      "baker",
+      "pilot"
+     ],
+     "color": [
+      "red",
+      "white",
+      "green",
+      "blue",
+      "yellow",
+      "purple"
+     ],
+     "nationality": [
+      "Swede",
+      "Dane",
+      "Brit",
+      "German",
+      "Spaniard",
+      "Norwegian"
+     ],
+     "pet": [
+      "fish",
+      "cat",
+      "horse",
+      "bird",
+      "dog",
+      "rabbit"
+     ]
+    },
+    "solution": {
+     "juice": 6,
+     "milk": 1,
+     "coffee": 5,
+     "tea": 4,
+     "water": 3,
+     "cocoa": 2,
+     "cooking": 2,
+     "chess": 1,
+     "painting": 3,
+     "hiking": 6,
+     "tennis": 5,
+     "golf": 4,
+     "teacher": 3,
+     "farmer": 1,
+     "doctor": 5,
+     "lawyer": 2,
+     "baker": 4,
+     "pilot": 6,
+     "red": 6,
+     "white": 5,
+     "green": 2,
+     "blue": 1,
+     "yellow": 3,
+     "purple": 4,
+     "swede": 5,
+     "dane": 6,
+     "brit": 4,
+     "german": 2,
+     "spaniard": 1,
+     "norwegian": 3,
+     "fish": 2,
+     "cat": 5,
+     "horse": 6,
+     "bird": 1,
+     "dog": 3,
+     "rabbit": 4
+    },
+    "style": "plain",
+    "clues": [
+     {
+      "type": "same",
+      "args": [
+       "milk",
+       "spaniard"
+      ],
+      "expr": "pos(\"milk\") == pos(\"spaniard\")",
+      "text": "The Spaniard drinks milk."
+     },
+     {
+      "type": "same",
+      "args": [
+       "doctor",
+       "swede"
+      ],
+      "expr": "pos(\"doctor\") == pos(\"swede\")",
+      "text": "The Swede works as the doctor."
+     },
+     {
+      "type": "gap2",
+      "args": [
+       "milk",
+       "yellow"
+      ],
+      "expr": "Abs(pos(\"milk\") - pos(\"yellow\")) == 2",
+      "text": "The person who drinks milk and whoever lives in the yellow house live two houses apart."
+     },
+     {
+      "type": "end",
+      "args": [
+       "hiking"
+      ],
+      "expr": "Or(pos(\"hiking\") == 1, pos(\"hiking\") == 6)",
+      "text": "The hiking enthusiast lives in one of the two end houses."
+     },
+     {
+      "type": "left_of",
+      "args": [
+       "tennis",
+       "red"
+      ],
+      "expr": "pos(\"tennis\") + 1 == pos(\"red\")",
+      "text": "Whoever lives in the red house lives immediately to the right of the person who enjoys tennis."
+     },
+     {
+      "type": "same",
+      "args": [
+       "swede",
+       "white"
+      ],
+      "expr": "pos(\"swede\") == pos(\"white\")",
+      "text": "The person in the white house is the Swede."
+     },
+     {
+      "type": "next_to",
+      "args": [
+       "baker",
+       "dog"
+      ],
+      "expr": "Abs(pos(\"baker\") - pos(\"dog\")) == 1",
+      "text": "The baker lives next to the person who keeps the dog."
+     },
+     {
+      "type": "before",
+      "args": [
+       "farmer",
+       "purple"
+      ],
+      "expr": "pos(\"farmer\") < pos(\"purple\")",
+      "text": "The farmer lives somewhere to the left of the occupant of the purple house."
+     },
+     {
+      "type": "same",
+      "args": [
+       "horse",
+       "red"
+      ],
+      "expr": "pos(\"horse\") == pos(\"red\")",
+      "text": "The occupant of the red house keeps the horse."
+     },
+     {
+      "type": "next_to",
+      "args": [
+       "coffee",
+       "hiking"
+      ],
+      "expr": "Abs(pos(\"coffee\") - pos(\"hiking\")) == 1",
+      "text": "The coffee drinker and the person who enjoys hiking live in adjacent houses."
+     },
+     {
+      "type": "next_to",
+      "args": [
+       "green",
+       "yellow"
+      ],
+      "expr": "Abs(pos(\"green\") - pos(\"yellow\")) == 1",
+      "text": "The occupant of the green house and the person in the yellow house are neighbours."
+     },
+     {
+      "type": "left_of",
+      "args": [
+       "fish",
+       "painting"
+      ],
+      "expr": "pos(\"fish\") + 1 == pos(\"painting\")",
+      "text": "The person who keeps the fish lives in the house just left of the one where the person who enjoys painting lives."
+     },
+     {
+      "type": "at",
+      "args": [
+       "cooking",
+       2
+      ],
+      "expr": "pos(\"cooking\") == 2",
+      "text": "The cooking enthusiast lives in the second house."
+     },
+     {
+      "type": "left_of",
+      "args": [
+       "cat",
+       "red"
+      ],
+      "expr": "pos(\"cat\") + 1 == pos(\"red\")",
+      "text": "The cat owner lives directly to the left of the occupant of the red house."
+     },
+     {
+      "type": "left_of",
+      "args": [
+       "blue",
+       "green"
+      ],
+      "expr": "pos(\"blue\") + 1 == pos(\"green\")",
+      "text": "Whoever lives in the blue house lives directly to the left of the occupant of the green house."
+     },
+     {
+      "type": "next_to",
+      "args": [
+       "bird",
+       "german"
+      ],
+      "expr": "Abs(pos(\"bird\") - pos(\"german\")) == 1",
+      "text": "The person who keeps the bird and the German live in adjacent houses."
+     },
+     {
+      "type": "next_to",
+      "args": [
+       "coffee",
+       "dane"
+      ],
+      "expr": "Abs(pos(\"coffee\") - pos(\"dane\")) == 1",
+      "text": "The coffee drinker lives next to the Dane."
+     },
+     {
+      "type": "not_same",
+      "args": [
+       "fish",
+       "spaniard"
+      ],
+      "expr": "pos(\"fish\") != pos(\"spaniard\")",
+      "text": "The person who keeps the fish and the Spaniard are different people."
+     },
+     {
+      "type": "not_at",
+      "args": [
+       "water",
+       2
+      ],
+      "expr": "pos(\"water\") != 2",
+      "text": "The person who drinks water does not live in the second house."
+     },
+     {
+      "type": "gap2",
+      "args": [
+       "brit",
+       "red"
+      ],
+      "expr": "Abs(pos(\"brit\") - pos(\"red\")) == 2",
+      "text": "There is exactly one house between the Brit and the person in the red house."
+     },
+     {
+      "type": "same",
+      "args": [
+       "green",
+       "lawyer"
+      ],
+      "expr": "pos(\"green\") == pos(\"lawyer\")",
+      "text": "The lawyer lives in the green house."
+     },
+     {
+      "type": "same",
+      "args": [
+       "dog",
+       "teacher"
+      ],
+      "expr": "pos(\"dog\") == pos(\"teacher\")",
+      "text": "The teacher keeps the dog."
+     },
+     {
+      "type": "same",
+      "args": [
+       "golf",
+       "tea"
+      ],
+      "expr": "pos(\"golf\") == pos(\"tea\")",
+      "text": "The person who drinks tea enjoys golf."
+     },
+     {
+      "type": "same",
+      "args": [
+       "juice",
+       "red"
+      ],
+      "expr": "pos(\"juice\") == pos(\"red\")",
+      "text": "Whoever lives in the red house drinks juice."
+     },
+     {
+      "type": "gap2",
+      "args": [
+       "rabbit",
+       "cooking"
+      ],
+      "expr": "Abs(pos(\"rabbit\") - pos(\"cooking\")) == 2",
+      "text": "There is exactly one house between the owner of the rabbit and the person who enjoys cooking."
+     },
+     {
+      "type": "next_to",
+      "args": [
+       "coffee",
+       "juice"
+      ],
+      "expr": "Abs(pos(\"coffee\") - pos(\"juice\")) == 1",
+      "text": "The person who drinks coffee and the juice drinker are neighbours."
+     }
+    ]
+   },
+   "born": 2,
+   "parent": "e4b-g0-04",
+   "level": 3,
+   "evals": [
+    1.0
+   ],
+   "repair_added": 1,
+   "idea": "Weaken exact positions to end and gap clues.",
+   "answers": {
+    "2": {
+     "1": {
+      "drink": "milk",
+      "hobby": "chess",
+      "job": "farmer",
+      "color": "blue",
+      "pet": "bird",
+      "nationality": "Spaniard"
+     },
+     "2": {
+      "drink": "cocoa",
+      "hobby": "cooking",
+      "job": "lawyer",
+      "color": "green",
+      "pet": "fish",
+      "nationality": "German"
+     },
+     "3": {
+      "drink": "water",
+      "hobby": "painting",
+      "job": "teacher",
+      "color": "yellow",
+      "pet": "dog",
+      "nationality": "Norwegian"
+     },
+     "4": {
+      "drink": "tea",
+      "hobby": "golf",
+      "job": "baker",
+      "color": "purple",
+      "pet": "rabbit",
+      "nationality": "Brit"
+     },
+     "5": {
+      "drink": "coffee",
+      "hobby": "tennis",
+      "job": "doctor",
+      "color": "white",
+      "pet": "cat",
+      "nationality": "Swede"
+     },
+     "6": {
+      "drink": "juice",
+      "hobby": "hiking",
+      "job": "pilot",
+      "color": "red",
+      "pet": "horse",
+      "nationality": "Dane"
+     }
+    }
+   }
+  },
+  "e4b-g2-10": {
+   "id": "e4b-g2-10",
+   "spec": {
+    "family": "zebra",
+    "n": 6,
+    "cats": {
+     "color": [
+      "purple",
+      "blue",
+      "white",
+      "yellow",
+      "red",
+      "green"
+     ],
+     "job": [
+      "farmer",
+      "doctor",
+      "pilot",
+      "lawyer",
+      "teacher",
+      "baker"
+     ],
+     "pet": [
+      "dog",
+      "bird",
+      "fish",
+      "horse",
+      "rabbit",
+      "cat"
+     ],
+     "hobby": [
+      "hiking",
+      "chess",
+      "painting",
+      "golf",
+      "cooking",
+      "tennis"
+     ],
+     "drink": [
+      "cocoa",
+      "coffee",
+      "milk",
+      "water",
+      "juice",
+      "tea"
+     ],
+     "nationality": [
+      "Spaniard",
+      "Swede",
+      "German",
+      "Dane",
+      "Brit",
+      "Norwegian"
+     ]
+    },
+    "solution": {
+     "purple": 2,
+     "blue": 5,
+     "white": 4,
+     "yellow": 3,
+     "red": 1,
+     "green": 6,
+     "farmer": 3,
+     "doctor": 1,
+     "pilot": 4,
+     "lawyer": 5,
+     "teacher": 6,
+     "baker": 2,
+     "dog": 1,
+     "bird": 5,
+     "fish": 4,
+     "horse": 2,
+     "rabbit": 6,
+     "cat": 3,
+     "hiking": 6,
+     "chess": 2,
+     "painting": 5,
+     "golf": 4,
+     "cooking": 1,
+     "tennis": 3,
+     "cocoa": 1,
+     "coffee": 6,
+     "milk": 5,
+     "water": 3,
+     "juice": 2,
+     "tea": 4,
+     "spaniard": 2,
+     "swede": 6,
+     "german": 4,
+     "dane": 5,
+     "brit": 3,
+     "norwegian": 1
+    },
+    "style": "plain",
+    "clues": [
+     {
+      "type": "same",
+      "args": [
+       "brit",
+       "cat"
+      ],
+      "expr": "pos(\"brit\") == pos(\"cat\")",
+      "text": "The cat owner is the Brit."
+     },
+     {
+      "type": "gap2",
+      "args": [
+       "brit",
+       "dog"
+      ],
+      "expr": "Abs(pos(\"brit\") - pos(\"dog\")) == 2",
+      "text": "The Brit and the person who keeps the dog live two houses apart."
+     },
+     {
+      "type": "gap2",
+      "args": [
+       "bird",
+       "farmer"
+      ],
+      "expr": "Abs(pos(\"bird\") - pos(\"farmer\")) == 2",
+      "text": "The person who keeps the bird and the farmer live two houses apart."
+     },
+     {
+      "type": "gap2",
+      "args": [
+       "rabbit",
+       "tea"
+      ],
+      "expr": "Abs(pos(\"rabbit\") - pos(\"tea\")) == 2",
+      "text": "The person who keeps the rabbit and the tea drinker live two houses apart."
+     },
+     {
+      "type": "same",
+      "args": [
+       "cocoa",
+       "red"
+      ],
+      "expr": "pos(\"cocoa\") == pos(\"red\")",
+      "text": "The person who drinks cocoa lives in the red house."
+     },
+     {
+      "type": "left_of",
+      "args": [
+       "german",
+       "blue"
+      ],
+      "expr": "pos(\"german\") + 1 == pos(\"blue\")",
+      "text": "The person in the blue house lives immediately to the right of the German."
+     },
+     {
+      "type": "same",
+      "args": [
+       "brit",
+       "water"
+      ],
+      "expr": "pos(\"brit\") == pos(\"water\")",
+      "text": "The Brit drinks water."
+     },
+     {
+      "type": "end",
+      "args": [
+       "doctor"
+      ],
+      "expr": "Or(pos(\"doctor\") == 1, pos(\"doctor\") == 6)",
+      "text": "The doctor lives at one end of the row."
+     },
+     {
+      "type": "left_of",
+      "args": [
+       "dog",
+       "spaniard"
+      ],
+      "expr": "pos(\"dog\") + 1 == pos(\"spaniard\")",
+      "text": "The person who keeps the dog lives directly to the left of the Spaniard."
+     },
+     {
+      "type": "next_to",
+      "args": [
+       "purple",
+       "red"
+      ],
+      "expr": "Abs(pos(\"purple\") - pos(\"red\")) == 1",
+      "text": "Whoever lives in the purple house and the occupant of the red house live in adjacent houses."
+     },
+     {
+      "type": "same",
+      "args": [
+       "chess",
+       "juice"
+      ],
+      "expr": "pos(\"chess\") == pos(\"juice\")",
+      "text": "The person who drinks juice enjoys chess."
+     },
+     {
+      "type": "next_to",
+      "args": [
+       "german",
+       "tennis"
+      ],
+      "expr": "Abs(pos(\"german\") - pos(\"tennis\")) == 1",
+      "text": "The German and the person who enjoys tennis are neighbours."
+     },
+     {
+      "type": "next_to",
+      "args": [
+       "lawyer",
+       "teacher"
+      ],
+      "expr": "Abs(pos(\"lawyer\") - pos(\"teacher\")) == 1",
+      "text": "The lawyer and the teacher are neighbours."
+     },
+     {
+      "type": "at",
+      "args": [
+       "cooking",
+       1
+      ],
+      "expr": "pos(\"cooking\") == 1",
+      "text": "The cooking enthusiast lives in the first house."
+     },
+     {
+      "type": "left_of",
+      "args": [
+       "white",
+       "lawyer"
+      ],
+      "expr": "pos(\"white\") + 1 == pos(\"lawyer\")",
+      "text": "The occupant of the white house lives directly to the left of the lawyer."
+     },
+     {
+      "type": "same",
+      "args": [
+       "bird",
+       "painting"
+      ],
+      "expr": "pos(\"bird\") == pos(\"painting\")",
+      "text": "The bird owner enjoys painting."
+     },
+     {
+      "type": "left_of",
+      "args": [
+       "baker",
+       "water"
+      ],
+      "expr": "pos(\"baker\") + 1 == pos(\"water\")",
+      "text": "The person who drinks water lives immediately to the right of the baker."
+     },
+     {
+      "type": "left_of",
+      "args": [
+       "norwegian",
+       "juice"
+      ],
+      "expr": "pos(\"norwegian\") + 1 == pos(\"juice\")",
+      "text": "The person who drinks juice lives immediately to the right of the Norwegian."
+     },
+     {
+      "type": "not_next_to",
+      "args": [
+       "doctor",
+       "pilot"
+      ],
+      "expr": "Abs(pos(\"doctor\") - pos(\"pilot\")) != 1",
+      "text": "The doctor does not live next to the pilot."
+     },
+     {
+      "type": "left_of",
+      "args": [
+       "fish",
+       "dane"
+      ],
+      "expr": "pos(\"fish\") + 1 == pos(\"dane\")",
+      "text": "The owner of the fish lives directly to the left of the Dane."
+     },
+     {
+      "type": "same",
+      "args": [
+       "norwegian",
+       "red"
+      ],
+      "expr": "pos(\"norwegian\") == pos(\"red\")",
+      "text": "Whoever lives in the red house is the Norwegian."
+     },
+     {
+      "type": "gap2",
+      "args": [
+       "german",
+       "teacher"
+      ],
+      "expr": "Abs(pos(\"german\") - pos(\"teacher\")) == 2",
+      "text": "There is exactly one house between the German and the teacher."
+     },
+     {
+      "type": "left_of",
+      "args": [
+       "brit",
+       "golf"
+      ],
+      "expr": "pos(\"brit\") + 1 == pos(\"golf\")",
+      "text": "The person who enjoys golf lives immediately to the right of the Brit."
+     },
+     {
+      "type": "end",
+      "args": [
+       "green"
+      ],
+      "expr": "Or(pos(\"green\") == 1, pos(\"green\") == 6)",
+      "text": "Whoever lives in the green house lives at one end of the row."
+     },
+     {
+      "type": "gap2",
+      "args": [
+       "baker",
+       "german"
+      ],
+      "expr": "Abs(pos(\"baker\") - pos(\"german\")) == 2",
+      "text": "There is exactly one house between the baker and the German."
+     },
+     {
+      "type": "before",
+      "args": [
+       "german",
+       "rabbit"
+      ],
+      "expr": "pos(\"german\") < pos(\"rabbit\")",
+      "text": "The German lives somewhere to the left of the rabbit owner."
+     },
+     {
+      "type": "next_to",
+      "args": [
+       "milk",
+       "tea"
+      ],
+      "expr": "Abs(pos(\"milk\") - pos(\"tea\")) == 1",
+      "text": "The milk drinker and the tea drinker live in adjacent houses."
+     }
+    ]
+   },
+   "born": 2,
+   "parent": "e4b-g0-07",
+   "level": 3,
+   "evals": [
+    1.0
+   ],
+   "repair_added": 2,
+   "idea": "Remove two pinned jobs and use negative and end clues.",
+   "answers": {
+    "2": {
+     "1": {
+      "color": "red",
+      "job": "doctor",
+      "pet": "dog",
+      "hobby": "cooking",
+      "drink": "cocoa",
+      "nationality": "Norwegian"
+     },
+     "2": {
+      "color": "purple",
+      "job": "baker",
+      "pet": "horse",
+      "hobby": "chess",
+      "drink": "juice",
+      "nationality": "Spaniard"
+     },
+     "3": {
+      "color": "yellow",
+      "job": "farmer",
+      "pet": "cat",
+      "hobby": "tennis",
+      "drink": "water",
+      "nationality": "Brit"
+     },
+     "4": {
+      "color": "white",
+      "job": "pilot",
+      "pet": "fish",
+      "hobby": "golf",
+      "drink": "tea",
+      "nationality": "German"
+     },
+     "5": {
+      "color": "blue",
+      "job": "lawyer",
+      "pet": "bird",
+      "hobby": "painting",
+      "drink": "milk",
+      "nationality": "Dane"
+     },
+     "6": {
+      "color": "green",
+      "job": "teacher",
+      "pet": "rabbit",
+      "hobby": "hiking",
+      "drink": "coffee",
+      "nationality": "Swede"
+     }
+    }
+   }
+  },
+  "e4b-g2-11": {
+   "id": "e4b-g2-11",
+   "spec": {
+    "family": "zebra",
+    "n": 6,
+    "cats": {
+     "color": [
+      "purple",
+      "blue",
+      "white",
+      "yellow",
+      "red",
+      "green"
+     ],
+     "job": [
+      "farmer",
+      "doctor",
+      "pilot",
+      "lawyer",
+      "teacher",
+      "baker"
+     ],
+     "pet": [
+      "dog",
+      "bird",
+      "fish",
+      "horse",
+      "rabbit",
+      "cat"
+     ],
+     "hobby": [
+      "hiking",
+      "chess",
+      "painting",
+      "golf",
+      "cooking",
+      "tennis"
+     ],
+     "drink": [
+      "cocoa",
+      "coffee",
+      "milk",
+      "water",
+      "juice",
+      "tea"
+     ],
+     "nationality": [
+      "Spaniard",
+      "Swede",
+      "German",
+      "Dane",
+      "Brit",
+      "Norwegian"
+     ]
+    },
+    "solution": {
+     "purple": 2,
+     "blue": 5,
+     "white": 4,
+     "yellow": 3,
+     "red": 1,
+     "green": 6,
+     "farmer": 3,
+     "doctor": 1,
+     "pilot": 4,
+     "lawyer": 5,
+     "teacher": 6,
+     "baker": 2,
+     "dog": 1,
+     "bird": 5,
+     "fish": 4,
+     "horse": 2,
+     "rabbit": 6,
+     "cat": 3,
+     "hiking": 6,
+     "chess": 2,
+     "painting": 5,
+     "golf": 4,
+     "cooking": 1,
+     "tennis": 3,
+     "cocoa": 1,
+     "coffee": 6,
+     "milk": 5,
+     "water": 3,
+     "juice": 2,
+     "tea": 4,
+     "spaniard": 2,
+     "swede": 6,
+     "german": 4,
+     "dane": 5,
+     "brit": 3,
+     "norwegian": 1
+    },
+    "style": "plain",
+    "clues": [
+     {
+      "type": "end",
+      "args": [
+       "green"
+      ],
+      "expr": "Or(pos(\"green\") == 1, pos(\"green\") == 6)",
+      "text": "Whoever lives in the green house lives at one end of the row."
+     },
+     {
+      "type": "at",
+      "args": [
+       "doctor",
+       1
+      ],
+      "expr": "pos(\"doctor\") == 1",
+      "text": "The doctor lives in the first house."
+     },
+     {
+      "type": "next_to",
+      "args": [
+       "lawyer",
+       "pilot"
+      ],
+      "expr": "Abs(pos(\"lawyer\") - pos(\"pilot\")) == 1",
+      "text": "The lawyer and the pilot live in adjacent houses."
+     },
+     {
+      "type": "before",
+      "args": [
+       "german",
+       "rabbit"
+      ],
+      "expr": "pos(\"german\") < pos(\"rabbit\")",
+      "text": "The German lives somewhere to the left of the owner of the rabbit."
+     },
+     {
+      "type": "left_of",
+      "args": [
+       "tennis",
+       "tea"
+      ],
+      "expr": "pos(\"tennis\") + 1 == pos(\"tea\")",
+      "text": "The person who enjoys tennis lives directly to the left of the tea drinker."
+     },
+     {
+      "type": "gap2",
+      "args": [
+       "rabbit",
+       "tea"
+      ],
+      "expr": "Abs(pos(\"rabbit\") - pos(\"tea\")) == 2",
+      "text": "The owner of the rabbit and the tea drinker live two houses apart."
+     },
+     {
+      "type": "gap2",
+      "args": [
+       "german",
+       "teacher"
+      ],
+      "expr": "Abs(pos(\"german\") - pos(\"teacher\")) == 2",
+      "text": "There is exactly one house between the German and the teacher."
+     },
+     {
+      "type": "gap2",
+      "args": [
+       "baker",
+       "german"
+      ],
+      "expr": "Abs(pos(\"baker\") - pos(\"german\")) == 2",
+      "text": "There is exactly one house between the baker and the German."
+     },
+     {
+      "type": "same",
+      "args": [
+       "bird",
+       "painting"
+      ],
+      "expr": "pos(\"bird\") == pos(\"painting\")",
+      "text": "The person who keeps the bird enjoys painting."
+     },
+     {
+      "type": "same",
+      "args": [
+       "chess",
+       "juice"
+      ],
+      "expr": "pos(\"chess\") == pos(\"juice\")",
+      "text": "The juice drinker enjoys chess."
+     },
+     {
+      "type": "left_of",
+      "args": [
+       "german",
+       "blue"
+      ],
+      "expr": "pos(\"german\") + 1 == pos(\"blue\")",
+      "text": "Whoever lives in the blue house lives immediately to the right of the German."
+     },
+     {
+      "type": "same",
+      "args": [
+       "norwegian",
+       "red"
+      ],
+      "expr": "pos(\"norwegian\") == pos(\"red\")",
+      "text": "The Norwegian lives in the red house."
+     },
+     {
+      "type": "next_to",
+      "args": [
+       "lawyer",
+       "teacher"
+      ],
+      "expr": "Abs(pos(\"lawyer\") - pos(\"teacher\")) == 1",
+      "text": "The lawyer lives next to the teacher."
+     },
+     {
+      "type": "left_of",
+      "args": [
+       "brit",
+       "golf"
+      ],
+      "expr": "pos(\"brit\") + 1 == pos(\"golf\")",
+      "text": "The Brit lives in the house just left of the one where the person who enjoys golf lives."
+     },
+     {
+      "type": "end",
+      "args": [
+       "cooking"
+      ],
+      "expr": "Or(pos(\"cooking\") == 1, pos(\"cooking\") == 6)",
+      "text": "The person who enjoys cooking lives at one end of the row."
+     },
+     {
+      "type": "left_of",
+      "args": [
+       "dog",
+       "spaniard"
+      ],
+      "expr": "pos(\"dog\") + 1 == pos(\"spaniard\")",
+      "text": "The person who keeps the dog lives directly to the left of the Spaniard."
+     },
+     {
+      "type": "next_to",
+      "args": [
+       "german",
+       "tennis"
+      ],
+      "expr": "Abs(pos(\"german\") - pos(\"tennis\")) == 1",
+      "text": "The German and the tennis enthusiast are neighbours."
+     },
+     {
+      "type": "not_next_to",
+      "args": [
+       "pilot",
+       "teacher"
+      ],
+      "expr": "Abs(pos(\"pilot\") - pos(\"teacher\")) != 1",
+      "text": "The pilot and the teacher are not neighbours."
+     },
+     {
+      "type": "same",
+      "args": [
+       "brit",
+       "cat"
+      ],
+      "expr": "pos(\"brit\") == pos(\"cat\")",
+      "text": "The owner of the cat is the Brit."
+     },
+     {
+      "type": "next_to",
+      "args": [
+       "milk",
+       "tea"
+      ],
+      "expr": "Abs(pos(\"milk\") - pos(\"tea\")) == 1",
+      "text": "The person who drinks milk lives next to the person who drinks tea."
+     },
+     {
+      "type": "next_to",
+      "args": [
+       "purple",
+       "red"
+      ],
+      "expr": "Abs(pos(\"purple\") - pos(\"red\")) == 1",
+      "text": "Whoever lives in the purple house and the occupant of the red house are neighbours."
+     },
+     {
+      "type": "same",
+      "args": [
+       "brit",
+       "water"
+      ],
+      "expr": "pos(\"brit\") == pos(\"water\")",
+      "text": "The person who drinks water is the Brit."
+     },
+     {
+      "type": "left_of",
+      "args": [
+       "white",
+       "lawyer"
+      ],
+      "expr": "pos(\"white\") + 1 == pos(\"lawyer\")",
+      "text": "The person in the white house lives directly to the left of the lawyer."
+     },
+     {
+      "type": "same",
+      "args": [
+       "cooking",
+       "doctor"
+      ],
+      "expr": "pos(\"cooking\") == pos(\"doctor\")",
+      "text": "The doctor enjoys cooking."
+     },
+     {
+      "type": "left_of",
+      "args": [
+       "norwegian",
+       "juice"
+      ],
+      "expr": "pos(\"norwegian\") + 1 == pos(\"juice\")",
+      "text": "The Norwegian lives in the house just left of the one where the person who drinks juice lives."
+     },
+     {
+      "type": "same",
+      "args": [
+       "cocoa",
+       "red"
+      ],
+      "expr": "pos(\"cocoa\") == pos(\"red\")",
+      "text": "The person who drinks cocoa lives in the red house."
+     },
+     {
+      "type": "gap2",
+      "args": [
+       "brit",
+       "dog"
+      ],
+      "expr": "Abs(pos(\"brit\") - pos(\"dog\")) == 2",
+      "text": "The Brit and the dog owner live two houses apart."
+     },
+     {
+      "type": "left_of",
+      "args": [
+       "fish",
+       "dane"
+      ],
+      "expr": "pos(\"fish\") + 1 == pos(\"dane\")",
+      "text": "The owner of the fish lives in the house just left of the one where the Dane lives."
+     }
+    ]
+   },
+   "born": 2,
+   "parent": "e4b-g0-07",
+   "level": 3,
+   "evals": [
+    1.0
+   ],
+   "repair_added": 3,
+   "idea": "Replace absolute positions with end and negative clues.",
+   "answers": {
+    "2": {
+     "1": {
+      "color": "red",
+      "job": "doctor",
+      "pet": "dog",
+      "hobby": "cooking",
+      "drink": "cocoa",
+      "nationality": "Norwegian"
+     },
+     "2": {
+      "color": "purple",
+      "job": "baker",
+      "pet": "horse",
+      "hobby": "chess",
+      "drink": "juice",
+      "nationality": "Spaniard"
+     },
+     "3": {
+      "color": "yellow",
+      "job": "farmer",
+      "pet": "cat",
+      "hobby": "tennis",
+      "drink": "water",
+      "nationality": "Brit"
+     },
+     "4": {
+      "color": "white",
+      "job": "pilot",
+      "pet": "fish",
+      "hobby": "golf",
+      "drink": "tea",
+      "nationality": "German"
+     },
+     "5": {
+      "color": "blue",
+      "job": "lawyer",
+      "pet": "bird",
+      "hobby": "painting",
+      "drink": "milk",
+      "nationality": "Dane"
+     },
+     "6": {
+      "color": "green",
+      "job": "teacher",
+      "pet": "rabbit",
+      "hobby": "hiking",
+      "drink": "coffee",
+      "nationality": "Swede"
+     }
+    }
+   }
   }
  },
  "history": [
@@ -12134,6 +17708,149 @@
     1,
     2,
     2
+   ],
+   "mutation_log": [
+    {
+     "parent": "e4b-g0-00",
+     "n_ops_applied": 2,
+     "accepted": true,
+     "idea": "Swap two direct position clues for a relative clue and a disjunction.",
+     "child": "e4b-g2-00"
+    },
+    {
+     "parent": "e4b-g0-00",
+     "n_ops_applied": 2,
+     "accepted": true,
+     "idea": "Turn exact positions of water and coffee into relative and end clues.",
+     "child": "e4b-g2-01"
+    },
+    {
+     "parent": "e4b-g0-02",
+     "n_ops_applied": 2,
+     "accepted": true,
+     "idea": "Replace house-1 anchors with end and negative adjacency clues.",
+     "child": "e4b-g2-02"
+    },
+    {
+     "parent": "e4b-g0-02",
+     "n_ops_applied": 2,
+     "accepted": false,
+     "idea": "Loosen the bird position and rabbit-green direction."
+    },
+    {
+     "parent": "e4b-g0-05",
+     "n_ops_applied": 2,
+     "accepted": false,
+     "idea": "Replace fixed color positions with end and adjacency clues."
+    },
+    {
+     "parent": "e4b-g0-05",
+     "n_ops_applied": 2,
+     "accepted": false,
+     "idea": "Weaken directional chains to looser relative clues."
+    },
+    {
+     "parent": "e4b-g0-01",
+     "n_ops_applied": 2,
+     "accepted": true,
+     "idea": "Replace Brit and Dane positions with relative and end clues.",
+     "child": "e4b-g2-03"
+    },
+    {
+     "parent": "e4b-g0-01",
+     "n_ops_applied": 2,
+     "accepted": true,
+     "idea": "Remove exact doctor and chess positions in favor of relative clues.",
+     "child": "e4b-g2-04"
+    },
+    {
+     "parent": "e4b-g0-06",
+     "n_ops_applied": 2,
+     "accepted": true,
+     "idea": "Replace blue and milk anchors with relative clues.",
+     "child": "e4b-g2-05"
+    },
+    {
+     "parent": "e4b-g0-06",
+     "n_ops_applied": 2,
+     "accepted": true,
+     "idea": "Make Brit and cat positions indirect.",
+     "child": "e4b-g2-06"
+    },
+    {
+     "parent": "e4b-g1-00",
+     "n_ops_applied": 4,
+     "accepted": true,
+     "idea": "Remove direct position clues and substitute negative and end clues.",
+     "child": "e4b-g2-07"
+    },
+    {
+     "parent": "e4b-g1-00",
+     "n_ops_applied": 2,
+     "accepted": false,
+     "idea": "Turn absolute positions into relative gap clues."
+    },
+    {
+     "parent": "e4b-g0-04",
+     "n_ops_applied": 4,
+     "accepted": true,
+     "idea": "Drop two fixed-position clues in favour of vaguer relative clues.",
+     "child": "e4b-g2-08"
+    },
+    {
+     "parent": "e4b-g0-04",
+     "n_ops_applied": 2,
+     "accepted": true,
+     "idea": "Weaken exact positions to end and gap clues.",
+     "child": "e4b-g2-09"
+    },
+    {
+     "parent": "e4b-g0-07",
+     "n_ops_applied": 4,
+     "accepted": true,
+     "idea": "Remove two pinned jobs and use negative and end clues.",
+     "child": "e4b-g2-10"
+    },
+    {
+     "parent": "e4b-g0-07",
+     "n_ops_applied": 2,
+     "accepted": true,
+     "idea": "Replace absolute positions with end and negative clues.",
+     "child": "e4b-g2-11"
+    }
+   ]
+  },
+  {
+   "gen": 2,
+   "fitness": [
+    0.0,
+    0.0,
+    0.0,
+    0.0,
+    0.0,
+    0.0,
+    0.0,
+    0.0
+   ],
+   "ids": [
+    "e4b-g0-00",
+    "e4b-g0-02",
+    "e4b-g0-05",
+    "e4b-g0-01",
+    "e4b-g0-06",
+    "e4b-g1-00",
+    "e4b-g0-04",
+    "e4b-g0-07"
+   ],
+   "n_evals": [
+    3,
+    3,
+    3,
+    3,
+    3,
+    2,
+    3,
+    3
    ]
   }
  ]
