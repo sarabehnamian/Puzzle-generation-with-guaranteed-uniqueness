@@ -1,1293 +1,9 @@
 {
  "gen": 1,
- "phase": "eval",
+ "phase": "mutate",
  "pop": [
   {
-   "id": "e4s-g0-00",
-   "spec": {
-    "family": "sudoku",
-    "n": 9,
-    "box": [
-     3,
-     3
-    ],
-    "solution": [
-     [
-      4,
-      6,
-      9,
-      2,
-      1,
-      3,
-      7,
-      5,
-      8
-     ],
-     [
-      2,
-      3,
-      1,
-      7,
-      8,
-      5,
-      9,
-      4,
-      6
-     ],
-     [
-      7,
-      5,
-      8,
-      9,
-      6,
-      4,
-      1,
-      2,
-      3
-     ],
-     [
-      6,
-      9,
-      4,
-      3,
-      2,
-      1,
-      5,
-      8,
-      7
-     ],
-     [
-      5,
-      8,
-      7,
-      4,
-      9,
-      6,
-      2,
-      3,
-      1
-     ],
-     [
-      3,
-      1,
-      2,
-      5,
-      7,
-      8,
-      4,
-      6,
-      9
-     ],
-     [
-      1,
-      2,
-      3,
-      8,
-      5,
-      7,
-      6,
-      9,
-      4
-     ],
-     [
-      9,
-      4,
-      6,
-      1,
-      3,
-      2,
-      8,
-      7,
-      5
-     ],
-     [
-      8,
-      7,
-      5,
-      6,
-      4,
-      9,
-      3,
-      1,
-      2
-     ]
-    ],
-    "clues": [
-     {
-      "type": "given",
-      "cell": [
-       0,
-       1
-      ],
-      "value": 6
-     },
-     {
-      "type": "given",
-      "cell": [
-       0,
-       3
-      ],
-      "value": 2
-     },
-     {
-      "type": "given",
-      "cell": [
-       0,
-       7
-      ],
-      "value": 5
-     },
-     {
-      "type": "given",
-      "cell": [
-       1,
-       6
-      ],
-      "value": 9
-     },
-     {
-      "type": "given",
-      "cell": [
-       2,
-       0
-      ],
-      "value": 7
-     },
-     {
-      "type": "given",
-      "cell": [
-       2,
-       2
-      ],
-      "value": 8
-     },
-     {
-      "type": "given",
-      "cell": [
-       2,
-       4
-      ],
-      "value": 6
-     },
-     {
-      "type": "given",
-      "cell": [
-       2,
-       5
-      ],
-      "value": 4
-     },
-     {
-      "type": "given",
-      "cell": [
-       3,
-       1
-      ],
-      "value": 9
-     },
-     {
-      "type": "given",
-      "cell": [
-       3,
-       2
-      ],
-      "value": 4
-     },
-     {
-      "type": "given",
-      "cell": [
-       3,
-       5
-      ],
-      "value": 1
-     },
-     {
-      "type": "given",
-      "cell": [
-       3,
-       6
-      ],
-      "value": 5
-     },
-     {
-      "type": "given",
-      "cell": [
-       4,
-       2
-      ],
-      "value": 7
-     },
-     {
-      "type": "given",
-      "cell": [
-       4,
-       3
-      ],
-      "value": 4
-     },
-     {
-      "type": "given",
-      "cell": [
-       4,
-       7
-      ],
-      "value": 3
-     },
-     {
-      "type": "given",
-      "cell": [
-       5,
-       2
-      ],
-      "value": 2
-     },
-     {
-      "type": "given",
-      "cell": [
-       5,
-       5
-      ],
-      "value": 8
-     },
-     {
-      "type": "given",
-      "cell": [
-       6,
-       0
-      ],
-      "value": 1
-     },
-     {
-      "type": "given",
-      "cell": [
-       6,
-       4
-      ],
-      "value": 5
-     },
-     {
-      "type": "given",
-      "cell": [
-       6,
-       5
-      ],
-      "value": 7
-     },
-     {
-      "type": "given",
-      "cell": [
-       6,
-       8
-      ],
-      "value": 4
-     },
-     {
-      "type": "given",
-      "cell": [
-       7,
-       6
-      ],
-      "value": 8
-     },
-     {
-      "type": "given",
-      "cell": [
-       8,
-       6
-      ],
-      "value": 3
-     },
-     {
-      "type": "given",
-      "cell": [
-       8,
-       7
-      ],
-      "value": 1
-     }
-    ]
-   },
-   "born": 0,
-   "parent": null,
-   "level": 3,
-   "evals": [
-    0.9298245614035088
-   ],
-   "answers": {
-    "0": {
-     "grid": [
-      "469213758",
-      "231785946",
-      "758946123",
-      "647321581",
-      "587496231",
-      "312578469",
-      "123859674",
-      "946132875",
-      "875674312"
-     ]
-    }
-   }
-  },
-  {
-   "id": "e4s-g0-01",
-   "spec": {
-    "family": "sudoku",
-    "n": 9,
-    "box": [
-     3,
-     3
-    ],
-    "solution": [
-     [
-      7,
-      9,
-      8,
-      5,
-      3,
-      1,
-      4,
-      6,
-      2
-     ],
-     [
-      6,
-      4,
-      2,
-      7,
-      9,
-      8,
-      1,
-      3,
-      5
-     ],
-     [
-      1,
-      5,
-      3,
-      4,
-      2,
-      6,
-      7,
-      8,
-      9
-     ],
-     [
-      8,
-      7,
-      9,
-      1,
-      5,
-      3,
-      6,
-      2,
-      4
-     ],
-     [
-      3,
-      1,
-      5,
-      6,
-      4,
-      2,
-      8,
-      9,
-      7
-     ],
-     [
-      2,
-      6,
-      4,
-      8,
-      7,
-      9,
-      3,
-      5,
-      1
-     ],
-     [
-      4,
-      2,
-      6,
-      9,
-      8,
-      7,
-      5,
-      1,
-      3
-     ],
-     [
-      9,
-      8,
-      7,
-      3,
-      1,
-      5,
-      2,
-      4,
-      6
-     ],
-     [
-      5,
-      3,
-      1,
-      2,
-      6,
-      4,
-      9,
-      7,
-      8
-     ]
-    ],
-    "clues": [
-     {
-      "type": "given",
-      "cell": [
-       0,
-       1
-      ],
-      "value": 9
-     },
-     {
-      "type": "given",
-      "cell": [
-       0,
-       3
-      ],
-      "value": 5
-     },
-     {
-      "type": "given",
-      "cell": [
-       0,
-       4
-      ],
-      "value": 3
-     },
-     {
-      "type": "given",
-      "cell": [
-       1,
-       0
-      ],
-      "value": 6
-     },
-     {
-      "type": "given",
-      "cell": [
-       1,
-       4
-      ],
-      "value": 9
-     },
-     {
-      "type": "given",
-      "cell": [
-       1,
-       6
-      ],
-      "value": 1
-     },
-     {
-      "type": "given",
-      "cell": [
-       2,
-       2
-      ],
-      "value": 3
-     },
-     {
-      "type": "given",
-      "cell": [
-       2,
-       6
-      ],
-      "value": 7
-     },
-     {
-      "type": "given",
-      "cell": [
-       3,
-       6
-      ],
-      "value": 6
-     },
-     {
-      "type": "given",
-      "cell": [
-       3,
-       7
-      ],
-      "value": 2
-     },
-     {
-      "type": "given",
-      "cell": [
-       4,
-       1
-      ],
-      "value": 1
-     },
-     {
-      "type": "given",
-      "cell": [
-       4,
-       5
-      ],
-      "value": 2
-     },
-     {
-      "type": "given",
-      "cell": [
-       4,
-       7
-      ],
-      "value": 9
-     },
-     {
-      "type": "given",
-      "cell": [
-       5,
-       2
-      ],
-      "value": 4
-     },
-     {
-      "type": "given",
-      "cell": [
-       5,
-       3
-      ],
-      "value": 8
-     },
-     {
-      "type": "given",
-      "cell": [
-       6,
-       5
-      ],
-      "value": 7
-     },
-     {
-      "type": "given",
-      "cell": [
-       6,
-       8
-      ],
-      "value": 3
-     },
-     {
-      "type": "given",
-      "cell": [
-       7,
-       1
-      ],
-      "value": 8
-     },
-     {
-      "type": "given",
-      "cell": [
-       7,
-       2
-      ],
-      "value": 7
-     },
-     {
-      "type": "given",
-      "cell": [
-       7,
-       4
-      ],
-      "value": 1
-     },
-     {
-      "type": "given",
-      "cell": [
-       7,
-       6
-      ],
-      "value": 2
-     },
-     {
-      "type": "given",
-      "cell": [
-       8,
-       0
-      ],
-      "value": 5
-     },
-     {
-      "type": "given",
-      "cell": [
-       8,
-       4
-      ],
-      "value": 6
-     }
-    ]
-   },
-   "born": 0,
-   "parent": null,
-   "level": 3,
-   "evals": [
-    1.0
-   ],
-   "answers": {
-    "0": {
-     "grid": [
-      "798531462",
-      "642798135",
-      "153426789",
-      "879153624",
-      "315642897",
-      "264879351",
-      "426987513",
-      "987315246",
-      "531264978"
-     ]
-    }
-   }
-  },
-  {
-   "id": "e4s-g0-02",
-   "spec": {
-    "family": "sudoku",
-    "n": 9,
-    "box": [
-     3,
-     3
-    ],
-    "solution": [
-     [
-      1,
-      4,
-      5,
-      2,
-      9,
-      3,
-      6,
-      7,
-      8
-     ],
-     [
-      8,
-      6,
-      7,
-      1,
-      4,
-      5,
-      9,
-      3,
-      2
-     ],
-     [
-      2,
-      9,
-      3,
-      8,
-      6,
-      7,
-      4,
-      5,
-      1
-     ],
-     [
-      9,
-      3,
-      8,
-      6,
-      7,
-      1,
-      5,
-      2,
-      4
-     ],
-     [
-      6,
-      7,
-      1,
-      4,
-      5,
-      2,
-      3,
-      8,
-      9
-     ],
-     [
-      4,
-      5,
-      2,
-      9,
-      3,
-      8,
-      7,
-      1,
-      6
-     ],
-     [
-      7,
-      1,
-      4,
-      5,
-      2,
-      9,
-      8,
-      6,
-      3
-     ],
-     [
-      5,
-      2,
-      9,
-      3,
-      8,
-      6,
-      1,
-      4,
-      7
-     ],
-     [
-      3,
-      8,
-      6,
-      7,
-      1,
-      4,
-      2,
-      9,
-      5
-     ]
-    ],
-    "clues": [
-     {
-      "type": "given",
-      "cell": [
-       0,
-       2
-      ],
-      "value": 5
-     },
-     {
-      "type": "given",
-      "cell": [
-       0,
-       7
-      ],
-      "value": 7
-     },
-     {
-      "type": "given",
-      "cell": [
-       0,
-       8
-      ],
-      "value": 8
-     },
-     {
-      "type": "given",
-      "cell": [
-       1,
-       1
-      ],
-      "value": 6
-     },
-     {
-      "type": "given",
-      "cell": [
-       1,
-       5
-      ],
-      "value": 5
-     },
-     {
-      "type": "given",
-      "cell": [
-       2,
-       0
-      ],
-      "value": 2
-     },
-     {
-      "type": "given",
-      "cell": [
-       2,
-       3
-      ],
-      "value": 8
-     },
-     {
-      "type": "given",
-      "cell": [
-       2,
-       6
-      ],
-      "value": 4
-     },
-     {
-      "type": "given",
-      "cell": [
-       3,
-       1
-      ],
-      "value": 3
-     },
-     {
-      "type": "given",
-      "cell": [
-       3,
-       4
-      ],
-      "value": 7
-     },
-     {
-      "type": "given",
-      "cell": [
-       3,
-       8
-      ],
-      "value": 4
-     },
-     {
-      "type": "given",
-      "cell": [
-       4,
-       2
-      ],
-      "value": 1
-     },
-     {
-      "type": "given",
-      "cell": [
-       4,
-       4
-      ],
-      "value": 5
-     },
-     {
-      "type": "given",
-      "cell": [
-       4,
-       7
-      ],
-      "value": 8
-     },
-     {
-      "type": "given",
-      "cell": [
-       5,
-       3
-      ],
-      "value": 9
-     },
-     {
-      "type": "given",
-      "cell": [
-       5,
-       5
-      ],
-      "value": 8
-     },
-     {
-      "type": "given",
-      "cell": [
-       6,
-       0
-      ],
-      "value": 7
-     },
-     {
-      "type": "given",
-      "cell": [
-       7,
-       3
-      ],
-      "value": 3
-     },
-     {
-      "type": "given",
-      "cell": [
-       7,
-       4
-      ],
-      "value": 8
-     },
-     {
-      "type": "given",
-      "cell": [
-       7,
-       5
-      ],
-      "value": 6
-     },
-     {
-      "type": "given",
-      "cell": [
-       8,
-       3
-      ],
-      "value": 7
-     },
-     {
-      "type": "given",
-      "cell": [
-       8,
-       6
-      ],
-      "value": 2
-     },
-     {
-      "type": "given",
-      "cell": [
-       8,
-       7
-      ],
-      "value": 9
-     }
-    ]
-   },
-   "born": 0,
-   "parent": null,
-   "level": 3,
-   "evals": [
-    1.0
-   ],
-   "answers": {
-    "0": {
-     "grid": [
-      "145293678",
-      "867145932",
-      "293867451",
-      "938671524",
-      "671452389",
-      "452938716",
-      "714529863",
-      "529386147",
-      "386714295"
-     ]
-    }
-   }
-  },
-  {
-   "id": "e4s-g0-05",
-   "spec": {
-    "family": "sudoku",
-    "n": 9,
-    "box": [
-     3,
-     3
-    ],
-    "solution": [
-     [
-      8,
-      2,
-      6,
-      4,
-      1,
-      9,
-      3,
-      5,
-      7
-     ],
-     [
-      4,
-      1,
-      9,
-      3,
-      5,
-      7,
-      6,
-      8,
-      2
-     ],
-     [
-      3,
-      5,
-      7,
-      6,
-      8,
-      2,
-      9,
-      4,
-      1
-     ],
-     [
-      5,
-      7,
-      3,
-      8,
-      2,
-      6,
-      4,
-      1,
-      9
-     ],
-     [
-      2,
-      6,
-      8,
-      1,
-      9,
-      4,
-      5,
-      7,
-      3
-     ],
-     [
-      1,
-      9,
-      4,
-      5,
-      7,
-      3,
-      8,
-      2,
-      6
-     ],
-     [
-      7,
-      3,
-      5,
-      2,
-      6,
-      8,
-      1,
-      9,
-      4
-     ],
-     [
-      6,
-      8,
-      2,
-      9,
-      4,
-      1,
-      7,
-      3,
-      5
-     ],
-     [
-      9,
-      4,
-      1,
-      7,
-      3,
-      5,
-      2,
-      6,
-      8
-     ]
-    ],
-    "clues": [
-     {
-      "type": "given",
-      "cell": [
-       0,
-       0
-      ],
-      "value": 8
-     },
-     {
-      "type": "given",
-      "cell": [
-       0,
-       2
-      ],
-      "value": 6
-     },
-     {
-      "type": "given",
-      "cell": [
-       0,
-       4
-      ],
-      "value": 1
-     },
-     {
-      "type": "given",
-      "cell": [
-       1,
-       0
-      ],
-      "value": 4
-     },
-     {
-      "type": "given",
-      "cell": [
-       1,
-       1
-      ],
-      "value": 1
-     },
-     {
-      "type": "given",
-      "cell": [
-       1,
-       5
-      ],
-      "value": 7
-     },
-     {
-      "type": "given",
-      "cell": [
-       2,
-       4
-      ],
-      "value": 8
-     },
-     {
-      "type": "given",
-      "cell": [
-       2,
-       5
-      ],
-      "value": 2
-     },
-     {
-      "type": "given",
-      "cell": [
-       2,
-       6
-      ],
-      "value": 9
-     },
-     {
-      "type": "given",
-      "cell": [
-       3,
-       2
-      ],
-      "value": 3
-     },
-     {
-      "type": "given",
-      "cell": [
-       3,
-       6
-      ],
-      "value": 4
-     },
-     {
-      "type": "given",
-      "cell": [
-       4,
-       2
-      ],
-      "value": 8
-     },
-     {
-      "type": "given",
-      "cell": [
-       4,
-       5
-      ],
-      "value": 4
-     },
-     {
-      "type": "given",
-      "cell": [
-       4,
-       6
-      ],
-      "value": 5
-     },
-     {
-      "type": "given",
-      "cell": [
-       5,
-       4
-      ],
-      "value": 7
-     },
-     {
-      "type": "given",
-      "cell": [
-       5,
-       6
-      ],
-      "value": 8
-     },
-     {
-      "type": "given",
-      "cell": [
-       6,
-       0
-      ],
-      "value": 7
-     },
-     {
-      "type": "given",
-      "cell": [
-       6,
-       5
-      ],
-      "value": 8
-     },
-     {
-      "type": "given",
-      "cell": [
-       6,
-       8
-      ],
-      "value": 4
-     },
-     {
-      "type": "given",
-      "cell": [
-       7,
-       7
-      ],
-      "value": 3
-     },
-     {
-      "type": "given",
-      "cell": [
-       8,
-       0
-      ],
-      "value": 9
-     },
-     {
-      "type": "given",
-      "cell": [
-       8,
-       4
-      ],
-      "value": 3
-     },
-     {
-      "type": "given",
-      "cell": [
-       8,
-       7
-      ],
-      "value": 6
-     }
-    ]
-   },
-   "born": 0,
-   "parent": null,
-   "level": 3,
-   "evals": [
-    1.0
-   ],
-   "answers": {
-    "0": {
-     "grid": [
-      "826419357",
-      "419357682",
-      "357682941",
-      "573826419",
-      "268194573",
-      "194573826",
-      "735268194",
-      "682941735",
-      "941735268"
-     ]
-    }
-   }
-  },
-  {
-   "id": "e4s-g0-06",
+   "id": "e4s-g1-08",
    "spec": {
     "family": "sudoku",
     "n": 9,
@@ -1401,333 +117,30 @@
       "type": "given",
       "cell": [
        0,
-       8
-      ],
-      "value": 7
-     },
-     {
-      "type": "given",
-      "cell": [
-       1,
-       1
-      ],
-      "value": 2
-     },
-     {
-      "type": "given",
-      "cell": [
-       1,
-       2
-      ],
-      "value": 4
-     },
-     {
-      "type": "given",
-      "cell": [
-       1,
-       7
-      ],
-      "value": 9
-     },
-     {
-      "type": "given",
-      "cell": [
-       2,
-       0
-      ],
-      "value": 1
-     },
-     {
-      "type": "given",
-      "cell": [
-       2,
-       3
-      ],
-      "value": 3
-     },
-     {
-      "type": "given",
-      "cell": [
-       2,
-       5
-      ],
-      "value": 6
-     },
-     {
-      "type": "given",
-      "cell": [
-       2,
-       6
-      ],
-      "value": 2
-     },
-     {
-      "type": "given",
-      "cell": [
-       3,
-       1
-      ],
-      "value": 5
-     },
-     {
-      "type": "given",
-      "cell": [
-       3,
-       3
-      ],
-      "value": 6
-     },
-     {
-      "type": "given",
-      "cell": [
-       4,
-       3
-      ],
-      "value": 2
-     },
-     {
-      "type": "given",
-      "cell": [
-       4,
        4
       ],
-      "value": 4
-     },
-     {
-      "type": "given",
-      "cell": [
-       5,
-       3
-      ],
-      "value": 8
-     },
-     {
-      "type": "given",
-      "cell": [
-       5,
-       6
-      ],
-      "value": 1
-     },
-     {
-      "type": "given",
-      "cell": [
-       5,
-       7
-      ],
-      "value": 3
-     },
-     {
-      "type": "given",
-      "cell": [
-       5,
-       8
-      ],
-      "value": 6
-     },
-     {
-      "type": "given",
-      "cell": [
-       6,
-       0
-      ],
-      "value": 6
-     },
-     {
-      "type": "given",
-      "cell": [
-       6,
-       7
-      ],
-      "value": 8
-     },
-     {
-      "type": "given",
-      "cell": [
-       7,
-       2
-      ],
-      "value": 9
-     },
-     {
-      "type": "given",
-      "cell": [
-       7,
-       5
-      ],
-      "value": 4
-     },
-     {
-      "type": "given",
-      "cell": [
-       8,
-       0
-      ],
-      "value": 8
-     },
-     {
-      "type": "given",
-      "cell": [
-       8,
-       3
-      ],
-      "value": 1
-     },
-     {
-      "type": "given",
-      "cell": [
-       8,
-       6
-      ],
-      "value": 3
-     }
-    ]
-   },
-   "born": 0,
-   "parent": null,
-   "level": 3,
-   "evals": [
-    1.0
-   ],
-   "answers": {
-    "0": {
-     "grid": [
-      "963452817",
-      "524718693",
-      "187396254",
-      "758631942",
-      "316249578",
-      "492875136",
-      "671923485",
-      "239584761",
-      "845167329"
-     ]
-    }
-   }
-  },
-  {
-   "id": "e4s-g0-04",
-   "spec": {
-    "family": "sudoku",
-    "n": 9,
-    "box": [
-     3,
-     3
-    ],
-    "solution": [
-     [
-      9,
-      7,
-      4,
-      3,
-      8,
-      1,
-      2,
-      5,
-      6
-     ],
-     [
-      6,
-      2,
-      5,
-      7,
-      4,
-      9,
-      3,
-      8,
-      1
-     ],
-     [
-      1,
-      3,
-      8,
-      2,
-      5,
-      6,
-      7,
-      4,
-      9
-     ],
-     [
-      7,
-      5,
-      9,
-      4,
-      1,
-      3,
-      8,
-      6,
-      2
-     ],
-     [
-      3,
-      4,
-      1,
-      8,
-      6,
-      2,
-      5,
-      9,
-      7
-     ],
-     [
-      2,
-      8,
-      6,
-      5,
-      9,
-      7,
-      4,
-      1,
-      3
-     ],
-     [
-      5,
-      6,
-      7,
-      9,
-      3,
-      4,
-      1,
-      2,
-      8
-     ],
-     [
-      4,
-      9,
-      3,
-      1,
-      2,
-      8,
-      6,
-      7,
-      5
-     ],
-     [
-      8,
-      1,
-      2,
-      6,
-      7,
-      5,
-      9,
-      3,
-      4
-     ]
-    ],
-    "clues": [
-     {
-      "type": "given",
-      "cell": [
-       0,
-       0
-      ],
-      "value": 9
+      "value": 5
      },
      {
       "type": "given",
       "cell": [
        0,
+       8
+      ],
+      "value": 7
+     },
+     {
+      "type": "given",
+      "cell": [
+       1,
+       1
+      ],
+      "value": 2
+     },
+     {
+      "type": "given",
+      "cell": [
+       1,
        2
       ],
       "value": 4
@@ -1735,1029 +148,8 @@
      {
       "type": "given",
       "cell": [
-       0,
-       6
-      ],
-      "value": 2
-     },
-     {
-      "type": "given",
-      "cell": [
        1,
        7
-      ],
-      "value": 8
-     },
-     {
-      "type": "given",
-      "cell": [
-       2,
-       0
-      ],
-      "value": 1
-     },
-     {
-      "type": "given",
-      "cell": [
-       2,
-       1
-      ],
-      "value": 3
-     },
-     {
-      "type": "given",
-      "cell": [
-       2,
-       8
-      ],
-      "value": 9
-     },
-     {
-      "type": "given",
-      "cell": [
-       3,
-       0
-      ],
-      "value": 7
-     },
-     {
-      "type": "given",
-      "cell": [
-       3,
-       7
-      ],
-      "value": 6
-     },
-     {
-      "type": "given",
-      "cell": [
-       4,
-       1
-      ],
-      "value": 4
-     },
-     {
-      "type": "given",
-      "cell": [
-       4,
-       3
-      ],
-      "value": 8
-     },
-     {
-      "type": "given",
-      "cell": [
-       5,
-       0
-      ],
-      "value": 2
-     },
-     {
-      "type": "given",
-      "cell": [
-       5,
-       1
-      ],
-      "value": 8
-     },
-     {
-      "type": "given",
-      "cell": [
-       5,
-       2
-      ],
-      "value": 6
-     },
-     {
-      "type": "given",
-      "cell": [
-       5,
-       7
-      ],
-      "value": 1
-     },
-     {
-      "type": "given",
-      "cell": [
-       5,
-       8
-      ],
-      "value": 3
-     },
-     {
-      "type": "given",
-      "cell": [
-       6,
-       2
-      ],
-      "value": 7
-     },
-     {
-      "type": "given",
-      "cell": [
-       6,
-       7
-      ],
-      "value": 2
-     },
-     {
-      "type": "given",
-      "cell": [
-       6,
-       8
-      ],
-      "value": 8
-     },
-     {
-      "type": "given",
-      "cell": [
-       7,
-       4
-      ],
-      "value": 2
-     },
-     {
-      "type": "given",
-      "cell": [
-       7,
-       6
-      ],
-      "value": 6
-     },
-     {
-      "type": "given",
-      "cell": [
-       8,
-       1
-      ],
-      "value": 1
-     },
-     {
-      "type": "given",
-      "cell": [
-       8,
-       4
-      ],
-      "value": 7
-     },
-     {
-      "type": "given",
-      "cell": [
-       8,
-       5
-      ],
-      "value": 5
-     }
-    ]
-   },
-   "born": 0,
-   "parent": null,
-   "level": 3,
-   "evals": [
-    1.0
-   ],
-   "answers": {
-    "0": {
-     "grid": [
-      "974381256",
-      "625749381",
-      "138256749",
-      "759413862",
-      "341862597",
-      "286597413",
-      "567934128",
-      "493128675",
-      "812675934"
-     ]
-    }
-   }
-  },
-  {
-   "id": "e4s-g0-03",
-   "spec": {
-    "family": "sudoku",
-    "n": 9,
-    "box": [
-     3,
-     3
-    ],
-    "solution": [
-     [
-      3,
-      7,
-      6,
-      2,
-      5,
-      8,
-      1,
-      9,
-      4
-     ],
-     [
-      1,
-      4,
-      9,
-      6,
-      7,
-      3,
-      8,
-      2,
-      5
-     ],
-     [
-      8,
-      5,
-      2,
-      9,
-      4,
-      1,
-      3,
-      6,
-      7
-     ],
-     [
-      2,
-      8,
-      7,
-      5,
-      1,
-      9,
-      6,
-      4,
-      3
-     ],
-     [
-      6,
-      3,
-      4,
-      7,
-      8,
-      2,
-      9,
-      5,
-      1
-     ],
-     [
-      9,
-      1,
-      5,
-      4,
-      3,
-      6,
-      2,
-      7,
-      8
-     ],
-     [
-      7,
-      2,
-      3,
-      8,
-      9,
-      5,
-      4,
-      1,
-      6
-     ],
-     [
-      5,
-      9,
-      8,
-      1,
-      6,
-      4,
-      7,
-      3,
-      2
-     ],
-     [
-      4,
-      6,
-      1,
-      3,
-      2,
-      7,
-      5,
-      8,
-      9
-     ]
-    ],
-    "clues": [
-     {
-      "type": "given",
-      "cell": [
-       0,
-       4
-      ],
-      "value": 5
-     },
-     {
-      "type": "given",
-      "cell": [
-       1,
-       1
-      ],
-      "value": 4
-     },
-     {
-      "type": "given",
-      "cell": [
-       1,
-       2
-      ],
-      "value": 9
-     },
-     {
-      "type": "given",
-      "cell": [
-       1,
-       5
-      ],
-      "value": 3
-     },
-     {
-      "type": "given",
-      "cell": [
-       2,
-       0
-      ],
-      "value": 8
-     },
-     {
-      "type": "given",
-      "cell": [
-       2,
-       2
-      ],
-      "value": 2
-     },
-     {
-      "type": "given",
-      "cell": [
-       2,
-       3
-      ],
-      "value": 9
-     },
-     {
-      "type": "given",
-      "cell": [
-       3,
-       1
-      ],
-      "value": 8
-     },
-     {
-      "type": "given",
-      "cell": [
-       3,
-       4
-      ],
-      "value": 1
-     },
-     {
-      "type": "given",
-      "cell": [
-       4,
-       4
-      ],
-      "value": 8
-     },
-     {
-      "type": "given",
-      "cell": [
-       4,
-       5
-      ],
-      "value": 2
-     },
-     {
-      "type": "given",
-      "cell": [
-       4,
-       7
-      ],
-      "value": 5
-     },
-     {
-      "type": "given",
-      "cell": [
-       4,
-       8
-      ],
-      "value": 1
-     },
-     {
-      "type": "given",
-      "cell": [
-       5,
-       2
-      ],
-      "value": 5
-     },
-     {
-      "type": "given",
-      "cell": [
-       5,
-       5
-      ],
-      "value": 6
-     },
-     {
-      "type": "given",
-      "cell": [
-       5,
-       6
-      ],
-      "value": 2
-     },
-     {
-      "type": "given",
-      "cell": [
-       5,
-       7
-      ],
-      "value": 7
-     },
-     {
-      "type": "given",
-      "cell": [
-       6,
-       7
-      ],
-      "value": 1
-     },
-     {
-      "type": "given",
-      "cell": [
-       6,
-       8
-      ],
-      "value": 6
-     },
-     {
-      "type": "given",
-      "cell": [
-       7,
-       1
-      ],
-      "value": 9
-     },
-     {
-      "type": "given",
-      "cell": [
-       7,
-       6
-      ],
-      "value": 7
-     },
-     {
-      "type": "given",
-      "cell": [
-       7,
-       7
-      ],
-      "value": 3
-     },
-     {
-      "type": "given",
-      "cell": [
-       8,
-       3
-      ],
-      "value": 3
-     },
-     {
-      "type": "given",
-      "cell": [
-       8,
-       5
-      ],
-      "value": 7
-     },
-     {
-      "type": "given",
-      "cell": [
-       8,
-       6
-      ],
-      "value": 5
-     }
-    ]
-   },
-   "born": 0,
-   "parent": null,
-   "level": 3,
-   "evals": [
-    1.0
-   ],
-   "answers": {
-    "0": {
-     "grid": [
-      "376258194",
-      "149673825",
-      "852941367",
-      "287519643",
-      "634782951",
-      "915436278",
-      "723895416",
-      "598164732",
-      "461327589"
-     ]
-    }
-   }
-  },
-  {
-   "id": "e4s-g0-07",
-   "spec": {
-    "family": "sudoku",
-    "n": 9,
-    "box": [
-     3,
-     3
-    ],
-    "solution": [
-     [
-      6,
-      5,
-      1,
-      9,
-      7,
-      4,
-      8,
-      3,
-      2
-     ],
-     [
-      3,
-      2,
-      8,
-      1,
-      6,
-      5,
-      9,
-      7,
-      4
-     ],
-     [
-      7,
-      4,
-      9,
-      8,
-      3,
-      2,
-      1,
-      6,
-      5
-     ],
-     [
-      8,
-      3,
-      5,
-      4,
-      1,
-      6,
-      2,
-      9,
-      7
-     ],
-     [
-      9,
-      7,
-      2,
-      5,
-      8,
-      3,
-      4,
-      1,
-      6
-     ],
-     [
-      1,
-      6,
-      4,
-      2,
-      9,
-      7,
-      5,
-      8,
-      3
-     ],
-     [
-      4,
-      1,
-      7,
-      3,
-      2,
-      9,
-      6,
-      5,
-      8
-     ],
-     [
-      2,
-      9,
-      3,
-      6,
-      5,
-      8,
-      7,
-      4,
-      1
-     ],
-     [
-      5,
-      8,
-      6,
-      7,
-      4,
-      1,
-      3,
-      2,
-      9
-     ]
-    ],
-    "clues": [
-     {
-      "type": "given",
-      "cell": [
-       0,
-       0
-      ],
-      "value": 6
-     },
-     {
-      "type": "given",
-      "cell": [
-       0,
-       4
-      ],
-      "value": 7
-     },
-     {
-      "type": "given",
-      "cell": [
-       1,
-       2
-      ],
-      "value": 8
-     },
-     {
-      "type": "given",
-      "cell": [
-       1,
-       3
-      ],
-      "value": 1
-     },
-     {
-      "type": "given",
-      "cell": [
-       1,
-       4
-      ],
-      "value": 6
-     },
-     {
-      "type": "given",
-      "cell": [
-       1,
-       5
-      ],
-      "value": 5
-     },
-     {
-      "type": "given",
-      "cell": [
-       1,
-       7
-      ],
-      "value": 7
-     },
-     {
-      "type": "given",
-      "cell": [
-       2,
-       1
-      ],
-      "value": 4
-     },
-     {
-      "type": "given",
-      "cell": [
-       2,
-       3
-      ],
-      "value": 8
-     },
-     {
-      "type": "given",
-      "cell": [
-       2,
-       8
-      ],
-      "value": 5
-     },
-     {
-      "type": "given",
-      "cell": [
-       3,
-       0
-      ],
-      "value": 8
-     },
-     {
-      "type": "given",
-      "cell": [
-       3,
-       1
-      ],
-      "value": 3
-     },
-     {
-      "type": "given",
-      "cell": [
-       3,
-       4
-      ],
-      "value": 1
-     },
-     {
-      "type": "given",
-      "cell": [
-       3,
-       8
-      ],
-      "value": 7
-     },
-     {
-      "type": "given",
-      "cell": [
-       4,
-       2
-      ],
-      "value": 2
-     },
-     {
-      "type": "given",
-      "cell": [
-       4,
-       4
-      ],
-      "value": 8
-     },
-     {
-      "type": "given",
-      "cell": [
-       5,
-       2
-      ],
-      "value": 4
-     },
-     {
-      "type": "given",
-      "cell": [
-       5,
-       6
-      ],
-      "value": 5
-     },
-     {
-      "type": "given",
-      "cell": [
-       5,
-       8
-      ],
-      "value": 3
-     },
-     {
-      "type": "given",
-      "cell": [
-       6,
-       2
-      ],
-      "value": 7
-     },
-     {
-      "type": "given",
-      "cell": [
-       7,
-       0
-      ],
-      "value": 2
-     },
-     {
-      "type": "given",
-      "cell": [
-       7,
-       1
-      ],
-      "value": 9
-     },
-     {
-      "type": "given",
-      "cell": [
-       7,
-       2
-      ],
-      "value": 3
-     },
-     {
-      "type": "given",
-      "cell": [
-       7,
-       4
-      ],
-      "value": 5
-     },
-     {
-      "type": "given",
-      "cell": [
-       8,
-       3
-      ],
-      "value": 7
-     },
-     {
-      "type": "given",
-      "cell": [
-       8,
-       5
-      ],
-      "value": 1
-     },
-     {
-      "type": "given",
-      "cell": [
-       8,
-       7
-      ],
-      "value": 2
-     }
-    ]
-   },
-   "born": 0,
-   "parent": null,
-   "level": 3,
-   "evals": [
-    1.0
-   ],
-   "answers": {
-    "0": {
-     "grid": [
-      "651974832",
-      "328165974",
-      "749832165",
-      "835416297",
-      "972583416",
-      "164297583",
-      "417329658",
-      "293658741",
-      "586741329"
-     ]
-    }
-   }
-  },
-  {
-   "id": "e4s-g1-00",
-   "spec": {
-    "family": "sudoku",
-    "n": 9,
-    "box": [
-     3,
-     3
-    ],
-    "solution": [
-     [
-      4,
-      6,
-      9,
-      2,
-      1,
-      3,
-      7,
-      5,
-      8
-     ],
-     [
-      2,
-      3,
-      1,
-      7,
-      8,
-      5,
-      9,
-      4,
-      6
-     ],
-     [
-      7,
-      5,
-      8,
-      9,
-      6,
-      4,
-      1,
-      2,
-      3
-     ],
-     [
-      6,
-      9,
-      4,
-      3,
-      2,
-      1,
-      5,
-      8,
-      7
-     ],
-     [
-      5,
-      8,
-      7,
-      4,
-      9,
-      6,
-      2,
-      3,
-      1
-     ],
-     [
-      3,
-      1,
-      2,
-      5,
-      7,
-      8,
-      4,
-      6,
-      9
-     ],
-     [
-      1,
-      2,
-      3,
-      8,
-      5,
-      7,
-      6,
-      9,
-      4
-     ],
-     [
-      9,
-      4,
-      6,
-      1,
-      3,
-      2,
-      8,
-      7,
-      5
-     ],
-     [
-      8,
-      7,
-      5,
-      6,
-      4,
-      9,
-      3,
-      1,
-      2
-     ]
-    ],
-    "clues": [
-     {
-      "type": "given",
-      "cell": [
-       0,
-       1
-      ],
-      "value": 6
-     },
-     {
-      "type": "given",
-      "cell": [
-       0,
-       3
-      ],
-      "value": 2
-     },
-     {
-      "type": "given",
-      "cell": [
-       0,
-       7
-      ],
-      "value": 5
-     },
-     {
-      "type": "given",
-      "cell": [
-       1,
-       6
       ],
       "value": 9
      },
@@ -2767,7 +159,7 @@
        2,
        0
       ],
-      "value": 7
+      "value": 1
      },
      {
       "type": "given",
@@ -2775,7 +167,7 @@
        2,
        2
       ],
-      "value": 8
+      "value": 7
      },
      {
       "type": "given",
@@ -2783,7 +175,7 @@
        2,
        3
       ],
-      "value": 9
+      "value": 3
      },
      {
       "type": "given",
@@ -2791,7 +183,7 @@
        2,
        5
       ],
-      "value": 4
+      "value": 6
      },
      {
       "type": "given",
@@ -2799,39 +191,15 @@
        3,
        1
       ],
-      "value": 9
-     },
-     {
-      "type": "given",
-      "cell": [
-       3,
-       2
-      ],
-      "value": 4
-     },
-     {
-      "type": "given",
-      "cell": [
-       3,
-       5
-      ],
-      "value": 1
-     },
-     {
-      "type": "given",
-      "cell": [
-       3,
-       6
-      ],
       "value": 5
      },
      {
       "type": "given",
       "cell": [
-       4,
-       2
+       3,
+       3
       ],
-      "value": 7
+      "value": 6
      },
      {
       "type": "given",
@@ -2839,12 +207,36 @@
        4,
        3
       ],
-      "value": 4
+      "value": 2
      },
      {
       "type": "given",
       "cell": [
        4,
+       4
+      ],
+      "value": 4
+     },
+     {
+      "type": "given",
+      "cell": [
+       5,
+       3
+      ],
+      "value": 8
+     },
+     {
+      "type": "given",
+      "cell": [
+       5,
+       6
+      ],
+      "value": 1
+     },
+     {
+      "type": "given",
+      "cell": [
+       5,
        7
       ],
       "value": 3
@@ -2852,26 +244,10 @@
      {
       "type": "given",
       "cell": [
-       4,
+       5,
        8
       ],
-      "value": 1
-     },
-     {
-      "type": "given",
-      "cell": [
-       5,
-       2
-      ],
-      "value": 2
-     },
-     {
-      "type": "given",
-      "cell": [
-       5,
-       4
-      ],
-      "value": 7
+      "value": 6
      },
      {
       "type": "given",
@@ -2879,29 +255,13 @@
        6,
        0
       ],
-      "value": 1
+      "value": 6
      },
      {
       "type": "given",
       "cell": [
        6,
-       2
-      ],
-      "value": 3
-     },
-     {
-      "type": "given",
-      "cell": [
-       6,
-       4
-      ],
-      "value": 5
-     },
-     {
-      "type": "given",
-      "cell": [
-       6,
-       5
+       1
       ],
       "value": 7
      },
@@ -2909,15 +269,39 @@
       "type": "given",
       "cell": [
        6,
+       7
+      ],
+      "value": 8
+     },
+     {
+      "type": "given",
+      "cell": [
+       6,
        8
+      ],
+      "value": 5
+     },
+     {
+      "type": "given",
+      "cell": [
+       7,
+       2
+      ],
+      "value": 9
+     },
+     {
+      "type": "given",
+      "cell": [
+       7,
+       5
       ],
       "value": 4
      },
      {
       "type": "given",
       "cell": [
-       7,
-       6
+       8,
+       0
       ],
       "value": 8
      },
@@ -2928,1695 +312,32 @@
        6
       ],
       "value": 3
-     },
-     {
-      "type": "given",
-      "cell": [
-       8,
-       7
-      ],
-      "value": 1
-     },
-     {
-      "type": "given",
-      "cell": [
-       8,
-       8
-      ],
-      "value": 2
      }
     ]
    },
    "born": 1,
-   "parent": "e4s-g0-00",
+   "parent": "e4s-g0-06",
    "level": 1,
-   "evals": [],
-   "repair_added": 6,
-   "idea": "Remove givens that make singles easy in the near-complete row 3 and in the lower-left box."
-  },
-  {
-   "id": "e4s-g1-01",
-   "spec": {
-    "family": "sudoku",
-    "n": 9,
-    "box": [
-     3,
-     3
-    ],
-    "solution": [
-     [
-      4,
-      6,
-      9,
-      2,
-      1,
-      3,
-      7,
-      5,
-      8
-     ],
-     [
-      2,
-      3,
-      1,
-      7,
-      8,
-      5,
-      9,
-      4,
-      6
-     ],
-     [
-      7,
-      5,
-      8,
-      9,
-      6,
-      4,
-      1,
-      2,
-      3
-     ],
-     [
-      6,
-      9,
-      4,
-      3,
-      2,
-      1,
-      5,
-      8,
-      7
-     ],
-     [
-      5,
-      8,
-      7,
-      4,
-      9,
-      6,
-      2,
-      3,
-      1
-     ],
-     [
-      3,
-      1,
-      2,
-      5,
-      7,
-      8,
-      4,
-      6,
-      9
-     ],
-     [
-      1,
-      2,
-      3,
-      8,
-      5,
-      7,
-      6,
-      9,
-      4
-     ],
-     [
-      9,
-      4,
-      6,
-      1,
-      3,
-      2,
-      8,
-      7,
-      5
-     ],
-     [
-      8,
-      7,
-      5,
-      6,
-      4,
-      9,
-      3,
-      1,
-      2
-     ]
-    ],
-    "clues": [
-     {
-      "type": "given",
-      "cell": [
-       0,
-       1
-      ],
-      "value": 6
-     },
-     {
-      "type": "given",
-      "cell": [
-       0,
-       5
-      ],
-      "value": 3
-     },
-     {
-      "type": "given",
-      "cell": [
-       0,
-       7
-      ],
-      "value": 5
-     },
-     {
-      "type": "given",
-      "cell": [
-       1,
-       6
-      ],
-      "value": 9
-     },
-     {
-      "type": "given",
-      "cell": [
-       1,
-       7
-      ],
-      "value": 4
-     },
-     {
-      "type": "given",
-      "cell": [
-       2,
-       0
-      ],
-      "value": 7
-     },
-     {
-      "type": "given",
-      "cell": [
-       2,
-       2
-      ],
-      "value": 8
-     },
-     {
-      "type": "given",
-      "cell": [
-       2,
-       4
-      ],
-      "value": 6
-     },
-     {
-      "type": "given",
-      "cell": [
-       2,
-       5
-      ],
-      "value": 4
-     },
-     {
-      "type": "given",
-      "cell": [
-       3,
-       1
-      ],
-      "value": 9
-     },
-     {
-      "type": "given",
-      "cell": [
-       3,
-       2
-      ],
-      "value": 4
-     },
-     {
-      "type": "given",
-      "cell": [
-       3,
-       5
-      ],
-      "value": 1
-     },
-     {
-      "type": "given",
-      "cell": [
-       4,
-       1
-      ],
-      "value": 8
-     },
-     {
-      "type": "given",
-      "cell": [
-       4,
-       2
-      ],
-      "value": 7
-     },
-     {
-      "type": "given",
-      "cell": [
-       4,
-       3
-      ],
-      "value": 4
-     },
-     {
-      "type": "given",
-      "cell": [
-       4,
-       7
-      ],
-      "value": 3
-     },
-     {
-      "type": "given",
-      "cell": [
-       5,
-       2
-      ],
-      "value": 2
-     },
-     {
-      "type": "given",
-      "cell": [
-       5,
-       5
-      ],
-      "value": 8
-     },
-     {
-      "type": "given",
-      "cell": [
-       6,
-       0
-      ],
-      "value": 1
-     },
-     {
-      "type": "given",
-      "cell": [
-       6,
-       4
-      ],
-      "value": 5
-     },
-     {
-      "type": "given",
-      "cell": [
-       6,
-       5
-      ],
-      "value": 7
-     },
-     {
-      "type": "given",
-      "cell": [
-       6,
-       8
-      ],
-      "value": 4
-     },
-     {
-      "type": "given",
-      "cell": [
-       7,
-       3
-      ],
-      "value": 1
-     },
-     {
-      "type": "given",
-      "cell": [
-       7,
-       6
-      ],
-      "value": 8
-     },
-     {
-      "type": "given",
-      "cell": [
-       8,
-       6
-      ],
-      "value": 3
-     },
-     {
-      "type": "given",
-      "cell": [
-       8,
-       8
-      ],
-      "value": 2
-     }
-    ]
-   },
-   "born": 1,
-   "parent": "e4s-g0-00",
-   "level": 1,
-   "evals": [],
+   "evals": [
+    0.0
+   ],
    "repair_added": 5,
-   "idea": "Fewer givens in the right side and top row so deductions need longer chains."
-  },
-  {
-   "id": "e4s-g1-02",
-   "spec": {
-    "family": "sudoku",
-    "n": 9,
-    "box": [
-     3,
-     3
-    ],
-    "solution": [
-     [
-      7,
-      9,
-      8,
-      5,
-      3,
-      1,
-      4,
-      6,
-      2
-     ],
-     [
-      6,
-      4,
-      2,
-      7,
-      9,
-      8,
-      1,
-      3,
-      5
-     ],
-     [
-      1,
-      5,
-      3,
-      4,
-      2,
-      6,
-      7,
-      8,
-      9
-     ],
-     [
-      8,
-      7,
-      9,
-      1,
-      5,
-      3,
-      6,
-      2,
-      4
-     ],
-     [
-      3,
-      1,
-      5,
-      6,
-      4,
-      2,
-      8,
-      9,
-      7
-     ],
-     [
-      2,
-      6,
-      4,
-      8,
-      7,
-      9,
-      3,
-      5,
-      1
-     ],
-     [
-      4,
-      2,
-      6,
-      9,
-      8,
-      7,
-      5,
-      1,
-      3
-     ],
-     [
-      9,
-      8,
-      7,
-      3,
-      1,
-      5,
-      2,
-      4,
-      6
-     ],
-     [
-      5,
-      3,
-      1,
-      2,
-      6,
-      4,
-      9,
-      7,
-      8
+   "idea": "Remove givens from the fullest row and box to lengthen logic chains.",
+   "answers": {
+    "1": {
+     "grid": [
+      "000050007",
+      "024000090",
+      "107036000",
+      "050600000",
+      "000240000",
+      "000800136",
+      "067000085",
+      "009004000",
+      "800000300"
      ]
-    ],
-    "clues": [
-     {
-      "type": "given",
-      "cell": [
-       0,
-       1
-      ],
-      "value": 9
-     },
-     {
-      "type": "given",
-      "cell": [
-       0,
-       2
-      ],
-      "value": 8
-     },
-     {
-      "type": "given",
-      "cell": [
-       0,
-       3
-      ],
-      "value": 5
-     },
-     {
-      "type": "given",
-      "cell": [
-       0,
-       4
-      ],
-      "value": 3
-     },
-     {
-      "type": "given",
-      "cell": [
-       1,
-       0
-      ],
-      "value": 6
-     },
-     {
-      "type": "given",
-      "cell": [
-       1,
-       2
-      ],
-      "value": 2
-     },
-     {
-      "type": "given",
-      "cell": [
-       1,
-       4
-      ],
-      "value": 9
-     },
-     {
-      "type": "given",
-      "cell": [
-       1,
-       7
-      ],
-      "value": 3
-     },
-     {
-      "type": "given",
-      "cell": [
-       1,
-       8
-      ],
-      "value": 5
-     },
-     {
-      "type": "given",
-      "cell": [
-       2,
-       2
-      ],
-      "value": 3
-     },
-     {
-      "type": "given",
-      "cell": [
-       2,
-       6
-      ],
-      "value": 7
-     },
-     {
-      "type": "given",
-      "cell": [
-       3,
-       6
-      ],
-      "value": 6
-     },
-     {
-      "type": "given",
-      "cell": [
-       3,
-       7
-      ],
-      "value": 2
-     },
-     {
-      "type": "given",
-      "cell": [
-       4,
-       1
-      ],
-      "value": 1
-     },
-     {
-      "type": "given",
-      "cell": [
-       4,
-       4
-      ],
-      "value": 4
-     },
-     {
-      "type": "given",
-      "cell": [
-       4,
-       5
-      ],
-      "value": 2
-     },
-     {
-      "type": "given",
-      "cell": [
-       4,
-       7
-      ],
-      "value": 9
-     },
-     {
-      "type": "given",
-      "cell": [
-       5,
-       2
-      ],
-      "value": 4
-     },
-     {
-      "type": "given",
-      "cell": [
-       6,
-       2
-      ],
-      "value": 6
-     },
-     {
-      "type": "given",
-      "cell": [
-       6,
-       4
-      ],
-      "value": 8
-     },
-     {
-      "type": "given",
-      "cell": [
-       6,
-       5
-      ],
-      "value": 7
-     },
-     {
-      "type": "given",
-      "cell": [
-       6,
-       8
-      ],
-      "value": 3
-     },
-     {
-      "type": "given",
-      "cell": [
-       7,
-       1
-      ],
-      "value": 8
-     },
-     {
-      "type": "given",
-      "cell": [
-       7,
-       3
-      ],
-      "value": 3
-     },
-     {
-      "type": "given",
-      "cell": [
-       7,
-       4
-      ],
-      "value": 1
-     },
-     {
-      "type": "given",
-      "cell": [
-       7,
-       6
-      ],
-      "value": 2
-     },
-     {
-      "type": "given",
-      "cell": [
-       8,
-       0
-      ],
-      "value": 5
-     },
-     {
-      "type": "given",
-      "cell": [
-       8,
-       4
-      ],
-      "value": 6
-     }
-    ]
-   },
-   "born": 1,
-   "parent": "e4s-g0-01",
-   "level": 1,
-   "evals": [],
-   "repair_added": 8,
-   "idea": "Strip givens from the nearly complete row 8 and spread information thinner."
-  },
-  {
-   "id": "e4s-g1-03",
-   "spec": {
-    "family": "sudoku",
-    "n": 9,
-    "box": [
-     3,
-     3
-    ],
-    "solution": [
-     [
-      7,
-      9,
-      8,
-      5,
-      3,
-      1,
-      4,
-      6,
-      2
-     ],
-     [
-      6,
-      4,
-      2,
-      7,
-      9,
-      8,
-      1,
-      3,
-      5
-     ],
-     [
-      1,
-      5,
-      3,
-      4,
-      2,
-      6,
-      7,
-      8,
-      9
-     ],
-     [
-      8,
-      7,
-      9,
-      1,
-      5,
-      3,
-      6,
-      2,
-      4
-     ],
-     [
-      3,
-      1,
-      5,
-      6,
-      4,
-      2,
-      8,
-      9,
-      7
-     ],
-     [
-      2,
-      6,
-      4,
-      8,
-      7,
-      9,
-      3,
-      5,
-      1
-     ],
-     [
-      4,
-      2,
-      6,
-      9,
-      8,
-      7,
-      5,
-      1,
-      3
-     ],
-     [
-      9,
-      8,
-      7,
-      3,
-      1,
-      5,
-      2,
-      4,
-      6
-     ],
-     [
-      5,
-      3,
-      1,
-      2,
-      6,
-      4,
-      9,
-      7,
-      8
-     ]
-    ],
-    "clues": [
-     {
-      "type": "given",
-      "cell": [
-       0,
-       1
-      ],
-      "value": 9
-     },
-     {
-      "type": "given",
-      "cell": [
-       0,
-       2
-      ],
-      "value": 8
-     },
-     {
-      "type": "given",
-      "cell": [
-       0,
-       3
-      ],
-      "value": 5
-     },
-     {
-      "type": "given",
-      "cell": [
-       1,
-       0
-      ],
-      "value": 6
-     },
-     {
-      "type": "given",
-      "cell": [
-       1,
-       4
-      ],
-      "value": 9
-     },
-     {
-      "type": "given",
-      "cell": [
-       1,
-       6
-      ],
-      "value": 1
-     },
-     {
-      "type": "given",
-      "cell": [
-       2,
-       2
-      ],
-      "value": 3
-     },
-     {
-      "type": "given",
-      "cell": [
-       2,
-       5
-      ],
-      "value": 6
-     },
-     {
-      "type": "given",
-      "cell": [
-       2,
-       6
-      ],
-      "value": 7
-     },
-     {
-      "type": "given",
-      "cell": [
-       3,
-       1
-      ],
-      "value": 7
-     },
-     {
-      "type": "given",
-      "cell": [
-       3,
-       6
-      ],
-      "value": 6
-     },
-     {
-      "type": "given",
-      "cell": [
-       3,
-       7
-      ],
-      "value": 2
-     },
-     {
-      "type": "given",
-      "cell": [
-       4,
-       1
-      ],
-      "value": 1
-     },
-     {
-      "type": "given",
-      "cell": [
-       4,
-       7
-      ],
-      "value": 9
-     },
-     {
-      "type": "given",
-      "cell": [
-       5,
-       2
-      ],
-      "value": 4
-     },
-     {
-      "type": "given",
-      "cell": [
-       5,
-       3
-      ],
-      "value": 8
-     },
-     {
-      "type": "given",
-      "cell": [
-       6,
-       5
-      ],
-      "value": 7
-     },
-     {
-      "type": "given",
-      "cell": [
-       6,
-       8
-      ],
-      "value": 3
-     },
-     {
-      "type": "given",
-      "cell": [
-       7,
-       1
-      ],
-      "value": 8
-     },
-     {
-      "type": "given",
-      "cell": [
-       7,
-       2
-      ],
-      "value": 7
-     },
-     {
-      "type": "given",
-      "cell": [
-       7,
-       4
-      ],
-      "value": 1
-     },
-     {
-      "type": "given",
-      "cell": [
-       7,
-       6
-      ],
-      "value": 2
-     },
-     {
-      "type": "given",
-      "cell": [
-       8,
-       4
-      ],
-      "value": 6
-     },
-     {
-      "type": "given",
-      "cell": [
-       8,
-       5
-      ],
-      "value": 4
-     }
-    ]
-   },
-   "born": 1,
-   "parent": "e4s-g0-01",
-   "level": 1,
-   "evals": [],
-   "repair_added": 4,
-   "idea": "Remove central and corner givens so fewer easy singles appear."
-  },
-  {
-   "id": "e4s-g1-04",
-   "spec": {
-    "family": "sudoku",
-    "n": 9,
-    "box": [
-     3,
-     3
-    ],
-    "solution": [
-     [
-      1,
-      4,
-      5,
-      2,
-      9,
-      3,
-      6,
-      7,
-      8
-     ],
-     [
-      8,
-      6,
-      7,
-      1,
-      4,
-      5,
-      9,
-      3,
-      2
-     ],
-     [
-      2,
-      9,
-      3,
-      8,
-      6,
-      7,
-      4,
-      5,
-      1
-     ],
-     [
-      9,
-      3,
-      8,
-      6,
-      7,
-      1,
-      5,
-      2,
-      4
-     ],
-     [
-      6,
-      7,
-      1,
-      4,
-      5,
-      2,
-      3,
-      8,
-      9
-     ],
-     [
-      4,
-      5,
-      2,
-      9,
-      3,
-      8,
-      7,
-      1,
-      6
-     ],
-     [
-      7,
-      1,
-      4,
-      5,
-      2,
-      9,
-      8,
-      6,
-      3
-     ],
-     [
-      5,
-      2,
-      9,
-      3,
-      8,
-      6,
-      1,
-      4,
-      7
-     ],
-     [
-      3,
-      8,
-      6,
-      7,
-      1,
-      4,
-      2,
-      9,
-      5
-     ]
-    ],
-    "clues": [
-     {
-      "type": "given",
-      "cell": [
-       0,
-       2
-      ],
-      "value": 5
-     },
-     {
-      "type": "given",
-      "cell": [
-       0,
-       7
-      ],
-      "value": 7
-     },
-     {
-      "type": "given",
-      "cell": [
-       0,
-       8
-      ],
-      "value": 8
-     },
-     {
-      "type": "given",
-      "cell": [
-       1,
-       1
-      ],
-      "value": 6
-     },
-     {
-      "type": "given",
-      "cell": [
-       1,
-       5
-      ],
-      "value": 5
-     },
-     {
-      "type": "given",
-      "cell": [
-       2,
-       0
-      ],
-      "value": 2
-     },
-     {
-      "type": "given",
-      "cell": [
-       2,
-       3
-      ],
-      "value": 8
-     },
-     {
-      "type": "given",
-      "cell": [
-       2,
-       4
-      ],
-      "value": 6
-     },
-     {
-      "type": "given",
-      "cell": [
-       2,
-       6
-      ],
-      "value": 4
-     },
-     {
-      "type": "given",
-      "cell": [
-       3,
-       1
-      ],
-      "value": 3
-     },
-     {
-      "type": "given",
-      "cell": [
-       3,
-       4
-      ],
-      "value": 7
-     },
-     {
-      "type": "given",
-      "cell": [
-       3,
-       6
-      ],
-      "value": 5
-     },
-     {
-      "type": "given",
-      "cell": [
-       3,
-       7
-      ],
-      "value": 2
-     },
-     {
-      "type": "given",
-      "cell": [
-       3,
-       8
-      ],
-      "value": 4
-     },
-     {
-      "type": "given",
-      "cell": [
-       4,
-       2
-      ],
-      "value": 1
-     },
-     {
-      "type": "given",
-      "cell": [
-       4,
-       4
-      ],
-      "value": 5
-     },
-     {
-      "type": "given",
-      "cell": [
-       4,
-       7
-      ],
-      "value": 8
-     },
-     {
-      "type": "given",
-      "cell": [
-       5,
-       0
-      ],
-      "value": 4
-     },
-     {
-      "type": "given",
-      "cell": [
-       5,
-       3
-      ],
-      "value": 9
-     },
-     {
-      "type": "given",
-      "cell": [
-       5,
-       5
-      ],
-      "value": 8
-     },
-     {
-      "type": "given",
-      "cell": [
-       6,
-       0
-      ],
-      "value": 7
-     },
-     {
-      "type": "given",
-      "cell": [
-       7,
-       3
-      ],
-      "value": 3
-     },
-     {
-      "type": "given",
-      "cell": [
-       7,
-       4
-      ],
-      "value": 8
-     },
-     {
-      "type": "given",
-      "cell": [
-       7,
-       5
-      ],
-      "value": 6
-     },
-     {
-      "type": "given",
-      "cell": [
-       7,
-       6
-      ],
-      "value": 1
-     },
-     {
-      "type": "given",
-      "cell": [
-       8,
-       3
-      ],
-      "value": 7
-     },
-     {
-      "type": "given",
-      "cell": [
-       8,
-       4
-      ],
-      "value": 1
-     },
-     {
-      "type": "given",
-      "cell": [
-       8,
-       7
-      ],
-      "value": 9
-     }
-    ]
-   },
-   "born": 1,
-   "parent": "e4s-g0-02",
-   "level": 1,
-   "evals": [],
-   "repair_added": 8,
-   "idea": "Remove givens that anchor the central cross-hatching of 5s and 8s."
-  },
-  {
-   "id": "e4s-g1-05",
-   "spec": {
-    "family": "sudoku",
-    "n": 9,
-    "box": [
-     3,
-     3
-    ],
-    "solution": [
-     [
-      1,
-      4,
-      5,
-      2,
-      9,
-      3,
-      6,
-      7,
-      8
-     ],
-     [
-      8,
-      6,
-      7,
-      1,
-      4,
-      5,
-      9,
-      3,
-      2
-     ],
-     [
-      2,
-      9,
-      3,
-      8,
-      6,
-      7,
-      4,
-      5,
-      1
-     ],
-     [
-      9,
-      3,
-      8,
-      6,
-      7,
-      1,
-      5,
-      2,
-      4
-     ],
-     [
-      6,
-      7,
-      1,
-      4,
-      5,
-      2,
-      3,
-      8,
-      9
-     ],
-     [
-      4,
-      5,
-      2,
-      9,
-      3,
-      8,
-      7,
-      1,
-      6
-     ],
-     [
-      7,
-      1,
-      4,
-      5,
-      2,
-      9,
-      8,
-      6,
-      3
-     ],
-     [
-      5,
-      2,
-      9,
-      3,
-      8,
-      6,
-      1,
-      4,
-      7
-     ],
-     [
-      3,
-      8,
-      6,
-      7,
-      1,
-      4,
-      2,
-      9,
-      5
-     ]
-    ],
-    "clues": [
-     {
-      "type": "given",
-      "cell": [
-       0,
-       0
-      ],
-      "value": 1
-     },
-     {
-      "type": "given",
-      "cell": [
-       0,
-       2
-      ],
-      "value": 5
-     },
-     {
-      "type": "given",
-      "cell": [
-       0,
-       5
-      ],
-      "value": 3
-     },
-     {
-      "type": "given",
-      "cell": [
-       0,
-       7
-      ],
-      "value": 7
-     },
-     {
-      "type": "given",
-      "cell": [
-       1,
-       1
-      ],
-      "value": 6
-     },
-     {
-      "type": "given",
-      "cell": [
-       1,
-       5
-      ],
-      "value": 5
-     },
-     {
-      "type": "given",
-      "cell": [
-       2,
-       0
-      ],
-      "value": 2
-     },
-     {
-      "type": "given",
-      "cell": [
-       2,
-       3
-      ],
-      "value": 8
-     },
-     {
-      "type": "given",
-      "cell": [
-       2,
-       6
-      ],
-      "value": 4
-     },
-     {
-      "type": "given",
-      "cell": [
-       3,
-       1
-      ],
-      "value": 3
-     },
-     {
-      "type": "given",
-      "cell": [
-       3,
-       8
-      ],
-      "value": 4
-     },
-     {
-      "type": "given",
-      "cell": [
-       4,
-       2
-      ],
-      "value": 1
-     },
-     {
-      "type": "given",
-      "cell": [
-       4,
-       4
-      ],
-      "value": 5
-     },
-     {
-      "type": "given",
-      "cell": [
-       4,
-       7
-      ],
-      "value": 8
-     },
-     {
-      "type": "given",
-      "cell": [
-       5,
-       0
-      ],
-      "value": 4
-     },
-     {
-      "type": "given",
-      "cell": [
-       5,
-       3
-      ],
-      "value": 9
-     },
-     {
-      "type": "given",
-      "cell": [
-       5,
-       5
-      ],
-      "value": 8
-     },
-     {
-      "type": "given",
-      "cell": [
-       6,
-       0
-      ],
-      "value": 7
-     },
-     {
-      "type": "given",
-      "cell": [
-       6,
-       8
-      ],
-      "value": 3
-     },
-     {
-      "type": "given",
-      "cell": [
-       7,
-       3
-      ],
-      "value": 3
-     },
-     {
-      "type": "given",
-      "cell": [
-       7,
-       4
-      ],
-      "value": 8
-     },
-     {
-      "type": "given",
-      "cell": [
-       7,
-       5
-      ],
-      "value": 6
-     },
-     {
-      "type": "given",
-      "cell": [
-       7,
-       6
-      ],
-      "value": 1
-     },
-     {
-      "type": "given",
-      "cell": [
-       8,
-       2
-      ],
-      "value": 6
-     },
-     {
-      "type": "given",
-      "cell": [
-       8,
-       3
-      ],
-      "value": 7
-     },
-     {
-      "type": "given",
-      "cell": [
-       8,
-       6
-      ],
-      "value": 2
-     },
-     {
-      "type": "given",
-      "cell": [
-       8,
-       7
-      ],
-      "value": 9
-     }
-    ]
-   },
-   "born": 1,
-   "parent": "e4s-g0-02",
-   "level": 2,
-   "evals": [],
-   "repair_added": 7,
-   "idea": "Fewer givens in column 5 so the column offers no easy singles."
+    }
+   }
   },
   {
    "id": "e4s-g1-06",
@@ -4958,969 +679,26 @@
    "born": 1,
    "parent": "e4s-g0-05",
    "level": 1,
-   "evals": [],
+   "evals": [
+    0.0
+   ],
    "repair_added": 8,
-   "idea": "Remove givens that make the shifted-pattern deductions quick."
-  },
-  {
-   "id": "e4s-g1-07",
-   "spec": {
-    "family": "sudoku",
-    "n": 9,
-    "box": [
-     3,
-     3
-    ],
-    "solution": [
-     [
-      8,
-      2,
-      6,
-      4,
-      1,
-      9,
-      3,
-      5,
-      7
-     ],
-     [
-      4,
-      1,
-      9,
-      3,
-      5,
-      7,
-      6,
-      8,
-      2
-     ],
-     [
-      3,
-      5,
-      7,
-      6,
-      8,
-      2,
-      9,
-      4,
-      1
-     ],
-     [
-      5,
-      7,
-      3,
-      8,
-      2,
-      6,
-      4,
-      1,
-      9
-     ],
-     [
-      2,
-      6,
-      8,
-      1,
-      9,
-      4,
-      5,
-      7,
-      3
-     ],
-     [
-      1,
-      9,
-      4,
-      5,
-      7,
-      3,
-      8,
-      2,
-      6
-     ],
-     [
-      7,
-      3,
-      5,
-      2,
-      6,
-      8,
-      1,
-      9,
-      4
-     ],
-     [
-      6,
-      8,
-      2,
-      9,
-      4,
-      1,
-      7,
-      3,
-      5
-     ],
-     [
-      9,
-      4,
-      1,
-      7,
-      3,
-      5,
-      2,
-      6,
-      8
+   "idea": "Remove givens that make the shifted-pattern deductions quick.",
+   "answers": {
+    "1": {
+     "grid": [
+      "806019000",
+      "410007000",
+      "000082001",
+      "003000400",
+      "008000570",
+      "000070820",
+      "730008004",
+      "000040035",
+      "900005060"
      ]
-    ],
-    "clues": [
-     {
-      "type": "given",
-      "cell": [
-       0,
-       0
-      ],
-      "value": 8
-     },
-     {
-      "type": "given",
-      "cell": [
-       0,
-       2
-      ],
-      "value": 6
-     },
-     {
-      "type": "given",
-      "cell": [
-       0,
-       4
-      ],
-      "value": 1
-     },
-     {
-      "type": "given",
-      "cell": [
-       1,
-       0
-      ],
-      "value": 4
-     },
-     {
-      "type": "given",
-      "cell": [
-       1,
-       5
-      ],
-      "value": 7
-     },
-     {
-      "type": "given",
-      "cell": [
-       1,
-       8
-      ],
-      "value": 2
-     },
-     {
-      "type": "given",
-      "cell": [
-       2,
-       4
-      ],
-      "value": 8
-     },
-     {
-      "type": "given",
-      "cell": [
-       2,
-       5
-      ],
-      "value": 2
-     },
-     {
-      "type": "given",
-      "cell": [
-       2,
-       6
-      ],
-      "value": 9
-     },
-     {
-      "type": "given",
-      "cell": [
-       3,
-       2
-      ],
-      "value": 3
-     },
-     {
-      "type": "given",
-      "cell": [
-       3,
-       6
-      ],
-      "value": 4
-     },
-     {
-      "type": "given",
-      "cell": [
-       4,
-       2
-      ],
-      "value": 8
-     },
-     {
-      "type": "given",
-      "cell": [
-       4,
-       5
-      ],
-      "value": 4
-     },
-     {
-      "type": "given",
-      "cell": [
-       4,
-       6
-      ],
-      "value": 5
-     },
-     {
-      "type": "given",
-      "cell": [
-       5,
-       3
-      ],
-      "value": 5
-     },
-     {
-      "type": "given",
-      "cell": [
-       5,
-       4
-      ],
-      "value": 7
-     },
-     {
-      "type": "given",
-      "cell": [
-       5,
-       7
-      ],
-      "value": 2
-     },
-     {
-      "type": "given",
-      "cell": [
-       6,
-       0
-      ],
-      "value": 7
-     },
-     {
-      "type": "given",
-      "cell": [
-       6,
-       5
-      ],
-      "value": 8
-     },
-     {
-      "type": "given",
-      "cell": [
-       6,
-       7
-      ],
-      "value": 9
-     },
-     {
-      "type": "given",
-      "cell": [
-       7,
-       1
-      ],
-      "value": 8
-     },
-     {
-      "type": "given",
-      "cell": [
-       7,
-       7
-      ],
-      "value": 3
-     },
-     {
-      "type": "given",
-      "cell": [
-       8,
-       0
-      ],
-      "value": 9
-     },
-     {
-      "type": "given",
-      "cell": [
-       8,
-       2
-      ],
-      "value": 1
-     },
-     {
-      "type": "given",
-      "cell": [
-       8,
-       4
-      ],
-      "value": 3
-     },
-     {
-      "type": "given",
-      "cell": [
-       8,
-       7
-      ],
-      "value": 6
-     }
-    ]
-   },
-   "born": 1,
-   "parent": "e4s-g0-05",
-   "level": 1,
-   "evals": [],
-   "repair_added": 6,
-   "idea": "Thin out rows 2, 6 and 7 so no row is nearly complete."
-  },
-  {
-   "id": "e4s-g1-08",
-   "spec": {
-    "family": "sudoku",
-    "n": 9,
-    "box": [
-     3,
-     3
-    ],
-    "solution": [
-     [
-      9,
-      6,
-      3,
-      4,
-      5,
-      2,
-      8,
-      1,
-      7
-     ],
-     [
-      5,
-      2,
-      4,
-      7,
-      1,
-      8,
-      6,
-      9,
-      3
-     ],
-     [
-      1,
-      8,
-      7,
-      3,
-      9,
-      6,
-      2,
-      5,
-      4
-     ],
-     [
-      7,
-      5,
-      8,
-      6,
-      3,
-      1,
-      9,
-      4,
-      2
-     ],
-     [
-      3,
-      1,
-      6,
-      2,
-      4,
-      9,
-      5,
-      7,
-      8
-     ],
-     [
-      4,
-      9,
-      2,
-      8,
-      7,
-      5,
-      1,
-      3,
-      6
-     ],
-     [
-      6,
-      7,
-      1,
-      9,
-      2,
-      3,
-      4,
-      8,
-      5
-     ],
-     [
-      2,
-      3,
-      9,
-      5,
-      8,
-      4,
-      7,
-      6,
-      1
-     ],
-     [
-      8,
-      4,
-      5,
-      1,
-      6,
-      7,
-      3,
-      2,
-      9
-     ]
-    ],
-    "clues": [
-     {
-      "type": "given",
-      "cell": [
-       0,
-       4
-      ],
-      "value": 5
-     },
-     {
-      "type": "given",
-      "cell": [
-       0,
-       8
-      ],
-      "value": 7
-     },
-     {
-      "type": "given",
-      "cell": [
-       1,
-       1
-      ],
-      "value": 2
-     },
-     {
-      "type": "given",
-      "cell": [
-       1,
-       2
-      ],
-      "value": 4
-     },
-     {
-      "type": "given",
-      "cell": [
-       1,
-       7
-      ],
-      "value": 9
-     },
-     {
-      "type": "given",
-      "cell": [
-       2,
-       0
-      ],
-      "value": 1
-     },
-     {
-      "type": "given",
-      "cell": [
-       2,
-       2
-      ],
-      "value": 7
-     },
-     {
-      "type": "given",
-      "cell": [
-       2,
-       3
-      ],
-      "value": 3
-     },
-     {
-      "type": "given",
-      "cell": [
-       2,
-       5
-      ],
-      "value": 6
-     },
-     {
-      "type": "given",
-      "cell": [
-       3,
-       1
-      ],
-      "value": 5
-     },
-     {
-      "type": "given",
-      "cell": [
-       3,
-       3
-      ],
-      "value": 6
-     },
-     {
-      "type": "given",
-      "cell": [
-       4,
-       3
-      ],
-      "value": 2
-     },
-     {
-      "type": "given",
-      "cell": [
-       4,
-       4
-      ],
-      "value": 4
-     },
-     {
-      "type": "given",
-      "cell": [
-       5,
-       3
-      ],
-      "value": 8
-     },
-     {
-      "type": "given",
-      "cell": [
-       5,
-       6
-      ],
-      "value": 1
-     },
-     {
-      "type": "given",
-      "cell": [
-       5,
-       7
-      ],
-      "value": 3
-     },
-     {
-      "type": "given",
-      "cell": [
-       5,
-       8
-      ],
-      "value": 6
-     },
-     {
-      "type": "given",
-      "cell": [
-       6,
-       0
-      ],
-      "value": 6
-     },
-     {
-      "type": "given",
-      "cell": [
-       6,
-       1
-      ],
-      "value": 7
-     },
-     {
-      "type": "given",
-      "cell": [
-       6,
-       7
-      ],
-      "value": 8
-     },
-     {
-      "type": "given",
-      "cell": [
-       6,
-       8
-      ],
-      "value": 5
-     },
-     {
-      "type": "given",
-      "cell": [
-       7,
-       2
-      ],
-      "value": 9
-     },
-     {
-      "type": "given",
-      "cell": [
-       7,
-       5
-      ],
-      "value": 4
-     },
-     {
-      "type": "given",
-      "cell": [
-       8,
-       0
-      ],
-      "value": 8
-     },
-     {
-      "type": "given",
-      "cell": [
-       8,
-       6
-      ],
-      "value": 3
-     }
-    ]
-   },
-   "born": 1,
-   "parent": "e4s-g0-06",
-   "level": 1,
-   "evals": [],
-   "repair_added": 5,
-   "idea": "Remove givens from the fullest row and box to lengthen logic chains."
-  },
-  {
-   "id": "e4s-g1-09",
-   "spec": {
-    "family": "sudoku",
-    "n": 9,
-    "box": [
-     3,
-     3
-    ],
-    "solution": [
-     [
-      9,
-      6,
-      3,
-      4,
-      5,
-      2,
-      8,
-      1,
-      7
-     ],
-     [
-      5,
-      2,
-      4,
-      7,
-      1,
-      8,
-      6,
-      9,
-      3
-     ],
-     [
-      1,
-      8,
-      7,
-      3,
-      9,
-      6,
-      2,
-      5,
-      4
-     ],
-     [
-      7,
-      5,
-      8,
-      6,
-      3,
-      1,
-      9,
-      4,
-      2
-     ],
-     [
-      3,
-      1,
-      6,
-      2,
-      4,
-      9,
-      5,
-      7,
-      8
-     ],
-     [
-      4,
-      9,
-      2,
-      8,
-      7,
-      5,
-      1,
-      3,
-      6
-     ],
-     [
-      6,
-      7,
-      1,
-      9,
-      2,
-      3,
-      4,
-      8,
-      5
-     ],
-     [
-      2,
-      3,
-      9,
-      5,
-      8,
-      4,
-      7,
-      6,
-      1
-     ],
-     [
-      8,
-      4,
-      5,
-      1,
-      6,
-      7,
-      3,
-      2,
-      9
-     ]
-    ],
-    "clues": [
-     {
-      "type": "given",
-      "cell": [
-       0,
-       8
-      ],
-      "value": 7
-     },
-     {
-      "type": "given",
-      "cell": [
-       1,
-       1
-      ],
-      "value": 2
-     },
-     {
-      "type": "given",
-      "cell": [
-       1,
-       7
-      ],
-      "value": 9
-     },
-     {
-      "type": "given",
-      "cell": [
-       2,
-       0
-      ],
-      "value": 1
-     },
-     {
-      "type": "given",
-      "cell": [
-       2,
-       3
-      ],
-      "value": 3
-     },
-     {
-      "type": "given",
-      "cell": [
-       2,
-       5
-      ],
-      "value": 6
-     },
-     {
-      "type": "given",
-      "cell": [
-       2,
-       6
-      ],
-      "value": 2
-     },
-     {
-      "type": "given",
-      "cell": [
-       3,
-       1
-      ],
-      "value": 5
-     },
-     {
-      "type": "given",
-      "cell": [
-       3,
-       3
-      ],
-      "value": 6
-     },
-     {
-      "type": "given",
-      "cell": [
-       4,
-       1
-      ],
-      "value": 1
-     },
-     {
-      "type": "given",
-      "cell": [
-       4,
-       3
-      ],
-      "value": 2
-     },
-     {
-      "type": "given",
-      "cell": [
-       4,
-       4
-      ],
-      "value": 4
-     },
-     {
-      "type": "given",
-      "cell": [
-       5,
-       3
-      ],
-      "value": 8
-     },
-     {
-      "type": "given",
-      "cell": [
-       5,
-       6
-      ],
-      "value": 1
-     },
-     {
-      "type": "given",
-      "cell": [
-       5,
-       7
-      ],
-      "value": 3
-     },
-     {
-      "type": "given",
-      "cell": [
-       5,
-       8
-      ],
-      "value": 6
-     },
-     {
-      "type": "given",
-      "cell": [
-       6,
-       0
-      ],
-      "value": 6
-     },
-     {
-      "type": "given",
-      "cell": [
-       6,
-       4
-      ],
-      "value": 2
-     },
-     {
-      "type": "given",
-      "cell": [
-       7,
-       2
-      ],
-      "value": 9
-     },
-     {
-      "type": "given",
-      "cell": [
-       7,
-       5
-      ],
-      "value": 4
-     },
-     {
-      "type": "given",
-      "cell": [
-       8,
-       0
-      ],
-      "value": 8
-     },
-     {
-      "type": "given",
-      "cell": [
-       8,
-       3
-      ],
-      "value": 1
-     },
-     {
-      "type": "given",
-      "cell": [
-       8,
-       6
-      ],
-      "value": 3
-     },
-     {
-      "type": "given",
-      "cell": [
-       8,
-       7
-      ],
-      "value": 2
-     }
-    ]
-   },
-   "born": 1,
-   "parent": "e4s-g0-06",
-   "level": 1,
-   "evals": [],
-   "repair_added": 4,
-   "idea": "Remove scattered givens so information is spread thin across boxes."
+    }
+   }
   },
   {
    "id": "e4s-g1-10",
@@ -6262,12 +1040,29 @@
    "born": 1,
    "parent": "e4s-g0-04",
    "level": 2,
-   "evals": [],
+   "evals": [
+    0.0
+   ],
    "repair_added": 7,
-   "idea": "Break the nearly complete row 6 and box 1 so easy singles disappear."
+   "idea": "Break the nearly complete row 6 and box 1 so easy singles disappear.",
+   "answers": {
+    "1": {
+     "grid": [
+      "904000200",
+      "005700080",
+      "100000009",
+      "700000060",
+      "040800000",
+      "286507010",
+      "067900028",
+      "000020600",
+      "010075000"
+     ]
+    }
+   }
   },
   {
-   "id": "e4s-g1-11",
+   "id": "e4s-g0-00",
    "spec": {
     "family": "sudoku",
     "n": 9,
@@ -6277,103 +1072,103 @@
     ],
     "solution": [
      [
-      9,
-      7,
       4,
-      3,
-      8,
-      1,
-      2,
-      5,
-      6
-     ],
-     [
       6,
-      2,
-      5,
-      7,
-      4,
       9,
-      3,
-      8,
-      1
-     ],
-     [
+      2,
       1,
       3,
-      8,
-      2,
-      5,
-      6,
-      7,
-      4,
-      9
-     ],
-     [
       7,
       5,
-      9,
-      4,
-      1,
-      3,
-      8,
-      6,
-      2
-     ],
-     [
-      3,
-      4,
-      1,
-      8,
-      6,
-      2,
-      5,
-      9,
-      7
-     ],
-     [
-      2,
-      8,
-      6,
-      5,
-      9,
-      7,
-      4,
-      1,
-      3
-     ],
-     [
-      5,
-      6,
-      7,
-      9,
-      3,
-      4,
-      1,
-      2,
       8
      ],
      [
+      2,
+      3,
+      1,
+      7,
+      8,
+      5,
+      9,
+      4,
+      6
+     ],
+     [
+      7,
+      5,
+      8,
+      9,
+      6,
+      4,
+      1,
+      2,
+      3
+     ],
+     [
+      6,
+      9,
+      4,
+      3,
+      2,
+      1,
+      5,
+      8,
+      7
+     ],
+     [
+      5,
+      8,
+      7,
       4,
       9,
+      6,
+      2,
+      3,
+      1
+     ],
+     [
       3,
       1,
       2,
+      5,
+      7,
       8,
+      4,
       6,
+      9
+     ],
+     [
+      1,
+      2,
+      3,
+      8,
+      5,
+      7,
+      6,
+      9,
+      4
+     ],
+     [
+      9,
+      4,
+      6,
+      1,
+      3,
+      2,
+      8,
       7,
       5
      ],
      [
       8,
-      1,
-      2,
-      6,
       7,
       5,
+      6,
+      4,
       9,
       3,
-      4
+      1,
+      2
      ]
     ],
     "clues": [
@@ -6381,62 +1176,38 @@
       "type": "given",
       "cell": [
        0,
-       0
-      ],
-      "value": 9
-     },
-     {
-      "type": "given",
-      "cell": [
-       0,
-       2
-      ],
-      "value": 4
-     },
-     {
-      "type": "given",
-      "cell": [
-       0,
-       6
-      ],
-      "value": 2
-     },
-     {
-      "type": "given",
-      "cell": [
-       1,
-       0
+       1
       ],
       "value": 6
      },
      {
       "type": "given",
       "cell": [
-       1,
+       0,
+       3
+      ],
+      "value": 2
+     },
+     {
+      "type": "given",
+      "cell": [
+       0,
        7
       ],
-      "value": 8
+      "value": 5
      },
      {
       "type": "given",
       "cell": [
-       2,
-       1
-      ],
-      "value": 3
-     },
-     {
-      "type": "given",
-      "cell": [
-       2,
-       8
+       1,
+       6
       ],
       "value": 9
      },
      {
       "type": "given",
       "cell": [
-       3,
+       2,
        0
       ],
       "value": 7
@@ -6444,10 +1215,42 @@
      {
       "type": "given",
       "cell": [
+       2,
+       2
+      ],
+      "value": 8
+     },
+     {
+      "type": "given",
+      "cell": [
+       2,
+       4
+      ],
+      "value": 6
+     },
+     {
+      "type": "given",
+      "cell": [
+       2,
+       5
+      ],
+      "value": 4
+     },
+     {
+      "type": "given",
+      "cell": [
+       3,
+       1
+      ],
+      "value": 9
+     },
+     {
+      "type": "given",
+      "cell": [
        3,
        2
       ],
-      "value": 9
+      "value": 4
      },
      {
       "type": "given",
@@ -6455,31 +1258,23 @@
        3,
        5
       ],
-      "value": 3
+      "value": 1
      },
      {
       "type": "given",
       "cell": [
        3,
-       7
+       6
       ],
-      "value": 6
-     },
-     {
-      "type": "given",
-      "cell": [
-       3,
-       8
-      ],
-      "value": 2
+      "value": 5
      },
      {
       "type": "given",
       "cell": [
        4,
-       1
+       2
       ],
-      "value": 4
+      "value": 7
      },
      {
       "type": "given",
@@ -6487,23 +1282,15 @@
        4,
        3
       ],
-      "value": 8
+      "value": 4
      },
      {
       "type": "given",
       "cell": [
-       5,
-       0
+       4,
+       7
       ],
-      "value": 2
-     },
-     {
-      "type": "given",
-      "cell": [
-       5,
-       1
-      ],
-      "value": 8
+      "value": 3
      },
      {
       "type": "given",
@@ -6511,29 +1298,29 @@
        5,
        2
       ],
-      "value": 6
+      "value": 2
      },
      {
       "type": "given",
       "cell": [
        5,
-       7
+       5
       ],
-      "value": 1
-     },
-     {
-      "type": "given",
-      "cell": [
-       5,
-       8
-      ],
-      "value": 3
+      "value": 8
      },
      {
       "type": "given",
       "cell": [
        6,
        0
+      ],
+      "value": 1
+     },
+     {
+      "type": "given",
+      "cell": [
+       6,
+       4
       ],
       "value": 5
      },
@@ -6541,7 +1328,7 @@
       "type": "given",
       "cell": [
        6,
-       2
+       5
       ],
       "value": 7
      },
@@ -6549,17 +1336,9 @@
       "type": "given",
       "cell": [
        6,
-       7
+       8
       ],
-      "value": 2
-     },
-     {
-      "type": "given",
-      "cell": [
-       7,
-       4
-      ],
-      "value": 2
+      "value": 4
      },
      {
       "type": "given",
@@ -6567,12 +1346,185 @@
        7,
        6
       ],
-      "value": 6
+      "value": 8
      },
      {
       "type": "given",
       "cell": [
-       7,
+       8,
+       6
+      ],
+      "value": 3
+     },
+     {
+      "type": "given",
+      "cell": [
+       8,
+       7
+      ],
+      "value": 1
+     }
+    ]
+   },
+   "born": 0,
+   "parent": null,
+   "level": 3,
+   "evals": [
+    0.9298245614035088,
+    0.0
+   ],
+   "answers": {
+    "0": {
+     "grid": [
+      "469213758",
+      "231785946",
+      "758946123",
+      "647321581",
+      "587496231",
+      "312578469",
+      "123859674",
+      "946132875",
+      "875674312"
+     ]
+    },
+    "1": {
+     "grid": [
+      "060200050",
+      "000000900",
+      "708064000",
+      "094001500",
+      "007400030",
+      "002008000",
+      "100057004",
+      "000000800",
+      "000000310"
+     ]
+    }
+   }
+  },
+  {
+   "id": "e4s-g1-04",
+   "spec": {
+    "family": "sudoku",
+    "n": 9,
+    "box": [
+     3,
+     3
+    ],
+    "solution": [
+     [
+      1,
+      4,
+      5,
+      2,
+      9,
+      3,
+      6,
+      7,
+      8
+     ],
+     [
+      8,
+      6,
+      7,
+      1,
+      4,
+      5,
+      9,
+      3,
+      2
+     ],
+     [
+      2,
+      9,
+      3,
+      8,
+      6,
+      7,
+      4,
+      5,
+      1
+     ],
+     [
+      9,
+      3,
+      8,
+      6,
+      7,
+      1,
+      5,
+      2,
+      4
+     ],
+     [
+      6,
+      7,
+      1,
+      4,
+      5,
+      2,
+      3,
+      8,
+      9
+     ],
+     [
+      4,
+      5,
+      2,
+      9,
+      3,
+      8,
+      7,
+      1,
+      6
+     ],
+     [
+      7,
+      1,
+      4,
+      5,
+      2,
+      9,
+      8,
+      6,
+      3
+     ],
+     [
+      5,
+      2,
+      9,
+      3,
+      8,
+      6,
+      1,
+      4,
+      7
+     ],
+     [
+      3,
+      8,
+      6,
+      7,
+      1,
+      4,
+      2,
+      9,
+      5
+     ]
+    ],
+    "clues": [
+     {
+      "type": "given",
+      "cell": [
+       0,
+       2
+      ],
+      "value": 5
+     },
+     {
+      "type": "given",
+      "cell": [
+       0,
        7
       ],
       "value": 7
@@ -6580,24 +1532,184 @@
      {
       "type": "given",
       "cell": [
-       7,
+       0,
        8
-      ],
-      "value": 5
-     },
-     {
-      "type": "given",
-      "cell": [
-       8,
-       0
       ],
       "value": 8
      },
      {
       "type": "given",
       "cell": [
-       8,
+       1,
        1
+      ],
+      "value": 6
+     },
+     {
+      "type": "given",
+      "cell": [
+       1,
+       5
+      ],
+      "value": 5
+     },
+     {
+      "type": "given",
+      "cell": [
+       2,
+       0
+      ],
+      "value": 2
+     },
+     {
+      "type": "given",
+      "cell": [
+       2,
+       3
+      ],
+      "value": 8
+     },
+     {
+      "type": "given",
+      "cell": [
+       2,
+       4
+      ],
+      "value": 6
+     },
+     {
+      "type": "given",
+      "cell": [
+       2,
+       6
+      ],
+      "value": 4
+     },
+     {
+      "type": "given",
+      "cell": [
+       3,
+       1
+      ],
+      "value": 3
+     },
+     {
+      "type": "given",
+      "cell": [
+       3,
+       4
+      ],
+      "value": 7
+     },
+     {
+      "type": "given",
+      "cell": [
+       3,
+       6
+      ],
+      "value": 5
+     },
+     {
+      "type": "given",
+      "cell": [
+       3,
+       7
+      ],
+      "value": 2
+     },
+     {
+      "type": "given",
+      "cell": [
+       3,
+       8
+      ],
+      "value": 4
+     },
+     {
+      "type": "given",
+      "cell": [
+       4,
+       2
+      ],
+      "value": 1
+     },
+     {
+      "type": "given",
+      "cell": [
+       4,
+       4
+      ],
+      "value": 5
+     },
+     {
+      "type": "given",
+      "cell": [
+       4,
+       7
+      ],
+      "value": 8
+     },
+     {
+      "type": "given",
+      "cell": [
+       5,
+       0
+      ],
+      "value": 4
+     },
+     {
+      "type": "given",
+      "cell": [
+       5,
+       3
+      ],
+      "value": 9
+     },
+     {
+      "type": "given",
+      "cell": [
+       5,
+       5
+      ],
+      "value": 8
+     },
+     {
+      "type": "given",
+      "cell": [
+       6,
+       0
+      ],
+      "value": 7
+     },
+     {
+      "type": "given",
+      "cell": [
+       7,
+       3
+      ],
+      "value": 3
+     },
+     {
+      "type": "given",
+      "cell": [
+       7,
+       4
+      ],
+      "value": 8
+     },
+     {
+      "type": "given",
+      "cell": [
+       7,
+       5
+      ],
+      "value": 6
+     },
+     {
+      "type": "given",
+      "cell": [
+       7,
+       6
       ],
       "value": 1
      },
@@ -6605,21 +1717,54 @@
       "type": "given",
       "cell": [
        8,
-       4
+       3
       ],
       "value": 7
+     },
+     {
+      "type": "given",
+      "cell": [
+       8,
+       4
+      ],
+      "value": 1
+     },
+     {
+      "type": "given",
+      "cell": [
+       8,
+       7
+      ],
+      "value": 9
      }
     ]
    },
    "born": 1,
-   "parent": "e4s-g0-04",
+   "parent": "e4s-g0-02",
    "level": 1,
-   "evals": [],
+   "evals": [
+    0.9245283018867925
+   ],
    "repair_added": 8,
-   "idea": "Remove givens from dense spots to lengthen deduction chains."
+   "idea": "Remove givens that anchor the central cross-hatching of 5s and 8s.",
+   "answers": {
+    "1": {
+     "grid": [
+      "145293678",
+      "867145932",
+      "293867451",
+      "936715248",
+      "671452389",
+      "452938716",
+      "714529863",
+      "529386147",
+      "386741295"
+     ]
+    }
+   }
   },
   {
-   "id": "e4s-g1-12",
+   "id": "e4s-g1-09",
    "spec": {
     "family": "sudoku",
     "n": 9,
@@ -6629,102 +1774,102 @@
     ],
     "solution": [
      [
-      3,
-      7,
-      6,
-      2,
-      5,
-      8,
-      1,
       9,
-      4
-     ],
-     [
-      1,
+      6,
+      3,
       4,
-      9,
-      6,
-      7,
-      3,
-      8,
-      2,
-      5
-     ],
-     [
-      8,
       5,
       2,
-      9,
-      4,
+      8,
       1,
-      3,
-      6,
       7
      ],
      [
-      2,
-      8,
-      7,
       5,
-      1,
-      9,
-      6,
+      2,
       4,
+      7,
+      1,
+      8,
+      6,
+      9,
       3
      ],
      [
-      6,
-      3,
-      4,
-      7,
+      1,
       8,
-      2,
+      7,
+      3,
       9,
+      6,
+      2,
       5,
-      1
+      4
      ],
      [
-      9,
-      1,
+      7,
       5,
-      4,
+      8,
+      6,
       3,
+      1,
+      9,
+      4,
+      2
+     ],
+     [
+      3,
+      1,
       6,
       2,
+      4,
+      9,
+      5,
       7,
       8
      ],
      [
-      7,
-      2,
-      3,
-      8,
-      9,
-      5,
       4,
+      9,
+      2,
+      8,
+      7,
+      5,
       1,
+      3,
       6
      ],
      [
-      5,
-      9,
-      8,
-      1,
       6,
-      4,
       7,
+      1,
+      9,
+      2,
       3,
-      2
+      4,
+      8,
+      5
      ],
      [
-      4,
-      6,
-      1,
-      3,
       2,
-      7,
+      3,
+      9,
       5,
       8,
+      4,
+      7,
+      6,
+      1
+     ],
+     [
+      8,
+      4,
+      5,
+      1,
+      6,
+      7,
+      3,
+      2,
       9
      ]
     ],
@@ -6733,49 +1878,17 @@
       "type": "given",
       "cell": [
        0,
-       1
+       8
       ],
       "value": 7
      },
      {
       "type": "given",
       "cell": [
-       0,
-       2
-      ],
-      "value": 6
-     },
-     {
-      "type": "given",
-      "cell": [
-       0,
-       4
-      ],
-      "value": 5
-     },
-     {
-      "type": "given",
-      "cell": [
        1,
        1
       ],
-      "value": 4
-     },
-     {
-      "type": "given",
-      "cell": [
-       1,
-       2
-      ],
-      "value": 9
-     },
-     {
-      "type": "given",
-      "cell": [
-       1,
-       5
-      ],
-      "value": 3
+      "value": 2
      },
      {
       "type": "given",
@@ -6783,7 +1896,7 @@
        1,
        7
       ],
-      "value": 2
+      "value": 9
      },
      {
       "type": "given",
@@ -6791,15 +1904,7 @@
        2,
        0
       ],
-      "value": 8
-     },
-     {
-      "type": "given",
-      "cell": [
-       2,
-       2
-      ],
-      "value": 2
+      "value": 1
      },
      {
       "type": "given",
@@ -6807,7 +1912,7 @@
        2,
        3
       ],
-      "value": 9
+      "value": 3
      },
      {
       "type": "given",
@@ -6815,7 +1920,15 @@
        2,
        5
       ],
-      "value": 1
+      "value": 6
+     },
+     {
+      "type": "given",
+      "cell": [
+       2,
+       6
+      ],
+      "value": 2
      },
      {
       "type": "given",
@@ -6823,100 +1936,68 @@
        3,
        1
       ],
-      "value": 8
+      "value": 5
      },
      {
       "type": "given",
       "cell": [
        3,
-       2
+       3
       ],
-      "value": 7
+      "value": 6
      },
      {
       "type": "given",
       "cell": [
-       3,
-       4
+       4,
+       1
       ],
       "value": 1
      },
      {
       "type": "given",
       "cell": [
-       3,
-       8
+       4,
+       3
+      ],
+      "value": 2
+     },
+     {
+      "type": "given",
+      "cell": [
+       4,
+       4
+      ],
+      "value": 4
+     },
+     {
+      "type": "given",
+      "cell": [
+       5,
+       3
+      ],
+      "value": 8
+     },
+     {
+      "type": "given",
+      "cell": [
+       5,
+       6
+      ],
+      "value": 1
+     },
+     {
+      "type": "given",
+      "cell": [
+       5,
+       7
       ],
       "value": 3
      },
      {
       "type": "given",
       "cell": [
-       4,
-       4
-      ],
-      "value": 8
-     },
-     {
-      "type": "given",
-      "cell": [
-       4,
-       5
-      ],
-      "value": 2
-     },
-     {
-      "type": "given",
-      "cell": [
-       4,
-       6
-      ],
-      "value": 9
-     },
-     {
-      "type": "given",
-      "cell": [
-       4,
-       7
-      ],
-      "value": 5
-     },
-     {
-      "type": "given",
-      "cell": [
        5,
-       2
-      ],
-      "value": 5
-     },
-     {
-      "type": "given",
-      "cell": [
-       5,
-       5
-      ],
-      "value": 6
-     },
-     {
-      "type": "given",
-      "cell": [
-       5,
-       6
-      ],
-      "value": 2
-     },
-     {
-      "type": "given",
-      "cell": [
-       6,
-       7
-      ],
-      "value": 1
-     },
-     {
-      "type": "given",
-      "cell": [
-       6,
        8
       ],
       "value": 6
@@ -6924,8 +2005,24 @@
      {
       "type": "given",
       "cell": [
+       6,
+       0
+      ],
+      "value": 6
+     },
+     {
+      "type": "given",
+      "cell": [
+       6,
+       4
+      ],
+      "value": 2
+     },
+     {
+      "type": "given",
+      "cell": [
        7,
-       1
+       2
       ],
       "value": 9
      },
@@ -6933,9 +2030,17 @@
       "type": "given",
       "cell": [
        7,
-       6
+       5
       ],
-      "value": 7
+      "value": 4
+     },
+     {
+      "type": "given",
+      "cell": [
+       8,
+       0
+      ],
+      "value": 8
      },
      {
       "type": "given",
@@ -6943,15 +2048,7 @@
        8,
        3
       ],
-      "value": 3
-     },
-     {
-      "type": "given",
-      "cell": [
-       8,
-       5
-      ],
-      "value": 7
+      "value": 1
      },
      {
       "type": "given",
@@ -6959,19 +2056,44 @@
        8,
        6
       ],
-      "value": 5
+      "value": 3
+     },
+     {
+      "type": "given",
+      "cell": [
+       8,
+       7
+      ],
+      "value": 2
      }
     ]
    },
    "born": 1,
-   "parent": "e4s-g0-03",
+   "parent": "e4s-g0-06",
    "level": 1,
-   "evals": [],
-   "repair_added": 7,
-   "idea": "Thin out the right side where rows 5 and 6 are nearly complete."
+   "evals": [
+    0.9473684210526315
+   ],
+   "repair_added": 4,
+   "idea": "Remove scattered givens so information is spread thin across boxes.",
+   "answers": {
+    "1": {
+     "grid": [
+      "963452817",
+      "524718693",
+      "187396254",
+      "759631942",
+      "316249578",
+      "492857136",
+      "671923485",
+      "239584761",
+      "845167329"
+     ]
+    }
+   }
   },
   {
-   "id": "e4s-g1-13",
+   "id": "e4s-g0-01",
    "spec": {
     "family": "sudoku",
     "n": 9,
@@ -6981,103 +2103,103 @@
     ],
     "solution": [
      [
-      3,
       7,
-      6,
-      2,
-      5,
-      8,
-      1,
       9,
-      4
-     ],
-     [
+      8,
+      5,
+      3,
       1,
       4,
-      9,
       6,
-      7,
-      3,
-      8,
+      2
+     ],
+     [
+      6,
+      4,
       2,
+      7,
+      9,
+      8,
+      1,
+      3,
       5
      ],
      [
-      8,
-      5,
-      2,
-      9,
-      4,
       1,
+      5,
+      3,
+      4,
+      2,
+      6,
+      7,
+      8,
+      9
+     ],
+     [
+      8,
+      7,
+      9,
+      1,
+      5,
       3,
       6,
+      2,
+      4
+     ],
+     [
+      3,
+      1,
+      5,
+      6,
+      4,
+      2,
+      8,
+      9,
       7
      ],
      [
       2,
-      8,
-      7,
-      5,
-      1,
-      9,
       6,
       4,
-      3
-     ],
-     [
-      6,
+      8,
+      7,
+      9,
       3,
-      4,
-      7,
-      8,
-      2,
-      9,
       5,
       1
      ],
      [
-      9,
-      1,
-      5,
       4,
-      3,
-      6,
       2,
+      6,
+      9,
+      8,
       7,
-      8
+      5,
+      1,
+      3
      ],
      [
-      7,
-      2,
-      3,
-      8,
       9,
-      5,
-      4,
+      8,
+      7,
+      3,
       1,
+      5,
+      2,
+      4,
       6
      ],
      [
       5,
-      9,
-      8,
-      1,
-      6,
-      4,
-      7,
       3,
-      2
-     ],
-     [
-      4,
-      6,
       1,
-      3,
       2,
+      6,
+      4,
+      9,
       7,
-      5,
-      8,
-      9
+      8
      ]
     ],
     "clues": [
@@ -7085,190 +2207,6 @@
       "type": "given",
       "cell": [
        0,
-       0
-      ],
-      "value": 3
-     },
-     {
-      "type": "given",
-      "cell": [
-       0,
-       4
-      ],
-      "value": 5
-     },
-     {
-      "type": "given",
-      "cell": [
-       0,
-       8
-      ],
-      "value": 4
-     },
-     {
-      "type": "given",
-      "cell": [
-       1,
-       1
-      ],
-      "value": 4
-     },
-     {
-      "type": "given",
-      "cell": [
-       1,
-       2
-      ],
-      "value": 9
-     },
-     {
-      "type": "given",
-      "cell": [
-       1,
-       3
-      ],
-      "value": 6
-     },
-     {
-      "type": "given",
-      "cell": [
-       1,
-       5
-      ],
-      "value": 3
-     },
-     {
-      "type": "given",
-      "cell": [
-       2,
-       0
-      ],
-      "value": 8
-     },
-     {
-      "type": "given",
-      "cell": [
-       2,
-       2
-      ],
-      "value": 2
-     },
-     {
-      "type": "given",
-      "cell": [
-       3,
-       1
-      ],
-      "value": 8
-     },
-     {
-      "type": "given",
-      "cell": [
-       3,
-       3
-      ],
-      "value": 5
-     },
-     {
-      "type": "given",
-      "cell": [
-       3,
-       4
-      ],
-      "value": 1
-     },
-     {
-      "type": "given",
-      "cell": [
-       4,
-       0
-      ],
-      "value": 6
-     },
-     {
-      "type": "given",
-      "cell": [
-       4,
-       4
-      ],
-      "value": 8
-     },
-     {
-      "type": "given",
-      "cell": [
-       4,
-       5
-      ],
-      "value": 2
-     },
-     {
-      "type": "given",
-      "cell": [
-       4,
-       7
-      ],
-      "value": 5
-     },
-     {
-      "type": "given",
-      "cell": [
-       4,
-       8
-      ],
-      "value": 1
-     },
-     {
-      "type": "given",
-      "cell": [
-       5,
-       2
-      ],
-      "value": 5
-     },
-     {
-      "type": "given",
-      "cell": [
-       5,
-       5
-      ],
-      "value": 6
-     },
-     {
-      "type": "given",
-      "cell": [
-       5,
-       6
-      ],
-      "value": 2
-     },
-     {
-      "type": "given",
-      "cell": [
-       5,
-       7
-      ],
-      "value": 7
-     },
-     {
-      "type": "given",
-      "cell": [
-       6,
-       7
-      ],
-      "value": 1
-     },
-     {
-      "type": "given",
-      "cell": [
-       6,
-       8
-      ],
-      "value": 6
-     },
-     {
-      "type": "given",
-      "cell": [
-       7,
        1
       ],
       "value": 9
@@ -7276,15 +2214,55 @@
      {
       "type": "given",
       "cell": [
-       7,
+       0,
+       3
+      ],
+      "value": 5
+     },
+     {
+      "type": "given",
+      "cell": [
+       0,
        4
+      ],
+      "value": 3
+     },
+     {
+      "type": "given",
+      "cell": [
+       1,
+       0
       ],
       "value": 6
      },
      {
       "type": "given",
       "cell": [
-       7,
+       1,
+       4
+      ],
+      "value": 9
+     },
+     {
+      "type": "given",
+      "cell": [
+       1,
+       6
+      ],
+      "value": 1
+     },
+     {
+      "type": "given",
+      "cell": [
+       2,
+       2
+      ],
+      "value": 3
+     },
+     {
+      "type": "given",
+      "cell": [
+       2,
        6
       ],
       "value": 7
@@ -7292,23 +2270,63 @@
      {
       "type": "given",
       "cell": [
-       7,
+       3,
+       6
+      ],
+      "value": 6
+     },
+     {
+      "type": "given",
+      "cell": [
+       3,
        7
       ],
-      "value": 3
+      "value": 2
      },
      {
       "type": "given",
       "cell": [
-       8,
+       4,
+       1
+      ],
+      "value": 1
+     },
+     {
+      "type": "given",
+      "cell": [
+       4,
+       5
+      ],
+      "value": 2
+     },
+     {
+      "type": "given",
+      "cell": [
+       4,
+       7
+      ],
+      "value": 9
+     },
+     {
+      "type": "given",
+      "cell": [
+       5,
+       2
+      ],
+      "value": 4
+     },
+     {
+      "type": "given",
+      "cell": [
+       5,
        3
       ],
-      "value": 3
+      "value": 8
      },
      {
       "type": "given",
       "cell": [
-       8,
+       6,
        5
       ],
       "value": 7
@@ -7316,22 +2334,99 @@
      {
       "type": "given",
       "cell": [
-       8,
+       6,
+       8
+      ],
+      "value": 3
+     },
+     {
+      "type": "given",
+      "cell": [
+       7,
+       1
+      ],
+      "value": 8
+     },
+     {
+      "type": "given",
+      "cell": [
+       7,
+       2
+      ],
+      "value": 7
+     },
+     {
+      "type": "given",
+      "cell": [
+       7,
+       4
+      ],
+      "value": 1
+     },
+     {
+      "type": "given",
+      "cell": [
+       7,
        6
       ],
+      "value": 2
+     },
+     {
+      "type": "given",
+      "cell": [
+       8,
+       0
+      ],
       "value": 5
+     },
+     {
+      "type": "given",
+      "cell": [
+       8,
+       4
+      ],
+      "value": 6
      }
     ]
    },
-   "born": 1,
-   "parent": "e4s-g0-03",
-   "level": 2,
-   "evals": [],
-   "repair_added": 8,
-   "idea": "Remove givens that give easy singles in the top-left box and the bottom row."
+   "born": 0,
+   "parent": null,
+   "level": 3,
+   "evals": [
+    1.0,
+    1.0
+   ],
+   "answers": {
+    "0": {
+     "grid": [
+      "798531462",
+      "642798135",
+      "153426789",
+      "879153624",
+      "315642897",
+      "264879351",
+      "426987513",
+      "987315246",
+      "531264978"
+     ]
+    },
+    "1": {
+     "grid": [
+      "798531462",
+      "642798135",
+      "153426789",
+      "879153624",
+      "315642897",
+      "264879351",
+      "426987513",
+      "987315246",
+      "531264978"
+     ]
+    }
+   }
   },
   {
-   "id": "e4s-g1-14",
+   "id": "e4s-g0-02",
    "spec": {
     "family": "sudoku",
     "n": 9,
@@ -7341,103 +2436,103 @@
     ],
     "solution": [
      [
-      6,
-      5,
       1,
-      9,
-      7,
       4,
+      5,
+      2,
+      9,
+      3,
+      6,
+      7,
+      8
+     ],
+     [
       8,
+      6,
+      7,
+      1,
+      4,
+      5,
+      9,
       3,
       2
      ],
      [
-      3,
       2,
-      8,
-      1,
-      6,
-      5,
       9,
+      3,
+      8,
+      6,
       7,
+      4,
+      5,
+      1
+     ],
+     [
+      9,
+      3,
+      8,
+      6,
+      7,
+      1,
+      5,
+      2,
       4
      ],
      [
-      7,
-      4,
-      9,
-      8,
-      3,
-      2,
-      1,
       6,
-      5
+      7,
+      1,
+      4,
+      5,
+      2,
+      3,
+      8,
+      9
      ],
      [
-      8,
-      3,
-      5,
       4,
-      1,
-      6,
+      5,
       2,
       9,
-      7
-     ],
-     [
-      9,
+      3,
+      8,
       7,
-      2,
-      5,
-      8,
-      3,
-      4,
       1,
       6
      ],
      [
+      7,
       1,
-      6,
       4,
+      5,
       2,
       9,
-      7,
-      5,
       8,
+      6,
       3
      ],
      [
-      4,
-      1,
-      7,
-      3,
-      2,
-      9,
-      6,
       5,
-      8
-     ],
-     [
       2,
       9,
       3,
-      6,
-      5,
       8,
-      7,
+      6,
+      1,
       4,
-      1
+      7
      ],
      [
-      5,
+      3,
       8,
       6,
       7,
-      4,
       1,
-      3,
+      4,
       2,
-      9
+      9,
+      5
      ]
     ],
     "clues": [
@@ -7445,15 +2540,7 @@
       "type": "given",
       "cell": [
        0,
-       0
-      ],
-      "value": 6
-     },
-     {
-      "type": "given",
-      "cell": [
-       0,
-       1
+       2
       ],
       "value": 5
      },
@@ -7461,38 +2548,6 @@
       "type": "given",
       "cell": [
        0,
-       4
-      ],
-      "value": 7
-     },
-     {
-      "type": "given",
-      "cell": [
-       0,
-       6
-      ],
-      "value": 8
-     },
-     {
-      "type": "given",
-      "cell": [
-       1,
-       2
-      ],
-      "value": 8
-     },
-     {
-      "type": "given",
-      "cell": [
-       1,
-       4
-      ],
-      "value": 6
-     },
-     {
-      "type": "given",
-      "cell": [
-       1,
        7
       ],
       "value": 7
@@ -7500,10 +2555,34 @@
      {
       "type": "given",
       "cell": [
-       2,
+       0,
+       8
+      ],
+      "value": 8
+     },
+     {
+      "type": "given",
+      "cell": [
+       1,
        1
       ],
-      "value": 4
+      "value": 6
+     },
+     {
+      "type": "given",
+      "cell": [
+       1,
+       5
+      ],
+      "value": 5
+     },
+     {
+      "type": "given",
+      "cell": [
+       2,
+       0
+      ],
+      "value": 2
      },
      {
       "type": "given",
@@ -7519,23 +2598,7 @@
        2,
        6
       ],
-      "value": 1
-     },
-     {
-      "type": "given",
-      "cell": [
-       2,
-       8
-      ],
-      "value": 5
-     },
-     {
-      "type": "given",
-      "cell": [
-       3,
-       0
-      ],
-      "value": 8
+      "value": 4
      },
      {
       "type": "given",
@@ -7551,7 +2614,7 @@
        3,
        4
       ],
-      "value": 1
+      "value": 7
      },
      {
       "type": "given",
@@ -7559,7 +2622,7 @@
        3,
        8
       ],
-      "value": 7
+      "value": 4
      },
      {
       "type": "given",
@@ -7567,7 +2630,7 @@
        4,
        2
       ],
-      "value": 2
+      "value": 1
      },
      {
       "type": "given",
@@ -7575,69 +2638,45 @@
        4,
        4
       ],
+      "value": 5
+     },
+     {
+      "type": "given",
+      "cell": [
+       4,
+       7
+      ],
       "value": 8
      },
      {
       "type": "given",
       "cell": [
        5,
-       2
-      ],
-      "value": 4
-     },
-     {
-      "type": "given",
-      "cell": [
-       5,
-       6
-      ],
-      "value": 5
-     },
-     {
-      "type": "given",
-      "cell": [
-       5,
-       8
-      ],
-      "value": 3
-     },
-     {
-      "type": "given",
-      "cell": [
-       6,
-       0
-      ],
-      "value": 4
-     },
-     {
-      "type": "given",
-      "cell": [
-       6,
-       2
-      ],
-      "value": 7
-     },
-     {
-      "type": "given",
-      "cell": [
-       7,
-       0
-      ],
-      "value": 2
-     },
-     {
-      "type": "given",
-      "cell": [
-       7,
-       1
+       3
       ],
       "value": 9
      },
      {
       "type": "given",
       "cell": [
+       5,
+       5
+      ],
+      "value": 8
+     },
+     {
+      "type": "given",
+      "cell": [
+       6,
+       0
+      ],
+      "value": 7
+     },
+     {
+      "type": "given",
+      "cell": [
        7,
-       2
+       3
       ],
       "value": 3
      },
@@ -7647,15 +2686,15 @@
        7,
        4
       ],
-      "value": 5
+      "value": 8
      },
      {
       "type": "given",
       "cell": [
        7,
-       7
+       5
       ],
-      "value": 4
+      "value": 6
      },
      {
       "type": "given",
@@ -7669,9 +2708,9 @@
       "type": "given",
       "cell": [
        8,
-       5
+       6
       ],
-      "value": 1
+      "value": 2
      },
      {
       "type": "given",
@@ -7679,392 +2718,45 @@
        8,
        7
       ],
-      "value": 2
+      "value": 9
      }
     ]
    },
-   "born": 1,
-   "parent": "e4s-g0-07",
-   "level": 1,
-   "evals": [],
-   "repair_added": 6,
-   "idea": "Break the nearly complete row 2 and row 8."
-  },
-  {
-   "id": "e4s-g1-15",
-   "spec": {
-    "family": "sudoku",
-    "n": 9,
-    "box": [
-     3,
-     3
-    ],
-    "solution": [
-     [
-      6,
-      5,
-      1,
-      9,
-      7,
-      4,
-      8,
-      3,
-      2
-     ],
-     [
-      3,
-      2,
-      8,
-      1,
-      6,
-      5,
-      9,
-      7,
-      4
-     ],
-     [
-      7,
-      4,
-      9,
-      8,
-      3,
-      2,
-      1,
-      6,
-      5
-     ],
-     [
-      8,
-      3,
-      5,
-      4,
-      1,
-      6,
-      2,
-      9,
-      7
-     ],
-     [
-      9,
-      7,
-      2,
-      5,
-      8,
-      3,
-      4,
-      1,
-      6
-     ],
-     [
-      1,
-      6,
-      4,
-      2,
-      9,
-      7,
-      5,
-      8,
-      3
-     ],
-     [
-      4,
-      1,
-      7,
-      3,
-      2,
-      9,
-      6,
-      5,
-      8
-     ],
-     [
-      2,
-      9,
-      3,
-      6,
-      5,
-      8,
-      7,
-      4,
-      1
-     ],
-     [
-      5,
-      8,
-      6,
-      7,
-      4,
-      1,
-      3,
-      2,
-      9
+   "born": 0,
+   "parent": null,
+   "level": 3,
+   "evals": [
+    1.0,
+    1.0
+   ],
+   "answers": {
+    "0": {
+     "grid": [
+      "145293678",
+      "867145932",
+      "293867451",
+      "938671524",
+      "671452389",
+      "452938716",
+      "714529863",
+      "529386147",
+      "386714295"
      ]
-    ],
-    "clues": [
-     {
-      "type": "given",
-      "cell": [
-       0,
-       0
-      ],
-      "value": 6
-     },
-     {
-      "type": "given",
-      "cell": [
-       0,
-       4
-      ],
-      "value": 7
-     },
-     {
-      "type": "given",
-      "cell": [
-       0,
-       5
-      ],
-      "value": 4
-     },
-     {
-      "type": "given",
-      "cell": [
-       1,
-       2
-      ],
-      "value": 8
-     },
-     {
-      "type": "given",
-      "cell": [
-       1,
-       3
-      ],
-      "value": 1
-     },
-     {
-      "type": "given",
-      "cell": [
-       1,
-       4
-      ],
-      "value": 6
-     },
-     {
-      "type": "given",
-      "cell": [
-       1,
-       5
-      ],
-      "value": 5
-     },
-     {
-      "type": "given",
-      "cell": [
-       1,
-       7
-      ],
-      "value": 7
-     },
-     {
-      "type": "given",
-      "cell": [
-       2,
-       1
-      ],
-      "value": 4
-     },
-     {
-      "type": "given",
-      "cell": [
-       2,
-       3
-      ],
-      "value": 8
-     },
-     {
-      "type": "given",
-      "cell": [
-       2,
-       4
-      ],
-      "value": 3
-     },
-     {
-      "type": "given",
-      "cell": [
-       2,
-       8
-      ],
-      "value": 5
-     },
-     {
-      "type": "given",
-      "cell": [
-       3,
-       0
-      ],
-      "value": 8
-     },
-     {
-      "type": "given",
-      "cell": [
-       3,
-       2
-      ],
-      "value": 5
-     },
-     {
-      "type": "given",
-      "cell": [
-       3,
-       4
-      ],
-      "value": 1
-     },
-     {
-      "type": "given",
-      "cell": [
-       3,
-       5
-      ],
-      "value": 6
-     },
-     {
-      "type": "given",
-      "cell": [
-       3,
-       8
-      ],
-      "value": 7
-     },
-     {
-      "type": "given",
-      "cell": [
-       4,
-       1
-      ],
-      "value": 7
-     },
-     {
-      "type": "given",
-      "cell": [
-       4,
-       2
-      ],
-      "value": 2
-     },
-     {
-      "type": "given",
-      "cell": [
-       4,
-       4
-      ],
-      "value": 8
-     },
-     {
-      "type": "given",
-      "cell": [
-       4,
-       7
-      ],
-      "value": 1
-     },
-     {
-      "type": "given",
-      "cell": [
-       5,
-       2
-      ],
-      "value": 4
-     },
-     {
-      "type": "given",
-      "cell": [
-       5,
-       6
-      ],
-      "value": 5
-     },
-     {
-      "type": "given",
-      "cell": [
-       6,
-       2
-      ],
-      "value": 7
-     },
-     {
-      "type": "given",
-      "cell": [
-       6,
-       5
-      ],
-      "value": 9
-     },
-     {
-      "type": "given",
-      "cell": [
-       7,
-       0
-      ],
-      "value": 2
-     },
-     {
-      "type": "given",
-      "cell": [
-       7,
-       2
-      ],
-      "value": 3
-     },
-     {
-      "type": "given",
-      "cell": [
-       7,
-       4
-      ],
-      "value": 5
-     },
-     {
-      "type": "given",
-      "cell": [
-       8,
-       3
-      ],
-      "value": 7
-     },
-     {
-      "type": "given",
-      "cell": [
-       8,
-       5
-      ],
-      "value": 1
-     },
-     {
-      "type": "given",
-      "cell": [
-       8,
-       7
-      ],
-      "value": 2
-     },
-     {
-      "type": "given",
-      "cell": [
-       8,
-       8
-      ],
-      "value": 9
-     }
-    ]
-   },
-   "born": 1,
-   "parent": "e4s-g0-07",
-   "level": 1,
-   "evals": [],
-   "repair_added": 9,
-   "idea": "Fewer givens with no row or box close to complete."
+    },
+    "1": {
+     "grid": [
+      "145293678",
+      "867145932",
+      "293867451",
+      "938671524",
+      "671452389",
+      "452938716",
+      "714529863",
+      "529386147",
+      "386714295"
+     ]
+    }
+   }
   }
  ],
  "all": {
@@ -8377,7 +3069,8 @@
    "parent": null,
    "level": 3,
    "evals": [
-    0.9298245614035088
+    0.9298245614035088,
+    0.0
    ],
    "answers": {
     "0": {
@@ -8391,6 +3084,19 @@
       "123859674",
       "946132875",
       "875674312"
+     ]
+    },
+    "1": {
+     "grid": [
+      "060200050",
+      "000000900",
+      "708064000",
+      "094001500",
+      "007400030",
+      "002008000",
+      "100057004",
+      "000000800",
+      "000000310"
      ]
     }
    }
@@ -8696,10 +3402,24 @@
    "parent": null,
    "level": 3,
    "evals": [
+    1.0,
     1.0
    ],
    "answers": {
     "0": {
+     "grid": [
+      "798531462",
+      "642798135",
+      "153426789",
+      "879153624",
+      "315642897",
+      "264879351",
+      "426987513",
+      "987315246",
+      "531264978"
+     ]
+    },
+    "1": {
      "grid": [
       "798531462",
       "642798135",
@@ -9015,10 +3735,24 @@
    "parent": null,
    "level": 3,
    "evals": [
+    1.0,
     1.0
    ],
    "answers": {
     "0": {
+     "grid": [
+      "145293678",
+      "867145932",
+      "293867451",
+      "938671524",
+      "671452389",
+      "452938716",
+      "714529863",
+      "529386147",
+      "386714295"
+     ]
+    },
+    "1": {
      "grid": [
       "145293678",
       "867145932",
@@ -9350,10 +4084,24 @@
    "parent": null,
    "level": 3,
    "evals": [
+    1.0,
     1.0
    ],
    "answers": {
     "0": {
+     "grid": [
+      "376258194",
+      "149673825",
+      "852941367",
+      "287519643",
+      "634782951",
+      "915436278",
+      "723895416",
+      "598164732",
+      "461327589"
+     ]
+    },
+    "1": {
      "grid": [
       "376258194",
       "149673825",
@@ -9677,10 +4425,24 @@
    "parent": null,
    "level": 3,
    "evals": [
+    1.0,
     1.0
    ],
    "answers": {
     "0": {
+     "grid": [
+      "974381256",
+      "625749381",
+      "138256749",
+      "759413862",
+      "341862597",
+      "286597413",
+      "567934128",
+      "493128675",
+      "812675934"
+     ]
+    },
+    "1": {
      "grid": [
       "974381256",
       "625749381",
@@ -9996,10 +4758,24 @@
    "parent": null,
    "level": 3,
    "evals": [
+    1.0,
     1.0
    ],
    "answers": {
     "0": {
+     "grid": [
+      "826419357",
+      "419357682",
+      "357682941",
+      "573826419",
+      "268194573",
+      "194573826",
+      "735268194",
+      "682941735",
+      "941735268"
+     ]
+    },
+    "1": {
      "grid": [
       "826419357",
       "419357682",
@@ -10315,10 +5091,24 @@
    "parent": null,
    "level": 3,
    "evals": [
+    1.0,
     1.0
    ],
    "answers": {
     "0": {
+     "grid": [
+      "963452817",
+      "524718693",
+      "187396254",
+      "758631942",
+      "316249578",
+      "492875136",
+      "671923485",
+      "239584761",
+      "845167329"
+     ]
+    },
+    "1": {
      "grid": [
       "963452817",
       "524718693",
@@ -10666,10 +5456,24 @@
    "parent": null,
    "level": 3,
    "evals": [
+    1.0,
     1.0
    ],
    "answers": {
     "0": {
+     "grid": [
+      "651974832",
+      "328165974",
+      "749832165",
+      "835416297",
+      "972583416",
+      "164297583",
+      "417329658",
+      "293658741",
+      "586741329"
+     ]
+    },
+    "1": {
      "grid": [
       "651974832",
       "328165974",
@@ -11016,9 +5820,26 @@
    "born": 1,
    "parent": "e4s-g0-00",
    "level": 1,
-   "evals": [],
+   "evals": [
+    1.0
+   ],
    "repair_added": 6,
-   "idea": "Remove givens that make singles easy in the near-complete row 3 and in the lower-left box."
+   "idea": "Remove givens that make singles easy in the near-complete row 3 and in the lower-left box.",
+   "answers": {
+    "1": {
+     "grid": [
+      "469213758",
+      "231785946",
+      "758964123",
+      "694321587",
+      "587496231",
+      "312578469",
+      "123857694",
+      "946132875",
+      "875649312"
+     ]
+    }
+   }
   },
   "e4s-g1-01": {
    "id": "e4s-g1-01",
@@ -11344,9 +6165,26 @@
    "born": 1,
    "parent": "e4s-g0-00",
    "level": 1,
-   "evals": [],
+   "evals": [
+    1.0
+   ],
    "repair_added": 5,
-   "idea": "Fewer givens in the right side and top row so deductions need longer chains."
+   "idea": "Fewer givens in the right side and top row so deductions need longer chains.",
+   "answers": {
+    "1": {
+     "grid": [
+      "469213758",
+      "231785946",
+      "758964123",
+      "694321587",
+      "587496231",
+      "312578469",
+      "123857694",
+      "946132875",
+      "875649312"
+     ]
+    }
+   }
   },
   "e4s-g1-02": {
    "id": "e4s-g1-02",
@@ -11688,9 +6526,26 @@
    "born": 1,
    "parent": "e4s-g0-01",
    "level": 1,
-   "evals": [],
+   "evals": [
+    1.0
+   ],
    "repair_added": 8,
-   "idea": "Strip givens from the nearly complete row 8 and spread information thinner."
+   "idea": "Strip givens from the nearly complete row 8 and spread information thinner.",
+   "answers": {
+    "1": {
+     "grid": [
+      "798531462",
+      "642798135",
+      "153426789",
+      "879153624",
+      "315642897",
+      "264879351",
+      "426987513",
+      "987315246",
+      "531264978"
+     ]
+    }
+   }
   },
   "e4s-g1-03": {
    "id": "e4s-g1-03",
@@ -12000,9 +6855,26 @@
    "born": 1,
    "parent": "e4s-g0-01",
    "level": 1,
-   "evals": [],
+   "evals": [
+    1.0
+   ],
    "repair_added": 4,
-   "idea": "Remove central and corner givens so fewer easy singles appear."
+   "idea": "Remove central and corner givens so fewer easy singles appear.",
+   "answers": {
+    "1": {
+     "grid": [
+      "798531462",
+      "642798135",
+      "153426789",
+      "879153624",
+      "315642897",
+      "264879351",
+      "426987513",
+      "987315246",
+      "531264978"
+     ]
+    }
+   }
   },
   "e4s-g1-04": {
    "id": "e4s-g1-04",
@@ -12344,9 +7216,26 @@
    "born": 1,
    "parent": "e4s-g0-02",
    "level": 1,
-   "evals": [],
+   "evals": [
+    0.9245283018867925
+   ],
    "repair_added": 8,
-   "idea": "Remove givens that anchor the central cross-hatching of 5s and 8s."
+   "idea": "Remove givens that anchor the central cross-hatching of 5s and 8s.",
+   "answers": {
+    "1": {
+     "grid": [
+      "145293678",
+      "867145932",
+      "293867451",
+      "936715248",
+      "671452389",
+      "452938716",
+      "714529863",
+      "529386147",
+      "386741295"
+     ]
+    }
+   }
   },
   "e4s-g1-05": {
    "id": "e4s-g1-05",
@@ -12680,9 +7569,26 @@
    "born": 1,
    "parent": "e4s-g0-02",
    "level": 2,
-   "evals": [],
+   "evals": [
+    1.0
+   ],
    "repair_added": 7,
-   "idea": "Fewer givens in column 5 so the column offers no easy singles."
+   "idea": "Fewer givens in column 5 so the column offers no easy singles.",
+   "answers": {
+    "1": {
+     "grid": [
+      "145293678",
+      "867145932",
+      "293867451",
+      "938671524",
+      "671452389",
+      "452938716",
+      "714529863",
+      "529386147",
+      "386714295"
+     ]
+    }
+   }
   },
   "e4s-g1-06": {
    "id": "e4s-g1-06",
@@ -13024,9 +7930,26 @@
    "born": 1,
    "parent": "e4s-g0-05",
    "level": 1,
-   "evals": [],
+   "evals": [
+    0.0
+   ],
    "repair_added": 8,
-   "idea": "Remove givens that make the shifted-pattern deductions quick."
+   "idea": "Remove givens that make the shifted-pattern deductions quick.",
+   "answers": {
+    "1": {
+     "grid": [
+      "806019000",
+      "410007000",
+      "000082001",
+      "003000400",
+      "008000570",
+      "000070820",
+      "730008004",
+      "000040035",
+      "900005060"
+     ]
+    }
+   }
   },
   "e4s-g1-07": {
    "id": "e4s-g1-07",
@@ -13352,9 +8275,26 @@
    "born": 1,
    "parent": "e4s-g0-05",
    "level": 1,
-   "evals": [],
+   "evals": [
+    1.0
+   ],
    "repair_added": 6,
-   "idea": "Thin out rows 2, 6 and 7 so no row is nearly complete."
+   "idea": "Thin out rows 2, 6 and 7 so no row is nearly complete.",
+   "answers": {
+    "1": {
+     "grid": [
+      "826419357",
+      "419357682",
+      "357682941",
+      "573826419",
+      "268194573",
+      "194573826",
+      "735268194",
+      "682941735",
+      "941735268"
+     ]
+    }
+   }
   },
   "e4s-g1-08": {
    "id": "e4s-g1-08",
@@ -13672,9 +8612,26 @@
    "born": 1,
    "parent": "e4s-g0-06",
    "level": 1,
-   "evals": [],
+   "evals": [
+    0.0
+   ],
    "repair_added": 5,
-   "idea": "Remove givens from the fullest row and box to lengthen logic chains."
+   "idea": "Remove givens from the fullest row and box to lengthen logic chains.",
+   "answers": {
+    "1": {
+     "grid": [
+      "000050007",
+      "024000090",
+      "107036000",
+      "050600000",
+      "000240000",
+      "000800136",
+      "067000085",
+      "009004000",
+      "800000300"
+     ]
+    }
+   }
   },
   "e4s-g1-09": {
    "id": "e4s-g1-09",
@@ -13984,9 +8941,26 @@
    "born": 1,
    "parent": "e4s-g0-06",
    "level": 1,
-   "evals": [],
+   "evals": [
+    0.9473684210526315
+   ],
    "repair_added": 4,
-   "idea": "Remove scattered givens so information is spread thin across boxes."
+   "idea": "Remove scattered givens so information is spread thin across boxes.",
+   "answers": {
+    "1": {
+     "grid": [
+      "963452817",
+      "524718693",
+      "187396254",
+      "759631942",
+      "316249578",
+      "492857136",
+      "671923485",
+      "239584761",
+      "845167329"
+     ]
+    }
+   }
   },
   "e4s-g1-10": {
    "id": "e4s-g1-10",
@@ -14328,9 +9302,26 @@
    "born": 1,
    "parent": "e4s-g0-04",
    "level": 2,
-   "evals": [],
+   "evals": [
+    0.0
+   ],
    "repair_added": 7,
-   "idea": "Break the nearly complete row 6 and box 1 so easy singles disappear."
+   "idea": "Break the nearly complete row 6 and box 1 so easy singles disappear.",
+   "answers": {
+    "1": {
+     "grid": [
+      "904000200",
+      "005700080",
+      "100000009",
+      "700000060",
+      "040800000",
+      "286507010",
+      "067900028",
+      "000020600",
+      "010075000"
+     ]
+    }
+   }
   },
   "e4s-g1-11": {
    "id": "e4s-g1-11",
@@ -14680,9 +9671,26 @@
    "born": 1,
    "parent": "e4s-g0-04",
    "level": 1,
-   "evals": [],
+   "evals": [
+    1.0
+   ],
    "repair_added": 8,
-   "idea": "Remove givens from dense spots to lengthen deduction chains."
+   "idea": "Remove givens from dense spots to lengthen deduction chains.",
+   "answers": {
+    "1": {
+     "grid": [
+      "974381256",
+      "625749381",
+      "138256749",
+      "759413862",
+      "341862597",
+      "286597413",
+      "567934128",
+      "493128675",
+      "812675934"
+     ]
+    }
+   }
   },
   "e4s-g1-12": {
    "id": "e4s-g1-12",
@@ -15032,9 +10040,26 @@
    "born": 1,
    "parent": "e4s-g0-03",
    "level": 1,
-   "evals": [],
+   "evals": [
+    1.0
+   ],
    "repair_added": 7,
-   "idea": "Thin out the right side where rows 5 and 6 are nearly complete."
+   "idea": "Thin out the right side where rows 5 and 6 are nearly complete.",
+   "answers": {
+    "1": {
+     "grid": [
+      "376258194",
+      "149673825",
+      "852941367",
+      "287519643",
+      "634782951",
+      "915436278",
+      "723895416",
+      "598164732",
+      "461327589"
+     ]
+    }
+   }
   },
   "e4s-g1-13": {
    "id": "e4s-g1-13",
@@ -15392,9 +10417,26 @@
    "born": 1,
    "parent": "e4s-g0-03",
    "level": 2,
-   "evals": [],
+   "evals": [
+    1.0
+   ],
    "repair_added": 8,
-   "idea": "Remove givens that give easy singles in the top-left box and the bottom row."
+   "idea": "Remove givens that give easy singles in the top-left box and the bottom row.",
+   "answers": {
+    "1": {
+     "grid": [
+      "376258194",
+      "149673825",
+      "852941367",
+      "287519643",
+      "634782951",
+      "915436278",
+      "723895416",
+      "598164732",
+      "461327589"
+     ]
+    }
+   }
   },
   "e4s-g1-14": {
    "id": "e4s-g1-14",
@@ -15752,9 +10794,26 @@
    "born": 1,
    "parent": "e4s-g0-07",
    "level": 1,
-   "evals": [],
+   "evals": [
+    1.0
+   ],
    "repair_added": 6,
-   "idea": "Break the nearly complete row 2 and row 8."
+   "idea": "Break the nearly complete row 2 and row 8.",
+   "answers": {
+    "1": {
+     "grid": [
+      "651974832",
+      "328165974",
+      "749832165",
+      "835416297",
+      "972583416",
+      "164297583",
+      "417329658",
+      "293658741",
+      "586741329"
+     ]
+    }
+   }
   },
   "e4s-g1-15": {
    "id": "e4s-g1-15",
@@ -16128,9 +11187,26 @@
    "born": 1,
    "parent": "e4s-g0-07",
    "level": 1,
-   "evals": [],
+   "evals": [
+    1.0
+   ],
    "repair_added": 9,
-   "idea": "Fewer givens with no row or box close to complete."
+   "idea": "Fewer givens with no row or box close to complete.",
+   "answers": {
+    "1": {
+     "grid": [
+      "651974832",
+      "328165974",
+      "749832165",
+      "835416297",
+      "972583416",
+      "164297583",
+      "417329658",
+      "293658741",
+      "586741329"
+     ]
+    }
+   }
   }
  },
  "history": [
@@ -16279,6 +11355,39 @@
      "idea": "Fewer givens with no row or box close to complete.",
      "child": "e4s-g1-15"
     }
+   ]
+  },
+  {
+   "gen": 1,
+   "fitness": [
+    1.0,
+    1.0,
+    1.0,
+    0.5350877192982456,
+    0.07547169811320753,
+    0.052631578947368474,
+    0.0,
+    0.0
+   ],
+   "ids": [
+    "e4s-g1-08",
+    "e4s-g1-06",
+    "e4s-g1-10",
+    "e4s-g0-00",
+    "e4s-g1-04",
+    "e4s-g1-09",
+    "e4s-g0-01",
+    "e4s-g0-02"
+   ],
+   "n_evals": [
+    1,
+    1,
+    1,
+    2,
+    1,
+    1,
+    2,
+    2
    ]
   }
  ]
