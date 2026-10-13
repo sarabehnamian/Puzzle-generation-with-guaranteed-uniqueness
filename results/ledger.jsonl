@@ -248,3 +248,5 @@
 {"stage": "e4s_eval_g1", "call_id": "e4s_eval_g1_haiku_004", "model": "haiku", "model_id": "claude-haiku-5-5", "subagent_tokens": 160457, "tool_uses": 3, "duration_ms": 400060, "ts": "2026-10-13T20:30:43"}
 {"stage": "e4s_eval_g1", "call_id": "e4s_eval_g1_haiku_002", "model": "haiku", "model_id": "claude-haiku-5-5", "subagent_tokens": 142308, "tool_uses": 6, "duration_ms": 817972, "ts": "2026-10-13T20:37:40"}
 {"stage": "e4s_eval_g1", "call_id": "e4s_eval_g1_haiku_005", "model": "haiku", "model_id": "claude-haiku-5-5", "subagent_tokens": 152888, "tool_uses": 7, "duration_ms": 846661, "ts": "2026-10-13T20:38:10"}
+{"stage": "e4s_mut_g1", "call_id": "e4s_mut_g1_1", "model": "sonnet", "model_id": "claude-sonnet-5-5", "subagent_tokens": 48711, "tool_uses": 3, "duration_ms": 14941, "ts": "2026-10-13T20:38:44"}
+{"stage": "e4s_mut_g1", "call_id": "e4s_mut_g1_0", "model": "sonnet", "model_id": "claude-sonnet-5-5", "subagent_tokens": 52465, "tool_uses": 3, "duration_ms": 19018, "ts": "2026-10-13T20:38:44"}
