@@ -77,8 +77,34 @@ def main():
         models["logit_main"]["level_boot"] = [est, lo, hi]
     except Exception as e:  # noqa: BLE001
         models["logit_main"] = {"error": str(e)}
+    # the pooled model is quasi-separated (zebra and Opus are at ceiling); refit on the
+    # family x model cells that are not at ceiling
+    Dn = D[(D["family"] != "zebra") & (D["model"] != "opus")]
+    f_nc = "exact ~ level + C(family) + C(model)"
+    try:
+        fit = smf.logit(f_nc, Dn).fit(disp=0)
+
+        def slope_nc(df):
+            return smf.logit(f_nc, df).fit(disp=0).params["level"]
+        est, lo, hi = boot_cluster(Dn, slope_nc, "id", n_boot=500)
+        models["logit_nonceiling"] = {"params": fit.params.to_dict(), "bse": fit.bse.to_dict(),
+                                      "pvalues": fit.pvalues.to_dict(), "n": int(fit.nobs),
+                                      "level_boot": [est, lo, hi],
+                                      "subset": "families sudoku/killer/futoshiki, models haiku/sonnet"}
+    except Exception as e:  # noqa: BLE001
+        models["logit_nonceiling"] = {"error": str(e)}
+    # Haiku on Sudoku: the one cell with a clear accuracy gradient
+    Hs = D[(D["family"] == "sudoku") & (D["model"] == "haiku")]
+    try:
+        fit = smf.logit("exact ~ level", Hs).fit(disp=0)
+        est, lo, hi = boot_cluster(Hs, lambda df: smf.logit("exact ~ level", df).fit(disp=0).params["level"],
+                                   "id", n_boot=1000)
+        models["logit_sudoku_haiku"] = {"params": fit.params.to_dict(), "pvalues": fit.pvalues.to_dict(),
+                                        "n": int(fit.nobs), "level_boot": [est, lo, hi]}
+    except Exception as e:  # noqa: BLE001
+        models["logit_sudoku_haiku"] = {"error": str(e)}
     # does the ladder add information beyond solver metrics?
-    D2 = D.assign(log_conf=np.log1p(D["conflicts"]))
+    D2 = Dn.assign(log_conf=np.log1p(Dn["conflicts"]))
     for name, f in {"metrics_only": "exact ~ log_conf + mus_mean + n_clues + C(family) + C(model)",
                     "metrics_plus_level": "exact ~ level + log_conf + mus_mean + n_clues + C(family) + C(model)"}.items():
         try:

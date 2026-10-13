@@ -45,6 +45,11 @@
 {"id": "sudoku_x-01541", "model": "haiku", "answered": false, "cell_acc": 0.0, "exact": false, "family": "sudoku", "level": 3, "source": "minimal"}
 {"id": "sudoku_x-02971", "model": "haiku", "answered": false, "cell_acc": 0.0, "exact": false, "family": "sudoku", "level": 3, "source": "minimal"}
 {"id": "sudoku_x-03423", "model": "haiku", "answered": false, "cell_acc": 0.0, "exact": false, "family": "sudoku", "level": 3, "source": "minimal"}
+{"id": "sudoku_x-01679", "model": "haiku", "answered": true, "cell_acc": 0.9655172413793104, "exact": false, "family": "sudoku", "level": 2, "source": "minimal"}
+{"id": "sudoku_x-00374", "model": "haiku", "answered": true, "cell_acc": 1.0, "exact": true, "family": "sudoku", "level": 2, "source": "minimal"}
+{"id": "sudoku_x-01783", "model": "haiku", "answered": true, "cell_acc": 1.0, "exact": true, "family": "sudoku", "level": 3, "source": "minimal"}
+{"id": "sudoku_x-06144", "model": "haiku", "answered": true, "cell_acc": 1.0, "exact": true, "family": "sudoku", "level": 2, "source": "minimal"}
+{"id": "sudoku-00594", "model": "haiku", "answered": true, "cell_acc": 1.0, "exact": true, "family": "sudoku", "level": 3, "source": "minimal"}
 {"id": "sudoku_x-00552", "model": "haiku", "answered": true, "cell_acc": 1.0, "exact": true, "family": "sudoku", "level": 1, "source": "minimal"}
 {"id": "sudoku_x-02109", "model": "haiku", "answered": true, "cell_acc": 1.0, "exact": true, "family": "sudoku", "level": 3, "source": "minimal"}
 {"id": "sudoku_x-06719", "model": "haiku", "answered": true, "cell_acc": 1.0, "exact": true, "family": "sudoku", "level": 1, "source": "minimal"}
@@ -59,6 +64,11 @@
 {"id": "killer-00960", "model": "haiku", "answered": true, "cell_acc": 1.0, "exact": true, "family": "killer", "level": 3, "source": "minimal"}
 {"id": "killer-01174", "model": "haiku", "answered": true, "cell_acc": 1.0, "exact": true, "family": "killer", "level": 2, "source": "minimal"}
 {"id": "killer-00884", "model": "haiku", "answered": true, "cell_acc": 1.0, "exact": true, "family": "killer", "level": 2, "source": "minimal"}
+{"id": "killer-01205", "model": "haiku", "answered": true, "cell_acc": 1.0, "exact": true, "family": "killer", "level": 4, "source": "minimal"}
+{"id": "killer-01196-L1aug", "model": "haiku", "answered": true, "cell_acc": 1.0, "exact": true, "family": "killer", "level": 1, "source": "augmented"}
+{"id": "killer-00538", "model": "haiku", "answered": true, "cell_acc": 1.0, "exact": true, "family": "killer", "level": 4, "source": "minimal"}
+{"id": "killer-00163", "model": "haiku", "answered": true, "cell_acc": 1.0, "exact": true, "family": "killer", "level": 5, "source": "minimal"}
+{"id": "killer-00017", "model": "haiku", "answered": true, "cell_acc": 0.2777777777777778, "exact": false, "family": "killer", "level": 5, "source": "minimal"}
 {"id": "killer-00559", "model": "haiku", "answered": true, "cell_acc": 1.0, "exact": true, "family": "killer", "level": 3, "source": "minimal"}
 {"id": "killer-00706-L1aug", "model": "haiku", "answered": true, "cell_acc": 1.0, "exact": true, "family": "killer", "level": 1, "source": "augmented"}
 {"id": "killer-00048", "model": "haiku", "answered": true, "cell_acc": 1.0, "exact": true, "family": "killer", "level": 2, "source": "minimal"}
@@ -272,6 +282,10 @@
 {"id": "sudoku_x-01783", "model": "opus", "answered": true, "cell_acc": 1.0, "exact": true, "family": "sudoku", "level": 3, "source": "minimal"}
 {"id": "sudoku_x-06144", "model": "opus", "answered": true, "cell_acc": 1.0, "exact": true, "family": "sudoku", "level": 2, "source": "minimal"}
 {"id": "sudoku-00594", "model": "opus", "answered": true, "cell_acc": 1.0, "exact": true, "family": "sudoku", "level": 3, "source": "minimal"}
+{"id": "sudoku_x-00552", "model": "opus", "answered": true, "cell_acc": 1.0, "exact": true, "family": "sudoku", "level": 1, "source": "minimal"}
+{"id": "sudoku_x-02109", "model": "opus", "answered": true, "cell_acc": 1.0, "exact": true, "family": "sudoku", "level": 3, "source": "minimal"}
+{"id": "sudoku_x-06719", "model": "opus", "answered": true, "cell_acc": 1.0, "exact": true, "family": "sudoku", "level": 1, "source": "minimal"}
+{"id": "sudoku_x-00478", "model": "opus", "answered": true, "cell_acc": 1.0, "exact": true, "family": "sudoku", "level": 2, "source": "minimal"}
 {"id": "killer-00973", "model": "opus", "answered": true, "cell_acc": 1.0, "exact": true, "family": "killer", "level": 2, "source": "minimal"}
 {"id": "killer-01230", "model": "opus", "answered": true, "cell_acc": 1.0, "exact": true, "family": "killer", "level": 2, "source": "minimal"}
 {"id": "killer-00568-L1aug", "model": "opus", "answered": true, "cell_acc": 1.0, "exact": true, "family": "killer", "level": 1, "source": "augmented"}

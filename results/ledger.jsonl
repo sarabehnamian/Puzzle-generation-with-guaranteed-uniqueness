@@ -234,3 +234,6 @@
 {"stage": "e4b_heldout", "call_id": "e4b_heldout_sonnet_000", "model": "sonnet", "model_id": "claude-sonnet-5-5", "subagent_tokens": 67351, "tool_uses": 3, "duration_ms": 115541, "ts": "2026-10-13T20:12:51"}
 {"stage": "e4b_heldout", "call_id": "e4b_heldout_sonnet_001", "model": "sonnet", "model_id": "claude-sonnet-5-5", "subagent_tokens": 69647, "tool_uses": 3, "duration_ms": 133341, "ts": "2026-10-13T20:12:51"}
 {"stage": "e3_solve", "call_id": "e3_sudoku_opus_004", "model": "opus", "model_id": "claude-opus-5-5", "subagent_tokens": 92562, "tool_uses": 3, "duration_ms": 370720, "ts": "2026-10-13T20:12:51"}
+{"stage": "e4b_heldout", "call_id": "e4b_heldout_haiku_000", "model": "haiku", "model_id": "claude-haiku-5-5", "subagent_tokens": 91881, "tool_uses": 3, "duration_ms": 168761, "ts": "2026-10-13T20:12:58"}
+{"stage": "e3_solve", "call_id": "e3_sudoku_haiku_003", "model": "haiku", "model_id": "claude-haiku-5-5", "subagent_tokens": 174545, "tool_uses": 3, "duration_ms": 1390343, "ts": "2026-10-13T20:13:04"}
+{"stage": "e4b_heldout", "call_id": "e4b_heldout_haiku_001", "model": "haiku", "model_id": "claude-haiku-5-5", "subagent_tokens": 121697, "tool_uses": 4, "duration_ms": 217757, "ts": "2026-10-13T20:14:13"}
