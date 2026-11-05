@@ -18,7 +18,7 @@ Examples (from other puzzles):
 - "The person who reads poetry lives next to the person who drinks lemonade."
                                             ->  Abs(pos('poetry') - pos('lemonade')) == 1
 
-Output: write a single JSON object to the file /home/user/Puzzle-generation-with-guaranteed-uniqueness/data/llm_tasks/e1_encA/e1_encA_018.out.json with this exact structure
+Output: write a single JSON object to the file D:\Puzzle-generation-with-guaranteed-uniqueness\data\llm_tasks\e1_encA\e1_encA_018.out.json with this exact structure
 {"puzzles": [{"id": "<puzzle id>", "constraints": [{"clue": 1, "expr": "<expression>"}, ...]}, ...]}
 One entry per puzzle and exactly one constraint per numbered clue, in order. Use single quotes inside
 expressions so the JSON stays valid.
@@ -35,18 +35,18 @@ There are 5 houses in a row, numbered 1 to 5 from left to right. Each house has 
 - drink: milk, water, coffee, juice, tea
 
 Clues:
-1. The farmer drinks water.
-2. The doctor lives next to the tea drinker.
+1. The farmer's drink is water.
+2. The doctor lives next door to the tea drinker.
 3. The juice drinker and the milk drinker are neighbours.
 4. The chess enthusiast lives immediately left of the dog owner.
 5. The juice drinker lives directly right of the golf enthusiast.
-6. The rabbit owner lives in house 1.
-7. The doctor lives in house 4.
+6. The rabbit is kept in house 1.
+7. The doctor lives in the fourth house.
 8. The fish keeper's hobby is hiking.
 9. The pilot lives immediately left of the hiking enthusiast.
-10. The teacher lives immediately right of the pilot.
-11. The pilot lives directly right of the chess enthusiast.
-12. The cat owner lives next door to the golf enthusiast.
+10. The teacher lives directly right of the pilot.
+11. The chess enthusiast lives directly left of the pilot.
+12. The cat owner lives next to the golf enthusiast.
 13. The tennis enthusiast is the pilot.
 
 ## Puzzle plain:zebra-00006
@@ -221,18 +221,18 @@ There are 5 houses in a row, numbered 1 to 5 from left to right. Each house has 
 - nationality: Spaniard, Dane, Brit, Swede, German
 
 Clues:
-1. The dog owner and the keeper of the fish live next door to each other.
-2. The hiking enthusiast lives right beside the Swede.
-3. The Brit and the golf enthusiast have exactly one house between them.
-4. The horse owner lives in the fifth house.
-5. The Dane and the person in the yellow house are next-door neighbours.
-6. The Swede's home adjoins the white house.
-7. The fish keeper and the golf enthusiast live side by side.
-8. The person in the purple house is the golf enthusiast.
-9. The chess enthusiast is either the German or the Swede.
-10. The German lives immediately to the right of the yellow house's occupant.
-11. The bird owner lives in the blue house.
-12. The Spaniard is the one who enjoys cooking.
+1. The dog owner and the fish keeper live next door to each other.
+2. The hiking fan and the Swede are neighbours.
+3. The Brit and the golfer live two houses apart.
+4. The horse is kept in house 5.
+5. The Dane is a neighbour of the person in the yellow house.
+6. The Swede lives next to the white house.
+7. The fish keeper and the golf enthusiast are neighbours.
+8. The golf lover lives in the purple house.
+9. The chess player is either the German or the Swede.
+10. The German lives directly to the right of the yellow house.
+11. The bird lives in the blue house.
+12. The Spaniard's hobby is cooking.
 13. The cooking enthusiast lives in the white house.
 
 ## Puzzle paraphrase:zebra-00199
@@ -244,16 +244,16 @@ There are 5 houses in a row, numbered 1 to 5 from left to right. Each house has 
 - nationality: Brit, Dane, German, Norwegian, Spaniard
 
 Clues:
-1. The milk drinker is not the doctor.
-2. The baker lives directly to the right of the pilot.
-3. The chess enthusiast lives immediately to the left of the Brit.
-4. The pilot's house is immediately to the right of the farmer's.
-5. The painting enthusiast lives right after the Brit, immediately to the right.
-6. The Dane is the tea drinker.
+1. The doctor does not drink milk.
+2. The baker lives immediately to the right of the pilot.
+3. The chess enthusiast lives directly to the left of the Brit.
+4. The farmer lives just left of the pilot.
+5. The painting enthusiast lives immediately to the right of the Brit.
+6. The Dane drinks tea.
 7. The tea drinker lives next door to the tennis enthusiast.
 8. The chess enthusiast drinks coffee.
-9. Exactly one house lies between the Brit and the farmer.
+9. The Brit and the farmer have exactly one house between them.
 10. The Norwegian lives immediately to the right of the cooking enthusiast.
 11. The juice drinker lives next door to the Norwegian.
 12. The Spaniard is the lawyer.
-13. The doctor's house is immediately to the left of the farmer's.
+13. The farmer lives immediately to the right of the doctor.

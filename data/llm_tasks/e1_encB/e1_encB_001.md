@@ -18,7 +18,7 @@ Examples (from other puzzles):
 - "The person who reads poetry lives next to the person who drinks lemonade."
                                             ->  Abs(pos('poetry') - pos('lemonade')) == 1
 
-Output: write a single JSON object to the file /home/user/Puzzle-generation-with-guaranteed-uniqueness/data/llm_tasks/e1_encB/e1_encB_001.out.json with this exact structure
+Output: write a single JSON object to the file D:\Puzzle-generation-with-guaranteed-uniqueness\data\llm_tasks\e1_encB\e1_encB_001.out.json with this exact structure
 {"puzzles": [{"id": "<puzzle id>", "constraints": [{"clue": 1, "expr": "<expression>"}, ...]}, ...]}
 One entry per puzzle and exactly one constraint per numbered clue, in order. Use single quotes inside
 expressions so the JSON stays valid.
@@ -26,31 +26,31 @@ expressions so the JSON stays valid.
 The puzzles follow.
 
 
-## Puzzle paraphrase:zebra-00170
+## Puzzle paraphrase:zebra-00171
 
 There are 5 houses in a row, numbered 1 to 5 from left to right. Each house has one occupant. Every occupant has exactly one value from each category below, and no two occupants share a value within a category.
-- color: blue, green, white, yellow, red
-- nationality: Norwegian, German, Dane, Swede, Brit
-- drink: tea, milk, water, cocoa, coffee
-- hobby: hiking, chess, painting, tennis, golf
+- nationality: Norwegian, Dane, German, Spaniard, Swede
+- color: blue, purple, white, green, yellow
+- drink: coffee, cocoa, tea, water, milk
+- job: baker, farmer, lawyer, doctor, pilot
 
 Clues:
-1. The hiking fan is either the German or the Swede.
-2. Next door to the tea drinker lives the tennis enthusiast.
-3. Between the Norwegian and the resident of the white house there are exactly two houses' worth of distance: they are two houses apart.
-4. The person who enjoys painting lives immediately to the right of the person who enjoys hiking.
-5. The tennis enthusiast and the water drinker have exactly one house between them.
-6. One house separates the person who enjoys hiking from the person who enjoys tennis.
-7. Somewhere to the right of the white house's occupant lives the Swede.
-8. Whoever lives in the red house enjoys either golf or hiking.
-9. The Dane's hobby is golf.
-10. The Brit is the German's neighbour.
-11. The milk drinker is not a neighbour of the person who drinks tea.
-12. The coffee drinker's house is right beside the Dane's.
-13. The Swede's neighbour is the person in the yellow house.
-14. The person who enjoys chess lives immediately to the right of the green house's occupant.
-15. The tennis enthusiast lives further along to the right than the Brit.
-16. Further to the left than the cocoa drinker lives the coffee drinker.
+1. The Dane is the one who drinks tea.
+2. The resident of the blue house is either the Dane or the German.
+3. The milk drinker lives next door to the pilot.
+4. The Dane and the Spaniard live in neighbouring houses.
+5. The Norwegian lives next to the purple house.
+6. The resident of the yellow house is either the Dane or the Swede.
+7. The doctor drinks either coffee or water.
+8. The Swede lives in house 1.
+9. The pilot is not the person in the green house.
+10. The farmer's house has a lower number than the green house.
+11. The Norwegian lives right beside the water drinker.
+12. The milk drinker lives in one of the two end houses.
+13. The farmer lives somewhere to the left of the yellow house.
+14. The green house's occupant does not drink cocoa.
+15. The baker lives next door to the white house.
+16. The doctor and the Spaniard are next-door neighbours.
 
 ## Puzzle hard:zebra_hard-00020
 
@@ -84,16 +84,16 @@ There are 5 houses in a row, numbered 1 to 5 from left to right. Each house has 
 - drink: juice, tea, water, coffee, cocoa
 
 Clues:
-1. The person in the green house lives next door to the Spaniard.
+1. The green house and the Spaniard's home are next door to each other.
 2. The Dane is a pilot by trade.
-3. The occupant of the white house lives directly to the left of the Brit.
-4. The German is a tea drinker.
-5. The white house is one of the two end houses.
+3. The white house stands immediately to the left of the Brit's house.
+4. The German's drink is tea.
+5. The white house is at one of the two ends of the row.
 6. The coffee drinker is the farmer.
-7. The teacher lives right next door to the German, on his right-hand side.
-8. The water drinker's house sits immediately to the left of the juice drinker's house.
+7. The teacher lives right next door to the German, on his right.
+8. The water drinker's house is immediately to the left of the juice drinker's house.
 9. The Brit is the one who drinks water.
-10. The occupant of the red house lives further to the left than the baker.
+10. The red house is somewhere to the left of the baker's house.
 11. The occupant of the red house is either the baker or the doctor.
 12. The purple house is not house 3.
 
@@ -153,15 +153,15 @@ There are 5 houses in a row, numbered 1 to 5 from left to right. Each house has 
 - job: doctor, lawyer, farmer, teacher, baker
 
 Clues:
-1. The dog belongs to the Swede.
+1. The Swede keeps the dog.
 2. The baker lives directly to the left of the horse owner.
-3. The Swede is the one who drinks milk.
-4. The bird owner and the Swede live in neighbouring houses.
-5. The lawyer is the one who owns the bird.
+3. The Swede is the milk drinker.
+4. The bird owner lives right next to the Swede.
+5. The bird owner is the lawyer.
 6. The doctor is either the Dane or the Swede.
 7. The farmer lives immediately to the left of the dog owner.
-8. The lawyer lives somewhere further left than the cocoa drinker.
-9. The German lives directly to the left of the juice drinker.
+8. The lawyer lives somewhere to the left of the cocoa drinker.
+9. The German lives immediately to the left of the juice drinker.
 10. One house separates the Norwegian from the Swede.
 11. The doctor lives in the fifth house.
 12. The farmer drinks water.
@@ -200,19 +200,19 @@ There are 5 houses in a row, numbered 1 to 5 from left to right. Each house has 
 - color: purple, green, yellow, blue, white
 
 Clues:
-1. The fish lives in the yellow house.
-2. Chess is the bird owner's hobby.
+1. The fish owner lives in the yellow house.
+2. Chess is the hobby of the bird owner.
 3. The Dane lives immediately left of the horse owner.
-4. The Norwegian lives somewhere to the right of the green house's occupant.
-5. The cooking enthusiast lives somewhere to the right of the bird owner.
+4. The Norwegian lives somewhere to the right of the green house.
+5. The cooking enthusiast lives somewhere right of the bird owner.
 6. The cat owner is not the Norwegian.
 7. The dog owner lives immediately left of the Swede.
 8. The horse owner and the white house's occupant are neighbours.
-9. The Norwegian lives next door to the yellow house's occupant.
-10. The hiking enthusiast lives next to the purple house's occupant.
-11. The German lives immediately left of the fish keeper.
+9. The Norwegian and the yellow house's occupant are next-door neighbours.
+10. The hiking enthusiast lives next to the purple house.
+11. The German lives directly left of the fish owner.
 12. Cooking is the Spaniard's hobby.
-13. The tennis enthusiast lives in house 3.
+13. The tennis enthusiast lives in the third house.
 
 ## Puzzle plain:zebra-00076
 
@@ -247,16 +247,16 @@ There are 5 houses in a row, numbered 1 to 5 from left to right. Each house has 
 - nationality: Dane, German, Spaniard, Norwegian, Swede
 
 Clues:
-1. The Norwegian is the one who enjoys golf.
-2. The fish keeper lives somewhere to the left of the pilot.
+1. The golf enthusiast is the Norwegian.
+2. The fish owner lives somewhere to the left of the pilot.
 3. The cat owner and the German live two houses apart.
 4. The bird owner lives in the last house.
 5. The cat owner's hobby is either golf or hiking.
 6. The rabbit owner lives immediately to the left of the doctor.
 7. The farmer lives next door to the tennis enthusiast.
 8. The Swede is the doctor.
-9. The lawyer is the Dane.
-10. The Spaniard's home is house 2.
-11. The bird keeper and the chess enthusiast are neighbours.
-12. The farmer is the German.
-13. The Swede is the dog owner.
+9. The Dane is a lawyer by profession.
+10. The Spaniard lives in house 2.
+11. The bird owner and the chess enthusiast are neighbours.
+12. The German is the farmer.
+13. The Swede owns the dog.

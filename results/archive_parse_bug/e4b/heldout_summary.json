@@ -1,0 +1,32 @@
+{
+ "initial|haiku": {
+  "n": 8,
+  "exact": 0.875,
+  "cell_acc": 0.875
+ },
+ "initial|sonnet": {
+  "n": 8,
+  "exact": 0.875,
+  "cell_acc": 0.875
+ },
+ "initial|opus": {
+  "n": 8,
+  "exact": 1.0,
+  "cell_acc": 1.0
+ },
+ "final|haiku": {
+  "n": 8,
+  "exact": 0.75,
+  "cell_acc": 0.75
+ },
+ "final|sonnet": {
+  "n": 8,
+  "exact": 1.0,
+  "cell_acc": 1.0
+ },
+ "final|opus": {
+  "n": 8,
+  "exact": 1.0,
+  "cell_acc": 1.0
+ }
+}

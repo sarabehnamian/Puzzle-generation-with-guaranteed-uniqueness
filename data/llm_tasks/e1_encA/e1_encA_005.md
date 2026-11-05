@@ -18,7 +18,7 @@ Examples (from other puzzles):
 - "The person who reads poetry lives next to the person who drinks lemonade."
                                             ->  Abs(pos('poetry') - pos('lemonade')) == 1
 
-Output: write a single JSON object to the file /home/user/Puzzle-generation-with-guaranteed-uniqueness/data/llm_tasks/e1_encA/e1_encA_005.out.json with this exact structure
+Output: write a single JSON object to the file D:\Puzzle-generation-with-guaranteed-uniqueness\data\llm_tasks\e1_encA\e1_encA_005.out.json with this exact structure
 {"puzzles": [{"id": "<puzzle id>", "constraints": [{"clue": 1, "expr": "<expression>"}, ...]}, ...]}
 One entry per puzzle and exactly one constraint per numbered clue, in order. Use single quotes inside
 expressions so the JSON stays valid.
@@ -35,20 +35,20 @@ There are 5 houses in a row, numbered 1 to 5 from left to right. Each house has 
 - pet: dog, fish, horse, cat, bird
 
 Clues:
-1. The cat lives in the yellow house.
+1. The cat owner lives in the yellow house.
 2. The hiking enthusiast is either the lawyer or the pilot.
-3. The bird owner lives right next to the white house.
+3. The bird owner lives next to the white house's occupant.
 4. The fish owner lives directly to the left of the hiking enthusiast.
-5. The farmer is the cooking enthusiast.
-6. The chess enthusiast and the green house's occupant have exactly one house between them.
+5. The farmer enjoys cooking.
+6. Exactly one house lies between the chess enthusiast and the green house's occupant.
 7. The painting enthusiast and the teacher live in adjacent houses.
 8. The cooking enthusiast lives in one of the two end houses.
 9. The horse is kept in the blue house.
 10. The tennis enthusiast lives in either the blue house or the red house.
 11. The dog owner and the horse owner live in adjacent houses.
-12. The hiking enthusiast and the lawyer live in neighbouring houses.
+12. The hiking enthusiast and the lawyer live in adjacent houses.
 13. The painting enthusiast lives immediately to the left of the cat owner.
-14. Exactly one house lies between the blue house and the fish owner.
+14. Exactly one house separates the blue house's occupant from the fish owner.
 
 ## Puzzle plain:zebra-00041
 

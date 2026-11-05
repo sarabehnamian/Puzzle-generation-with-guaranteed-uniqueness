@@ -10,7 +10,7 @@ This repository contains the code, data, results and manuscript for a study of a
   probing → two-level lookahead → search) grades every puzzle, alongside solver statistics and
   minimal-unsatisfiable-core explanations for every fact.
 
-Experiments: E1 faithfulness of LLM encodings (299 zebra puzzles, 3 encoders), E2 validity of
+Experiments: E1 faithfulness of LLM encodings (298 zebra puzzles, 3 encoders), E2 validity of
 LLM-written puzzles with and without the solver loop, E3 ladder vs solver metrics vs accuracy of
 Haiku/Sonnet/Opus, E4 evolution of fair-but-hard puzzles against a solver, E5 genres invented by an LLM.
 
@@ -33,7 +33,7 @@ The manuscript is `paper/main.pdf`. The benchmark release is in `benchmark/` (se
 
 ```bash
 pip install -r requirements.txt
-pytest -q                                   # 16 tests
+pytest -q                                   # 17 tests
 python -m src.build_bank                    # certified banks (seeded; takes a while on 4 cores)
 python -m src.bank_stats
 ```
@@ -70,19 +70,29 @@ written by `src/make_numbers.py` from `results/`.
 
 ## How the model calls were made, and what a full run costs
 
-No API key was available when this study was run. Each call was therefore executed as a fresh
-Claude Code subagent (Haiku, Sonnet or Opus alias) that read one task file and wrote one output
-file, with no shared context between calls. The harness reports only total tokens per call; these
-are logged in `results/ledger.jsonl` and summarised in `results/cost_summary.json`.
+Every call goes through the Anthropic Messages API (`src/llm.py`: `claude-haiku-5-5`,
+`claude-sonnet-5-5`, `claude-opus-5-5`, adaptive thinking, effort `high`, 128k output limit,
+8 calls in parallel). Exact input/output tokens, stop reason and message id of every call are
+logged in `results/ledger.jsonl` and summarised in `results/cost_summary.json`. One experiment can
+be run end to end with
 
-* Calls made: see `total.calls` in `results/cost_summary.json` (about 250, 17M tokens including
-  a ~50k-token harness overhead per call).
-* Estimated cost of these calls at list prices without caching: about **$45** (upper bound:
-  the harness overhead is counted as uncached input).
-* Estimated cost of the same calls through the Messages API (no harness overhead): about **$26**.
+```bash
+PYTHONUTF8=1 python -m src.rerun_api e1      # or e2, e3, e4b, e4s, e5
+```
 
-The study is deliberately small (299 / 100 / 116 puzzles in E1 / E2 / E3). Scaling E1 and E3 by
-10x through the API would cost roughly $200-300 at the same token rates.
+(`PYTHONUTF8=1` matters on Windows, where Python otherwise reads and writes files as cp1252.)
+
+* Calls behind the reported results: 672, 8.4M tokens, about **$38** at list prices.
+* All calls including discarded runs: 971, about **$63**. Two runs were discarded: solving with
+  4-5 puzzles per call (Haiku hit the output limit and Sonnet guessed, so accuracy depended on the
+  batch; now one puzzle per call, `configs/config.json`), and an E4 run whose answer collector did
+  not accept single-puzzle replies without the JSON wrapper (fixed in `src/solve_stage.py`, with a
+  test). Both are kept in `data/llm_tasks_archive/`, `data/archive_*` and `results/archive_*`.
+* An earlier version of the study, made without an API key, ran the same task files through Claude
+  Code subagents; its outputs are on the `main` branch and its ledger is
+  `results/ledger_subagent.jsonl`. Only the abandoned E4 pilot (`data/e4`) still comes from it.
+
+The study is deliberately small (298 / 100 / 116 puzzles in E1 / E2 / E3).
 
 ## Licence
 

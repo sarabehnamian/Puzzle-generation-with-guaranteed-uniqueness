@@ -18,7 +18,7 @@ Examples (from other puzzles):
 - "The person who reads poetry lives next to the person who drinks lemonade."
                                             ->  Abs(pos('poetry') - pos('lemonade')) == 1
 
-Output: write a single JSON object to the file /home/user/Puzzle-generation-with-guaranteed-uniqueness/data/llm_tasks/e1_encB/e1_encB_024.out.json with this exact structure
+Output: write a single JSON object to the file D:\Puzzle-generation-with-guaranteed-uniqueness\data\llm_tasks\e1_encB\e1_encB_024.out.json with this exact structure
 {"puzzles": [{"id": "<puzzle id>", "constraints": [{"clue": 1, "expr": "<expression>"}, ...]}, ...]}
 One entry per puzzle and exactly one constraint per numbered clue, in order. Use single quotes inside
 expressions so the JSON stays valid.
@@ -155,17 +155,17 @@ There are 5 houses in a row, numbered 1 to 5 from left to right. Each house has 
 Clues:
 1. The golf enthusiast is either the Brit or the Spaniard.
 2. The doctor lives next door to the golf enthusiast.
-3. The cooking enthusiast lives right beside the purple house.
+3. The cooking enthusiast lives next to the purple house's occupant.
 4. The Swede lives somewhere to the right of the tennis enthusiast.
 5. The Swede is the teacher.
 6. The white house and the yellow house are two houses apart.
 7. The baker and the pilot are next-door neighbours.
-8. The lawyer and the yellow house's occupant live in adjacent houses.
+8. The lawyer lives in a house adjacent to the yellow house.
 9. The chess enthusiast lives in the red house.
 10. The Brit is the lawyer.
 11. The Dane does not live in the fourth house.
-12. The purple house is directly to the left of the pilot.
-13. The German lives in the purple house.
+12. The purple house is immediately to the left of the pilot's.
+13. The occupant of the purple house is the German.
 14. The hiking enthusiast lives immediately to the right of the red house.
 
 ## Puzzle plain:zebra-00073

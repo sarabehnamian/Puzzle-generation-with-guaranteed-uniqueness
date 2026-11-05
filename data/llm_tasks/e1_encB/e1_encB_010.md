@@ -18,7 +18,7 @@ Examples (from other puzzles):
 - "The person who reads poetry lives next to the person who drinks lemonade."
                                             ->  Abs(pos('poetry') - pos('lemonade')) == 1
 
-Output: write a single JSON object to the file /home/user/Puzzle-generation-with-guaranteed-uniqueness/data/llm_tasks/e1_encB/e1_encB_010.out.json with this exact structure
+Output: write a single JSON object to the file D:\Puzzle-generation-with-guaranteed-uniqueness\data\llm_tasks\e1_encB\e1_encB_010.out.json with this exact structure
 {"puzzles": [{"id": "<puzzle id>", "constraints": [{"clue": 1, "expr": "<expression>"}, ...]}, ...]}
 One entry per puzzle and exactly one constraint per numbered clue, in order. Use single quotes inside
 expressions so the JSON stays valid.
@@ -59,18 +59,18 @@ There are 5 houses in a row, numbered 1 to 5 from left to right. Each house has 
 - pet: fish, horse, cat, dog, rabbit
 
 Clues:
-1. The Dane is the one with the fish.
+1. The Dane is the one who owns the fish.
 2. The tea drinker and the water drinker live next door to each other.
-3. The horse is kept in the purple house.
-4. The Swede's house has a lower number than the horse owner's.
+3. The purple house's occupant keeps the horse.
+4. The Swede lives in a lower-numbered house than the horse owner.
 5. The German drinks either milk or tea.
 6. The red house is house 4.
-7. The Brit and the dog owner live in adjacent houses.
-8. The white house is where the dog owner lives.
+7. The Brit lives right beside the dog owner.
+8. The dog owner lives in the white house.
 9. The blue house is the first house.
-10. Exactly one house lies between the milk drinker and the rabbit owner.
-11. The Brit occupies the middle house.
-12. The coffee drinker lives immediately to the right of the purple house's occupant.
+10. The milk drinker and the rabbit owner have exactly one house between them.
+11. The Brit lives in the middle house.
+12. The coffee drinker lives immediately to the right of the purple house.
 13. The cat owner lives in the first house.
 14. The water drinker lives in one of the two end houses.
 
@@ -83,18 +83,18 @@ There are 5 houses in a row, numbered 1 to 5 from left to right. Each house has 
 - drink: milk, water, coffee, juice, tea
 
 Clues:
-1. The farmer drinks water.
-2. The doctor lives next to the tea drinker.
+1. The farmer's drink is water.
+2. The doctor lives next door to the tea drinker.
 3. The juice drinker and the milk drinker are neighbours.
 4. The chess enthusiast lives immediately left of the dog owner.
 5. The juice drinker lives directly right of the golf enthusiast.
-6. The rabbit owner lives in house 1.
-7. The doctor lives in house 4.
+6. The rabbit is kept in house 1.
+7. The doctor lives in the fourth house.
 8. The fish keeper's hobby is hiking.
 9. The pilot lives immediately left of the hiking enthusiast.
-10. The teacher lives immediately right of the pilot.
-11. The pilot lives directly right of the chess enthusiast.
-12. The cat owner lives next door to the golf enthusiast.
+10. The teacher lives directly right of the pilot.
+11. The chess enthusiast lives directly left of the pilot.
+12. The cat owner lives next to the golf enthusiast.
 13. The tennis enthusiast is the pilot.
 
 ## Puzzle hard:zebra_hard-00040

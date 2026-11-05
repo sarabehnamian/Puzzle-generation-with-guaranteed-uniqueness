@@ -18,7 +18,7 @@ Examples (from other puzzles):
 - "The person who reads poetry lives next to the person who drinks lemonade."
                                             ->  Abs(pos('poetry') - pos('lemonade')) == 1
 
-Output: write a single JSON object to the file /home/user/Puzzle-generation-with-guaranteed-uniqueness/data/llm_tasks/e1_encC/e1_encC_011.out.json with this exact structure
+Output: write a single JSON object to the file D:\Puzzle-generation-with-guaranteed-uniqueness\data\llm_tasks\e1_encC\e1_encC_011.out.json with this exact structure
 {"puzzles": [{"id": "<puzzle id>", "constraints": [{"clue": 1, "expr": "<expression>"}, ...]}, ...]}
 One entry per puzzle and exactly one constraint per numbered clue, in order. Use single quotes inside
 expressions so the JSON stays valid.
@@ -149,19 +149,19 @@ There are 5 houses in a row, numbered 1 to 5 from left to right. Each house has 
 - color: blue, white, green, yellow, red
 
 Clues:
-1. The yellow house is the first house.
-2. The occupant of the blue house does not drink tea.
-3. The cocoa drinker and the Norwegian do not live next door to each other.
-4. The water drinker and the white house have exactly one house between them.
-5. The blue house's occupant and the cocoa drinker are not the same person.
+1. The yellow house is house number 1.
+2. The blue house's occupant does not drink tea.
+3. The cocoa drinker and the Norwegian do not live next to each other.
+4. One house lies between the water drinker and the white house.
+5. The blue house's occupant is not the cocoa drinker.
 6. The doctor and the water drinker live two houses apart.
-7. The blue house stands directly to the left of the Dane's house.
+7. The blue house is immediately to the left of the Dane's house.
 8. The red house is not next door to the teacher.
 9. The lawyer and the Spaniard live two houses apart.
-10. The pilot and the tea drinker live next door to each other.
-11. One house separates the cocoa drinker from the Spaniard.
-12. The German lives right beside the white house.
-13. The green house stands directly to the left of the cocoa drinker's house.
+10. The pilot lives next door to the tea drinker.
+11. There is one house between the cocoa drinker and the Spaniard.
+12. The German and the white house's occupant are neighbours.
+13. The green house is directly left of the cocoa drinker's house.
 14. The coffee drinker lives in the white house.
 
 ## Puzzle hard:zebra_hard-00021

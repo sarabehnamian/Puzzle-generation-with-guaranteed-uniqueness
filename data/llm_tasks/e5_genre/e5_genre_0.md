@@ -24,7 +24,7 @@ Write each genre as Python source using ONLY this API (no imports):
 it may use + - * // % == != < <= > >= and/or/not, abs, min, max, sum, len, set, sorted, all, any.
 Keep clue scopes small (at most 4 cells). Make sure solutions to rules(g) exist.
 
-Output: write a single JSON object to the file /home/user/Puzzle-generation-with-guaranteed-uniqueness/data/llm_tasks/e5_genre/e5_genre_0.out.json with this structure
+Output: write a single JSON object to the file D:\Puzzle-generation-with-guaranteed-uniqueness\data\llm_tasks\e5_genre\e5_genre_0.out.json with this structure
 {"genres": [{"name": "<name>", "rules_text": "<rules a human solver would read, 2-5 sentences>",
              "clue_text": "<how clues are shown to the solver>", "code": "<python source>"}, ...]}
 

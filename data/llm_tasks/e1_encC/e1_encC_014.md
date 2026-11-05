@@ -18,7 +18,7 @@ Examples (from other puzzles):
 - "The person who reads poetry lives next to the person who drinks lemonade."
                                             ->  Abs(pos('poetry') - pos('lemonade')) == 1
 
-Output: write a single JSON object to the file /home/user/Puzzle-generation-with-guaranteed-uniqueness/data/llm_tasks/e1_encC/e1_encC_014.out.json with this exact structure
+Output: write a single JSON object to the file D:\Puzzle-generation-with-guaranteed-uniqueness\data\llm_tasks\e1_encC\e1_encC_014.out.json with this exact structure
 {"puzzles": [{"id": "<puzzle id>", "constraints": [{"clue": 1, "expr": "<expression>"}, ...]}, ...]}
 One entry per puzzle and exactly one constraint per numbered clue, in order. Use single quotes inside
 expressions so the JSON stays valid.
@@ -180,19 +180,19 @@ There are 5 houses in a row, numbered 1 to 5 from left to right. Each house has 
 
 Clues:
 1. The cocoa drinker and the Swede live next door to each other.
-2. The cat owner does not live next door to the Swede.
-3. The Spaniard is the rabbit keeper.
-4. The Dane lives directly to the left of the fish owner.
-5. The milk drinker lives immediately to the left of the fish owner.
-6. The German and the green house's occupant live two houses apart.
+2. The cat owner does not live next to the Swede.
+3. The Spaniard keeps the rabbit.
+4. The Dane's house is immediately to the left of the fish owner's house.
+5. The milk drinker lives directly to the left of the fish owner.
+6. The German and the green house are two houses apart.
 7. The rabbit owner lives somewhere to the right of the fish owner.
 8. The coffee drinker lives in either the blue house or the white house.
 9. The German lives in house 4.
 10. The juice drinker lives in the blue house.
 11. The milk drinker lives in the yellow house.
-12. The German is not next door to the horse owner.
-13. The blue house stands directly to the left of the Spaniard.
-14. The cat keeper lives next door to the Spaniard.
+12. The German is not a neighbour of the horse owner.
+13. The blue house is directly to the left of the Spaniard's house.
+14. The cat owner lives next door to the Spaniard.
 
 ## Puzzle hard:zebra_hard-00087
 

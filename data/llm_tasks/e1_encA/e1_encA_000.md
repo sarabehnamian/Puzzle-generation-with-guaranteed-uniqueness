@@ -18,7 +18,7 @@ Examples (from other puzzles):
 - "The person who reads poetry lives next to the person who drinks lemonade."
                                             ->  Abs(pos('poetry') - pos('lemonade')) == 1
 
-Output: write a single JSON object to the file /home/user/Puzzle-generation-with-guaranteed-uniqueness/data/llm_tasks/e1_encA/e1_encA_000.out.json with this exact structure
+Output: write a single JSON object to the file D:\Puzzle-generation-with-guaranteed-uniqueness\data\llm_tasks\e1_encA\e1_encA_000.out.json with this exact structure
 {"puzzles": [{"id": "<puzzle id>", "constraints": [{"clue": 1, "expr": "<expression>"}, ...]}, ...]}
 One entry per puzzle and exactly one constraint per numbered clue, in order. Use single quotes inside
 expressions so the JSON stays valid.
@@ -86,16 +86,16 @@ There are 5 houses in a row, numbered 1 to 5 from left to right. Each house has 
 - pet: horse, dog, cat, bird, rabbit
 
 Clues:
-1. The white house is somewhere to the left of the bird owner.
-2. The yellow house is house 5.
+1. The white house's occupant lives somewhere to the left of the bird owner.
+2. The yellow house's occupant lives in house 5.
 3. The tennis enthusiast is the lawyer.
-4. The rabbit is kept in the leftmost house.
-5. The cooking enthusiast and the lawyer are two houses apart.
-6. The blue house's occupant is the chess enthusiast.
-7. Exactly one house lies between the horse owner and the red house.
+4. The rabbit keeper lives in the leftmost house.
+5. The cooking enthusiast and the lawyer live two houses apart.
+6. The blue house's occupant enjoys chess.
+7. Exactly one house lies between the horse owner and the red house's occupant.
 8. The blue house's occupant is not the doctor.
-9. The cooking enthusiast and the white house's occupant are two houses apart.
-10. The horse owner is the hiking enthusiast.
+9. The cooking enthusiast and the white house's occupant live two houses apart.
+10. The horse owner enjoys hiking.
 11. The baker lives in house 2.
 12. The pilot's hobby is either painting or tennis.
 13. The chess enthusiast and the white house's occupant are not neighbours.
@@ -241,27 +241,28 @@ Clues:
 13. The teacher lives in the leftmost house.
 14. The German and the owner of the rabbit live in adjacent houses.
 
-## Puzzle paraphrase:zebra-00162
+## Puzzle paraphrase:zebra-00163
 
 There are 5 houses in a row, numbered 1 to 5 from left to right. Each house has one occupant. Every occupant has exactly one value from each category below, and no two occupants share a value within a category.
-- color: purple, white, yellow, red, green
-- hobby: hiking, cooking, painting, golf, tennis
-- pet: horse, dog, bird, cat, rabbit
-- drink: juice, cocoa, milk, water, coffee
+- job: doctor, lawyer, teacher, baker, farmer
+- pet: bird, horse, dog, rabbit, fish
+- hobby: painting, hiking, golf, tennis, chess
+- drink: cocoa, water, tea, juice, coffee
 
 Clues:
-1. The hiker and the juice drinker live in neighbouring houses.
-2. The tennis player lives directly to the right of the green house's occupant.
-3. The white house is the last one in the row.
-4. The purple house is where the hiker lives.
-5. The cooking enthusiast lives immediately to the left of the hiker.
-6. The rabbit's owner lives in the white house.
-7. The dog owner lives next door to the juice drinker.
-8. The green house's occupant and the water drinker are neighbours.
-9. The green house and the milk drinker's house stand side by side.
-10. The hiker keeps either the bird or the cat.
-11. The tennis player lives immediately to the right of the cat's owner.
-12. The golfer lives in house 5.
-13. The milk drinker lives further left in the row than the water drinker.
-14. The cocoa drinker lives right next to the hiker.
-15. Exactly one house separates the green house from the yellow house.
+1. The chess player lives somewhere to the left of the golfer.
+2. The golfer does not live next to the water drinker.
+3. The doctor's hobby is hiking.
+4. The cocoa drinker enjoys chess.
+5. The rabbit owner lives in house 5.
+6. The horse owner lives at one end of the row.
+7. The chess player does not keep the fish.
+8. The chess player lives next to the farmer.
+9. The hiker and the horse owner live two houses apart.
+10. The juice drinker lives directly to the left of the lawyer.
+11. The baker and the doctor are not neighbours.
+12. The water drinker lives at one end of the row.
+13. The dog owner lives in the middle house.
+14. The horse owner lives immediately to the left of the chess player.
+15. The tennis enthusiast is the baker.
+16. The coffee drinker and the doctor live two houses apart.

@@ -1,0 +1,32 @@
+{
+ "initial|haiku": {
+  "n": 8,
+  "exact": 0.625,
+  "cell_acc": 0.978182255206983
+ },
+ "initial|sonnet": {
+  "n": 8,
+  "exact": 0.875,
+  "cell_acc": 0.9933035714285714
+ },
+ "initial|opus": {
+  "n": 8,
+  "exact": 1.0,
+  "cell_acc": 1.0
+ },
+ "final|haiku": {
+  "n": 8,
+  "exact": 0.5,
+  "cell_acc": 0.9654728727485188
+ },
+ "final|sonnet": {
+  "n": 8,
+  "exact": 0.875,
+  "cell_acc": 0.9975490196078431
+ },
+ "final|opus": {
+  "n": 8,
+  "exact": 0.875,
+  "cell_acc": 0.9950980392156863
+ }
+}

@@ -1,0 +1,1102 @@
+{
+ "n_puzzles": 116,
+ "n_scores": 348,
+ "accuracy": [
+  {
+   "family": "futoshiki",
+   "level": 1,
+   "model": "haiku",
+   "n": 8,
+   "exact": 1.0,
+   "exact_lo": 1.0,
+   "exact_hi": 1.0,
+   "cell": 1.0,
+   "cell_lo": 1.0,
+   "cell_hi": 1.0
+  },
+  {
+   "family": "futoshiki",
+   "level": 1,
+   "model": "opus",
+   "n": 8,
+   "exact": 0.875,
+   "exact_lo": 0.625,
+   "exact_hi": 1.0,
+   "cell": 0.9833333333333334,
+   "cell_lo": 0.95,
+   "cell_hi": 1.0
+  },
+  {
+   "family": "futoshiki",
+   "level": 1,
+   "model": "sonnet",
+   "n": 8,
+   "exact": 0.5,
+   "exact_lo": 0.125,
+   "exact_hi": 0.875,
+   "cell": 0.6842320261437909,
+   "cell_lo": 0.375,
+   "cell_hi": 0.9791666666666667
+  },
+  {
+   "family": "futoshiki",
+   "level": 2,
+   "model": "haiku",
+   "n": 8,
+   "exact": 0.875,
+   "exact_lo": 0.625,
+   "exact_hi": 1.0,
+   "cell": 0.9895833333333333,
+   "cell_lo": 0.96875,
+   "cell_hi": 1.0
+  },
+  {
+   "family": "futoshiki",
+   "level": 2,
+   "model": "opus",
+   "n": 8,
+   "exact": 1.0,
+   "exact_lo": 1.0,
+   "exact_hi": 1.0,
+   "cell": 1.0,
+   "cell_lo": 1.0,
+   "cell_hi": 1.0
+  },
+  {
+   "family": "futoshiki",
+   "level": 2,
+   "model": "sonnet",
+   "n": 8,
+   "exact": 0.75,
+   "exact_lo": 0.375,
+   "exact_hi": 1.0,
+   "cell": 0.828125,
+   "cell_lo": 0.5833333333333334,
+   "cell_hi": 1.0
+  },
+  {
+   "family": "futoshiki",
+   "level": 3,
+   "model": "haiku",
+   "n": 8,
+   "exact": 0.875,
+   "exact_lo": 0.625,
+   "exact_hi": 1.0,
+   "cell": 0.9895833333333333,
+   "cell_lo": 0.96875,
+   "cell_hi": 1.0
+  },
+  {
+   "family": "futoshiki",
+   "level": 3,
+   "model": "opus",
+   "n": 8,
+   "exact": 0.875,
+   "exact_lo": 0.625,
+   "exact_hi": 1.0,
+   "cell": 0.9895833333333333,
+   "cell_lo": 0.96875,
+   "cell_hi": 1.0
+  },
+  {
+   "family": "futoshiki",
+   "level": 3,
+   "model": "sonnet",
+   "n": 8,
+   "exact": 0.625,
+   "exact_lo": 0.25,
+   "exact_hi": 0.875,
+   "cell": 0.65625,
+   "cell_lo": 0.34375,
+   "cell_hi": 0.90625
+  },
+  {
+   "family": "killer",
+   "level": 1,
+   "model": "haiku",
+   "n": 8,
+   "exact": 0.75,
+   "exact_lo": 0.375,
+   "exact_hi": 1.0,
+   "cell": 0.8663793103448276,
+   "cell_lo": 0.6163793103448276,
+   "cell_hi": 1.0
+  },
+  {
+   "family": "killer",
+   "level": 1,
+   "model": "opus",
+   "n": 8,
+   "exact": 1.0,
+   "exact_lo": 1.0,
+   "exact_hi": 1.0,
+   "cell": 1.0,
+   "cell_lo": 1.0,
+   "cell_hi": 1.0
+  },
+  {
+   "family": "killer",
+   "level": 1,
+   "model": "sonnet",
+   "n": 8,
+   "exact": 1.0,
+   "exact_lo": 1.0,
+   "exact_hi": 1.0,
+   "cell": 1.0,
+   "cell_lo": 1.0,
+   "cell_hi": 1.0
+  },
+  {
+   "family": "killer",
+   "level": 2,
+   "model": "haiku",
+   "n": 8,
+   "exact": 0.625,
+   "exact_lo": 0.25,
+   "exact_hi": 1.0,
+   "cell": 0.8345588235294118,
+   "cell_lo": 0.5845588235294118,
+   "cell_hi": 1.0
+  },
+  {
+   "family": "killer",
+   "level": 2,
+   "model": "opus",
+   "n": 8,
+   "exact": 1.0,
+   "exact_lo": 1.0,
+   "exact_hi": 1.0,
+   "cell": 1.0,
+   "cell_lo": 1.0,
+   "cell_hi": 1.0
+  },
+  {
+   "family": "killer",
+   "level": 2,
+   "model": "sonnet",
+   "n": 8,
+   "exact": 1.0,
+   "exact_lo": 1.0,
+   "exact_hi": 1.0,
+   "cell": 1.0,
+   "cell_lo": 1.0,
+   "cell_hi": 1.0
+  },
+  {
+   "family": "killer",
+   "level": 3,
+   "model": "haiku",
+   "n": 8,
+   "exact": 0.625,
+   "exact_lo": 0.25,
+   "exact_hi": 1.0,
+   "cell": 0.625,
+   "cell_lo": 0.25,
+   "cell_hi": 1.0
+  },
+  {
+   "family": "killer",
+   "level": 3,
+   "model": "opus",
+   "n": 8,
+   "exact": 1.0,
+   "exact_lo": 1.0,
+   "exact_hi": 1.0,
+   "cell": 1.0,
+   "cell_lo": 1.0,
+   "cell_hi": 1.0
+  },
+  {
+   "family": "killer",
+   "level": 3,
+   "model": "sonnet",
+   "n": 8,
+   "exact": 1.0,
+   "exact_lo": 1.0,
+   "exact_hi": 1.0,
+   "cell": 1.0,
+   "cell_lo": 1.0,
+   "cell_hi": 1.0
+  },
+  {
+   "family": "killer",
+   "level": 4,
+   "model": "haiku",
+   "n": 8,
+   "exact": 0.875,
+   "exact_lo": 0.625,
+   "exact_hi": 1.0,
+   "cell": 0.875,
+   "cell_lo": 0.625,
+   "cell_hi": 1.0
+  },
+  {
+   "family": "killer",
+   "level": 4,
+   "model": "opus",
+   "n": 8,
+   "exact": 1.0,
+   "exact_lo": 1.0,
+   "exact_hi": 1.0,
+   "cell": 1.0,
+   "cell_lo": 1.0,
+   "cell_hi": 1.0
+  },
+  {
+   "family": "killer",
+   "level": 4,
+   "model": "sonnet",
+   "n": 8,
+   "exact": 0.75,
+   "exact_lo": 0.375,
+   "exact_hi": 1.0,
+   "cell": 0.9857142857142858,
+   "cell_lo": 0.9642857142857143,
+   "cell_hi": 1.0
+  },
+  {
+   "family": "killer",
+   "level": 5,
+   "model": "haiku",
+   "n": 4,
+   "exact": 0.75,
+   "exact_lo": 0.25,
+   "exact_hi": 1.0,
+   "cell": 0.75,
+   "cell_lo": 0.25,
+   "cell_hi": 1.0
+  },
+  {
+   "family": "killer",
+   "level": 5,
+   "model": "opus",
+   "n": 4,
+   "exact": 1.0,
+   "exact_lo": 1.0,
+   "exact_hi": 1.0,
+   "cell": 1.0,
+   "cell_lo": 1.0,
+   "cell_hi": 1.0
+  },
+  {
+   "family": "killer",
+   "level": 5,
+   "model": "sonnet",
+   "n": 4,
+   "exact": 1.0,
+   "exact_lo": 1.0,
+   "exact_hi": 1.0,
+   "cell": 1.0,
+   "cell_lo": 1.0,
+   "cell_hi": 1.0
+  },
+  {
+   "family": "sudoku",
+   "level": 1,
+   "model": "haiku",
+   "n": 8,
+   "exact": 0.625,
+   "exact_lo": 0.25,
+   "exact_hi": 1.0,
+   "cell": 0.625,
+   "cell_lo": 0.25,
+   "cell_hi": 1.0
+  },
+  {
+   "family": "sudoku",
+   "level": 1,
+   "model": "opus",
+   "n": 8,
+   "exact": 1.0,
+   "exact_lo": 1.0,
+   "exact_hi": 1.0,
+   "cell": 1.0,
+   "cell_lo": 1.0,
+   "cell_hi": 1.0
+  },
+  {
+   "family": "sudoku",
+   "level": 1,
+   "model": "sonnet",
+   "n": 8,
+   "exact": 0.375,
+   "exact_lo": 0.0,
+   "exact_hi": 0.75,
+   "cell": 0.6202542995419584,
+   "cell_lo": 0.3494704433497537,
+   "cell_hi": 0.8789322444041138
+  },
+  {
+   "family": "sudoku",
+   "level": 2,
+   "model": "haiku",
+   "n": 8,
+   "exact": 0.375,
+   "exact_lo": 0.125,
+   "exact_hi": 0.75,
+   "cell": 0.375,
+   "cell_lo": 0.125,
+   "cell_hi": 0.75
+  },
+  {
+   "family": "sudoku",
+   "level": 2,
+   "model": "opus",
+   "n": 8,
+   "exact": 1.0,
+   "exact_lo": 1.0,
+   "exact_hi": 1.0,
+   "cell": 1.0,
+   "cell_lo": 1.0,
+   "cell_hi": 1.0
+  },
+  {
+   "family": "sudoku",
+   "level": 2,
+   "model": "sonnet",
+   "n": 8,
+   "exact": 0.25,
+   "exact_lo": 0.0,
+   "exact_hi": 0.625,
+   "cell": 0.5982926065162908,
+   "cell_lo": 0.41969180764411024,
+   "cell_hi": 0.7958470394736841
+  },
+  {
+   "family": "sudoku",
+   "level": 3,
+   "model": "haiku",
+   "n": 8,
+   "exact": 0.25,
+   "exact_lo": 0.0,
+   "exact_hi": 0.625,
+   "cell": 0.25,
+   "cell_lo": 0.0,
+   "cell_hi": 0.625
+  },
+  {
+   "family": "sudoku",
+   "level": 3,
+   "model": "opus",
+   "n": 8,
+   "exact": 1.0,
+   "exact_lo": 1.0,
+   "exact_hi": 1.0,
+   "cell": 1.0,
+   "cell_lo": 1.0,
+   "cell_hi": 1.0
+  },
+  {
+   "family": "sudoku",
+   "level": 3,
+   "model": "sonnet",
+   "n": 8,
+   "exact": 0.125,
+   "exact_lo": 0.0,
+   "exact_hi": 0.375,
+   "cell": 0.5985342062784078,
+   "cell_lo": 0.3705423516418164,
+   "cell_hi": 0.8162157246930886
+  },
+  {
+   "family": "zebra",
+   "level": 1,
+   "model": "haiku",
+   "n": 8,
+   "exact": 1.0,
+   "exact_lo": 1.0,
+   "exact_hi": 1.0,
+   "cell": 1.0,
+   "cell_lo": 1.0,
+   "cell_hi": 1.0
+  },
+  {
+   "family": "zebra",
+   "level": 1,
+   "model": "opus",
+   "n": 8,
+   "exact": 1.0,
+   "exact_lo": 1.0,
+   "exact_hi": 1.0,
+   "cell": 1.0,
+   "cell_lo": 1.0,
+   "cell_hi": 1.0
+  },
+  {
+   "family": "zebra",
+   "level": 1,
+   "model": "sonnet",
+   "n": 8,
+   "exact": 1.0,
+   "exact_lo": 1.0,
+   "exact_hi": 1.0,
+   "cell": 1.0,
+   "cell_lo": 1.0,
+   "cell_hi": 1.0
+  },
+  {
+   "family": "zebra",
+   "level": 2,
+   "model": "haiku",
+   "n": 8,
+   "exact": 1.0,
+   "exact_lo": 1.0,
+   "exact_hi": 1.0,
+   "cell": 1.0,
+   "cell_lo": 1.0,
+   "cell_hi": 1.0
+  },
+  {
+   "family": "zebra",
+   "level": 2,
+   "model": "opus",
+   "n": 8,
+   "exact": 1.0,
+   "exact_lo": 1.0,
+   "exact_hi": 1.0,
+   "cell": 1.0,
+   "cell_lo": 1.0,
+   "cell_hi": 1.0
+  },
+  {
+   "family": "zebra",
+   "level": 2,
+   "model": "sonnet",
+   "n": 8,
+   "exact": 1.0,
+   "exact_lo": 1.0,
+   "exact_hi": 1.0,
+   "cell": 1.0,
+   "cell_lo": 1.0,
+   "cell_hi": 1.0
+  },
+  {
+   "family": "zebra",
+   "level": 3,
+   "model": "haiku",
+   "n": 8,
+   "exact": 1.0,
+   "exact_lo": 1.0,
+   "exact_hi": 1.0,
+   "cell": 1.0,
+   "cell_lo": 1.0,
+   "cell_hi": 1.0
+  },
+  {
+   "family": "zebra",
+   "level": 3,
+   "model": "opus",
+   "n": 8,
+   "exact": 1.0,
+   "exact_lo": 1.0,
+   "exact_hi": 1.0,
+   "cell": 1.0,
+   "cell_lo": 1.0,
+   "cell_hi": 1.0
+  },
+  {
+   "family": "zebra",
+   "level": 3,
+   "model": "sonnet",
+   "n": 8,
+   "exact": 1.0,
+   "exact_lo": 1.0,
+   "exact_hi": 1.0,
+   "cell": 1.0,
+   "cell_lo": 1.0,
+   "cell_hi": 1.0
+  },
+  {
+   "family": "zebra",
+   "level": 4,
+   "model": "haiku",
+   "n": 8,
+   "exact": 1.0,
+   "exact_lo": 1.0,
+   "exact_hi": 1.0,
+   "cell": 1.0,
+   "cell_lo": 1.0,
+   "cell_hi": 1.0
+  },
+  {
+   "family": "zebra",
+   "level": 4,
+   "model": "opus",
+   "n": 8,
+   "exact": 1.0,
+   "exact_lo": 1.0,
+   "exact_hi": 1.0,
+   "cell": 1.0,
+   "cell_lo": 1.0,
+   "cell_hi": 1.0
+  },
+  {
+   "family": "zebra",
+   "level": 4,
+   "model": "sonnet",
+   "n": 8,
+   "exact": 1.0,
+   "exact_lo": 1.0,
+   "exact_hi": 1.0,
+   "cell": 1.0,
+   "cell_lo": 1.0,
+   "cell_hi": 1.0
+  }
+ ],
+ "accuracy_by_family": [
+  {
+   "family": "futoshiki",
+   "model": "haiku",
+   "n": 24,
+   "exact": 0.9166666666666666,
+   "exact_lo": 0.7916666666666666,
+   "exact_hi": 1.0,
+   "cell": 0.9930555555555555
+  },
+  {
+   "family": "futoshiki",
+   "model": "opus",
+   "n": 24,
+   "exact": 0.9166666666666666,
+   "exact_lo": 0.7916666666666666,
+   "exact_hi": 1.0,
+   "cell": 0.9909722222222221
+  },
+  {
+   "family": "futoshiki",
+   "model": "sonnet",
+   "n": 24,
+   "exact": 0.625,
+   "exact_lo": 0.4166666666666667,
+   "exact_hi": 0.7916666666666666,
+   "cell": 0.7228690087145969
+  },
+  {
+   "family": "killer",
+   "model": "haiku",
+   "n": 36,
+   "exact": 0.7222222222222222,
+   "exact_lo": 0.5555555555555556,
+   "exact_hi": 0.8611111111111112,
+   "cell": 0.7946529186387199
+  },
+  {
+   "family": "killer",
+   "model": "opus",
+   "n": 36,
+   "exact": 1.0,
+   "exact_lo": 1.0,
+   "exact_hi": 1.0,
+   "cell": 1.0
+  },
+  {
+   "family": "killer",
+   "model": "sonnet",
+   "n": 36,
+   "exact": 0.9444444444444444,
+   "exact_lo": 0.8611111111111112,
+   "exact_hi": 1.0,
+   "cell": 0.9968253968253968
+  },
+  {
+   "family": "sudoku",
+   "model": "haiku",
+   "n": 24,
+   "exact": 0.4166666666666667,
+   "exact_lo": 0.20833333333333334,
+   "exact_hi": 0.625,
+   "cell": 0.4166666666666667
+  },
+  {
+   "family": "sudoku",
+   "model": "opus",
+   "n": 24,
+   "exact": 1.0,
+   "exact_lo": 1.0,
+   "exact_hi": 1.0,
+   "cell": 1.0
+  },
+  {
+   "family": "sudoku",
+   "model": "sonnet",
+   "n": 24,
+   "exact": 0.25,
+   "exact_lo": 0.08333333333333333,
+   "exact_hi": 0.4583333333333333,
+   "cell": 0.6056937041122189
+  },
+  {
+   "family": "zebra",
+   "model": "haiku",
+   "n": 32,
+   "exact": 1.0,
+   "exact_lo": 1.0,
+   "exact_hi": 1.0,
+   "cell": 1.0
+  },
+  {
+   "family": "zebra",
+   "model": "opus",
+   "n": 32,
+   "exact": 1.0,
+   "exact_lo": 1.0,
+   "exact_hi": 1.0,
+   "cell": 1.0
+  },
+  {
+   "family": "zebra",
+   "model": "sonnet",
+   "n": 32,
+   "exact": 1.0,
+   "exact_lo": 1.0,
+   "exact_hi": 1.0,
+   "cell": 1.0
+  }
+ ],
+ "metric_vs_level": [
+  {
+   "family": "futoshiki",
+   "metric": "conflicts",
+   "rho": 0.8641000665562892,
+   "p": 5.29481822893463e-08,
+   "lo": 0.6436809836455435,
+   "hi": 0.9712937266564461,
+   "n": 24
+  },
+  {
+   "family": "futoshiki",
+   "metric": "decisions",
+   "rho": 0.8526366621559094,
+   "p": 1.2202232460074186e-07,
+   "lo": 0.6238360055777632,
+   "hi": 0.962148773048868,
+   "n": 24
+  },
+  {
+   "family": "futoshiki",
+   "metric": "mus_mean",
+   "rho": 0.9143389191006615,
+   "p": 4.207541949417367e-10,
+   "lo": 0.7961548319329761,
+   "hi": 0.945495885692983,
+   "n": 24
+  },
+  {
+   "family": "futoshiki",
+   "metric": "up_closure",
+   "rho": -0.7671004563554296,
+   "p": 1.2239540447503804e-05,
+   "lo": -0.9351447599809009,
+   "hi": -0.45103947553964924,
+   "n": 24
+  },
+  {
+   "family": "futoshiki",
+   "metric": "n_clues",
+   "rho": -0.5509516057153793,
+   "p": 0.005267334355517402,
+   "lo": -0.7875816471495835,
+   "hi": -0.0699361085489228,
+   "n": 24
+  },
+  {
+   "family": "futoshiki",
+   "metric": "fl_steps",
+   "rho": 0.8435344330351157,
+   "p": 2.2562658781060034e-07,
+   "lo": 0.6959922770015508,
+   "hi": 0.8904933234421395,
+   "n": 24
+  },
+  {
+   "family": "killer",
+   "metric": "conflicts",
+   "rho": 0.9109106475554962,
+   "p": 1.2566495032539362e-14,
+   "lo": 0.7997866792264156,
+   "hi": 0.9651572390261269,
+   "n": 36
+  },
+  {
+   "family": "killer",
+   "metric": "decisions",
+   "rho": 0.9203236697643392,
+   "p": 2.027107789053259e-15,
+   "lo": 0.8159130092685238,
+   "hi": 0.9723791668323037,
+   "n": 36
+  },
+  {
+   "family": "killer",
+   "metric": "mus_mean",
+   "rho": 0.714723886389806,
+   "p": 9.744904420154234e-07,
+   "lo": 0.4917407473486771,
+   "hi": 0.8469670378158719,
+   "n": 36
+  },
+  {
+   "family": "killer",
+   "metric": "up_closure",
+   "rho": -0.8687967720830435,
+   "p": 6.4842918926061224e-12,
+   "lo": -0.9550916908254197,
+   "hi": -0.7150969832117018,
+   "n": 36
+  },
+  {
+   "family": "killer",
+   "metric": "n_clues",
+   "rho": -0.7729109027942326,
+   "p": 3.312015942375871e-08,
+   "lo": -0.9110306544225858,
+   "hi": -0.5158970752305096,
+   "n": 36
+  },
+  {
+   "family": "killer",
+   "metric": "fl_steps",
+   "rho": 0.6702705738659221,
+   "p": 7.745661640197498e-06,
+   "lo": 0.3889818527670183,
+   "hi": 0.8387627843673179,
+   "n": 36
+  },
+  {
+   "family": "sudoku",
+   "metric": "conflicts",
+   "rho": 0.7385349644293686,
+   "p": 3.77533045308909e-05,
+   "lo": 0.40876303926836205,
+   "hi": 0.925274652271383,
+   "n": 24
+  },
+  {
+   "family": "sudoku",
+   "metric": "decisions",
+   "rho": 0.7334352251668976,
+   "p": 4.547880246910659e-05,
+   "lo": 0.38884872968769973,
+   "hi": 0.9267469053664553,
+   "n": 24
+  },
+  {
+   "family": "sudoku",
+   "metric": "mus_mean",
+   "rho": 0.4497957585898415,
+   "p": 0.027432819789132815,
+   "lo": 0.035461737388762425,
+   "hi": 0.769771777540889,
+   "n": 24
+  },
+  {
+   "family": "sudoku",
+   "metric": "up_closure",
+   "rho": -0.8421290672443174,
+   "p": 2.472347991045613e-07,
+   "lo": -0.9645742883877935,
+   "hi": -0.6167129880090314,
+   "n": 24
+  },
+  {
+   "family": "sudoku",
+   "metric": "n_clues",
+   "rho": 0.13216871288386361,
+   "p": 0.53813431068384,
+   "lo": -0.33030601880291344,
+   "hi": 0.5712430038364602,
+   "n": 24
+  },
+  {
+   "family": "sudoku",
+   "metric": "fl_steps",
+   "rho": 0.8432740427115677,
+   "p": 2.2949784765569343e-07,
+   "lo": 0.6959922770015508,
+   "hi": 0.8903467683608528,
+   "n": 24
+  },
+  {
+   "family": "zebra",
+   "metric": "conflicts",
+   "rho": 0.9523000311651696,
+   "p": 5.1948574983901564e-17,
+   "lo": 0.871666643199033,
+   "hi": 0.9818358579296391,
+   "n": 32
+  },
+  {
+   "family": "zebra",
+   "metric": "decisions",
+   "rho": 0.9199943830287602,
+   "p": 9.769018539940152e-14,
+   "lo": 0.8118691004600808,
+   "hi": 0.9700425970577939,
+   "n": 32
+  },
+  {
+   "family": "zebra",
+   "metric": "mus_mean",
+   "rho": 0.8826042095332058,
+   "p": 2.378998637900102e-11,
+   "lo": 0.7803482351912531,
+   "hi": 0.9326874279354537,
+   "n": 32
+  },
+  {
+   "family": "zebra",
+   "metric": "up_closure",
+   "rho": -0.9131511459111457,
+   "p": 3.1933954403345993e-13,
+   "lo": -0.9719294196380969,
+   "hi": -0.8039031328074825,
+   "n": 32
+  },
+  {
+   "family": "zebra",
+   "metric": "n_clues",
+   "rho": -0.7308932056386764,
+   "p": 2.030814410428029e-06,
+   "lo": -0.8745636854450567,
+   "hi": -0.48175222483830715,
+   "n": 32
+  },
+  {
+   "family": "zebra",
+   "metric": "fl_steps",
+   "rho": 0.8413402421977456,
+   "p": 1.6344047068979322e-09,
+   "lo": 0.7038795949151341,
+   "hi": 0.9036408523955758,
+   "n": 32
+  }
+ ],
+ "per_family_model": [
+  {
+   "family": "futoshiki",
+   "model": "haiku",
+   "spearman_level_cellacc": -0.1846372364689991,
+   "p": 0.3877484833102805
+  },
+  {
+   "family": "futoshiki",
+   "model": "opus",
+   "spearman_level_cellacc": 0.015371886547533641,
+   "p": 0.9431666684876414
+  },
+  {
+   "family": "futoshiki",
+   "model": "sonnet",
+   "spearman_level_cellacc": 0.05100153006885343,
+   "p": 0.8129120984003488
+  },
+  {
+   "family": "killer",
+   "model": "haiku",
+   "spearman_level_cellacc": 0.047965020343292114,
+   "p": 0.7811709887804049
+  },
+  {
+   "family": "killer",
+   "model": "opus",
+   "slope": null,
+   "note": "no variation in outcome"
+  },
+  {
+   "family": "killer",
+   "model": "sonnet",
+   "spearman_level_cellacc": -0.23884865823693072,
+   "p": 0.16064185790976282
+  },
+  {
+   "family": "sudoku",
+   "model": "haiku",
+   "spearman_level_cellacc": -0.31052950170405935,
+   "p": 0.13971283497570788
+  },
+  {
+   "family": "sudoku",
+   "model": "opus",
+   "slope": null,
+   "note": "no variation in outcome"
+  },
+  {
+   "family": "sudoku",
+   "model": "sonnet",
+   "spearman_level_cellacc": -0.05200186785573813,
+   "p": 0.8093077262823338
+  },
+  {
+   "family": "zebra",
+   "model": "haiku",
+   "slope": null,
+   "note": "no variation in outcome"
+  },
+  {
+   "family": "zebra",
+   "model": "opus",
+   "slope": null,
+   "note": "no variation in outcome"
+  },
+  {
+   "family": "zebra",
+   "model": "sonnet",
+   "slope": null,
+   "note": "no variation in outcome"
+  }
+ ],
+ "models": {
+  "logit_main": {
+   "params": {
+    "Intercept": 1.483548742903925,
+    "C(family)[T.killer]": 0.7634945057124818,
+    "C(family)[T.sudoku]": -1.595335899094867,
+    "C(family)[T.zebra]": 23.006600004948968,
+    "C(model)[T.opus]": 3.225386797062705,
+    "C(model)[T.sonnet]": -0.19956688903983646,
+    "level": -0.17674012964397276
+   },
+   "bse": {
+    "Intercept": 0.52411535176846,
+    "C(family)[T.killer]": 0.48116031620687166,
+    "C(family)[T.sudoku]": 0.4347048350999895,
+    "C(family)[T.zebra]": 19413.893951300397,
+    "C(model)[T.opus]": 0.779463470919096,
+    "C(model)[T.sonnet]": 0.3652582300595723,
+    "level": 0.17729490274103482
+   },
+   "aic": 212.32038456095037,
+   "llf": -99.16019228047519,
+   "n": 348,
+   "level_boot": [
+    -0.17674012964397276,
+    -0.5385249272732553,
+    0.1540796544460913
+   ]
+  },
+  "logit_nonceiling": {
+   "params": {
+    "Intercept": 1.704669770404772,
+    "C(family)[T.killer]": 0.558402525493876,
+    "C(family)[T.sudoku]": -1.9212780600995538,
+    "C(model)[T.sonnet]": -0.20746184786562794,
+    "level": -0.18928147017296398
+   },
+   "bse": {
+    "Intercept": 0.5500253833055813,
+    "C(family)[T.killer]": 0.4986076479969752,
+    "C(family)[T.sudoku]": 0.46240399555891976,
+    "C(model)[T.sonnet]": 0.37250676404527044,
+    "level": 0.18364175593249027
+   },
+   "pvalues": {
+    "Intercept": 0.0019400694785145474,
+    "C(family)[T.killer]": 0.26274627483429824,
+    "C(family)[T.sudoku]": 3.2531997653904304e-05,
+    "C(model)[T.sonnet]": 0.5775722195522407,
+    "level": 0.30267663998401906
+   },
+   "n": 168,
+   "level_boot": [
+    -0.18928147017296398,
+    -0.6090319538055307,
+    0.18602004016595663
+   ],
+   "subset": "families sudoku/killer/futoshiki, models haiku/sonnet"
+  },
+  "logit_sudoku_haiku": {
+   "params": {
+    "Intercept": 1.2562639477533408,
+    "level": -0.8147486859426676
+   },
+   "pvalues": {
+    "Intercept": 0.2699868881347759,
+    "level": 0.13912905109428855
+   },
+   "n": 24,
+   "level_boot": [
+    -0.8147486859426676,
+    -2.628334515842524,
+    0.2273733652736071
+   ]
+  },
+  "metrics_only": {
+   "params": {
+    "Intercept": 3.0966663264699275,
+    "C(family)[T.killer]": -0.01655344892056331,
+    "C(family)[T.sudoku]": -0.24577377507945464,
+    "C(model)[T.sonnet]": -0.20776388917229574,
+    "log_conf": -0.04287960234373134,
+    "mus_mean": -0.13874544150739204,
+    "n_clues": -0.0364082044775287
+   },
+   "pvalues": {
+    "Intercept": 0.08037293720877939,
+    "C(family)[T.killer]": 0.980788181845641,
+    "C(family)[T.sudoku]": 0.9035706021761785,
+    "C(model)[T.sonnet]": 0.5773019708896838,
+    "log_conf": 0.8016855055568461,
+    "mus_mean": 0.4282121102626434,
+    "n_clues": 0.4846289424196498
+   },
+   "aic": 190.2453514170683,
+   "llf": -88.12267570853415
+  },
+  "metrics_plus_level": {
+   "params": {
+    "Intercept": 2.6108856960431677,
+    "C(family)[T.killer]": 0.2498770596171198,
+    "C(family)[T.sudoku]": -0.55419609265242,
+    "C(model)[T.sonnet]": -0.209798846234549,
+    "level": -0.4942236890440516,
+    "log_conf": 0.2254457034868127,
+    "mus_mean": -0.08689099822309966,
+    "n_clues": -0.01359652530615106
+   },
+   "pvalues": {
+    "Intercept": 0.1515334980351389,
+    "C(family)[T.killer]": 0.7292016136368178,
+    "C(family)[T.sudoku]": 0.7871140232796918,
+    "C(model)[T.sonnet]": 0.5754503709205311,
+    "level": 0.20494212624568608,
+    "log_conf": 0.4106424872870035,
+    "mus_mean": 0.6290257240701957,
+    "n_clues": 0.8086564292322019
+   },
+   "aic": 190.57966719440327,
+   "llf": -87.28983359720164
+  },
+  "mixed_cell": {
+   "params": {
+    "Intercept": 0.8492551295223025,
+    "C(family)[T.killer]": 0.037372552491249864,
+    "C(family)[T.sudoku]": -0.22817880523782855,
+    "C(family)[T.zebra]": 0.10360167013392452,
+    "C(model)[T.opus]": 0.1839870252500551,
+    "C(model)[T.sonnet]": 0.04595156025199072,
+    "level": -0.011801197929430301,
+    "Group Var": 3.6751381626930886e-09
+   },
+   "bse": {
+    "Intercept": 0.04380455730629435,
+    "C(family)[T.killer]": 0.039995197892936596,
+    "C(family)[T.sudoku]": 0.04245647411460995,
+    "C(family)[T.zebra]": 0.04021842863812689,
+    "C(model)[T.opus]": 0.03344884882234974,
+    "C(model)[T.sonnet]": 0.03344884882234974,
+    "level": 0.012694696870130955,
+    "Group Var": 0.06095586434233439
+   },
+   "pvalues": {
+    "Intercept": 9.865535862015402e-84,
+    "C(family)[T.killer]": 0.35008419503002386,
+    "C(family)[T.sudoku]": 7.683077345853033e-08,
+    "C(family)[T.zebra]": 0.009995784863769432,
+    "C(model)[T.opus]": 3.7861094280036286e-08,
+    "C(model)[T.sonnet]": 0.1695081284728136,
+    "level": 0.35256975241495514,
+    "Group Var": 0.9999999518941117
+   }
+  }
+ }
+}

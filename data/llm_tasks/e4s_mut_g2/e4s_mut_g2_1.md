@@ -13,86 +13,57 @@ solution and will reject variants that need guessing, so focus on what makes the
 follow (for example: fewer givens, givens spread so that no row/column/box is nearly complete,
 removing givens that make singles easy).
 
-Output: write a single JSON object to the file /home/user/Puzzle-generation-with-guaranteed-uniqueness/data/llm_tasks/e4s_mut_g2/e4s_mut_g2_1.out.json with this structure
+Output: write a single JSON object to the file D:\Puzzle-generation-with-guaranteed-uniqueness\data\llm_tasks\e4s_mut_g2\e4s_mut_g2_1.out.json with this structure
 {"variants": [{"parent": "<puzzle id>", "ops": [<op>, ...], "idea": "<one short sentence>"}, ...]}
 with 2 variants per puzzle.
 
 The puzzles follow.
 
 
-## Puzzle e4s-g0-01
+## Puzzle e4s-g1-10
 
 Classic Sudoku on a 9x9 grid. Fill every cell with a digit 1-9 so that each row, each column and each 3x3 box contains every digit exactly once.
 
 Grid ('.' = empty):
-. 9 . | 5 3 . | . . .
-6 . . | . 9 . | 1 . .
-. . 3 | . . . | 7 . .
+4 6 . | 2 1 . | . 5 .
+2 . 1 | . . . | 9 . .
+. . 8 | . 6 4 | . . .
 ---------------------
-. . . | . . . | 6 2 .
-. 1 . | . . 2 | . 9 .
-. . 4 | 8 . . | . . .
+6 9 4 | . . 1 | 5 . .
+. . . | 4 . 6 | . 3 1
+. . 2 | . . 8 | . . .
 ---------------------
-. . . | . . 7 | . . 3
-. 8 7 | . 1 . | 2 . .
-5 . . | . 6 . | . . .
+1 . . | . 5 7 | . . 4
+. . . | . . . | 8 . .
+. 7 . | . . . | 3 . .
 
 Solution:
-798531462
-642798135
-153426789
-879153624
-315642897
-264879351
-426987513
-987315246
-531264978
-Solver mistakes: R1C1 (wrote 0, correct 7); R1C2 (wrote 0, correct 9); R1C3 (wrote 0, correct 8); R1C4 (wrote 0, correct 5); R1C5 (wrote 0, correct 3); R1C6 (wrote 0, correct 1); R1C7 (wrote 0, correct 4); R1C8 (wrote 0, correct 6); R1C9 (wrote 0, correct 2); R2C1 (wrote 0, correct 6); R2C2 (wrote 0, correct 4); R2C3 (wrote 0, correct 2); R2C4 (wrote 0, correct 7); R2C5 (wrote 0, correct 9); R2C6 (wrote 0, correct 8); R2C7 (wrote 0, correct 1); R2C8 (wrote 0, correct 3); R2C9 (wrote 0, correct 5); R3C1 (wrote 0, correct 1); R3C2 (wrote 0, correct 5); R3C3 (wrote 0, correct 3); R3C4 (wrote 0, correct 4); R3C5 (wrote 0, correct 2); R3C6 (wrote 0, correct 6); R3C7 (wrote 0, correct 7); R3C8 (wrote 0, correct 8); R3C9 (wrote 0, correct 9); R4C1 (wrote 0, correct 8); R4C2 (wrote 0, correct 7); R4C3 (wrote 0, correct 9)
+469213758
+231785946
+758964123
+694321587
+587496231
+312578469
+123857694
+946132875
+875649312
+Solver mistakes: R4C2 (wrote 3, correct 9); R4C3 (wrote 9, correct 4); R4C4 (wrote 2, correct 3); R4C5 (wrote 1, correct 2); R4C6 (wrote 5, correct 1); R4C7 (wrote 7, correct 5)
 
-## Puzzle e4s-g1-04
-
-Classic Sudoku on a 9x9 grid. Fill every cell with a digit 1-9 so that each row, each column and each 3x3 box contains every digit exactly once.
-
-Grid ('.' = empty):
-. . 5 | . . . | . 7 8
-. 6 . | . . 5 | . . .
-2 . . | 8 6 . | 4 . .
----------------------
-. 3 . | . 7 . | 5 2 4
-. . 1 | . 5 . | . 8 .
-4 . . | 9 . 8 | . . .
----------------------
-7 . . | . . . | . . .
-. . . | 3 8 6 | 1 . .
-. . . | 7 1 . | . 9 .
-
-Solution:
-145293678
-867145932
-293867451
-938671524
-671452389
-452938716
-714529863
-529386147
-386714295
-Solver mistakes: none - the solver got it fully right
-
-## Puzzle e4s-g0-02
+## Puzzle e4s-g2-07
 
 Classic Sudoku on a 9x9 grid. Fill every cell with a digit 1-9 so that each row, each column and each 3x3 box contains every digit exactly once.
 
 Grid ('.' = empty):
-. . 5 | . . . | . 7 8
-. 6 . | . . 5 | . . .
-2 . . | 8 . . | 4 . .
+. . . | . . . | . 7 8
+8 6 . | . . 5 | . . .
+2 . . | 8 . . | 4 5 1
 ---------------------
-. 3 . | . 7 . | . . 4
-. . 1 | . 5 . | . 8 .
-. . . | 9 . 8 | . . .
+. 3 8 | . 7 . | . . 4
+. . 1 | . 5 2 | . . .
+. . . | 9 . . | . . .
 ---------------------
-7 . . | . . . | . . .
-. . . | 3 8 6 | . . .
+7 . 4 | . 2 . | . 6 .
+5 . . | 3 8 6 | . . .
 . . . | 7 . . | 2 9 .
 
 Solution:
@@ -105,4 +76,33 @@ Solution:
 714529863
 529386147
 386714295
-Solver mistakes: none - the solver got it fully right
+Solver mistakes: R4C3 (wrote 6, correct 8); R4C4 (wrote 7, correct 6); R4C5 (wrote 1, correct 7); R4C6 (wrote 5, correct 1); R4C7 (wrote 2, correct 5); R4C8 (wrote 8, correct 2)
+
+## Puzzle e4s-g1-03
+
+Classic Sudoku on a 9x9 grid. Fill every cell with a digit 1-9 so that each row, each column and each 3x3 box contains every digit exactly once.
+
+Grid ('.' = empty):
+. . . | . 5 . | . . 7
+5 2 4 | . . . | . 9 .
+1 . . | 3 . 6 | 2 . .
+---------------------
+. 5 . | . . . | . . .
+. . . | 2 4 . | . . .
+. . . | 8 . . | 1 3 6
+---------------------
+6 7 . | . . . | 4 8 .
+. . 9 | . . 4 | 7 6 .
+. 4 . | 1 . . | 3 . .
+
+Solution:
+963452817
+524718693
+187396254
+758631942
+316249578
+492875136
+671923485
+239584761
+845167329
+Solver mistakes: R7C6 (wrote 4, correct 3); R7C7 (wrote 3, correct 4); R8C3 (wrote 5, correct 9); R8C4 (wrote 8, correct 5); R8C5 (wrote 4, correct 8); R8C6 (wrote 1, correct 4)

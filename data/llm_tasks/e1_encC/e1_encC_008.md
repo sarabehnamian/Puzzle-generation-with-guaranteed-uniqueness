@@ -18,7 +18,7 @@ Examples (from other puzzles):
 - "The person who reads poetry lives next to the person who drinks lemonade."
                                             ->  Abs(pos('poetry') - pos('lemonade')) == 1
 
-Output: write a single JSON object to the file /home/user/Puzzle-generation-with-guaranteed-uniqueness/data/llm_tasks/e1_encC/e1_encC_008.out.json with this exact structure
+Output: write a single JSON object to the file D:\Puzzle-generation-with-guaranteed-uniqueness\data\llm_tasks\e1_encC\e1_encC_008.out.json with this exact structure
 {"puzzles": [{"id": "<puzzle id>", "constraints": [{"clue": 1, "expr": "<expression>"}, ...]}, ...]}
 One entry per puzzle and exactly one constraint per numbered clue, in order. Use single quotes inside
 expressions so the JSON stays valid.
@@ -57,10 +57,10 @@ There are 5 houses in a row, numbered 1 to 5 from left to right. Each house has 
 - nationality: Dane, Norwegian, German, Spaniard, Swede
 
 Clues:
-1. The Spaniard's home is the second house.
+1. The Spaniard lives in house 2.
 2. The cooking enthusiast is either the lawyer or the pilot.
-3. The Swede lives immediately to the right of the green house's occupant.
-4. The golf enthusiast and the pilot have exactly one house between them.
+3. The Swede lives directly to the right of the green house's occupant.
+4. One house separates the golf enthusiast from the pilot.
 5. The doctor lives immediately to the right of the Norwegian.
 6. The lawyer lives immediately to the left of the tennis enthusiast.
 7. The teacher lives in house 2.
@@ -81,16 +81,16 @@ There are 5 houses in a row, numbered 1 to 5 from left to right. Each house has 
 Clues:
 1. The juice drinker and the tennis enthusiast live two houses apart.
 2. The chess enthusiast lives next door to the hiking enthusiast.
-3. The red house's occupant lives immediately left of the blue house's occupant.
+3. The red house is immediately left of the blue house.
 4. The coffee drinker lives directly right of the pilot.
-5. The juice drinker lives in house 3.
+5. The juice drinker lives in the middle house, number 3.
 6. The baker lives in house 2.
 7. The chess enthusiast lives directly right of the pilot.
-8. The chess enthusiast and the water drinker live two houses apart.
+8. Two houses separate the chess enthusiast from the water drinker.
 9. The green house's occupant lives next to the tea drinker.
 10. The pilot lives somewhere to the right of the lawyer.
 11. The pilot lives in either the green house or the white house.
-12. Hiking is the hobby of the milk drinker.
+12. The milk drinker enjoys hiking.
 13. The painting enthusiast lives immediately left of the farmer.
 
 ## Puzzle paraphrase:zebra-00197
@@ -102,19 +102,19 @@ There are 5 houses in a row, numbered 1 to 5 from left to right. Each house has 
 - color: blue, red, purple, yellow, green
 
 Clues:
-1. The bird owner lives in the house immediately to the right of the milk drinker's.
-2. Exactly one house lies between the horse owner and the milk drinker.
+1. The milk drinker lives in the house immediately left of the bird keeper's.
+2. The horse keeper and the milk drinker have exactly one house between them.
 3. The cocoa drinker is either the German or the Spaniard.
 4. The German is the horse owner.
-5. The Brit lives next door to the yellow house's resident.
+5. The Brit lives next door to the yellow house's occupant.
 6. The cat owner lives immediately to the right of the fish owner.
-7. The coffee drinker lives next door to the red house's resident.
+7. The coffee drinker lives next door to the red house's occupant.
 8. The yellow house's occupant drinks juice.
 9. The tea drinker lives in house 3.
 10. The fish owner lives in the purple house.
 11. The tea drinker is either the Brit or the German.
 12. The cat owner lives in the green house.
-13. The fish owner and the Swede are two houses apart.
+13. The fish owner and the Swede live two houses apart.
 
 ## Puzzle plain:zebra-00024
 
@@ -151,19 +151,19 @@ There are 5 houses in a row, numbered 1 to 5 from left to right. Each house has 
 - job: farmer, pilot, lawyer, teacher, doctor
 
 Clues:
-1. The purple house's occupant lives right beside the teacher.
+1. The purple house's occupant and the teacher are next-door neighbours.
 2. The cat owner lives directly to the right of the fish owner.
 3. The bird owner lives somewhere to the right of the farmer.
 4. The pilot keeps either the cat or the fish.
 5. The rabbit owner drinks either coffee or tea.
 6. The juice drinker lives next door to the purple house.
-7. The pilot lives next door to the yellow house.
+7. The pilot and the yellow house's occupant are neighbours.
 8. The farmer lives directly to the right of the cat owner.
-9. The coffee drinker lives in the first house.
-10. The farmer and the rabbit owner are next-door neighbours.
-11. One house lies between the blue house and the pilot.
+9. The coffee drinker lives in house 1.
+10. The farmer and the rabbit owner live in adjacent houses.
+11. One house separates the blue house from the pilot.
 12. The doctor lives somewhere to the right of the cocoa drinker.
-13. The bird owner does not live next door to the purple house.
+13. The bird owner and the purple house's occupant are not neighbours.
 14. The red house's occupant is the pilot.
 
 ## Puzzle plain:zebra-00068
@@ -223,18 +223,18 @@ There are 5 houses in a row, numbered 1 to 5 from left to right. Each house has 
 
 Clues:
 1. The golf enthusiast lives immediately left of the blue house's occupant.
-2. The pilot and the rabbit owner are separated by exactly one house.
-3. The painting enthusiast lives in house 4.
-4. House 2 is home to the cooking enthusiast.
-5. The bird owner lives immediately left of the purple house's occupant.
+2. One house lies between the pilot and the rabbit owner.
+3. The painting enthusiast lives in the fourth house.
+4. House 2 belongs to the cooking enthusiast.
+5. The bird owner lives directly left of the purple house's occupant.
 6. The red house's occupant is the teacher.
-7. The baker lives in house 2.
-8. The tennis enthusiast lives next door to the occupant of the blue house.
-9. The farmer is not a neighbour of the rabbit owner.
-10. The fish keeper and the rabbit owner live next to each other.
-11. Exactly one house lies between the blue house and the green house.
+7. The baker lives in the second house.
+8. The blue house's occupant lives next door to the tennis enthusiast.
+9. The farmer does not live next to the rabbit owner.
+10. The fish keeper and the rabbit owner are neighbours.
+11. Exactly one house separates the blue house from the green house.
 12. The tennis enthusiast is either the farmer or the lawyer.
-13. The fish owner lives next door to the person in the blue house.
+13. The blue house's occupant lives next to the fish owner.
 14. The bird keeper lives next door to the horse owner.
 15. The teacher lives in the middle house.
 
@@ -247,16 +247,16 @@ There are 5 houses in a row, numbered 1 to 5 from left to right. Each house has 
 - pet: horse, dog, cat, bird, rabbit
 
 Clues:
-1. The white house is somewhere to the left of the bird owner.
-2. The yellow house is house 5.
+1. The white house's occupant lives somewhere to the left of the bird owner.
+2. The yellow house's occupant lives in house 5.
 3. The tennis enthusiast is the lawyer.
-4. The rabbit is kept in the leftmost house.
-5. The cooking enthusiast and the lawyer are two houses apart.
-6. The blue house's occupant is the chess enthusiast.
-7. Exactly one house lies between the horse owner and the red house.
+4. The rabbit keeper lives in the leftmost house.
+5. The cooking enthusiast and the lawyer live two houses apart.
+6. The blue house's occupant enjoys chess.
+7. Exactly one house lies between the horse owner and the red house's occupant.
 8. The blue house's occupant is not the doctor.
-9. The cooking enthusiast and the white house's occupant are two houses apart.
-10. The horse owner is the hiking enthusiast.
+9. The cooking enthusiast and the white house's occupant live two houses apart.
+10. The horse owner enjoys hiking.
 11. The baker lives in house 2.
 12. The pilot's hobby is either painting or tennis.
 13. The chess enthusiast and the white house's occupant are not neighbours.

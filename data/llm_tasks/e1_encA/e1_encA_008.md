@@ -18,7 +18,7 @@ Examples (from other puzzles):
 - "The person who reads poetry lives next to the person who drinks lemonade."
                                             ->  Abs(pos('poetry') - pos('lemonade')) == 1
 
-Output: write a single JSON object to the file /home/user/Puzzle-generation-with-guaranteed-uniqueness/data/llm_tasks/e1_encA/e1_encA_008.out.json with this exact structure
+Output: write a single JSON object to the file D:\Puzzle-generation-with-guaranteed-uniqueness\data\llm_tasks\e1_encA\e1_encA_008.out.json with this exact structure
 {"puzzles": [{"id": "<puzzle id>", "constraints": [{"clue": 1, "expr": "<expression>"}, ...]}, ...]}
 One entry per puzzle and exactly one constraint per numbered clue, in order. Use single quotes inside
 expressions so the JSON stays valid.
@@ -121,28 +121,28 @@ Clues:
 13. The left-hand neighbour of the owner of the fish lives in the purple house.
 14. One of the neighbours of the owner of the horse lives in the green house.
 
-## Puzzle paraphrase:zebra-00172
+## Puzzle paraphrase:zebra-00173
 
 There are 5 houses in a row, numbered 1 to 5 from left to right. Each house has one occupant. Every occupant has exactly one value from each category below, and no two occupants share a value within a category.
-- pet: rabbit, dog, fish, cat, bird
-- job: lawyer, pilot, doctor, baker, teacher
-- nationality: Swede, Norwegian, German, Brit, Dane
-- color: blue, yellow, white, red, purple
+- job: doctor, farmer, baker, lawyer, teacher
+- pet: rabbit, bird, fish, cat, horse
+- drink: cocoa, coffee, tea, water, milk
+- nationality: Swede, Spaniard, Norwegian, German, Brit
 
 Clues:
-1. The occupant of the yellow house is the doctor.
-2. The German is not a neighbour of the pilot.
-3. The cat owner lives in either the blue house or the white house.
-4. Two houses separate the red house from the yellow house.
-5. The dog owner lives immediately to the left of the yellow house's occupant.
-6. The bird owner lives somewhere to the left of the Dane.
-7. The lawyer and the occupant of the white house have exactly one house between them.
-8. The fish owner lives immediately to the right of the teacher.
-9. One house lies between the Brit and the pilot.
-10. The lawyer and the Norwegian have exactly one house between them.
-11. The Brit and the Dane do not live next to each other.
-12. The rabbit owner lives in house 2.
-13. Immediately to the right of the Norwegian is the purple house.
+1. The Swede does not live in house 5.
+2. The German lives immediately to the left of the coffee drinker.
+3. The doctor and the tea drinker are two houses apart.
+4. The farmer is not the Spaniard.
+5. The Spaniard is the horse keeper.
+6. The Brit is the doctor.
+7. The teacher lives immediately to the left of the Norwegian.
+8. The cocoa drinker is the lawyer.
+9. The cat owner does not live next door to the fish owner.
+10. The Norwegian lives immediately to the left of the water drinker.
+11. One house lies between the bird owner and the cat owner.
+12. The Norwegian keeps the rabbit.
+13. The tea drinker lives in the fifth house.
 
 ## Puzzle hard:zebra_hard-00030
 

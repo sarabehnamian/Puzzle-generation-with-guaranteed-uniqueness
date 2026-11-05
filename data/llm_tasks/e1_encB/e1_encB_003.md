@@ -18,7 +18,7 @@ Examples (from other puzzles):
 - "The person who reads poetry lives next to the person who drinks lemonade."
                                             ->  Abs(pos('poetry') - pos('lemonade')) == 1
 
-Output: write a single JSON object to the file /home/user/Puzzle-generation-with-guaranteed-uniqueness/data/llm_tasks/e1_encB/e1_encB_003.out.json with this exact structure
+Output: write a single JSON object to the file D:\Puzzle-generation-with-guaranteed-uniqueness\data\llm_tasks\e1_encB\e1_encB_003.out.json with this exact structure
 {"puzzles": [{"id": "<puzzle id>", "constraints": [{"clue": 1, "expr": "<expression>"}, ...]}, ...]}
 One entry per puzzle and exactly one constraint per numbered clue, in order. Use single quotes inside
 expressions so the JSON stays valid.
@@ -58,18 +58,18 @@ There are 5 houses in a row, numbered 1 to 5 from left to right. Each house has 
 - job: teacher, pilot, farmer, doctor, baker
 
 Clues:
-1. Whoever keeps the dog drinks cocoa.
-2. The doctor and the milk drinker are two houses apart.
-3. The coffee drinker's house sits immediately to the left of the water drinker's house.
+1. Whoever owns the dog drinks cocoa.
+2. The doctor and the milk drinker live two houses apart.
+3. The coffee drinker lives right next door to the left of the water drinker.
 4. The doctor is not a neighbour of the teacher.
 5. The baker and the milk drinker live in neighbouring houses.
 6. The cat is kept in house 3.
-7. The dog's keeper is either the doctor or the teacher.
-8. The rabbit owner lives right next door to the pilot, on the pilot's right.
+7. The dog's owner is either the doctor or the teacher.
+8. The rabbit owner lives directly to the right of the pilot.
 9. The golf enthusiast occupies the leftmost house.
-10. The chess player does not live in house 5.
-11. Two houses separate the rabbit owner from the teacher.
-12. The baker is not the person who owns the bird.
+10. The chess enthusiast does not live in house 5.
+11. The rabbit owner and the teacher live two houses apart.
+12. The baker is not the owner of the bird.
 13. The cocoa drinker and the painting enthusiast are two houses apart.
 14. The cooking enthusiast lives immediately to the left of the water drinker.
 
@@ -201,19 +201,19 @@ There are 5 houses in a row, numbered 1 to 5 from left to right. Each house has 
 
 Clues:
 1. The farmer lives in one of the two end houses.
-2. The horse belongs to the lawyer.
-3. The yellow house is directly to the left of the cat owner's house.
-4. The bird owner and the lawyer live next door to each other.
-5. Exactly one house lies between the baker and the Swede.
+2. The lawyer is the horse keeper.
+3. The yellow house stands immediately to the left of the cat owner's house.
+4. The bird keeper and the lawyer live next door to each other.
+5. The baker and the Swede have exactly one house between them.
 6. The Swede lives in either the blue house or the green house.
 7. The horse owner lives in either the blue house or the white house.
-8. The resident of the red house is either the lawyer or the teacher.
-9. The baker and the Brit are next-door neighbours.
-10. The German occupies the leftmost house.
-11. The Norwegian has the rabbit.
+8. The occupant of the red house is either the lawyer or the teacher.
+9. The baker lives next door to the Brit.
+10. The German lives in the leftmost house.
+11. The Norwegian keeps the rabbit.
 12. The Dane lives next door to the teacher.
-13. The dog belongs to the red house's resident.
-14. The green house's occupant and the red house's occupant are not neighbours.
+13. The red house's occupant keeps the dog.
+14. The green house and the red house are not next to each other.
 
 ## Puzzle hard:zebra_hard-00047
 

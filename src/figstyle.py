@@ -14,15 +14,29 @@ GRID = "#d9d8d4"
 FAMILY_NAMES = {"zebra": "Zebra (NL)", "sudoku": "Sudoku 9x9", "killer": "Killer 6x6", "futoshiki": "Futoshiki 5x5"}
 
 
+# figures are drawn at their printed size (A4, 2 cm margins => \textwidth = 17 cm), so the
+# LaTeX source includes them with width=\textwidth and no font gets scaled down
+TEXTWIDTH = 6.69
+
+
 def setup():
     plt.rcParams.update({
         "font.family": "DejaVu Sans",
-        "font.size": 8,
-        "axes.titlesize": 8.5,
-        "axes.labelsize": 8,
+        "font.size": 7.5,
+        "axes.titlesize": 8,
+        "axes.titleweight": "bold",
+        "axes.titlelocation": "left",
+        "axes.titlepad": 6,
+        "axes.labelsize": 7.5,
         "xtick.labelsize": 7,
         "ytick.labelsize": 7,
         "legend.fontsize": 7,
+        "legend.handlelength": 1.4,
+        "legend.columnspacing": 1.2,
+        "legend.borderaxespad": 0.2,
+        "figure.constrained_layout.use": True,
+        "figure.constrained_layout.h_pad": 0.04,
+        "figure.constrained_layout.w_pad": 0.06,
         "axes.edgecolor": INK2,
         "axes.labelcolor": INK,
         "xtick.color": INK2,
@@ -36,10 +50,22 @@ def setup():
         "axes.axisbelow": True,
         "lines.linewidth": 2,
         "savefig.bbox": "tight",
-        "savefig.dpi": 300,
+        "savefig.pad_inches": 0.03,
+        "savefig.dpi": 600,
         "pdf.fonttype": 42,
         "legend.frameon": False,
     })
+
+
+def legend_above(ax, handles=None, ncol=4, **kw):
+    """Legend in one row just above the axes, outside the data area."""
+    args = (handles,) if handles is not None else ()
+    return ax.legend(*args, loc="lower left", bbox_to_anchor=(0, 1.0), ncol=ncol, frameon=False, **kw)
+
+
+def fig_legend(fig, handles, ncol, **kw):
+    """One shared legend row at the top of the figure, above all panels."""
+    return fig.legend(handles=handles, loc="outside upper center", ncol=ncol, frameon=False, **kw)
 
 
 def save(fig, name):

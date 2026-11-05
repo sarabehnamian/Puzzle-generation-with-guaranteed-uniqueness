@@ -18,7 +18,7 @@ Examples (from other puzzles):
 - "The person who reads poetry lives next to the person who drinks lemonade."
                                             ->  Abs(pos('poetry') - pos('lemonade')) == 1
 
-Output: write a single JSON object to the file /home/user/Puzzle-generation-with-guaranteed-uniqueness/data/llm_tasks/e1_encC/e1_encC_022.out.json with this exact structure
+Output: write a single JSON object to the file D:\Puzzle-generation-with-guaranteed-uniqueness\data\llm_tasks\e1_encC\e1_encC_022.out.json with this exact structure
 {"puzzles": [{"id": "<puzzle id>", "constraints": [{"clue": 1, "expr": "<expression>"}, ...]}, ...]}
 One entry per puzzle and exactly one constraint per numbered clue, in order. Use single quotes inside
 expressions so the JSON stays valid.
@@ -106,18 +106,18 @@ There are 5 houses in a row, numbered 1 to 5 from left to right. Each house has 
 - hobby: hiking, golf, cooking, chess, tennis
 
 Clues:
-1. The milk drinker is the bird keeper.
-2. The green house stands immediately to the right of the milk drinker.
-3. The tea drinker lives somewhere to the left of the dog keeper.
-4. The coffee drinker lives directly to the left of the white house.
+1. The milk drinker keeps the bird.
+2. The green house stands directly to the right of the milk drinker.
+3. The tea drinker lives somewhere to the left of the dog owner.
+4. The coffee drinker lives directly left of the white house.
 5. The white house's occupant keeps either the dog or the rabbit.
-6. The golf enthusiast keeps the rabbit.
-7. The occupant of the white house enjoys hiking.
-8. The cooking enthusiast lives next door to the hiking enthusiast.
+6. The golfer keeps the rabbit.
+7. The white house's occupant likes hiking.
+8. The cooking enthusiast and the hiker live next door to each other.
 9. The rabbit owner drinks coffee.
-10. The blue house stands immediately to the right of the green house.
-11. The tennis enthusiast lives directly to the left of the rabbit owner.
-12. The yellow house's occupant is not the fish owner.
+10. The blue house is immediately to the right of the green house.
+11. The tennis player lives directly to the left of the rabbit owner.
+12. The yellow house's occupant and the fish owner are not the same person.
 13. The fish owner drinks water.
 
 ## Puzzle hard:zebra_hard-00022

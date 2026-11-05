@@ -18,7 +18,7 @@ Examples (from other puzzles):
 - "The person who reads poetry lives next to the person who drinks lemonade."
                                             ->  Abs(pos('poetry') - pos('lemonade')) == 1
 
-Output: write a single JSON object to the file /home/user/Puzzle-generation-with-guaranteed-uniqueness/data/llm_tasks/e1_encB/e1_encB_006.out.json with this exact structure
+Output: write a single JSON object to the file D:\Puzzle-generation-with-guaranteed-uniqueness\data\llm_tasks\e1_encB\e1_encB_006.out.json with this exact structure
 {"puzzles": [{"id": "<puzzle id>", "constraints": [{"clue": 1, "expr": "<expression>"}, ...]}, ...]}
 One entry per puzzle and exactly one constraint per numbered clue, in order. Use single quotes inside
 expressions so the JSON stays valid.
@@ -57,19 +57,19 @@ There are 5 houses in a row, numbered 1 to 5 from left to right. Each house has 
 - color: blue, white, green, yellow, red
 
 Clues:
-1. The yellow house is the first house.
-2. The occupant of the blue house does not drink tea.
-3. The cocoa drinker and the Norwegian do not live next door to each other.
-4. The water drinker and the white house have exactly one house between them.
-5. The blue house's occupant and the cocoa drinker are not the same person.
+1. The yellow house is house number 1.
+2. The blue house's occupant does not drink tea.
+3. The cocoa drinker and the Norwegian do not live next to each other.
+4. One house lies between the water drinker and the white house.
+5. The blue house's occupant is not the cocoa drinker.
 6. The doctor and the water drinker live two houses apart.
-7. The blue house stands directly to the left of the Dane's house.
+7. The blue house is immediately to the left of the Dane's house.
 8. The red house is not next door to the teacher.
 9. The lawyer and the Spaniard live two houses apart.
-10. The pilot and the tea drinker live next door to each other.
-11. One house separates the cocoa drinker from the Spaniard.
-12. The German lives right beside the white house.
-13. The green house stands directly to the left of the cocoa drinker's house.
+10. The pilot lives next door to the tea drinker.
+11. There is one house between the cocoa drinker and the Spaniard.
+12. The German and the white house's occupant are neighbours.
+13. The green house is directly left of the cocoa drinker's house.
 14. The coffee drinker lives in the white house.
 
 ## Puzzle plain:zebra-00031
@@ -105,18 +105,18 @@ There are 5 houses in a row, numbered 1 to 5 from left to right. Each house has 
 - drink: water, milk, tea, cocoa, coffee
 
 Clues:
-1. The hiker lives directly to the left of the milk drinker.
-2. The farmer and the Norwegian are next-door neighbours.
-3. House 4 belongs to the water drinker.
-4. The tennis player lives immediately to the left of the chess player.
+1. The hiker lives immediately to the left of the milk drinker.
+2. The farmer lives next door to the Norwegian.
+3. The water drinker lives in house 4.
+4. The tennis enthusiast lives immediately to the left of the chess player.
 5. The coffee drinker's hobby is chess.
 6. The Brit lives directly to the left of the coffee drinker.
-7. The baker is the one who drinks tea.
+7. The tea drinker is the baker.
 8. The lawyer and the pilot live next door to each other.
-9. One house lies between the German and the teacher.
+9. Exactly one house lies between the German and the teacher.
 10. The painter and the tea drinker live two houses apart.
 11. The milk drinker lives immediately to the left of the teacher.
-12. The Swede lives directly to the right of the pilot.
+12. The Swede lives immediately to the right of the pilot.
 
 ## Puzzle plain:zebra-00032
 
@@ -139,28 +139,32 @@ Clues:
 10. The pilot lives in the house just left of the one where the German lives.
 11. There is exactly one house between the Brit and the farmer.
 
-## Puzzle paraphrase:zebra-00182
+## Puzzle paraphrase:zebra-00183
 
 There are 5 houses in a row, numbered 1 to 5 from left to right. Each house has one occupant. Every occupant has exactly one value from each category below, and no two occupants share a value within a category.
-- pet: fish, cat, horse, dog, bird
-- nationality: Swede, Brit, German, Spaniard, Norwegian
-- hobby: tennis, golf, hiking, painting, cooking
-- color: blue, green, yellow, white, red
+- hobby: tennis, cooking, painting, golf, chess
+- color: green, blue, white, red, yellow
+- job: farmer, pilot, baker, teacher, lawyer
+- pet: dog, rabbit, bird, horse, cat
 
 Clues:
-1. The tennis player lives immediately to the right of the green house.
-2. The Brit occupies the leftmost house.
-3. House 3 belongs to the cooking enthusiast.
-4. The dog's house is immediately to the right of the white house.
-5. The cat owner lives next door to the cooking enthusiast.
-6. The bird belongs to the Spaniard.
-7. The Swede is the one who owns the cat.
-8. Hiking is the Spaniard's hobby.
-9. One house lies between the blue house and the cooking enthusiast.
-10. The tennis player lives in the fifth house.
-11. The red house and the white house are not next to each other.
-12. The horse owner lives immediately to the left of the Spaniard.
-13. The Norwegian and the painting enthusiast live two houses apart.
+1. The dog owner is not the pilot.
+2. The red house's occupant has either the bird or the rabbit.
+3. The rabbit lives in the blue house.
+4. The golfer is not the teacher.
+5. The cooking enthusiast and the pilot live in neighbouring houses.
+6. The green house is where the cat lives.
+7. The golfer lives in either the red house or the white house.
+8. The lawyer and the teacher have exactly one house between them.
+9. The white house is somewhere to the left of the horse owner.
+10. The bird owner lives somewhere to the right of the teacher.
+11. The horse owner and the tennis player live two houses apart.
+12. The yellow house is at one of the two ends of the row.
+13. The red house is immediately to the left of the painting enthusiast.
+14. The farmer and the painter live next door to each other.
+15. One house separates the green house from the painter.
+16. The teacher lives somewhere to the left of the cat owner.
+17. The cooking enthusiast lives in one of the end houses.
 
 ## Puzzle plain:zebra-00099
 

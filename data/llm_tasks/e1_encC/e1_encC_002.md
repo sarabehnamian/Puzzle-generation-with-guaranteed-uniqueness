@@ -18,7 +18,7 @@ Examples (from other puzzles):
 - "The person who reads poetry lives next to the person who drinks lemonade."
                                             ->  Abs(pos('poetry') - pos('lemonade')) == 1
 
-Output: write a single JSON object to the file /home/user/Puzzle-generation-with-guaranteed-uniqueness/data/llm_tasks/e1_encC/e1_encC_002.out.json with this exact structure
+Output: write a single JSON object to the file D:\Puzzle-generation-with-guaranteed-uniqueness\data\llm_tasks\e1_encC\e1_encC_002.out.json with this exact structure
 {"puzzles": [{"id": "<puzzle id>", "constraints": [{"clue": 1, "expr": "<expression>"}, ...]}, ...]}
 One entry per puzzle and exactly one constraint per numbered clue, in order. Use single quotes inside
 expressions so the JSON stays valid.
@@ -35,17 +35,17 @@ There are 5 houses in a row, numbered 1 to 5 from left to right. Each house has 
 - pet: fish, bird, dog, horse, rabbit
 
 Clues:
-1. The green house is directly to the left of the golfer.
-2. The juice drinker lives right next to the yellow house.
+1. The green house is directly to the left of the golfer's house.
+2. The juice drinker lives next door to the yellow house's occupant.
 3. The fish keeper lives immediately to the left of the juice drinker.
-4. The yellow house is directly to the right of the bird keeper.
-5. Cooking is the hobby of the rabbit keeper.
-6. One house lies between the chess player and the coffee drinker.
-7. The purple house lies somewhere to the right of the hiker.
-8. The cocoa drinker lives directly to the left of the tea drinker.
-9. Exactly one house separates the hiker from the red house.
-10. The dog owner lives in the fourth house.
-11. The rabbit owner lives immediately to the right of the yellow house.
+4. The yellow house's occupant lives immediately to the right of the bird keeper.
+5. The rabbit keeper's hobby is cooking.
+6. Exactly one house lies between the chess player and the coffee drinker.
+7. The purple house is somewhere to the right of the hiker.
+8. The cocoa drinker lives immediately to the left of the tea drinker.
+9. One house separates the hiker from the red house's occupant.
+10. The dog's owner lives in the fourth house.
+11. The rabbit's owner lives immediately to the right of the yellow house's occupant.
 12. The yellow house's occupant drinks either juice or tea.
 
 ## Puzzle plain:zebra-00076
@@ -223,19 +223,19 @@ There are 5 houses in a row, numbered 1 to 5 from left to right. Each house has 
 
 Clues:
 1. The farmer lives in one of the two end houses.
-2. The horse belongs to the lawyer.
-3. The yellow house is directly to the left of the cat owner's house.
-4. The bird owner and the lawyer live next door to each other.
-5. Exactly one house lies between the baker and the Swede.
+2. The lawyer is the horse keeper.
+3. The yellow house stands immediately to the left of the cat owner's house.
+4. The bird keeper and the lawyer live next door to each other.
+5. The baker and the Swede have exactly one house between them.
 6. The Swede lives in either the blue house or the green house.
 7. The horse owner lives in either the blue house or the white house.
-8. The resident of the red house is either the lawyer or the teacher.
-9. The baker and the Brit are next-door neighbours.
-10. The German occupies the leftmost house.
-11. The Norwegian has the rabbit.
+8. The occupant of the red house is either the lawyer or the teacher.
+9. The baker lives next door to the Brit.
+10. The German lives in the leftmost house.
+11. The Norwegian keeps the rabbit.
 12. The Dane lives next door to the teacher.
-13. The dog belongs to the red house's resident.
-14. The green house's occupant and the red house's occupant are not neighbours.
+13. The red house's occupant keeps the dog.
+14. The green house and the red house are not next to each other.
 
 ## Puzzle plain:zebra-00039
 

@@ -5,7 +5,7 @@ from pathlib import Path
 
 import matplotlib.pyplot as plt
 
-from .figstyle import INK, INK2, SERIES, save, setup
+from .figstyle import INK, INK2, SERIES, TEXTWIDTH, save, setup
 
 ROOT = Path(__file__).resolve().parents[1]
 
@@ -35,7 +35,7 @@ def draw_sudoku(ax, p):
     grid_lines(ax, 9, (3, 3))
     for c in s["clues"]:
         r, cc = c["cell"]
-        ax.text(cc + 0.5, r + 0.55, str(c["value"]), ha="center", va="center", fontsize=6.5, color=INK)
+        ax.text(cc + 0.5, r + 0.55, str(c["value"]), ha="center", va="center", fontsize=7, color=INK)
 
 
 def draw_killer(ax, p):
@@ -69,69 +69,86 @@ def draw_killer(ax, p):
 
 
 def draw_futoshiki(ax, p):
+    """Cells of side 0.72 on a pitch of 1, so the inequality signs sit in the gaps between cells."""
     s = p["spec"]
-    n = 5
+    n, side = 5, 0.72
     for r in range(n):
         for c in range(n):
-            ax.add_patch(plt.Rectangle((c * 1.4, r * 1.4), 1, 1, fill=False, color=INK, lw=0.8))
+            ax.add_patch(plt.Rectangle((c, r), side, side, fill=False, edgecolor=INK, lw=0.9))
+    mid = side + (1 - side) / 2
     for c in s["clues"]:
         if c["type"] == "given":
             r, cc = c["cell"]
-            ax.text(cc * 1.4 + 0.5, r * 1.4 + 0.55, str(c["value"]), ha="center", va="center", fontsize=8)
+            ax.text(cc + side / 2, r + side / 2, str(c["value"]), ha="center", va="center", fontsize=8)
         else:
             (r1, c1), (r2, c2) = c["a"], c["b"]
             if r1 == r2:
-                x = min(c1, c2) * 1.4 + 1.2
                 sym = "<" if c1 < c2 else ">"
-                ax.text(x, r1 * 1.4 + 0.55, sym, ha="center", va="center", fontsize=8, color=SERIES[0])
+                ax.text(min(c1, c2) + mid, r1 + side / 2, sym, ha="center", va="center", fontsize=7.5,
+                        color=SERIES[0])
             else:
-                y = min(r1, r2) * 1.4 + 1.2
                 sym = "∧" if r1 < r2 else "∨"
-                ax.text(c1 * 1.4 + 0.5, y, sym, ha="center", va="center", fontsize=8, color=SERIES[0])
-    ax.set_xlim(-0.2, n * 1.4)
-    ax.set_ylim(n * 1.4, -0.2)
+                ax.text(c1 + side / 2, min(r1, r2) + mid, sym, ha="center", va="center", fontsize=7.5,
+                        color=SERIES[0])
+    ax.set_xlim(-0.15, n - 1 + side + 0.15)
+    ax.set_ylim(n - 1 + side + 0.15, -0.15)
     ax.set_aspect("equal")
     ax.axis("off")
 
 
-def draw_text(ax, lines, size=5.4):
+def draw_text(ax, lines, size=5.6):
     ax.axis("off")
-    ax.text(0, 1, "\n".join(lines), va="top", fontsize=size, family="DejaVu Sans Mono", color=INK, linespacing=1.3)
+    ax.text(0, 1, "\n".join(lines), va="top", ha="left", fontsize=size, family="DejaVu Sans Mono", color=INK,
+            linespacing=1.35, transform=ax.transAxes)
+
+
+def zebra_lines(p, width=60):
+    s = p["spec"]
+    lines = [f"{c}: {', '.join(v)}" for c, v in s["cats"].items()] + [""]
+    for i, c in enumerate(s["clues"], 1):
+        for k, w in enumerate(textwrap.wrap(c["text"], width - 4)):
+            lines.append((f"{i:>2}. " if k == 0 else "    ") + w)
+    return lines
+
+
+def genre_and_instance():
+    """The genre chosen for E5 (results/e5/solve_items.json) and its deepest certified instance."""
+    G = json.loads((ROOT / "results/e5/genres.json").read_text(encoding="utf-8"))
+    items = ROOT / "results/e5/solve_items.json"
+    if items.exists():
+        name = json.loads(items.read_text(encoding="utf-8"))["genre"]
+    else:
+        from .e5_genres import pick_genre
+        name = pick_genre(G)
+    g = [x for x in G if x["name"] == name][0]
+    inst = sorted([i for i in g["instances"] if i.get("status") == "ok"], key=lambda i: -i["level"])[0]
+    return g, inst
 
 
 def main():
     setup()
-    fig = plt.figure(figsize=(7.2, 5.6))
-    specs = [("a  Zebra, L3", pick("zebra", 3)), ("b  Sudoku, L3", pick("sudoku", 3)),
-             ("c  Killer, L4", pick("killer", 4)), ("d  Futoshiki, L3", pick("futoshiki", 3))]
-    pos = [[0.0, 0.5, 0.48, 0.46], [0.52, 0.53, 0.22, 0.40], [0.77, 0.53, 0.22, 0.40], [0.58, 0.05, 0.26, 0.35]]
-    for (title, p), ps in zip(specs, pos):
-        ax = fig.add_axes(ps)
-        fam = p["family"]
-        if fam == "zebra":
-            s = p["spec"]
-            lines = [f"{c}: {', '.join(v)}" for c, v in s["cats"].items()] + [""]
-            for i, c in enumerate(s["clues"], 1):
-                for k, w in enumerate(textwrap.wrap(c["text"], 62)):
-                    lines.append((f"{i:>2}. " if k == 0 else "    ") + w)
-            draw_text(ax, lines)
-        elif fam == "sudoku":
-            draw_sudoku(ax, p)
-        elif fam == "killer":
-            draw_killer(ax, p)
-        else:
-            draw_futoshiki(ax, p)
-        fig.text(ps[0], ps[1] + ps[3] + 0.01, title + f" ({p['analysis']['n_clues']} clues)",
-                 fontsize=7.5, weight="bold")
-    # invented genre
-    G = json.loads((ROOT / "results/e5/genres.json").read_text())
-    g = [x for x in G if x["name"] == "Median Line Latin"][0]
-    inst = sorted([i for i in g["instances"] if i.get("status") == "ok"], key=lambda i: -i["level"])[0]
-    ax = fig.add_axes([0.0, 0.03, 0.48, 0.40])
-    lines = textwrap.wrap(g["rules_text"], 66) + [""] + [f"- {c['text']}" for c in inst["clues"]]
-    draw_text(ax, lines, 5.6)
-    fig.text(0.0, 0.445, f"e  LLM-invented genre “{g['name']}”, L{inst['level']} ({inst['n_clues']} clues)",
-             fontsize=7.5, weight="bold")
+    plt.rcParams["figure.constrained_layout.use"] = False
+    fig = plt.figure(figsize=(TEXTWIDTH, 5.3))
+    top, bottom = fig.subfigures(2, 1, height_ratios=[1.25, 1], hspace=0.02)
+    # top row: the two puzzles that are text
+    ta, tb = top.subplots(1, 2, gridspec_kw={"wspace": 0.08})
+    top.subplots_adjust(left=0.0, right=1.0, top=0.93, bottom=0.0)
+    za = pick("zebra", 3)
+    draw_text(ta, zebra_lines(za))
+    ta.set_title(f"a  Zebra, L3 ({za['analysis']['n_clues']} clues)")
+    g, inst = genre_and_instance()
+    lines = textwrap.wrap(g["rules_text"], 60) + [""] + \
+        [w for c in inst["clues"] for w in textwrap.wrap(f"- {c['text']}", 60, subsequent_indent="  ")]
+    draw_text(tb, lines)
+    tb.set_title(f"b  LLM-invented genre “{g['name']}”, L{inst['level']} ({inst['n_clues']} clues)")
+    # bottom row: the three grid puzzles at equal size
+    axs = bottom.subplots(1, 3, gridspec_kw={"wspace": 0.18})
+    bottom.subplots_adjust(left=0.01, right=0.99, top=0.9, bottom=0.02)
+    for ax, (letter, fam, lev, draw) in zip(axs, [("c", "sudoku", 3, draw_sudoku), ("d", "killer", 4, draw_killer),
+                                                  ("e", "futoshiki", 3, draw_futoshiki)]):
+        p = pick(fam, lev)
+        draw(ax, p)
+        ax.set_title(f"{letter}  {fam.capitalize()}, L{lev} ({p['analysis']['n_clues']} clues)")
     save(fig, "fig7_gallery")
 
 

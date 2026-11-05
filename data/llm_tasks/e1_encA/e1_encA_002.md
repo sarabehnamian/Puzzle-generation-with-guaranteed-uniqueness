@@ -18,7 +18,7 @@ Examples (from other puzzles):
 - "The person who reads poetry lives next to the person who drinks lemonade."
                                             ->  Abs(pos('poetry') - pos('lemonade')) == 1
 
-Output: write a single JSON object to the file /home/user/Puzzle-generation-with-guaranteed-uniqueness/data/llm_tasks/e1_encA/e1_encA_002.out.json with this exact structure
+Output: write a single JSON object to the file D:\Puzzle-generation-with-guaranteed-uniqueness\data\llm_tasks\e1_encA\e1_encA_002.out.json with this exact structure
 {"puzzles": [{"id": "<puzzle id>", "constraints": [{"clue": 1, "expr": "<expression>"}, ...]}, ...]}
 One entry per puzzle and exactly one constraint per numbered clue, in order. Use single quotes inside
 expressions so the JSON stays valid.
@@ -231,25 +231,26 @@ Clues:
 12. The cocoa drinker and the Dane are not neighbours.
 13. The owner of the fish lives next to the person in the red house.
 
-## Puzzle paraphrase:zebra-00165
+## Puzzle paraphrase:zebra-00166
 
 There are 5 houses in a row, numbered 1 to 5 from left to right. Each house has one occupant. Every occupant has exactly one value from each category below, and no two occupants share a value within a category.
-- job: farmer, lawyer, teacher, pilot, doctor
-- drink: tea, juice, milk, cocoa, coffee
-- nationality: Norwegian, German, Swede, Brit, Spaniard
-- hobby: chess, hiking, cooking, golf, tennis
+- hobby: golf, cooking, chess, painting, hiking
+- job: pilot, farmer, teacher, doctor, baker
+- pet: dog, cat, fish, rabbit, horse
+- color: yellow, purple, red, blue, green
 
 Clues:
-1. The Norwegian occupies house 1.
-2. The tea drinker lives immediately to the left of the lawyer.
-3. The German lives right before the farmer, directly to his left.
-4. The milk drinker is not a chess player.
-5. The golfer is the lawyer.
-6. The farmer lives immediately to the left of the coffee drinker.
-7. The Brit and the pilot have exactly one house between them.
-8. The cocoa drinker lives directly to the left of the cooking enthusiast.
-9. The farmer and the Spaniard live in neighbouring houses.
-10. The doctor drinks either cocoa or juice.
-11. The milk drinker lives immediately to the left of the tennis player.
-12. The cooking enthusiast and the milk drinker live two houses apart.
-13. The cocoa drinker lives right next door to the doctor.
+1. The hiker lives next door to the rabbit owner.
+2. The red house's occupant keeps the cat.
+3. The doctor keeps the fish.
+4. The golfer and the horse owner live in adjacent houses.
+5. The yellow house's occupant is the baker.
+6. Exactly one house lies between the horse owner and the rabbit owner.
+7. The baker's hobby is cooking.
+8. The blue house's occupant lives next to the fish owner.
+9. The fish owner lives in one of the two end houses.
+10. One house separates the horse owner from the yellow house.
+11. The farmer lives in a lower-numbered house than the teacher.
+12. The green house is immediately to the right of the blue house.
+13. One house separates the pilot from the purple house.
+14. Exactly one house lies between the horse owner and the painter.

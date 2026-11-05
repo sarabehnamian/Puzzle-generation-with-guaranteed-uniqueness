@@ -13,3 +13,5 @@ paper/*.fdb_latexmk
 paper/*.toc
 paper/*.synctex.gz
 .claude/
+.venv/
+logs/

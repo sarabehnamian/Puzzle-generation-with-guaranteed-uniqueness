@@ -42,6 +42,12 @@ def collect(stage):
         for a in answers:
             if isinstance(a, dict) and "id" in a:
                 got[str(a["id"])] = a.get("answer")
+        if not got and len(rec["items"]) == 1 and not res.get("_parse_error"):
+            # single-puzzle call whose reply deviates from {"answers": [{"id": .., "answer": ..}]}
+            # (no wrapper, or one entry without "id"): the reply can only belong to that one puzzle
+            cand = answers[0] if len(answers) == 1 else (res if not answers else None)
+            if isinstance(cand, dict):
+                got[rec["items"][0]] = cand["answer"] if "answer" in cand else cand
         for pid in rec["items"]:
             out[(pid, rec["model"])] = got.get(pid, None)
     return out

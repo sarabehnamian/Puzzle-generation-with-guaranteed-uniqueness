@@ -1,0 +1,12 @@
+{"variants":[
+{"parent":"e4b-g1-03","ops":[{"op":"replace","clue":1,"with":{"type":"or","args":["yellow","dog","cat"]}},{"op":"replace","clue":25,"with":{"type":"end","args":["brit"]}}],"idea":"Replace two direct house placements with a disjunction and an end clue."},
+{"parent":"e4b-g1-03","ops":[{"op":"replace","clue":20,"with":{"type":"not_next_to","args":["blue","green"]}},{"op":"replace","clue":25,"with":{"type":"end","args":["brit"]}}],"idea":"Turn the blue end clue into a negative relation and loosen the Brit position."},
+{"parent":"e4b-g1-02","ops":[{"op":"replace","clue":22,"with":{"type":"end","args":["bird"]}},{"op":"replace","clue":14,"with":{"type":"end","args":["blue"]}}],"idea":"Both fixed positions become end clues, which need case analysis."},
+{"parent":"e4b-g1-02","ops":[{"op":"remove","clue":22},{"op":"replace","clue":18,"with":{"type":"before","args":["golf","tennis"]}}],"idea":"Drop the bird position and weaken the golf end clue to a relative one."},
+{"parent":"e4b-g1-12","ops":[{"op":"replace","clue":25,"with":{"type":"gap2","args":["farmer","pilot"]}},{"op":"replace","clue":16,"with":{"type":"next_to","args":["bird","dog"]}}],"idea":"Replace two absolute positions with relative neighbour clues."},
+{"parent":"e4b-g1-12","ops":[{"op":"replace","clue":27,"with":{"type":"or","args":["teacher","brit","german"]}},{"op":"replace","clue":13,"with":{"type":"or","args":["doctor","red","blue"]}}],"idea":"Turn direct equalities into either-or clues."},
+{"parent":"e4b-g0-02","ops":[{"op":"replace","clue":4,"with":{"type":"end","args":["water"]}},{"op":"replace","clue":21,"with":{"type":"next_to","args":["spaniard","red"]}}],"idea":"Weaken two direct placements into end and adjacency clues."},
+{"parent":"e4b-g0-02","ops":[{"op":"replace","clue":17,"with":{"type":"end","args":["red"]}},{"op":"replace","clue":15,"with":{"type":"gap2","args":["pilot","spaniard"]}}],"idea":"Replace the red and pilot positions with an end clue and a gap clue."},
+{"parent":"e4b-g0-00","ops":[{"op":"replace","clue":6,"with":{"type":"next_to","args":["cat","norwegian"]}},{"op":"replace","clue":24,"with":{"type":"before","args":["white","yellow"]}}],"idea":"Remove the fixed cat position and the white end clue, using relative clues instead."},
+{"parent":"e4b-g0-00","ops":[{"op":"replace","clue":11,"with":{"type":"before","args":["red","blue"]}},{"op":"replace","clue":6,"with":{"type":"next_to","args":["cat","norwegian"]}}],"idea":"Make the red/blue clue non-adjacent and the cat position relative."}
+]}

@@ -18,7 +18,7 @@ Examples (from other puzzles):
 - "The person who reads poetry lives next to the person who drinks lemonade."
                                             ->  Abs(pos('poetry') - pos('lemonade')) == 1
 
-Output: write a single JSON object to the file /home/user/Puzzle-generation-with-guaranteed-uniqueness/data/llm_tasks/e1_encA/e1_encA_017.out.json with this exact structure
+Output: write a single JSON object to the file D:\Puzzle-generation-with-guaranteed-uniqueness\data\llm_tasks\e1_encA\e1_encA_017.out.json with this exact structure
 {"puzzles": [{"id": "<puzzle id>", "constraints": [{"clue": 1, "expr": "<expression>"}, ...]}, ...]}
 One entry per puzzle and exactly one constraint per numbered clue, in order. Use single quotes inside
 expressions so the JSON stays valid.
@@ -108,19 +108,19 @@ There are 5 houses in a row, numbered 1 to 5 from left to right. Each house has 
 
 Clues:
 1. The farmer lives in one of the two end houses.
-2. The horse belongs to the lawyer.
-3. The yellow house is directly to the left of the cat owner's house.
-4. The bird owner and the lawyer live next door to each other.
-5. Exactly one house lies between the baker and the Swede.
+2. The lawyer is the horse keeper.
+3. The yellow house stands immediately to the left of the cat owner's house.
+4. The bird keeper and the lawyer live next door to each other.
+5. The baker and the Swede have exactly one house between them.
 6. The Swede lives in either the blue house or the green house.
 7. The horse owner lives in either the blue house or the white house.
-8. The resident of the red house is either the lawyer or the teacher.
-9. The baker and the Brit are next-door neighbours.
-10. The German occupies the leftmost house.
-11. The Norwegian has the rabbit.
+8. The occupant of the red house is either the lawyer or the teacher.
+9. The baker lives next door to the Brit.
+10. The German lives in the leftmost house.
+11. The Norwegian keeps the rabbit.
 12. The Dane lives next door to the teacher.
-13. The dog belongs to the red house's resident.
-14. The green house's occupant and the red house's occupant are not neighbours.
+13. The red house's occupant keeps the dog.
+14. The green house and the red house are not next to each other.
 
 ## Puzzle plain:zebra-00001
 
@@ -224,19 +224,19 @@ There are 5 houses in a row, numbered 1 to 5 from left to right. Each house has 
 - pet: rabbit, fish, bird, cat, horse
 
 Clues:
-1. The white house lies somewhere to the left of the blue house.
-2. The occupant of the green house drinks tea.
-3. The hiking enthusiast lives directly to the left of the painting enthusiast.
-4. The cat keeper lives immediately to the right of the cocoa drinker.
+1. The white house is somewhere to the left of the blue house.
+2. The green house's occupant drinks tea.
+3. The hiker lives immediately to the left of the painter.
+4. The cat owner lives directly right of the cocoa drinker.
 5. One house separates the cocoa drinker from the cooking enthusiast.
-6. The juice drinker lives at one end of the row.
-7. The fish keeper and the person in the purple house are next-door neighbours.
-8. Exactly one house lies between the blue house and the white house.
-9. The horse owner and the rabbit owner live side by side.
-10. The milk drinker lives immediately to the right of the juice drinker.
-11. The cooking enthusiast drinks tea.
-12. The occupant of the red house keeps either the fish or the horse.
-13. The golf enthusiast keeps the fish.
+6. The juice drinker lives in one of the end houses.
+7. The fish keeper is a neighbour of the purple house's occupant.
+8. The horse owner and the rabbit owner live next door to each other.
+9. The milk drinker lives right next to the juice drinker, on its right.
+10. The cooking enthusiast drinks tea.
+11. The red house's occupant keeps either the fish or the horse.
+12. The golfer is the one who keeps the fish.
+13. There is one house between the blue house and the white house.
 
 ## Puzzle hard:zebra_hard-00025
 

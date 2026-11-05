@@ -21,9 +21,9 @@ Family & $n$ & L1 & L2 & L3 & L4 & L5 & clues (mean) \\
 
 \subsection{E1: how often is a single encoding wrong?}
 
-Figure~\ref{fig:example} shows one puzzle end to end: the text, the two Sonnet encodings (they differ in form on three clues and are proved equivalent), and the chain of forced facts with the minimal clue set behind each. Table~\ref{tab:e1} and Figure~\ref{fig:e1} give the error rates.
+Figure~\ref{fig:example} shows one puzzle end to end: the text, the two Sonnet encodings (here identical clue by clue up to letter case, and proved equivalent), and the chain of forced facts with the minimal clue set behind each. Table~\ref{tab:e1} and Figure~\ref{fig:e1} give the error rates.
 
-On plain template text no encoder made an error: 0 of 3$\times$\EOnePlainClues clue encodings were wrong. On hard templates Sonnet~A produced no wrong puzzle, Sonnet~B \EOneHardErrNB and Haiku \EOneHardErrNC of 100 (\EOneHardErrC). On paraphrased text all three encoders were wrong on 7--8 of \EOneParaN puzzles (Sonnet~A \EOneParaErrA). These rates are low and their intervals are wide; the more useful result is the audit of what went wrong (Section~\ref{sec:audit}).
+On plain template text the two Sonnet encoders made no error and Haiku one (a direction flip): \EOnePlainClueC of 3$\times$\EOnePlainClues clue encodings was wrong. On hard templates Sonnet~A produced \EOneHardErrNA wrong puzzle, Sonnet~B \EOneHardErrNB and Haiku \EOneHardErrNC of 100 (\EOneHardErrC). On paraphrased text the encoders were wrong on 3--4 of \EOneParaN puzzles (Sonnet~A \EOneParaErrA, Haiku \EOneParaErrC). Apart from Haiku on hard templates these rates are low and their intervals are wide; the more useful result is the audit of what went wrong (Section~\ref{sec:audit}).
 
 \begin{table*}[t]
 \centering
@@ -45,30 +45,31 @@ Text & $n$ & Sonnet A & Sonnet B & Haiku C & A--B & A--C & B--C \\
 \begin{figure*}[t]
 \centering
 \includegraphics[width=\textwidth]{../figures/fig1_example.pdf}
-\caption{One zebra puzzle through the pipeline. (a) The text given to the encoders. (b) The two Sonnet encodings in the position DSL; three clues are written differently and z3 proves $A \oplus B$ unsatisfiable. (c) Every fact of the solution in the order the ladder derives it, the strongest rule needed so far, and a minimal set of clues that forces it. The puzzle is L3: after one unit-propagation step every further fact needs failed-literal probing, and most explanations need 8--13 of the 14 clues.}
+\caption{One zebra puzzle through the pipeline. (a) The text given to the encoders. (b) The two Sonnet encodings in the position DSL; here they agree clue by clue up to letter case, and z3 proves $A \oplus B$ unsatisfiable. (c) Every fact of the solution in the order the ladder derives it, the strongest rule needed so far, and a minimal set of clues that forces it. The puzzle is L3: after one unit-propagation step every further fact needs failed-literal probing, and most explanations need 8--13 of the 14 clues.}
 \label{fig:example}
 \end{figure*}
 
 \begin{figure*}[t]
 \centering
-\includegraphics[width=0.85\textwidth]{../figures/fig2_faithfulness.pdf}
-\caption{E1. (a) Share of puzzles with a wrong single encoding, with 95\% bootstrap intervals. (b) For each encoder, how its wrong encodings were detected: by disagreement with its partner encoding, or only because the wrongly encoded puzzle no longer had a unique solution. No wrong encoding escaped both checks.}
+\includegraphics[width=\textwidth]{../figures/fig2_faithfulness.pdf}
+\caption{E1. (a) Share of puzzles with a wrong single encoding, with 95\% bootstrap intervals. (b) For each encoder, how its wrong encodings were detected: by disagreement with its partner encoding, or only because the wrongly encoded puzzle no longer had a unique solution. One wrong encoding, made by all three encoders of a paraphrase that had changed a clue's meaning, escaped both checks (grey).}
 \label{fig:e1}
 \end{figure*}
 
-\paragraph{Detection.} The dual check flagged every puzzle on which exactly one encoder of a pair was wrong. It missed the errors that both encoders shared: on paraphrased text the two Sonnet encodings disagreed on no puzzle at all, although both were wrong on the same 7. Each of those wrong encodings, however, made the encoded puzzle lose its unique solution, so the uniqueness check rejected it. Across all 299 puzzles and all three encoders, no wrong encoding passed both checks (Figure~\ref{fig:e1}b). Uniqueness works as a second detector because a minimal puzzle has no slack: changing the meaning of one clue almost always either removes the intended solution or admits a second one.
+\paragraph{Detection.} The dual check flagged every puzzle on which exactly one encoder of a pair was wrong (40 of 40 such puzzle--pair cases). It missed every error that both encoders shared: on paraphrased text the two Sonnet encodings disagreed on no puzzle at all, although both were wrong on the same 3, and Sonnet~A and Haiku shared one wrong encoding of a hard-template puzzle. Three of these four shared errors made the encoded puzzle lose its unique solution, so the uniqueness check rejected them. The fourth passed both checks: the paraphrase of puzzle \texttt{zebra-00148} said ``two houses separate the German from the rabbit owner'' for a clue that placed them two houses apart, all three encoders encoded the text as written (a distance of three), and the resulting puzzle still had exactly one solution, a different one. Across all \EOneN puzzles and three encoders this is the only wrong encoding that passed both checks (Figure~\ref{fig:e1}b). Uniqueness works as a second detector because a minimal puzzle has little slack: changing the meaning of one clue usually removes the intended solution or admits a second one, but not always.
 
-\paragraph{Audit.}\label{sec:audit} We read every clue-level error by hand (\texttt{results/e1/audit.md}). There were four groups.
+\paragraph{Audit.}\label{sec:audit} Every clue-level error was assigned a category automatically, by testing it against a list of plausible misreadings, and we read examples of every category (\texttt{results/e1/error\_examples.jsonl}). There were four groups.
 (i) \emph{An ambiguous template of our own} (\EOneTaxTooStrong clues, each misread by all three encoders): ``At least one house separates X and Y'' was generated for ``X and Y are not neighbours'' ($|p_X-p_Y|\neq1$, which allows the same house), and all three encoders read it as $|p_X-p_Y|\ge2$. Their reading is the natural one; the template is wrong. Because the clue is still true of the solution, no answer changed, and neither check can see the error; only the formal ground truth revealed it.
-(ii) \emph{Counting from the right}: ``the fourth house from the right'' encoded as house~4 (Haiku 5 clues, Sonnet~B 1).
-(iii) \emph{Direction flips}: ``the left-hand neighbour of the German drinks juice'' encoded with the German on the left (2 clues).
-(iv) \emph{Paraphrase drift}: Sonnet, asked to keep the meaning exactly, rewrote ``exactly one house between X and Y'' as ``two houses separate X and Y'' in 7 puzzles. The encoders then encoded what the text said. This is an error of the text, not of the encoding, and dual encoding by construction cannot catch it.
+(ii) \emph{Counting from the right}: ``the fifth house from the right'' encoded as house~5 (Haiku 17 clues, Sonnet~A 1). This one misreading accounts for most of Haiku's errors on hard templates. The dual check caught it wherever Sonnet read the clue correctly; on the one puzzle where Sonnet~A made the same misreading, the uniqueness check caught it.
+(iii) \emph{Direction flips and over-strong readings}, all by Haiku: ``somewhere to the left of'' encoded the other way round (3 clues), and ``somewhere between X and Y'' read as one order only (3 clues).
+(iv) \emph{Paraphrase drift}: Sonnet, asked to keep the meaning exactly, rewrote ``exactly one house between X and Y'' as ``two houses separate X and Y'' in 3 puzzles. The encoders then encoded what the text said. This is an error of the text, not of the encoding, and dual encoding by construction cannot catch it.
+The clue-level counts in Table~\ref{tab:e1} also include 11 clues per encoder from three paraphrased puzzles whose paraphrase listed the clues in a different order. The clue-by-clue comparison then pairs each encoded clue with the wrong original one, but the encodings of these puzzles are equivalent to the ground truth, so they are not errors.
 
 \subsection{E2: LLM-written puzzles without and with the loop}
 
-Sonnet's puzzles were almost always valid (Table~\ref{tab:e2}): \ETwoValid of \ETwoN parsed, had a unique solution equal to the stated one, and were fair. One Sudoku had a stated solution different from its true unique solution, and one Futoshiki had several solutions; one round of solver feedback repaired both (\ETwoValidRepair of \ETwoN). The zebra puzzles' two encodings never disagreed.
+Sonnet's puzzles were all valid (Table~\ref{tab:e2}): \ETwoValid of \ETwoN parsed, had a unique solution equal to the stated one, and were fair, so the round of solver feedback had nothing to repair. The zebra puzzles' two encodings never disagreed.
 
-The puzzles were, however, easy and redundant (Figure~\ref{fig:e2}). All 20 Sudoku had exactly 30 givens and were solved by unit propagation alone; half of the Killer puzzles were L1. On average \ETwoSudokuRed of a Sudoku's givens, \ETwoKillerRed of a Killer puzzle's clues and \ETwoFutoshikiRed of a Futoshiki puzzle's clues could each be removed without losing uniqueness; for zebra puzzles the figure was \ETwoZebraRed. Minimising the LLM puzzles with the solver raised their level (Sudoku: \ETwoSudokuMinLC of 20 reached L3; zebra: \ETwoZebraMinLC of 40). The 20 Sudoku used only \ETwoSudokuMasks distinct layouts of givens; \ETwoSudokuWikiMask used the layout of the example puzzle on the English Wikipedia Sudoku page and \ETwoSudokuWikiSame reproduced that puzzle exactly. LLM-written puzzles are thus valid but not a good source of hard or novel instances, and copying is a real risk for benchmarks built this way.
+The puzzles were, however, easy and redundant (Figure~\ref{fig:e2}). All 20 Sudoku had exactly 30 givens and were solved by unit propagation alone, and every Killer puzzle was L2. On average \ETwoSudokuRed of a Sudoku's givens, \ETwoKillerRed of a Killer puzzle's clues and \ETwoFutoshikiRed of a Futoshiki puzzle's clues could each be removed without losing uniqueness; for zebra puzzles the figure was \ETwoZebraRed. Minimising the LLM puzzles with the solver raised their level (Sudoku: \ETwoSudokuMinLC of 20 reached L3; zebra: \ETwoZebraMinLC of 40). The 20 Sudoku used only \ETwoSudokuMasks distinct layouts of givens; \ETwoSudokuWikiMask used the layout of the example puzzle on the English Wikipedia Sudoku page, though none reproduced that puzzle's digits. LLM-written puzzles are thus valid but not a good source of hard or novel instances, and reuse of familiar material is a real risk for benchmarks built this way.
 
 \begin{table*}[t]
 \centering
@@ -87,7 +88,7 @@ Family & $n$ & unique & as stated & valid & after repair & levels (LLM) & levels
 
 \begin{figure*}[t]
 \centering
-\includegraphics[width=0.85\textwidth]{../figures/fig3_validity.pdf}
+\includegraphics[width=\textwidth]{../figures/fig3_validity.pdf}
 \caption{E2. (a) Ladder levels of the LLM-written puzzles, of the same puzzles after solver minimisation, and of the pipeline's own bank. (b) Fraction of clues that can each be removed without losing uniqueness; the pipeline's puzzles have none by construction.}
 \label{fig:e2}
 \end{figure*}
@@ -118,13 +119,15 @@ Metric & Zebra & Sudoku & Killer & Futoshiki \\
 \end{tabular}
 \end{table*}
 
-\paragraph{Ladder versus LLM accuracy.} Table~\ref{tab:acc} and Figure~\ref{fig:acc} give the exact-solution rates. Every model solved every zebra puzzle at every level, including the 8 L4 puzzles. Opus solved all \EThreeN puzzles; Sonnet missed one L5 Killer puzzle (with 35 of 36 cells right). Only Haiku made more than isolated errors, and mostly on Sudoku (\EThreeSudokuHaiku\% exact). Haiku's Sudoku accuracy fell from 6 of 8 at L1 and L2 to 3 of 8 at L3, but this drop needs care: \EThreeSudokuHaikuUnans of its 24 Sudoku items were left unanswered, 5 of them L3, and 5 of the 6 came from one call that gave up on its whole batch of five. Among the items Haiku did answer, it solved \EThreeSudokuHaikuAnsLA at L1, \EThreeSudokuHaikuAnsLB at L2 and \EThreeSudokuHaikuAnsLC at L3. Whether giving up is itself a sign of difficulty cannot be separated here from the batch it happened in.
+\paragraph{Ladder versus LLM accuracy.} Table~\ref{tab:acc} and Figure~\ref{fig:acc} give the exact-solution rates; every call held one puzzle. Opus solved every zebra, Sudoku and Futoshiki puzzle and \EThreeKillerOpus\% of the Killer puzzles; its four misses were Killer puzzles at L1, L4 and L5 (two of the four L5 puzzles). Sonnet missed 10 puzzles spread over all four families and Haiku 17, most of them Sudoku (Haiku \EThreeSudokuHaiku\% exact, Sonnet \EThreeSudokuSonnet\%). Haiku's Sudoku failures did not depend on level: it solved \EThreeSudokuHaikuAnsLA at L1, \EThreeSudokuHaikuAnsLB at L2 and \EThreeSudokuHaikuAnsLC at L3. Sonnet's Sudoku accuracy fell with level (\EThreeSudokuSonnetAnsLA, \EThreeSudokuSonnetAnsLB, \EThreeSudokuSonnetAnsLC). Most misses were near misses: every wrong Sudoku answer of Sonnet had 98\% of its cells right, and Haiku's Sudoku cell accuracy was \EThreeSudokuHaikuCell\% overall; only two of Opus's Killer answers were far off (a quarter of the cells right or less). One item was unanswered (a Sonnet reply that was not valid JSON), and no call reached the output limit.
 
-Formally, on the family--model cells that are not at ceiling (Sudoku, Killer and Futoshiki for Haiku and Sonnet; $n=\LogitN$), the logistic slope of exact solution on level was \LogitLevel (95\% cluster-bootstrap interval \LogitLevelLo{} to \LogitLevelHi; $p=\LogitLevelP$). A linear mixed model of cell accuracy over all 348 attempts gave a level slope of \MixedLevel{} per level (SE \MixedLevelSE, $p=\MixedLevelP$). Adding the level to a model with MiniSat conflicts, explanation size and number of clues lowered the AIC from \AICMetrics{} to \AICMetricsLevel{}, so the ladder carries some information that raw solver effort does not, but the evidence is weak. The honest summary is that for current models these puzzle sizes are mostly too easy for the ladder to predict accuracy: it predicts solver effort well and LLM failure poorly, because there are few failures to predict.
+An earlier run of this experiment put 4--5 puzzles in each call. There, Haiku reached the 128{,}000-token output limit without answering on two of its five Sudoku calls (and one Killer call), and Sonnet answered others with grids that repeat a row pattern and break a given (Sonnet: 25\% of Sudoku exact, against \EThreeSudokuSonnet\% with one puzzle per call). Putting several hard items in one call thus changed measured accuracy far more than the puzzles' level did; we report only the single-puzzle run (the batched run is kept in \texttt{data/llm\_tasks\_archive/}).
+
+Formally, on Sudoku, Killer and Futoshiki for Haiku and Sonnet ($n=\LogitN$; Opus and zebra are at or near ceiling), the logistic slope of exact solution on level was \LogitLevel (95\% cluster-bootstrap interval \LogitLevelLo{} to \LogitLevelHi; $p=\LogitLevelP$). A linear mixed model of cell accuracy over all \EThreeScores attempts gave a level slope of \MixedLevel{} per level (SE \MixedLevelSE, $p=\MixedLevelP$): cell accuracy falls slightly with level. Adding the level to a model with MiniSat conflicts, explanation size and number of clues did not improve the fit (AIC \AICMetrics{} without the level, \AICMetricsLevel{} with it). The honest summary is that for current models these puzzle sizes are mostly too easy for the ladder to predict accuracy: it predicts solver effort well and LLM failure poorly, because there are few failures to predict and those that occur look like slips in carrying out a long solution rather than failures of deduction.
 
 \begin{table}[t]
 \centering
-\caption{E3. Exact solutions (\%) with 95\% bootstrap intervals, all levels pooled. Unanswered items count as wrong (Haiku: 6 Sudoku and 2 Futoshiki items).}
+\caption{E3. Exact solutions (\%) with 95\% bootstrap intervals, all levels pooled. Unanswered items count as wrong (one Sonnet zebra item whose reply was not valid JSON).}
 \label{tab:acc}
 \small
 \setlength{\tabcolsep}{3pt}
@@ -150,14 +153,14 @@ Family & Haiku & Sonnet & Opus \\
 
 \begin{figure*}[t]
 \centering
-\includegraphics[width=0.85\textwidth]{../figures/fig6_evolution.pdf}
-\caption{E4. (a) Best and mean fitness of the surviving population per generation (fitness = 1 $-$ mean Haiku cell accuracy over all evaluations of an individual). (b) Exact-solution rate of fresh solver calls on the initial (hatched) and final populations.}
+\includegraphics[width=\textwidth]{../figures/fig6_evolution.pdf}
+\caption{E4. (a) Best and mean fitness of the surviving population per generation for the $6{\times}6$ zebra and $9{\times}9$ Sudoku runs (fitness = 1 $-$ mean Haiku cell accuracy over all evaluations of an individual; the zebra curves lie at zero). (b) Exact-solution rate of fresh solver calls on the initial (hatched) and final populations.}
 \label{fig:evo}
 \end{figure*}
 
 \subsection{E5: genres invented by an LLM}
 
-All \EFiveGenres genres that Sonnet wrote compiled in the sandbox, and the pipeline built and certified 12 minimal unique instances of each (Table~\ref{tab:e5}). Most genres are Latin squares with a new clue type: parity and sums of neighbours, sums of mirrored cells, cells a knight's move apart that must differ, or bans on neighbouring digits two apart. Their certified instances are mostly L3. The genre we find most interesting is \emph{Median Line Latin} (Figure~\ref{fig:gallery}e): a $5{\times}5$ Latin square whose clues either give the sum of two or three neighbouring cells or state that the middle of three consecutive cells has a value strictly between the other two. Eight of its 12 instances need two-level lookahead (L4) with about 7 clues, the deepest of all genres. The ``median'' clue is weak on its own (it rules out only the two extreme values of the middle cell) but combines with the Latin rules into long chains, which is what the ladder detects. All three models nevertheless solved all four L4 instances of this genre that we gave them (\EFiveSolveExact of \EFiveSolveN attempts).
+All \EFiveGenres genres that Sonnet wrote compiled in the sandbox, and the pipeline built and certified 12 minimal unique instances of each (Table~\ref{tab:e5}). Most genres are Latin squares with a new kind of clue: relations between adjacent cells, statements about three cells in a line, a rule that cells a knight's move apart must differ, all-different diagonals, or $2{\times}2$ windows. Two change the base rules: one drops the column rule and instead requires vertically adjacent cells to differ by at least 2, and one uses a $4{\times}4$ grid with digits 1--5 and an even sum in every $2{\times}2$ window. Their certified instances are mostly L3. The deepest genre is \emph{\GenreName} (Figure~\ref{fig:gallery}b): a $5{\times}5$ Latin square whose clues describe $2{\times}2$ windows, giving a window's sum, which of its cells holds its largest or smallest digit, or whether a diagonal pair is equal. Ten of its 12 instances need two-level lookahead (L4) or search (L5), with about 7 clues. A window clue constrains four cells at once but fixes none of them, so the solver has to combine overlapping windows with the Latin rules, which is what the ladder detects. All three models nevertheless solved all four L5 instances of this genre that we gave them (\EFiveSolveExact of \EFiveSolveN attempts).
 
 \begin{table}[t]
 \centering
@@ -176,7 +179,7 @@ Genre & certified & L1 & L2 & L3 & L4 & L5 & clues \\
 
 \begin{figure*}[t]
 \centering
-\includegraphics[width=0.92\textwidth]{../figures/fig7_gallery.pdf}
-\caption{Gallery of certified puzzles from the benchmark: (a) zebra, (b) Sudoku, (c) Killer (cages with sums), (d) Futoshiki, (e) the LLM-invented genre Median Line Latin. Levels are ladder levels; every puzzle is minimal and unique.}
+\includegraphics[width=\textwidth]{../figures/fig7_gallery.pdf}
+\caption{Gallery of certified puzzles from the benchmark: (a) zebra, (b) the LLM-invented genre \GenreName{}, (c) Sudoku, (d) Killer (cages with sums), (e) Futoshiki. Levels are ladder levels; every puzzle is minimal and unique.}
 \label{fig:gallery}
 \end{figure*}

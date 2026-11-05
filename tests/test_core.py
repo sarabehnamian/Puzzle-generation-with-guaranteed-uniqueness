@@ -231,3 +231,21 @@ def test_zebra_score_roundtrip():
             ans.setdefault(str(spec["solution"][v.lower()]), {})[c] = v
     s = get("zebra").score(spec, ans)
     assert s["exact"] and s["cell_acc"] == 1.0
+
+
+def test_collect_single_puzzle_reply_shapes(monkeypatch):
+    """Single-puzzle calls are scored whatever wrapper the reply uses; batched calls need ids."""
+    from src import solve_stage
+    ans = {"grid": ["12", "21"]}
+    outs = {"c1": {"answers": [{"id": "p1", "answer": ans}]},   # requested shape
+            "c2": ans,                                         # bare answer
+            "c3": {"answers": [ans]},                          # entry without id
+            "c4": {"id": "p4", "answer": ans},                 # unwrapped entry
+            "c5": {"answers": [ans]}}                          # batched call: ambiguous, not scored
+    recs = [{"call_id": c, "model": "haiku", "items": [f"p{c[1]}"]} for c in ("c1", "c2", "c3", "c4")]
+    recs.append({"call_id": "c5", "model": "haiku", "items": ["p5", "p6"]})
+    monkeypatch.setattr(solve_stage.llm, "manifest", lambda stage: recs)
+    monkeypatch.setattr(solve_stage.llm, "read_output", lambda rec: outs[rec["call_id"]])
+    got = solve_stage.collect("x")
+    assert all(got[(f"p{i}", "haiku")] == ans for i in (1, 2, 3, 4))
+    assert got[("p5", "haiku")] is None and got[("p6", "haiku")] is None

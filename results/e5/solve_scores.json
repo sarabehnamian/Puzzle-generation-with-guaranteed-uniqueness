@@ -2,84 +2,84 @@
  {
   "model": "haiku",
   "puzzle": 0,
-  "level": 4,
+  "level": 5,
   "cell_acc": 1.0,
   "exact": true
  },
  {
   "model": "haiku",
   "puzzle": 1,
-  "level": 4,
+  "level": 5,
   "cell_acc": 1.0,
   "exact": true
  },
  {
   "model": "haiku",
   "puzzle": 2,
-  "level": 4,
+  "level": 5,
   "cell_acc": 1.0,
   "exact": true
  },
  {
   "model": "haiku",
   "puzzle": 3,
-  "level": 4,
+  "level": 5,
   "cell_acc": 1.0,
   "exact": true
  },
  {
   "model": "sonnet",
   "puzzle": 0,
-  "level": 4,
+  "level": 5,
   "cell_acc": 1.0,
   "exact": true
  },
  {
   "model": "sonnet",
   "puzzle": 1,
-  "level": 4,
+  "level": 5,
   "cell_acc": 1.0,
   "exact": true
  },
  {
   "model": "sonnet",
   "puzzle": 2,
-  "level": 4,
+  "level": 5,
   "cell_acc": 1.0,
   "exact": true
  },
  {
   "model": "sonnet",
   "puzzle": 3,
-  "level": 4,
+  "level": 5,
   "cell_acc": 1.0,
   "exact": true
  },
  {
   "model": "opus",
   "puzzle": 0,
-  "level": 4,
+  "level": 5,
   "cell_acc": 1.0,
   "exact": true
  },
  {
   "model": "opus",
   "puzzle": 1,
-  "level": 4,
+  "level": 5,
   "cell_acc": 1.0,
   "exact": true
  },
  {
   "model": "opus",
   "puzzle": 2,
-  "level": 4,
+  "level": 5,
   "cell_acc": 1.0,
   "exact": true
  },
  {
   "model": "opus",
   "puzzle": 3,
-  "level": 4,
+  "level": 5,
   "cell_acc": 1.0,
   "exact": true
  }

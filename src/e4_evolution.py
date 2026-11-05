@@ -264,7 +264,7 @@ def step():
         stage = f"{RUN}_eval_g{g}"
         if not llm.manifest(stage):
             items = [(p["id"], p["spec"]) for p in st["pop"]]
-            make_tasks(stage, items, E4["train_solver"], 4, f"{CFG['seed']}-{RUN}-{g}")
+            make_tasks(stage, items, E4["train_solver"], E4.get("solve_batch", 4), f"{CFG['seed']}-{RUN}-{g}")
             print("wrote eval tasks", stage)
             save(st)
             return
@@ -360,7 +360,7 @@ def heldout():
     stage = f"{RUN}_heldout"
     if not llm.manifest(stage):
         for m in [E4["train_solver"]] + E4["heldout_solvers"]:
-            make_tasks(stage, items, m, 4, f"{CFG['seed']}-{RUN}-heldout-{m}")
+            make_tasks(stage, items, m, E4.get("solve_batch", 4), f"{CFG['seed']}-{RUN}-heldout-{m}")
         print("wrote held-out tasks", stage)
         return
     if llm.pending(stage):

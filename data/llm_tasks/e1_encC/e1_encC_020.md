@@ -18,7 +18,7 @@ Examples (from other puzzles):
 - "The person who reads poetry lives next to the person who drinks lemonade."
                                             ->  Abs(pos('poetry') - pos('lemonade')) == 1
 
-Output: write a single JSON object to the file /home/user/Puzzle-generation-with-guaranteed-uniqueness/data/llm_tasks/e1_encC/e1_encC_020.out.json with this exact structure
+Output: write a single JSON object to the file D:\Puzzle-generation-with-guaranteed-uniqueness\data\llm_tasks\e1_encC\e1_encC_020.out.json with this exact structure
 {"puzzles": [{"id": "<puzzle id>", "constraints": [{"clue": 1, "expr": "<expression>"}, ...]}, ...]}
 One entry per puzzle and exactly one constraint per numbered clue, in order. Use single quotes inside
 expressions so the JSON stays valid.
@@ -82,18 +82,18 @@ There are 5 houses in a row, numbered 1 to 5 from left to right. Each house has 
 - drink: water, milk, tea, cocoa, coffee
 
 Clues:
-1. The hiker lives directly to the left of the milk drinker.
-2. The farmer and the Norwegian are next-door neighbours.
-3. House 4 belongs to the water drinker.
-4. The tennis player lives immediately to the left of the chess player.
+1. The hiker lives immediately to the left of the milk drinker.
+2. The farmer lives next door to the Norwegian.
+3. The water drinker lives in house 4.
+4. The tennis enthusiast lives immediately to the left of the chess player.
 5. The coffee drinker's hobby is chess.
 6. The Brit lives directly to the left of the coffee drinker.
-7. The baker is the one who drinks tea.
+7. The tea drinker is the baker.
 8. The lawyer and the pilot live next door to each other.
-9. One house lies between the German and the teacher.
+9. Exactly one house lies between the German and the teacher.
 10. The painter and the tea drinker live two houses apart.
 11. The milk drinker lives immediately to the left of the teacher.
-12. The Swede lives directly to the right of the pilot.
+12. The Swede lives immediately to the right of the pilot.
 
 ## Puzzle hard:zebra_hard-00071
 

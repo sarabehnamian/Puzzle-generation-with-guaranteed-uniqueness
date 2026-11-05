@@ -1,64 +1,89 @@
 {
  "total": {
-  "calls": 244,
-  "tokens": 17334196,
-  "api_estimate_usd": 25.659184199999995,
-  "usd": 45.0439202,
-  "tool_use_violations": 18
+  "calls": 971,
+  "tokens": 16172832,
+  "input_tokens": 1442210,
+  "output_tokens": 14730622,
+  "usd": 62.99194540000003,
+  "api_estimate_usd": 62.99194540000003,
+  "tool_use_violations": 0,
+  "stop_reasons": {
+   "end_turn": 960,
+   "max_tokens": 11
+  },
+  "effort": [
+   "high"
+  ],
+  "final_calls": 672,
+  "final_usd": 37.99747870000002,
+  "final_tokens": 8391842,
+  "final_max_tokens": 1
  },
  "by_experiment": {
-  "probe": {
-   "calls": 2,
-   "tokens": 156130,
-   "usd": 0.036924599999999995
-  },
-  "pilot": {
-   "calls": 4,
-   "tokens": 232757,
-   "usd": 0.6119699999999999
-  },
   "e1": {
    "calls": 100,
-   "tokens": 5999124,
-   "usd": 10.997652200000003
-  },
-  "e4": {
-   "calls": 39,
-   "tokens": 3038744,
-   "usd": 2.9870819
-  },
-  "e2": {
-   "calls": 20,
-   "tokens": 1305465,
-   "usd": 4.840465999999999
+   "input_tokens": 542782,
+   "output_tokens": 728506,
+   "tokens": 1271288,
+   "usd": 5.1278293999999995
   },
   "e3": {
-   "calls": 75,
-   "tokens": 6348113,
-   "usd": 24.9027424
+   "calls": 423,
+   "input_tokens": 387237,
+   "output_tokens": 5572942,
+   "tokens": 5960179,
+   "usd": 39.64728640000002
   },
   "e5": {
    "calls": 4,
-   "tokens": 253863,
-   "usd": 0.6670830999999999
+   "input_tokens": 4669,
+   "output_tokens": 86699,
+   "tokens": 91368,
+   "usd": 0.6593502
+  },
+  "e2": {
+   "calls": 18,
+   "input_tokens": 43542,
+   "output_tokens": 456104,
+   "tokens": 499646,
+   "usd": 4.648124
+  },
+  "e4": {
+   "calls": 426,
+   "input_tokens": 463980,
+   "output_tokens": 7886371,
+   "tokens": 8350351,
+   "usd": 12.909355399999997
   }
  },
  "by_model": {
-  "haiku": {
-   "calls": 83,
-   "tokens": 7057558,
-   "usd": 1.7894822
-  },
   "sonnet": {
-   "calls": 132,
-   "tokens": 8291349,
-   "usd": 27.322738
+   "calls": 305,
+   "input_tokens": 703481,
+   "output_tokens": 2665091,
+   "tokens": 3368572,
+   "usd": 28.057871999999996
+  },
+  "haiku": {
+   "calls": 482,
+   "input_tokens": 566609,
+   "output_tokens": 10621625,
+   "tokens": 11188234,
+   "usd": 5.367473400000005
   },
   "opus": {
-   "calls": 29,
-   "tokens": 1985289,
-   "usd": 15.9317
+   "calls": 184,
+   "input_tokens": 172120,
+   "output_tokens": 1443906,
+   "tokens": 1616026,
+   "usd": 29.56659999999999
   }
+ },
+ "subagent_run": {
+  "calls": 264,
+  "tokens": 19696834,
+  "usd_estimate": 47.013842000000025,
+  "tool_use_violations": 22
  },
  "assumptions": {
   "prices_per_mtok": {
@@ -75,6 +100,7 @@
     20.0
    ]
   },
-  "fixed_overhead_tokens_as_input": 50000
+  "api_costs": "exact token counts x list price, no batch discount",
+  "subagent_fixed_overhead_tokens_as_input": 50000
  }
 }

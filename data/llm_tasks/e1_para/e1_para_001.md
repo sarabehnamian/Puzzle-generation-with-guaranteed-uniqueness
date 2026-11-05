@@ -8,7 +8,7 @@ or split information. Keep the numbering one-to-one (clue k becomes rewritten cl
 value names exactly as listed in the header so a reader can match them. Houses stay numbered 1..N
 from left to right.
 
-Output: write a single JSON object to the file /home/user/Puzzle-generation-with-guaranteed-uniqueness/data/llm_tasks/e1_para/e1_para_001.out.json with this exact structure
+Output: write a single JSON object to the file D:\Puzzle-generation-with-guaranteed-uniqueness\data\llm_tasks\e1_para\e1_para_001.out.json with this exact structure
 {"puzzles": [{"id": "<puzzle id>", "clues": ["<rewritten clue 1>", "<rewritten clue 2>", ...]}, ...]}
 
 The puzzles follow.

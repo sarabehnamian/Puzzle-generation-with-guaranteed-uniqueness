@@ -1,8 +1,0 @@
-{"variants": [
-{"parent": "evo-g0-04", "ops": [{"op": "remove", "clue": 4}, {"op": "add", "clue": {"type": "not_next_to", "args": ["baker", "lawyer"]}}], "idea": "Replace a direct position clue with a negative relative clue."},
-{"parent": "evo-g0-04", "ops": [{"op": "replace", "clue": 3, "with": {"type": "end", "args": ["yellow"]}}, {"op": "replace", "clue": 8, "with": {"type": "not_at", "args": ["cooking", 3]}}], "idea": "Weaken position clues into end and negative clues."},
-{"parent": "evo-g0-05", "ops": [{"op": "remove", "clue": 10}, {"op": "add", "clue": {"type": "not_same", "args": ["norwegian", "hiking"]}}], "idea": "Replace a direct link with a negative one."},
-{"parent": "evo-g0-05", "ops": [{"op": "replace", "clue": 7, "with": {"type": "next_to", "args": ["dane", "yellow"]}}, {"op": "replace", "clue": 11, "with": {"type": "before", "args": ["blue", "yellow"]}}], "idea": "Loosen adjacency clues into weaker relative clues."},
-{"parent": "evo-g0-07", "ops": [{"op": "replace", "clue": 9, "with": {"type": "end", "args": ["cooking"]}}, {"op": "replace", "clue": 10, "with": {"type": "not_at", "args": ["juice", 3]}}], "idea": "Turn fixed positions into end and negative clues."},
-{"parent": "evo-g0-07", "ops": [{"op": "remove", "clue": 6}, {"op": "add", "clue": {"type": "next_to", "args": ["green", "white"]}}], "idea": "Replace a fixed position with a neighbour relation."}
-]}

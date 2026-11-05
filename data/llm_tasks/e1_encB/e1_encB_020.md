@@ -18,7 +18,7 @@ Examples (from other puzzles):
 - "The person who reads poetry lives next to the person who drinks lemonade."
                                             ->  Abs(pos('poetry') - pos('lemonade')) == 1
 
-Output: write a single JSON object to the file /home/user/Puzzle-generation-with-guaranteed-uniqueness/data/llm_tasks/e1_encB/e1_encB_020.out.json with this exact structure
+Output: write a single JSON object to the file D:\Puzzle-generation-with-guaranteed-uniqueness\data\llm_tasks\e1_encB\e1_encB_020.out.json with this exact structure
 {"puzzles": [{"id": "<puzzle id>", "constraints": [{"clue": 1, "expr": "<expression>"}, ...]}, ...]}
 One entry per puzzle and exactly one constraint per numbered clue, in order. Use single quotes inside
 expressions so the JSON stays valid.
@@ -82,20 +82,20 @@ There are 5 houses in a row, numbered 1 to 5 from left to right. Each house has 
 - color: blue, red, yellow, white, purple
 
 Clues:
-1. The red house's occupant and the Spaniard live in neighbouring houses.
-2. The milk drinker and the occupant of the white house live two houses apart.
-3. The Norwegian lives right next to the Spaniard, on the right.
+1. The red house's occupant and the Spaniard live in adjacent houses.
+2. The milk drinker and the white house's occupant live two houses apart.
+3. The Norwegian lives directly to the right of the Spaniard.
 4. The cooking enthusiast lives next door to the German.
-5. The coffee drinker lives immediately to the right of the German.
-6. The coffee drinker is not a neighbour of the water drinker.
-7. The coffee drinker and the golf enthusiast do not live next door to each other.
+5. The German lives immediately to the left of the coffee drinker.
+6. The coffee drinker doesn't live next to the water drinker.
+7. The coffee drinker and the golf enthusiast are not neighbours.
 8. The Norwegian lives in house 5.
 9. The milk drinker's hobby is either chess or cooking.
 10. The Dane lives immediately to the left of the blue house's occupant.
 11. The cocoa drinker lives in the leftmost house.
 12. The yellow house's occupant enjoys painting.
-13. The painting enthusiast lives immediately to the left of the water drinker.
-14. The occupant of the red house drinks water.
+13. The painting enthusiast lives directly to the left of the water drinker.
+14. The red house's occupant drinks water.
 
 ## Puzzle plain:zebra-00064
 

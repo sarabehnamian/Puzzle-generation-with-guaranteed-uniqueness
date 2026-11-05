@@ -3,48 +3,50 @@
 Solve each puzzle below by reasoning. Every puzzle has exactly one solution. Work carefully; you
 cannot run code. Give a complete answer for every puzzle even if unsure.
 
-Output: write a single JSON object to the file /home/user/Puzzle-generation-with-guaranteed-uniqueness/data/llm_tasks/e4b_heldout/e4b_heldout_haiku_002.out.json with this exact structure
+Output: write a single JSON object to the file D:\Puzzle-generation-with-guaranteed-uniqueness\data\llm_tasks\e4b_heldout\e4b_heldout_haiku_002.out.json with this exact structure
 {"answers": [{"id": "<puzzle id>", "answer": <answer>}, ...]}
 where <answer> has the format stated for each puzzle.
 
 The puzzles follow.
 
 
-## Puzzle e4b-g0-00
+## Puzzle e4b-g0-06
 
 Grid logic puzzle. Deduce which value of each category belongs to each house. Every value is used exactly once.
 
 There are 6 houses in a row, numbered 1 to 6 from left to right. Each house has one occupant. Every occupant has exactly one value from each category below, and no two occupants share a value within a category.
-- pet: rabbit, dog, bird, cat, horse, fish
-- drink: milk, juice, water, coffee, cocoa, tea
-- color: blue, purple, yellow, red, white, green
-- nationality: Dane, Spaniard, German, Swede, Norwegian, Brit
-- job: doctor, baker, teacher, pilot, farmer, lawyer
-- hobby: chess, painting, cooking, golf, tennis, hiking
+- drink: juice, cocoa, milk, coffee, tea, water
+- nationality: Brit, German, Norwegian, Spaniard, Dane, Swede
+- pet: dog, cat, horse, fish, bird, rabbit
+- color: white, purple, yellow, green, red, blue
+- job: farmer, baker, teacher, pilot, lawyer, doctor
+- hobby: painting, tennis, hiking, golf, chess, cooking
 
 Clues:
-1. The person who enjoys golf drinks coffee.
-2. The Swede and the occupant of the white house live two houses apart.
-3. The baker and the cocoa drinker live in adjacent houses.
-4. The person who keeps the dog lives somewhere to the left of the tea drinker.
-5. The person who enjoys hiking lives in the green house.
-6. The doctor and the occupant of the red house live in adjacent houses.
-7. The Brit drinks tea.
-8. The painting enthusiast lives immediately to the right of the person who keeps the rabbit.
-9. The person who drinks water lives in the fifth house.
-10. The farmer lives directly to the left of the owner of the rabbit.
-11. There is exactly one house between the person who keeps the cat and the lawyer.
-12. The person who drinks juice lives directly to the left of the owner of the cat.
-13. The person who enjoys chess lives in the yellow house.
-14. The occupant of the blue house lives in the third house.
-15. The juice drinker lives in house 2.
-16. The owner of the bird is the Dane.
-17. The person in the purple house lives next to the Spaniard.
-18. The pilot keeps the horse.
-19. The teacher enjoys tennis.
-20. The person who drinks coffee lives in the last house.
-21. Whoever lives in the green house and whoever lives in the red house are neighbours.
-22. The cocoa drinker and the Norwegian live in adjacent houses.
-23. The tea drinker and the tennis enthusiast live two houses apart.
+1. The person in the blue house lives immediately to the right of the Brit.
+2. The teacher lives in a lower-numbered house than the person who enjoys painting.
+3. The cooking enthusiast and whoever lives in the yellow house live two houses apart.
+4. The person who drinks juice lives in the white house.
+5. The teacher lives in the white house.
+6. The Dane lives directly to the left of the farmer.
+7. The owner of the horse lives in the purple house.
+8. The tennis enthusiast is the Spaniard.
+9. The person who keeps the bird and the owner of the fish are not neighbours.
+10. The person who enjoys golf either works as the farmer or works as the pilot.
+11. The person who drinks coffee and the Norwegian live in adjacent houses.
+12. The chess enthusiast lives in house 2.
+13. The cocoa drinker and the Spaniard live two houses apart.
+14. The tennis enthusiast lives in the house just left of the one where the cooking enthusiast lives.
+15. The rabbit owner lives in the house just left of the one where the tennis enthusiast lives.
+16. The bird owner lives in house 2.
+17. The Dane and the person who drinks milk are different people.
+18. The Swede enjoys golf.
+19. The occupant of the red house works as the doctor.
+20. The Brit lives in the white house.
+21. The German keeps the dog.
+22. The occupant of the white house lives immediately to the right of the person who drinks water.
+23. The baker lives in the green house.
+24. The golf enthusiast lives in house 3.
+25. The doctor and the person who enjoys tennis live in adjacent houses.
 
 Answer format for this puzzle: {"1": {"<category>": "<value>", ...}, "2": {...}, ...} -- one entry per house number, giving the value of every category.

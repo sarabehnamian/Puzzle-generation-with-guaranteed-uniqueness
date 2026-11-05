@@ -8,7 +8,7 @@ Each puzzle must have EXACTLY ONE solution, and it must be solvable by pure logi
 step by step, without guessing or trial and error. Aim for puzzles a keen human solver would enjoy:
 not trivial, but fair. You cannot run code, so check your puzzles carefully in your head.
 
-Output: write a single JSON object to the file /home/user/Puzzle-generation-with-guaranteed-uniqueness/data/llm_tasks/e2_gen/e2_gen_killer_1.out.json with this exact structure
+Output: write a single JSON object to the file D:\Puzzle-generation-with-guaranteed-uniqueness\data\llm_tasks\e2_gen\e2_gen_killer_1.out.json with this exact structure
 {"puzzles": [{"id": "g1", "cages": [{"cells": ["R1C1", "R1C2"], "sum": 7}, ...],
   "givens": ["<row 1: 6 chars, digits or '.'>", ... 6 rows],
   "solution": ["<row 1: 6 digits>", ... 6 rows]}, ...]}

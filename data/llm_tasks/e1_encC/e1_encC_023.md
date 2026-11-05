@@ -18,7 +18,7 @@ Examples (from other puzzles):
 - "The person who reads poetry lives next to the person who drinks lemonade."
                                             ->  Abs(pos('poetry') - pos('lemonade')) == 1
 
-Output: write a single JSON object to the file /home/user/Puzzle-generation-with-guaranteed-uniqueness/data/llm_tasks/e1_encC/e1_encC_023.out.json with this exact structure
+Output: write a single JSON object to the file D:\Puzzle-generation-with-guaranteed-uniqueness\data\llm_tasks\e1_encC\e1_encC_023.out.json with this exact structure
 {"puzzles": [{"id": "<puzzle id>", "constraints": [{"clue": 1, "expr": "<expression>"}, ...]}, ...]}
 One entry per puzzle and exactly one constraint per numbered clue, in order. Use single quotes inside
 expressions so the JSON stays valid.
@@ -133,20 +133,20 @@ There are 5 houses in a row, numbered 1 to 5 from left to right. Each house has 
 - drink: juice, cocoa, milk, water, coffee
 
 Clues:
-1. The painting enthusiast and the purple house are next-door neighbours.
-2. The blue house lies directly to the left of the teacher.
-3. The lawyer lives in one of the two end houses.
-4. The chess player and the milk drinker live in neighbouring houses.
+1. The painting enthusiast lives next to the purple house.
+2. The blue house is directly to the left of the teacher.
+3. The lawyer lives at one end of the row.
+4. The chess enthusiast and the milk drinker are neighbours.
 5. The cooking enthusiast drinks water.
-6. The blue house has a lower number than the white house.
+6. The blue house is at a lower number than the white house.
 7. The doctor lives in a lower-numbered house than the coffee drinker.
 8. The pilot lives directly to the left of the doctor.
-9. The tennis enthusiast is the teacher.
+9. The teacher is the tennis enthusiast.
 10. The water drinker lives in the purple house.
-11. The golf enthusiast and the teacher are two houses apart.
+11. The golf enthusiast and the teacher live two houses apart.
 12. The cocoa drinker lives in one of the two end houses.
-13. The coffee drinker lives right next to the milk drinker.
-14. The chess player lives directly to the left of the green house.
+13. The coffee drinker lives next door to the milk drinker.
+14. The chess enthusiast lives immediately to the left of the green house.
 15. The occupant of the green house is either the doctor or the teacher.
 
 ## Puzzle plain:zebra-00069

@@ -18,7 +18,7 @@ Examples (from other puzzles):
 - "The person who reads poetry lives next to the person who drinks lemonade."
                                             ->  Abs(pos('poetry') - pos('lemonade')) == 1
 
-Output: write a single JSON object to the file /home/user/Puzzle-generation-with-guaranteed-uniqueness/data/llm_tasks/e1_encC/e1_encC_000.out.json with this exact structure
+Output: write a single JSON object to the file D:\Puzzle-generation-with-guaranteed-uniqueness\data\llm_tasks\e1_encC\e1_encC_000.out.json with this exact structure
 {"puzzles": [{"id": "<puzzle id>", "constraints": [{"clue": 1, "expr": "<expression>"}, ...]}, ...]}
 One entry per puzzle and exactly one constraint per numbered clue, in order. Use single quotes inside
 expressions so the JSON stays valid.
@@ -103,20 +103,20 @@ There are 5 houses in a row, numbered 1 to 5 from left to right. Each house has 
 - job: farmer, baker, teacher, doctor, lawyer
 
 Clues:
-1. The Dane and the Norwegian do not live next door to each other.
-2. The milk drinker is directly to the left of the tea drinker.
-3. The golfer lives at one of the two ends of the row.
-4. The lawyer is the hiking enthusiast.
-5. Cooking is the doctor's hobby.
-6. The Swede's house is at one end of the row.
-7. The farmer's house number is lower than the lawyer's.
-8. The baker and the golfer live in neighbouring houses.
-9. The coffee drinker lives right next to the painter.
+1. The Dane and the Norwegian are not next-door neighbours.
+2. The milk drinker lives directly to the left of the tea drinker.
+3. The golfer lives in one of the end houses.
+4. The hiker is the lawyer.
+5. The doctor's hobby is cooking.
+6. The Swede lives at one end of the row.
+7. The farmer lives in a lower-numbered house than the lawyer.
+8. The baker and the golfer live in adjacent houses.
+9. The coffee drinker lives next door to the painter.
 10. The teacher lives immediately to the left of the tea drinker.
-11. The coffee drinker and the water drinker are in adjacent houses.
+11. The coffee drinker and the water drinker are next-door neighbours.
 12. The Dane's hobby is either golf or tennis.
-13. Hiking is the Spaniard's hobby.
-14. The Brit lives in house number four.
+13. The Spaniard's hobby is hiking.
+14. The Brit lives in the fourth house.
 
 ## Puzzle paraphrase:zebra-00157
 
@@ -127,20 +127,20 @@ There are 5 houses in a row, numbered 1 to 5 from left to right. Each house has 
 - pet: bird, rabbit, cat, dog, fish
 
 Clues:
-1. The painter lives directly to the right of the red house.
-2. The Dane and the white house are in adjacent houses.
-3. The fish keeper lives right next to the white house.
+1. The painter lives immediately to the right of the red house's occupant.
+2. The Dane and the white house's occupant live in adjacent houses.
+3. The fish keeper lives next door to the white house's occupant.
 4. The fish keeper lives somewhere to the right of the Dane.
-5. The rabbit owner and the Swede are not next-door neighbours.
-6. The red house's occupant has either painting or tennis as a hobby.
+5. The rabbit owner and the Swede are not neighbours.
+6. The red house's occupant enjoys either painting or tennis.
 7. The dog owner is either the Brit or the Spaniard.
 8. The hiker does not live in the blue house.
-9. The Swede is the golfer.
-10. The green house and the white house are neighbours.
+9. The golfer is the Swede.
+10. The green house and the white house are next-door neighbours.
 11. The Brit lives in house 5.
-12. The purple house is where the rabbit is kept.
+12. The purple house's occupant keeps the rabbit.
 13. The painter lives somewhere to the left of the rabbit owner.
-14. The bird owner lives immediately to the left of the rabbit owner.
+14. The bird owner lives immediately to the left of the rabbit keeper.
 
 ## Puzzle plain:zebra-00055
 
@@ -229,16 +229,16 @@ Clues:
 2. The dog owner lives immediately to the left of the rabbit owner.
 3. The baker's hobby is cooking.
 4. The bird owner does not live in the first house.
-5. The white house is immediately to the left of the green house.
-6. The farmer is the one who keeps the dog.
-7. The lawyer is the one who owns the bird.
+5. The white house is directly to the left of the green house.
+6. The farmer keeps the dog.
+7. The bird owner is the lawyer.
 8. The cat owner lives somewhere to the right of the baker.
-9. Exactly one house lies between the blue house and the rabbit owner.
+9. One house lies between the blue house and the rabbit owner.
 10. The occupant of the blue house is either the doctor or the farmer.
 11. The green house lies somewhere to the left of the farmer.
 12. The painting enthusiast lives in the fourth house.
-13. The chess player lives in one of the two end houses.
-14. The tennis enthusiast lives immediately to the left of the painting enthusiast.
+13. The chess enthusiast lives in one of the two end houses.
+14. The tennis enthusiast lives directly to the left of the painting enthusiast.
 
 ## Puzzle paraphrase:zebra-00116
 
@@ -251,15 +251,15 @@ There are 5 houses in a row, numbered 1 to 5 from left to right. Each house has 
 Clues:
 1. The golf enthusiast is either the Brit or the Spaniard.
 2. The doctor lives next door to the golf enthusiast.
-3. The cooking enthusiast lives right beside the purple house.
+3. The cooking enthusiast lives next to the purple house's occupant.
 4. The Swede lives somewhere to the right of the tennis enthusiast.
 5. The Swede is the teacher.
 6. The white house and the yellow house are two houses apart.
 7. The baker and the pilot are next-door neighbours.
-8. The lawyer and the yellow house's occupant live in adjacent houses.
+8. The lawyer lives in a house adjacent to the yellow house.
 9. The chess enthusiast lives in the red house.
 10. The Brit is the lawyer.
 11. The Dane does not live in the fourth house.
-12. The purple house is directly to the left of the pilot.
-13. The German lives in the purple house.
+12. The purple house is immediately to the left of the pilot's.
+13. The occupant of the purple house is the German.
 14. The hiking enthusiast lives immediately to the right of the red house.

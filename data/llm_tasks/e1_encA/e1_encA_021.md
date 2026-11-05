@@ -18,7 +18,7 @@ Examples (from other puzzles):
 - "The person who reads poetry lives next to the person who drinks lemonade."
                                             ->  Abs(pos('poetry') - pos('lemonade')) == 1
 
-Output: write a single JSON object to the file /home/user/Puzzle-generation-with-guaranteed-uniqueness/data/llm_tasks/e1_encA/e1_encA_021.out.json with this exact structure
+Output: write a single JSON object to the file D:\Puzzle-generation-with-guaranteed-uniqueness\data\llm_tasks\e1_encA\e1_encA_021.out.json with this exact structure
 {"puzzles": [{"id": "<puzzle id>", "constraints": [{"clue": 1, "expr": "<expression>"}, ...]}, ...]}
 One entry per puzzle and exactly one constraint per numbered clue, in order. Use single quotes inside
 expressions so the JSON stays valid.
@@ -219,18 +219,18 @@ There are 5 houses in a row, numbered 1 to 5 from left to right. Each house has 
 
 Clues:
 1. The golf enthusiast lives immediately left of the blue house's occupant.
-2. The pilot and the rabbit owner are separated by exactly one house.
-3. The painting enthusiast lives in house 4.
-4. House 2 is home to the cooking enthusiast.
-5. The bird owner lives immediately left of the purple house's occupant.
+2. One house lies between the pilot and the rabbit owner.
+3. The painting enthusiast lives in the fourth house.
+4. House 2 belongs to the cooking enthusiast.
+5. The bird owner lives directly left of the purple house's occupant.
 6. The red house's occupant is the teacher.
-7. The baker lives in house 2.
-8. The tennis enthusiast lives next door to the occupant of the blue house.
-9. The farmer is not a neighbour of the rabbit owner.
-10. The fish keeper and the rabbit owner live next to each other.
-11. Exactly one house lies between the blue house and the green house.
+7. The baker lives in the second house.
+8. The blue house's occupant lives next door to the tennis enthusiast.
+9. The farmer does not live next to the rabbit owner.
+10. The fish keeper and the rabbit owner are neighbours.
+11. Exactly one house separates the blue house from the green house.
 12. The tennis enthusiast is either the farmer or the lawyer.
-13. The fish owner lives next door to the person in the blue house.
+13. The blue house's occupant lives next to the fish owner.
 14. The bird keeper lives next door to the horse owner.
 15. The teacher lives in the middle house.
 

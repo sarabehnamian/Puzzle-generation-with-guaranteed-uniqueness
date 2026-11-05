@@ -1,5 +1,5 @@
 {
- "n_items": 234,
+ "n_items": 242,
  "by_family_level": {
   "futoshiki|L1": 8,
   "futoshiki|L2": 18,
@@ -9,9 +9,9 @@
   "killer|L3": 18,
   "killer|L4": 18,
   "killer|L5": 4,
-  "sudoku|L1": 18,
+  "sudoku|L1": 25,
   "sudoku|L2": 18,
-  "sudoku|L3": 18,
+  "sudoku|L3": 19,
   "zebra|L1": 8,
   "zebra|L2": 18,
   "zebra|L3": 26,

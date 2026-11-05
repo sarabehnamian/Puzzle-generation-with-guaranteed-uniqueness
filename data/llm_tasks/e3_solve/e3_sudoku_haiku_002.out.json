@@ -1,1 +1,1 @@
-{"answers": [], "_note": "worker returned without writing an answer file (reported it could not finish); scored as unanswered"}
+{"answers": [{"id": "sudoku_x-02520", "answer": {"grid": ["854763192", "129485673", "637912845", "415378926", "962541738", "783296451", "348625719", "274159386", "591834267"]}}]}

@@ -18,7 +18,7 @@ Examples (from other puzzles):
 - "The person who reads poetry lives next to the person who drinks lemonade."
                                             ->  Abs(pos('poetry') - pos('lemonade')) == 1
 
-Output: write a single JSON object to the file /home/user/Puzzle-generation-with-guaranteed-uniqueness/data/llm_tasks/e2_enc_encA/e2_enc_encA_001.out.json with this exact structure
+Output: write a single JSON object to the file D:\Puzzle-generation-with-guaranteed-uniqueness\data\llm_tasks\e2_enc_encA\e2_enc_encA_001.out.json with this exact structure
 {"puzzles": [{"id": "<puzzle id>", "constraints": [{"clue": 1, "expr": "<expression>"}, ...]}, ...]}
 One entry per puzzle and exactly one constraint per numbered clue, in order. Use single quotes inside
 expressions so the JSON stays valid.
@@ -29,265 +29,261 @@ The puzzles follow.
 ## Puzzle zebra/2/g8
 
 There are 5 houses in a row, numbered 1 to 5 from left to right. Each house has one occupant. Every occupant has exactly one value from each category below, and no two occupants share a value within a category.
-- name: Elena, Carla, Boris, Anna, Dmitri
-- fruit: Pear, Kiwi, Peach, Fig, Lime
-- pet: Hamster, Lizard, Tortoise, Parrot, Beagle
-- sport: Squash, Cycling, Hockey, Rowing, Cricket
+- name: Kim, Lou, Max, Nia, Oz
+- fruit: mango, peach, grape, melon, cherry
+- music: jazz, rock, opera, folk, blues
+- pet: lizard, hare, koi, finch, ferret
 
 Clues:
-1. Dmitri lives in the last house.
-2. Anna lives next to Dmitri.
-3. There is exactly one house between Elena and Boris.
-4. Boris lives somewhere to the right of Elena.
-5. The pear eater is Elena.
-6. The lime eater lives in the last house.
-7. The fig eater lives next to the lime eater.
-8. The kiwi eater is Carla.
-9. The beagle owner eats lime.
-10. The parrot owner eats fig.
-11. Boris owns the tortoise.
-12. The lizard owner lives directly right of the hamster owner.
-13. Anna plays rowing.
-14. The cricket player owns the beagle.
-15. The hockey player owns the tortoise.
-16. The squash player does not live next to the hockey player.
+1. Lou lives in the last house.
+2. Nia lives directly left of Kim.
+3. Oz lives next to Kim.
+4. Max lives somewhere to the left of Nia.
+5. The mango eater lives in the middle house.
+6. The cherry eater lives directly left of the mango eater.
+7. Lou eats peaches.
+8. The grape eater lives directly right of the mango eater.
+9. The jazz fan eats cherries.
+10. The melon eater likes folk.
+11. Kim likes blues.
+12. Oz does not like opera.
+13. The hare owner likes jazz.
+14. Kim owns the koi.
+15. The ferret owner eats peaches.
+16. The finch owner lives somewhere to the left of the lizard owner.
 
 ## Puzzle zebra/1/g5
 
 There are 5 houses in a row, numbered 1 to 5 from left to right. Each house has one occupant. Every occupant has exactly one value from each category below, and no two occupants share a value within a category.
-- colour: red, green, ivory, yellow, blue
-- pet: dog, snail, fox, horse, zebra
-- drink: tea, coffee, milk, juice, water
-- snack: chips, nuts, cake, popcorn, cookies
+- colour: grey, pink, black, orange, brown
+- vehicle: tram, bike, van, bus, car
+- pet: goat, snake, hen, pony, ferret
+- drink: tea, wine, cocoa, cider, lemonade
 
 Clues:
-1. The milk drinker lives in the middle house.
-2. The red house belongs to the chips eater.
-3. The chips eater drinks milk.
-4. The green house is directly right of the ivory house.
-5. The coffee drinker lives in the green house.
-6. The yellow house is not next to the red house.
-7. The tea drinker lives in the blue house.
-8. The water drinker lives in the yellow house, directly left of the tea drinker.
-9. The nut eater drinks water.
-10. The cookie eater drinks tea.
-11. The cake eater lives in the ivory house.
-12. The dog's owner drinks coffee.
-13. The snail lives in the red house.
-14. The zebra lives directly right of the snail.
-15. The fox lives somewhere to the left of the horse.
+1. The van owner lives in the middle house.
+2. The bus owner lives somewhere to the right of the van owner.
+3. The car owner does not live next to the van owner.
+4. The bike rider lives directly right of the tram rider.
+5. The bus owner lives in the orange house.
+6. The van owner lives in the black house.
+7. The bike rider lives in the pink house.
+8. The brown house is next to the orange house.
+9. The hen owner drives the van.
+10. The goat owner rides the tram.
+11. The snake owner rides the bike.
+12. The ferret owner does not live next to the hen owner.
+13. The tea drinker owns the goat.
+14. The wine drinker lives in the pink house.
+15. The cocoa drinker owns the hen.
+16. The lemonade drinker lives directly right of the cider drinker.
 
 ## Puzzle zebra/3/g7
 
 There are 5 houses in a row, numbered 1 to 5 from left to right. Each house has one occupant. Every occupant has exactly one value from each category below, and no two occupants share a value within a category.
-- color: amber, coral, indigo, olive, silver
-- pet: ferret, gecko, goldfish, pony, spider
-- drink: cider, lemonade, mead, smoothie, stout
-- hobby: baking, chess, knitting, painting, hiking
+- nationality: Thai, Mexican, Italian, Dane, Kenyan
+- instrument: drums, piano, harp, cello, flute
+- dessert: flan, cake, mousse, gelato, pie
+- transport: tram, bike, ferry, scooter, bus
 
 Clues:
-1. The amber house is in the middle of the row.
-2. There is exactly one house between the olive house and the silver house.
-3. The coral house is not next to the amber house.
-4. The silver house is somewhere right of the olive house.
-5. The indigo house is somewhere left of the olive house.
-6. The goldfish lives in the coral house.
-7. The spider lives in the silver house.
-8. The pony lives in the olive house.
-9. The gecko does not live in the amber house.
-10. The mead drinker keeps the goldfish.
-11. The lemonade drinker lives in the silver house.
-12. The smoothie drinker keeps the ferret.
-13. The cider drinker does not live in the indigo house.
-14. The knitter drinks mead.
-15. The painter drinks lemonade.
-16. The chess player lives in the amber house.
-17. The baker lives directly right of the hiker.
+1. The Mexican lives next to the Thai.
+2. The Italian lives directly right of the Mexican.
+3. The Kenyan lives in an end house.
+4. The Dane lives somewhere to the right of the Italian.
+5. The Dane does not live in an end house.
+6. The Mexican plays the piano.
+7. The cellist lives next to the Italian.
+8. The flute player is Kenyan.
+9. The drummer lives somewhere to the left of the harpist.
+10. The cake lover plays the piano.
+11. The mousse eater plays the harp.
+12. The pie eater lives directly right of the gelato eater.
+13. The bike rider eats cake.
+14. The Dane rides the scooter.
+15. The ferry passenger does not live in an end house.
+16. The tram rider eats flan.
 
 ## Puzzle zebra/0/g5
 
 There are 5 houses in a row, numbered 1 to 5 from left to right. Each house has one occupant. Every occupant has exactly one value from each category below, and no two occupants share a value within a category.
-- name: Ann, Bob, Cy, Di, Ed
-- major: law, art, math, music, physics
-- transport: bus, tram, bike, taxi, ferry
-- meal: soup, stew, pasta, salad, curry
+- job: farmer, judge, baker, tailor, nurse
+- pet: owl, snake, pony, mouse, ferret
+- drink: cider, cocoa, espresso, lemonade, soda
+- flower: tulip, rose, orchid, lily, daisy
 
 Clues:
-1. Ed lives in one of the two end houses.
-2. Bob lives in one of the two end houses.
-3. Ed lives somewhere to the left of Bob.
-4. Ann lives directly right of Ed.
-5. Cy lives somewhere to the left of Di.
-6. Ed studies law.
-7. The physics student lives somewhere to the left of the art student.
-8. The art student lives somewhere to the left of the music student.
-9. Di studies art.
-10. The math student is neither Bob nor Cy.
-11. The music student takes the taxi.
-12. The tram user lives next to the taxi user.
-13. The bus user studies physics.
-14. The ferry user lives somewhere to the left of the bike rider.
-15. The curry lover takes the ferry.
-16. The salad eater takes the tram.
-17. The pasta eater studies physics.
-18. The soup eater lives next to the curry eater.
+1. The espresso drinker lives in the middle house.
+2. The baker drinks espresso.
+3. There is exactly one house between the farmer and the baker.
+4. The tailor lives next to the baker.
+5. The judge lives directly left of the baker.
+6. The nurse lives somewhere right of the judge.
+7. The baker owns the pony.
+8. The snake owner lives directly right of the owl owner.
+9. The mouse owner is the tailor.
+10. The tailor drinks lemonade.
+11. The cocoa drinker lives next to the espresso drinker.
+12. The nurse does not drink cider.
+13. The baker grows orchids.
+14. The rose grower drinks cocoa.
+15. The lily grower lives directly right of the orchid grower.
+16. The tulip grower owns the owl.
 
 ## Puzzle zebra/0/g7
 
 There are 5 houses in a row, numbered 1 to 5 from left to right. Each house has one occupant. Every occupant has exactly one value from each category below, and no two occupants share a value within a category.
-- job: baker, nurse, farmer, judge, tailor
-- vehicle: van, jeep, truck, moped, coach
-- fruit: kiwi, mango, grape, peach, lemon
-- hobby: yoga, dance, golf, chess, sewing
+- colour: orange, pink, grey, purple, brown
+- pet: goat, cat, duck, pig, hen
+- drink: cola, tea, juice, wine, beer
+- music: folk, jazz, opera, techno, rock
 
 Clues:
-1. The judge lives in the middle house.
-2. The baker lives next to the judge.
-3. The tailor lives next to the judge.
-4. The farmer lives somewhere to the left of the nurse.
-5. The tailor lives somewhere to the left of the baker.
-6. The nurse rides the moped.
-7. The tailor drives the coach.
-8. The jeep driver lives next to the van driver.
-9. The truck driver lives somewhere to the left of the tailor.
-10. The baker does not drive the van.
-11. The kiwi eater drives the coach.
-12. The mango eater rides the moped.
-13. The peach eater is the judge.
-14. The lemon eater drives the jeep.
-15. The golfer is the judge.
-16. The yoga fan eats lemon.
-17. The nurse enjoys sewing.
-18. The chess player lives directly right of the dancer.
+1. The grey house is in the middle.
+2. The purple house is directly right of the grey house.
+3. The pink house is next to the grey house.
+4. The orange house is somewhere left of the pink house.
+5. The juice drinker lives in the grey house.
+6. The wine drinker lives next to the juice drinker.
+7. The tea drinker lives in the pink house.
+8. The beer drinker lives in the brown house.
+9. The jazz fan drinks tea.
+10. The opera fan drinks juice.
+11. The techno fan lives directly right of the opera fan.
+12. The rock fan drinks beer.
+13. The cat owner likes jazz.
+14. The hen owner lives in the brown house.
+15. The pig owner drinks wine.
+16. The goat owner lives somewhere left of the duck owner.
 
 ## Puzzle zebra/2/g6
 
 There are 5 houses in a row, numbered 1 to 5 from left to right. Each house has one occupant. Every occupant has exactly one value from each category below, and no two occupants share a value within a category.
-- job: Artist, Judge, Farmer, Nurse, Pilot
-- city: Lima, Oslo, Paris, Cairo, Rome
-- drink: Soda, Cocoa, Latte, Cider, Mead
-- pet: Duck, Mule, Goat, Hen, Pig
+- name: Fay, Gus, Hal, Ida, Jon
+- sport: tennis, golf, rowing, judo, skiing
+- snack: chips, grapes, pretzel, olives, popcorn
+- shirt: pink, gray, black, orange, purple
 
 Clues:
-1. The farmer lives in the middle house.
-2. The nurse lives directly left of the pilot.
-3. The artist does not live next to the farmer.
-4. The judge lives in one of the first two houses.
-5. The pilot comes from Rome.
-6. The farmer comes from Paris.
-7. The Cairo resident lives directly left of the Rome resident.
-8. The judge comes from Oslo.
-9. The soda drinker is the artist.
-10. The latte drinker lives in Paris.
-11. The cider drinker lives in Cairo.
-12. The cocoa drinker lives directly right of the soda drinker.
-13. The goat owner drinks latte.
-14. The pig lives in the house of the mead drinker.
-15. The hen is kept by the nurse.
-16. The mule belongs to the cocoa drinker.
-17. The duck owner does not live next to the goat owner.
+1. Ida and Hal live in the two end houses.
+2. Ida lives somewhere to the left of Gus.
+3. Jon lives directly right of Gus.
+4. Fay does not live next to Ida.
+5. The skier lives in the middle house.
+6. Ida is the rower.
+7. The judoka lives next to the golfer.
+8. Hal does not play golf.
+9. The rower eats olives.
+10. The tennis player eats chips.
+11. The grape eater lives directly left of the pretzel eater.
+12. The skier does not eat grapes.
+13. The tennis player wears pink.
+14. The golfer wears black.
+15. The pretzel eater wears orange.
+16. The olive eater does not wear gray.
 
 ## Puzzle zebra/1/g10
 
 There are 5 houses in a row, numbered 1 to 5 from left to right. Each house has one occupant. Every occupant has exactly one value from each category below, and no two occupants share a value within a category.
-- name: Ana, Bo, Cy, Di, Ed
-- fruit: apple, kiwi, lime, melon, fig
-- sport: golf, judo, polo, yoga, darts
-- city: Bern, Riga, Oslo, Rome, Kiev
+- colour: cream, lilac, maroon, navy, orange
+- job: baker, clerk, judge, nurse, pilot
+- pet: ferret, gecko, koi, pigeon, tortoise
+- drink: ale, cola, juice, tea, wine
 
 Clues:
-1. Ana lives in the middle house.
-2. Ed and Di each live directly next to Ana, on opposite sides of her.
-3. Ed lives to the left of Di.
-4. Bo lives somewhere to the right of Cy.
-5. Ana eats apples.
-6. The fig eater lives directly left of Ana.
-7. The kiwi eater lives next to the apple eater and is not the fig eater.
-8. The lime eater lives somewhere to the right of the kiwi eater.
-9. Bo does yoga.
-10. The polo player eats melon.
-11. The golfer lives directly left of the darts player.
-12. Ed does not do judo.
-13. The polo player lives in Rome.
-14. The person from Riga does yoga.
-15. The person from Bern plays golf.
-16. The person from Oslo lives next to the person from Riga.
+1. The clerk and the nurse live at opposite ends of the row.
+2. The baker lives next to the judge.
+3. The pilot lives somewhere to the right of the baker.
+4. The nurse lives next to the pilot.
+5. The judge lives in the cream house.
+6. The baker lives in the orange house.
+7. The cream house is directly right of the orange house.
+8. The pilot lives in the lilac house.
+9. The nurse does not live in the navy house.
+10. The baker keeps the koi.
+11. The tortoise owner lives next to the nurse.
+12. The ferret owner lives in the cream house.
+13. The pigeon owner is not the clerk.
+14. The tea drinker keeps the koi.
+15. The wine drinker lives in the lilac house.
+16. The cola drinker lives in the middle house.
+17. The clerk drinks ale.
 
 ## Puzzle zebra/0/g2
 
 There are 5 houses in a row, numbered 1 to 5 from left to right. Each house has one occupant. Every occupant has exactly one value from each category below, and no two occupants share a value within a category.
-- nation: Dane, Finn, Greek, Irish, Pole
-- sport: chess, golf, rowing, tennis, judo
-- fruit: apple, pear, plum, fig, lime
-- car: Audi, Fiat, Ford, Mini, Opel
+- name: Emil, Anna, Dara, Boris, Chen
+- fruit: banana, cherry, pear, apple, grape
+- hobby: golf, chess, archery, sailing, judo
+- transport: bus, train, bike, tram, car
 
 Clues:
-1. The Irish person lives in the middle house.
-2. The Dane lives in one of the two end houses.
-3. The Greek lives directly right of the Finn.
-4. The Pole lives directly left of the Irish person.
-5. The chess player is the Irish person.
-6. The judo player lives next to the chess player.
-7. The Pole does not play judo.
-8. The tennis player is neither the Dane nor the Greek.
-9. The golfer lives somewhere to the left of the rower.
-10. The person who eats the pear plays chess.
-11. The person who eats the lime plays judo.
-12. The fig eater lives next to the pear eater.
-13. The plum eater lives somewhere to the right of the apple eater.
-14. The Ford driver eats the pear.
-15. The Opel driver lives directly left of the Ford driver.
-16. The Mini driver is the Finn.
-17. The Audi driver is not the Greek.
+1. Dara lives in the middle house.
+2. Emil and Chen live at the two ends of the street.
+3. Emil lives somewhere left of Anna.
+4. Emil eats bananas.
+5. Boris lives next to Chen.
+6. The cherry eater lives next to the banana eater.
+7. Dara eats pears.
+8. The apple eater lives directly left of the grape eater.
+9. The golfer eats bananas.
+10. The sailor eats apples.
+11. The archer lives directly left of the sailor.
+12. The chess player eats cherries.
+13. Emil takes the bus.
+14. The train passenger lives directly right of the bus rider.
+15. The tram rider eats apples.
+16. The bike rider eats pears.
 
 ## Puzzle zebra/1/g9
 
 There are 5 houses in a row, numbered 1 to 5 from left to right. Each house has one occupant. Every occupant has exactly one value from each category below, and no two occupants share a value within a category.
-- colour: red, green, blue, yellow, white
-- pet: dog, cat, bird, fish, rabbit
-- drink: tea, coffee, milk, juice, water
-- hobby: sailing, chess, golf, yoga, darts
+- instrument: cello, drums, flute, guitar, piano
+- food: curry, pasta, pizza, sushi, tacos
+- city: Berlin, Delhi, Lima, Oslo, Rome
+- shirt: blue, gold, pink, teal, violet
 
 Clues:
-1. The green house is directly left of the red house.
-2. The yellow house is directly right of the red house.
-3. The blue house is somewhere to the right of the yellow house.
-4. The white house is at one end of the row.
-5. The water drinker lives in the white house.
-6. The tea drinker lives in the green house.
-7. The tea drinker lives directly right of the water drinker.
-8. The milk drinker lives in the red house.
-9. The juice drinker lives directly left of the coffee drinker.
-10. The rabbit lives in the white house.
-11. The cat drinks tea.
-12. The dog lives in the red house.
-13. The fish lives next to the dog.
-14. The yoga fan drinks water.
-15. The chess player owns the cat.
-16. The darts player owns the dog.
-17. The golfer lives next to the darts player.
+1. The pianist lives in the middle house.
+2. There is exactly one house between the guitarist and the drummer.
+3. The flutist lives somewhere to the right of the cellist.
+4. The guitarist lives next to the cellist.
+5. The pianist eats curry.
+6. The pizza eater lives next to the drummer.
+7. The drummer eats tacos.
+8. The guitarist does not eat pasta.
+9. The Berliner plays either the cello or the flute.
+10. The Delhi resident eats sushi.
+11. The Delhi resident lives next to the Berliner.
+12. The Rome resident plays the piano.
+13. The Oslo resident is not the flutist.
+14. The pianist wears teal.
+15. The gold shirt is directly left of the violet shirt.
+16. The pink shirt is not next to the teal shirt.
+17. The cellist does not wear pink.
 
 ## Puzzle zebra/2/g5
 
 There are 5 houses in a row, numbered 1 to 5 from left to right. Each house has one occupant. Every occupant has exactly one value from each category below, and no two occupants share a value within a category.
-- nationality: Thai, Dane, Finn, Greek, Brit
-- pet: Rabbit, Dog, Turtle, Parrot, Cat
-- car: Van, Mini, Truck, Coupe, Jeep
-- snack: Fudge, Crisps, Pretzel, Nachos, Popcorn
+- job: baker, nurse, judge, tailor, farmer
+- flower: rose, tulip, lily, daisy, orchid
+- vehicle: bike, bus, tram, scooter, taxi
+- drink: cocoa, lemonade, cider, smoothie, espresso
 
 Clues:
-1. The Finn lives in the middle house.
-2. There is exactly one house between the Dane and the Greek.
-3. The Brit lives directly right of the Greek.
-4. The Dane owns the dog.
-5. The Brit owns the cat.
-6. The parrot owner lives directly left of the cat owner.
-7. The turtle owner is the Finn.
-8. The Jeep driver owns the cat.
-9. The Coupe driver is the Greek.
-10. The Mini driver lives right next to both the Van driver and the Truck driver.
-11. The Truck driver is the Finn.
-12. Popcorn is eaten by the Jeep driver.
-13. The nachos eater lives next to the popcorn eater.
-14. The pretzel eater drives the Truck.
-15. The crisps eater owns the dog.
+1. The farmer lives directly left of the baker.
+2. There is exactly one house between the nurse and the baker.
+3. The tailor lives in house 5.
+4. The judge lives somewhere to the right of the farmer.
+5. The nurse lives in one of the end houses.
+6. The baker grows tulips.
+7. The nurse grows orchids.
+8. The rose grower lives next to the orchid grower.
+9. The judge grows lilies.
+10. The nurse rides the tram.
+11. The baker takes the taxi.
+12. The bus rider lives next to the scooter rider.
+13. The tailor does not ride the scooter.
+14. The espresso drinker lives in the middle house.
+15. The cocoa drinker rides the tram.
+16. The lemonade drinker lives directly left of the smoothie drinker.

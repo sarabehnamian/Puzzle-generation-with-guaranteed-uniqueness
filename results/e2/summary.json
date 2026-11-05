@@ -10,28 +10,28 @@
    "encoding_disputed": 0,
    "levels": {
     "1": 1,
-    "2": 37,
-    "3": 2,
+    "2": 32,
+    "3": 7,
     "4": 0,
     "5": 0
    },
    "levels_after_min": {
-    "1": 1,
-    "2": 25,
-    "3": 14,
+    "1": 0,
+    "2": 23,
+    "3": 17,
     "4": 0,
     "5": 0
    },
-   "redundancy_mean": 0.2939565365619932,
-   "clues_mean": 16.275,
-   "clues_min_mean": 14.1
+   "redundancy_mean": 0.2685127801120448,
+   "clues_mean": 15.925,
+   "clues_min_mean": 14
   },
   "sudoku": {
    "n": 20,
    "parsed": 20,
    "unique": 20,
-   "matches_intended": 19,
-   "valid_raw": 19,
+   "matches_intended": 20,
+   "valid_raw": 20,
    "valid_after_repair1": 20,
    "encoding_disputed": 0,
    "levels": {
@@ -42,15 +42,15 @@
     "5": 0
    },
    "levels_after_min": {
-    "1": 6,
-    "2": 9,
-    "3": 5,
+    "1": 9,
+    "2": 7,
+    "3": 4,
     "4": 0,
     "5": 0
    },
    "redundancy_mean": 0.7333333333333333,
    "clues_mean": 30,
-   "clues_min_mean": 22.25
+   "clues_min_mean": 22.65
   },
   "killer": {
    "n": 20,
@@ -61,62 +61,62 @@
    "valid_after_repair1": 20,
    "encoding_disputed": 0,
    "levels": {
-    "1": 10,
-    "2": 10,
+    "1": 0,
+    "2": 20,
     "3": 0,
     "4": 0,
     "5": 0
    },
    "levels_after_min": {
     "1": 0,
-    "2": 17,
-    "3": 3,
+    "2": 19,
+    "3": 1,
     "4": 0,
     "5": 0
    },
-   "redundancy_mean": 0.8353095975232199,
-   "clues_mean": 18.65,
-   "clues_min_mean": 10.05
+   "redundancy_mean": 0.7645636527215475,
+   "clues_mean": 16.45,
+   "clues_min_mean": 9.1
   },
   "futoshiki": {
    "n": 20,
    "parsed": 20,
-   "unique": 19,
-   "matches_intended": 19,
-   "valid_raw": 19,
+   "unique": 20,
+   "matches_intended": 20,
+   "valid_raw": 20,
    "valid_after_repair1": 20,
    "encoding_disputed": 0,
    "levels": {
     "1": 1,
-    "2": 18,
+    "2": 19,
     "3": 0,
     "4": 0,
     "5": 0
    },
    "levels_after_min": {
     "1": 0,
-    "2": 13,
-    "3": 6,
+    "2": 15,
+    "3": 5,
     "4": 0,
     "5": 0
    },
-   "redundancy_mean": 0.7857536738423165,
-   "clues_mean": 15,
-   "clues_min_mean": 9.052631578947368
+   "redundancy_mean": 0.8203871475793167,
+   "clues_mean": 19.85,
+   "clues_min_mean": 9.55
   }
  },
  "duplication": {
   "sudoku": {
    "n": 20,
-   "distinct_masks": 8,
-   "largest_mask_group": 7,
-   "wikipedia_mask": 7,
-   "wikipedia_identical": 1
+   "distinct_masks": 12,
+   "largest_mask_group": 4,
+   "wikipedia_mask": 2,
+   "wikipedia_identical": 0
   },
   "futoshiki": {
    "n": 20,
-   "distinct_masks": 20,
-   "largest_mask_group": 1
+   "distinct_masks": 19,
+   "largest_mask_group": 2
   }
  }
 }

@@ -13,12 +13,41 @@ solution and will reject variants that need guessing, so focus on what makes the
 follow (for example: fewer givens, givens spread so that no row/column/box is nearly complete,
 removing givens that make singles easy).
 
-Output: write a single JSON object to the file /home/user/Puzzle-generation-with-guaranteed-uniqueness/data/llm_tasks/e4s_mut_g0/e4s_mut_g0_1.out.json with this structure
+Output: write a single JSON object to the file D:\Puzzle-generation-with-guaranteed-uniqueness\data\llm_tasks\e4s_mut_g0\e4s_mut_g0_1.out.json with this structure
 {"variants": [{"parent": "<puzzle id>", "ops": [<op>, ...], "idea": "<one short sentence>"}, ...]}
 with 2 variants per puzzle.
 
 The puzzles follow.
 
+
+## Puzzle e4s-g0-00
+
+Classic Sudoku on a 9x9 grid. Fill every cell with a digit 1-9 so that each row, each column and each 3x3 box contains every digit exactly once.
+
+Grid ('.' = empty):
+. 6 . | 2 . . | . 5 .
+. . . | . . . | 9 . .
+7 . 8 | . 6 4 | . . .
+---------------------
+. 9 4 | . . 1 | 5 . .
+. . 7 | 4 . . | . 3 .
+. . 2 | . . 8 | . . .
+---------------------
+1 . . | . 5 7 | . . 4
+. . . | . . . | 8 . .
+. . . | . . . | 3 1 .
+
+Solution:
+469213758
+231785946
+758964123
+694321587
+587496231
+312578469
+123857694
+946132875
+875649312
+Solver mistakes: none - the solver got it fully right
 
 ## Puzzle e4s-g0-04
 
@@ -76,33 +105,4 @@ Solution:
 723895416
 598164732
 461327589
-Solver mistakes: none - the solver got it fully right
-
-## Puzzle e4s-g0-07
-
-Classic Sudoku on a 9x9 grid. Fill every cell with a digit 1-9 so that each row, each column and each 3x3 box contains every digit exactly once.
-
-Grid ('.' = empty):
-6 . . | . 7 . | . . .
-. . 8 | 1 6 5 | . 7 .
-. 4 . | 8 . . | . . 5
----------------------
-8 3 . | . 1 . | . . 7
-. . 2 | . 8 . | . . .
-. . 4 | . . . | 5 . 3
----------------------
-. . 7 | . . . | . . .
-2 9 3 | . 5 . | . . .
-. . . | 7 . 1 | . 2 .
-
-Solution:
-651974832
-328165974
-749832165
-835416297
-972583416
-164297583
-417329658
-293658741
-586741329
 Solver mistakes: none - the solver got it fully right

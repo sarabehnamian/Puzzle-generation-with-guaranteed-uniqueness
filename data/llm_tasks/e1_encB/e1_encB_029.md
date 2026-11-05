@@ -18,7 +18,7 @@ Examples (from other puzzles):
 - "The person who reads poetry lives next to the person who drinks lemonade."
                                             ->  Abs(pos('poetry') - pos('lemonade')) == 1
 
-Output: write a single JSON object to the file /home/user/Puzzle-generation-with-guaranteed-uniqueness/data/llm_tasks/e1_encB/e1_encB_029.out.json with this exact structure
+Output: write a single JSON object to the file D:\Puzzle-generation-with-guaranteed-uniqueness\data\llm_tasks\e1_encB\e1_encB_029.out.json with this exact structure
 {"puzzles": [{"id": "<puzzle id>", "constraints": [{"clue": 1, "expr": "<expression>"}, ...]}, ...]}
 One entry per puzzle and exactly one constraint per numbered clue, in order. Use single quotes inside
 expressions so the JSON stays valid.
@@ -203,20 +203,20 @@ There are 5 houses in a row, numbered 1 to 5 from left to right. Each house has 
 
 Clues:
 1. The white house's occupant is not the baker.
-2. The green house and the red house are next to each other.
-3. The fish owner lives immediately to the right of the cocoa drinker.
+2. The green house is right next to the red house.
+3. The fish owner lives directly to the right of the cocoa drinker.
 4. One house separates the dog owner from the purple house.
-5. One house separates the doctor from the pilot.
+5. One house lies between the doctor and the pilot.
 6. The coffee drinker lives in house 1.
 7. The horse owner lives immediately to the left of the doctor.
-8. The purple house and the tea drinker are neighbours.
-9. The lawyer is the one who keeps the horse.
+8. The purple house is next door to the tea drinker.
+9. The horse owner is the lawyer.
 10. The green house lies somewhere to the right of the doctor.
 11. The rabbit owner lives immediately to the left of the farmer.
 12. The dog owner and the lawyer are not neighbours.
 13. The green house is directly to the right of the cocoa drinker.
-14. The doctor is not the rabbit owner.
-15. There is exactly one house between the green house and the milk drinker.
+14. The doctor does not own the rabbit.
+15. One house lies between the green house and the milk drinker.
 
 ## Puzzle plain:zebra-00077
 

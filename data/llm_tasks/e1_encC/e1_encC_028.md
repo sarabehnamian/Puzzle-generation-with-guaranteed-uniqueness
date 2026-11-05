@@ -18,7 +18,7 @@ Examples (from other puzzles):
 - "The person who reads poetry lives next to the person who drinks lemonade."
                                             ->  Abs(pos('poetry') - pos('lemonade')) == 1
 
-Output: write a single JSON object to the file /home/user/Puzzle-generation-with-guaranteed-uniqueness/data/llm_tasks/e1_encC/e1_encC_028.out.json with this exact structure
+Output: write a single JSON object to the file D:\Puzzle-generation-with-guaranteed-uniqueness\data\llm_tasks\e1_encC\e1_encC_028.out.json with this exact structure
 {"puzzles": [{"id": "<puzzle id>", "constraints": [{"clue": 1, "expr": "<expression>"}, ...]}, ...]}
 One entry per puzzle and exactly one constraint per numbered clue, in order. Use single quotes inside
 expressions so the JSON stays valid.
@@ -105,20 +105,20 @@ There are 5 houses in a row, numbered 1 to 5 from left to right. Each house has 
 - drink: milk, cocoa, tea, juice, water
 
 Clues:
-1. The cocoa drinker's house is right next to the doctor's.
-2. The juice drinker's hobby is either chess or golf.
-3. Whoever enjoys painting drinks water.
+1. The cocoa drinker lives next door to the doctor.
+2. Whoever drinks juice enjoys either chess or golf.
+3. The painting enthusiast drinks water.
 4. The baker lives directly to the right of the water drinker.
 5. The cooking enthusiast is either the farmer or the teacher.
-6. The teacher occupies house 1.
+6. The teacher lives in house 1.
 7. The tea drinker is either the doctor or the lawyer.
 8. The Dane lives directly to the right of the milk drinker.
-9. The farmer occupies house 5.
+9. The farmer lives in house 5.
 10. The German does not live in house 5.
-11. The Spaniard lives somewhere further left than the juice drinker.
-12. The tea drinker lives directly to the left of the German.
-13. The doctor and the hiking enthusiast live next door to each other.
-14. The Norwegian and the water drinker are next-door neighbours.
+11. The Spaniard lives somewhere to the left of the juice drinker.
+12. The tea drinker lives immediately to the left of the German.
+13. The doctor and the hiking enthusiast are next-door neighbours.
+14. The Norwegian lives next door to the water drinker.
 15. The golf enthusiast is either the lawyer or the teacher.
 
 ## Puzzle hard:zebra_hard-00019
@@ -254,15 +254,15 @@ There are 5 houses in a row, numbered 1 to 5 from left to right. Each house has 
 
 Clues:
 1. The hiker keeps the fish.
-2. The green house is right next to the Swede.
+2. The green house's occupant lives next door to the Swede.
 3. The German lives immediately to the left of the white house.
-4. The purple house and the rabbit owner are neighbours.
+4. The purple house's occupant and the rabbit owner are neighbours.
 5. The painter lives in the red house.
-6. The purple house's occupant is not the tennis player.
-7. The cook and the Dane live in neighbouring houses.
+6. The purple house's occupant doesn't play tennis.
+7. The cooking enthusiast and the Dane live next to each other.
 8. The rabbit keeper's hobby is cooking.
-9. The bird owner lives right next to the Swede.
-10. The horse belongs to the Dane.
-11. The Brit is the one in the blue house.
-12. The Brit and the red house are two houses apart.
-13. The Swede lives in the red house.
+9. The bird owner lives next door to the Swede.
+10. The Dane keeps the horse.
+11. The blue house's occupant is the Brit.
+12. The Brit and the red house's occupant live two houses apart.
+13. The red house's occupant is the Swede.

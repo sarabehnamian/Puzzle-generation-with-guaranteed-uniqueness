@@ -9,7 +9,7 @@ Each puzzle must have EXACTLY ONE solution, and it must be solvable by pure logi
 step by step, without guessing or trial and error. Aim for puzzles a keen human solver would enjoy:
 not trivial, but fair. You cannot run code, so check your puzzles carefully in your head.
 
-Output: write a single JSON object to the file /home/user/Puzzle-generation-with-guaranteed-uniqueness/data/llm_tasks/e2_gen/e2_gen_zebra_3.out.json with this exact structure
+Output: write a single JSON object to the file D:\Puzzle-generation-with-guaranteed-uniqueness\data\llm_tasks\e2_gen\e2_gen_zebra_3.out.json with this exact structure
 {"puzzles": [{"id": "g1", "categories": {"<category>": ["<v1>", "<v2>", "<v3>", "<v4>", "<v5>"], ...},
   "clues": ["<clue 1>", "<clue 2>", ...],
   "solution": {"1": {"<category>": "<value>", ...}, "2": {...}, "3": {...}, "4": {...}, "5": {...}}}, ...]}

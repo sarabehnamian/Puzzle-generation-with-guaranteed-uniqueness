@@ -18,7 +18,7 @@ Examples (from other puzzles):
 - "The person who reads poetry lives next to the person who drinks lemonade."
                                             ->  Abs(pos('poetry') - pos('lemonade')) == 1
 
-Output: write a single JSON object to the file /home/user/Puzzle-generation-with-guaranteed-uniqueness/data/llm_tasks/e1_encB/e1_encB_012.out.json with this exact structure
+Output: write a single JSON object to the file D:\Puzzle-generation-with-guaranteed-uniqueness\data\llm_tasks\e1_encB\e1_encB_012.out.json with this exact structure
 {"puzzles": [{"id": "<puzzle id>", "constraints": [{"clue": 1, "expr": "<expression>"}, ...]}, ...]}
 One entry per puzzle and exactly one constraint per numbered clue, in order. Use single quotes inside
 expressions so the JSON stays valid.
@@ -57,19 +57,19 @@ There are 5 houses in a row, numbered 1 to 5 from left to right. Each house has 
 - drink: milk, tea, cocoa, juice, water
 
 Clues:
-1. The doctor and the lawyer have a single house between them.
-2. The cat owner lives next door to the tea drinker.
-3. The farmer lives in the house immediately right of the water drinker.
+1. Exactly one house separates the doctor from the lawyer.
+2. The cat owner and the tea drinker live next door to each other.
+3. The water drinker lives immediately left of the farmer.
 4. The bird owner and the tennis enthusiast are neighbours.
-5. The dog owner and the hiking enthusiast live in adjoining houses.
-6. The owner of the horse lives directly left of the juice drinker.
-7. The tea drinker's house has a lower number than the cocoa drinker's.
-8. The golf enthusiast lives immediately right of the doctor.
-9. The cooking enthusiast lives immediately right of the pilot.
+5. The dog owner and the hiking enthusiast live in adjacent houses.
+6. The juice drinker lives directly right of the horse owner.
+7. The tea drinker lives in a lower-numbered house than the cocoa drinker.
+8. The golf enthusiast lives directly right of the doctor.
+9. The cooking enthusiast lives directly right of the pilot.
 10. The water drinker's hobby is either chess or hiking.
-11. The bird owner occupies one of the two end houses.
+11. The bird owner lives in one of the two end houses.
 12. The chess enthusiast and the milk drinker are next-door neighbours.
-13. The farmer lives immediately right of the horse owner.
+13. The horse owner lives immediately left of the farmer.
 
 ## Puzzle hard:zebra_hard-00021
 
@@ -145,31 +145,27 @@ Clues:
 14. The cooking enthusiast lives immediately to the right of the person who drinks juice.
 15. The Swede keeps the cat.
 
-## Puzzle paraphrase:zebra-00163
+## Puzzle paraphrase:zebra-00164
 
 There are 5 houses in a row, numbered 1 to 5 from left to right. Each house has one occupant. Every occupant has exactly one value from each category below, and no two occupants share a value within a category.
-- job: doctor, lawyer, teacher, baker, farmer
-- pet: bird, horse, dog, rabbit, fish
-- hobby: painting, hiking, golf, tennis, chess
-- drink: cocoa, water, tea, juice, coffee
+- hobby: hiking, painting, chess, golf, tennis
+- drink: coffee, milk, water, cocoa, tea
+- nationality: Norwegian, Spaniard, Swede, Dane, Brit
+- color: blue, purple, red, white, yellow
 
 Clues:
-1. The chess player lives somewhere to the left of the golfer.
-2. The golfer does not live next door to the water drinker.
-3. The doctor's hobby is hiking.
-4. Chess is the hobby of the cocoa drinker.
-5. The last house belongs to the rabbit owner.
-6. The horse is kept at one end of the row.
-7. The chess player does not own the fish.
-8. The chess player lives right beside the farmer.
-9. The hiker and the horse owner live two doors apart.
-10. The juice drinker lives immediately to the left of the lawyer.
-11. The baker and the doctor are not next-door neighbours.
-12. The water drinker lives at one of the ends of the row.
-13. The dog owner lives in the middle house.
-14. The horse owner lives directly to the left of the chess player.
-15. The tennis player is the baker.
-16. The coffee drinker and the doctor are separated by exactly one house.
+1. The painter lives in the blue house.
+2. Exactly one house lies between the milk drinker and the Norwegian.
+3. The blue house's occupant and the water drinker live next door to each other.
+4. The purple house's occupant drinks tea.
+5. The hiker lives in a lower-numbered house than the Dane.
+6. The Swede lives somewhere to the left of the red house.
+7. The tennis enthusiast lives in house 4.
+8. The Brit lives next door to the cocoa drinker.
+9. The white house is the middle house.
+10. The water drinker lives immediately to the left of the golfer.
+11. The purple house's occupant lives next to the Swede.
+12. The hiker lives immediately to the right of the Spaniard.
 
 ## Puzzle hard:zebra_hard-00014
 
@@ -195,27 +191,28 @@ Clues:
 13. The coffee drinker and the person who keeps the horse are one and the same person.
 14. The pilot and the water drinker are one and the same person.
 
-## Puzzle paraphrase:zebra-00164
+## Puzzle paraphrase:zebra-00165
 
 There are 5 houses in a row, numbered 1 to 5 from left to right. Each house has one occupant. Every occupant has exactly one value from each category below, and no two occupants share a value within a category.
-- hobby: hiking, painting, chess, golf, tennis
-- drink: coffee, milk, water, cocoa, tea
-- nationality: Norwegian, Spaniard, Swede, Dane, Brit
-- color: blue, purple, red, white, yellow
+- job: farmer, lawyer, teacher, pilot, doctor
+- drink: tea, juice, milk, cocoa, coffee
+- nationality: Norwegian, German, Swede, Brit, Spaniard
+- hobby: chess, hiking, cooking, golf, tennis
 
 Clues:
-1. The painter lives in the blue house.
-2. One house lies between the milk drinker and the Norwegian.
-3. The blue house and the water drinker's house are next to each other.
-4. Tea is drunk by whoever lives in the purple house.
-5. The hiker lives further left than the Dane.
-6. The Swede lives somewhere to the left of the red house's occupant.
-7. The tennis player lives in house 4.
-8. The Brit and the cocoa drinker are next-door neighbours.
-9. The white house is the one in the middle.
-10. The water drinker lives immediately to the left of the golfer.
-11. The purple house's occupant lives right beside the Swede.
-12. The hiker lives directly to the right of the Spaniard.
+1. The Norwegian lives in house 1.
+2. The tea drinker lives immediately to the left of the lawyer.
+3. The German lives immediately to the left of the farmer.
+4. The milk drinker does not enjoy chess.
+5. The golfer is the lawyer.
+6. The farmer lives immediately to the left of the coffee drinker.
+7. One house separates the Brit from the pilot.
+8. The cocoa drinker lives immediately to the left of the cooking enthusiast.
+9. The farmer and the Spaniard live in adjacent houses.
+10. The doctor drinks either cocoa or juice.
+11. The milk drinker lives immediately to the left of the tennis enthusiast.
+12. The cooking enthusiast and the milk drinker live two houses apart.
+13. The cocoa drinker lives next door to the doctor.
 
 ## Puzzle hard:zebra_hard-00072
 
@@ -239,26 +236,27 @@ Clues:
 11. The person who keeps the rabbit and the person who enjoys tennis are one and the same person.
 12. The farmer lives two doors away from the Swede.
 
-## Puzzle paraphrase:zebra-00161
+## Puzzle paraphrase:zebra-00162
 
 There are 5 houses in a row, numbered 1 to 5 from left to right. Each house has one occupant. Every occupant has exactly one value from each category below, and no two occupants share a value within a category.
-- drink: tea, cocoa, milk, water, coffee
-- job: lawyer, teacher, doctor, farmer, baker
-- pet: bird, cat, dog, fish, horse
-- hobby: golf, tennis, painting, cooking, hiking
+- color: purple, white, yellow, red, green
+- hobby: hiking, cooking, painting, golf, tennis
+- pet: horse, dog, bird, cat, rabbit
+- drink: juice, cocoa, milk, water, coffee
 
 Clues:
-1. House 1 is home to the cocoa drinker.
-2. The tea drinker's house is right beside the teacher's.
-3. The farmer and the cocoa drinker are next-door neighbours.
-4. The bird belongs to the hiker.
-5. The coffee drinker has either the dog or the fish.
-6. The bird's owner lives next door to the fish's owner.
-7. The lawyer lives somewhere further right than the painting enthusiast.
-8. The farmer is the one who owns the horse.
-9. The cat owner lives in the centre house.
-10. The milk drinker is not the horse owner.
-11. The golfer lives somewhere to the left of the milk drinker.
-12. The baker's hobby is painting.
-13. The cooking enthusiast lives right beside the dog owner.
-14. The tea drinker lives in one of the two end houses.
+1. The hiker and the juice drinker live in adjacent houses.
+2. The tennis enthusiast lives immediately to the right of the green house's occupant.
+3. The white house is the last house.
+4. The hiker lives in the purple house.
+5. The hiker lives immediately to the right of the cooking enthusiast.
+6. The rabbit owner lives in the white house.
+7. The dog owner and the juice drinker are next-door neighbours.
+8. The green house's occupant and the water drinker are neighbours.
+9. The occupant of the green house lives next to the milk drinker.
+10. The hiker keeps either the bird or the cat.
+11. The tennis enthusiast lives immediately to the right of the cat owner.
+12. The golfer lives in house 5.
+13. The milk drinker lives in a lower-numbered house than the water drinker.
+14. The cocoa drinker lives next door to the hiker.
+15. Exactly one house separates the green house from the yellow house.

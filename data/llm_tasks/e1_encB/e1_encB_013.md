@@ -18,7 +18,7 @@ Examples (from other puzzles):
 - "The person who reads poetry lives next to the person who drinks lemonade."
                                             ->  Abs(pos('poetry') - pos('lemonade')) == 1
 
-Output: write a single JSON object to the file /home/user/Puzzle-generation-with-guaranteed-uniqueness/data/llm_tasks/e1_encB/e1_encB_013.out.json with this exact structure
+Output: write a single JSON object to the file D:\Puzzle-generation-with-guaranteed-uniqueness\data\llm_tasks\e1_encB\e1_encB_013.out.json with this exact structure
 {"puzzles": [{"id": "<puzzle id>", "constraints": [{"clue": 1, "expr": "<expression>"}, ...]}, ...]}
 One entry per puzzle and exactly one constraint per numbered clue, in order. Use single quotes inside
 expressions so the JSON stays valid.
@@ -36,18 +36,18 @@ There are 5 houses in a row, numbered 1 to 5 from left to right. Each house has 
 
 Clues:
 1. The golf enthusiast lives immediately left of the blue house's occupant.
-2. The pilot and the rabbit owner are separated by exactly one house.
-3. The painting enthusiast lives in house 4.
-4. House 2 is home to the cooking enthusiast.
-5. The bird owner lives immediately left of the purple house's occupant.
+2. One house lies between the pilot and the rabbit owner.
+3. The painting enthusiast lives in the fourth house.
+4. House 2 belongs to the cooking enthusiast.
+5. The bird owner lives directly left of the purple house's occupant.
 6. The red house's occupant is the teacher.
-7. The baker lives in house 2.
-8. The tennis enthusiast lives next door to the occupant of the blue house.
-9. The farmer is not a neighbour of the rabbit owner.
-10. The fish keeper and the rabbit owner live next to each other.
-11. Exactly one house lies between the blue house and the green house.
+7. The baker lives in the second house.
+8. The blue house's occupant lives next door to the tennis enthusiast.
+9. The farmer does not live next to the rabbit owner.
+10. The fish keeper and the rabbit owner are neighbours.
+11. Exactly one house separates the blue house from the green house.
 12. The tennis enthusiast is either the farmer or the lawyer.
-13. The fish owner lives next door to the person in the blue house.
+13. The blue house's occupant lives next to the fish owner.
 14. The bird keeper lives next door to the horse owner.
 15. The teacher lives in the middle house.
 
@@ -205,17 +205,17 @@ There are 5 houses in a row, numbered 1 to 5 from left to right. Each house has 
 - pet: fish, bird, dog, horse, rabbit
 
 Clues:
-1. The green house is directly to the left of the golfer.
-2. The juice drinker lives right next to the yellow house.
+1. The green house is directly to the left of the golfer's house.
+2. The juice drinker lives next door to the yellow house's occupant.
 3. The fish keeper lives immediately to the left of the juice drinker.
-4. The yellow house is directly to the right of the bird keeper.
-5. Cooking is the hobby of the rabbit keeper.
-6. One house lies between the chess player and the coffee drinker.
-7. The purple house lies somewhere to the right of the hiker.
-8. The cocoa drinker lives directly to the left of the tea drinker.
-9. Exactly one house separates the hiker from the red house.
-10. The dog owner lives in the fourth house.
-11. The rabbit owner lives immediately to the right of the yellow house.
+4. The yellow house's occupant lives immediately to the right of the bird keeper.
+5. The rabbit keeper's hobby is cooking.
+6. Exactly one house lies between the chess player and the coffee drinker.
+7. The purple house is somewhere to the right of the hiker.
+8. The cocoa drinker lives immediately to the left of the tea drinker.
+9. One house separates the hiker from the red house's occupant.
+10. The dog's owner lives in the fourth house.
+11. The rabbit's owner lives immediately to the right of the yellow house's occupant.
 12. The yellow house's occupant drinks either juice or tea.
 
 ## Puzzle plain:zebra-00084
@@ -251,17 +251,17 @@ There are 5 houses in a row, numbered 1 to 5 from left to right. Each house has 
 - pet: bird, rabbit, cat, dog, fish
 
 Clues:
-1. The painter lives directly to the right of the red house.
-2. The Dane and the white house are in adjacent houses.
-3. The fish keeper lives right next to the white house.
+1. The painter lives immediately to the right of the red house's occupant.
+2. The Dane and the white house's occupant live in adjacent houses.
+3. The fish keeper lives next door to the white house's occupant.
 4. The fish keeper lives somewhere to the right of the Dane.
-5. The rabbit owner and the Swede are not next-door neighbours.
-6. The red house's occupant has either painting or tennis as a hobby.
+5. The rabbit owner and the Swede are not neighbours.
+6. The red house's occupant enjoys either painting or tennis.
 7. The dog owner is either the Brit or the Spaniard.
 8. The hiker does not live in the blue house.
-9. The Swede is the golfer.
-10. The green house and the white house are neighbours.
+9. The golfer is the Swede.
+10. The green house and the white house are next-door neighbours.
 11. The Brit lives in house 5.
-12. The purple house is where the rabbit is kept.
+12. The purple house's occupant keeps the rabbit.
 13. The painter lives somewhere to the left of the rabbit owner.
-14. The bird owner lives immediately to the left of the rabbit owner.
+14. The bird owner lives immediately to the left of the rabbit keeper.

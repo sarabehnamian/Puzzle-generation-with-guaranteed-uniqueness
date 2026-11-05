@@ -43,8 +43,11 @@ class G:
 
 def load_genre(code):
     _guard(code)
+    # one namespace for globals and locals, so top-level helper functions are visible
+    # inside rules()/clues() (separate dicts would hide them from function bodies)
     ns = dict(SAFE)
-    exec(compile(code, "<genre>", "exec"), {"__builtins__": SAFE}, ns)  # noqa: S102
+    ns["__builtins__"] = SAFE
+    exec(compile(code, "<genre>", "exec"), ns)  # noqa: S102
     R, C, D = ns["GRID"]
     assert 2 <= R <= 6 and 2 <= C <= 6 and 2 <= D <= 6
     return ns, (R, C, D)
@@ -153,9 +156,25 @@ def genre_text(g, inst):
     return "\n".join(lines)
 
 
-def prepare_solve(genre_name="Median Line Latin", k=4):
+def pick_genre(G):
+    """The genre whose certified instances reach the deepest ladder level (ties: more instances).
+
+    The original run named its genre by hand ("Median Line Latin"); a rerun invents new
+    genres, so the choice is made by this fixed rule instead.
+    """
+    def key(g):
+        ok = [i for i in g.get("instances", []) if i.get("status") == "ok"]
+        return (max((i["level"] for i in ok), default=0), len(ok))
+    best = max(G, key=key)
+    if key(best)[1] == 0:
+        raise SystemExit("no genre produced a certified instance")
+    return best["name"]
+
+
+def prepare_solve(genre_name=None, k=4):
     from .prompts import SOLVER_HEAD
     G = json.loads((OUT / "genres.json").read_text())
+    genre_name = genre_name or pick_genre(G)
     g = [x for x in G if x["name"] == genre_name][0]
     insts = [i for i in g["instances"] if i.get("status") == "ok"]
     insts = sorted(insts, key=lambda i: -i["level"])[:k]

@@ -7,143 +7,143 @@
    "level": 1,
    "model": "haiku",
    "n": 8,
+   "exact": 1.0,
+   "exact_lo": 1.0,
+   "exact_hi": 1.0,
+   "cell": 1.0,
+   "cell_lo": 1.0,
+   "cell_hi": 1.0
+  },
+  {
+   "family": "futoshiki",
+   "level": 1,
+   "model": "opus",
+   "n": 8,
+   "exact": 1.0,
+   "exact_lo": 1.0,
+   "exact_hi": 1.0,
+   "cell": 1.0,
+   "cell_lo": 1.0,
+   "cell_hi": 1.0
+  },
+  {
+   "family": "futoshiki",
+   "level": 1,
+   "model": "sonnet",
+   "n": 8,
+   "exact": 0.875,
+   "exact_lo": 0.625,
+   "exact_hi": 1.0,
+   "cell": 0.993421052631579,
+   "cell_lo": 0.9802631578947367,
+   "cell_hi": 1.0
+  },
+  {
+   "family": "futoshiki",
+   "level": 2,
+   "model": "haiku",
+   "n": 8,
+   "exact": 1.0,
+   "exact_lo": 1.0,
+   "exact_hi": 1.0,
+   "cell": 1.0,
+   "cell_lo": 1.0,
+   "cell_hi": 1.0
+  },
+  {
+   "family": "futoshiki",
+   "level": 2,
+   "model": "opus",
+   "n": 8,
+   "exact": 1.0,
+   "exact_lo": 1.0,
+   "exact_hi": 1.0,
+   "cell": 1.0,
+   "cell_lo": 1.0,
+   "cell_hi": 1.0
+  },
+  {
+   "family": "futoshiki",
+   "level": 2,
+   "model": "sonnet",
+   "n": 8,
+   "exact": 1.0,
+   "exact_lo": 1.0,
+   "exact_hi": 1.0,
+   "cell": 1.0,
+   "cell_lo": 1.0,
+   "cell_hi": 1.0
+  },
+  {
+   "family": "futoshiki",
+   "level": 3,
+   "model": "haiku",
+   "n": 8,
+   "exact": 1.0,
+   "exact_lo": 1.0,
+   "exact_hi": 1.0,
+   "cell": 1.0,
+   "cell_lo": 1.0,
+   "cell_hi": 1.0
+  },
+  {
+   "family": "futoshiki",
+   "level": 3,
+   "model": "opus",
+   "n": 8,
+   "exact": 1.0,
+   "exact_lo": 1.0,
+   "exact_hi": 1.0,
+   "cell": 1.0,
+   "cell_lo": 1.0,
+   "cell_hi": 1.0
+  },
+  {
+   "family": "futoshiki",
+   "level": 3,
+   "model": "sonnet",
+   "n": 8,
+   "exact": 1.0,
+   "exact_lo": 1.0,
+   "exact_hi": 1.0,
+   "cell": 1.0,
+   "cell_lo": 1.0,
+   "cell_hi": 1.0
+  },
+  {
+   "family": "killer",
+   "level": 1,
+   "model": "haiku",
+   "n": 8,
+   "exact": 1.0,
+   "exact_lo": 1.0,
+   "exact_hi": 1.0,
+   "cell": 1.0,
+   "cell_lo": 1.0,
+   "cell_hi": 1.0
+  },
+  {
+   "family": "killer",
+   "level": 1,
+   "model": "opus",
+   "n": 8,
+   "exact": 0.875,
+   "exact_lo": 0.625,
+   "exact_hi": 1.0,
+   "cell": 0.9916666666666667,
+   "cell_lo": 0.9750000000000001,
+   "cell_hi": 1.0
+  },
+  {
+   "family": "killer",
+   "level": 1,
+   "model": "sonnet",
+   "n": 8,
    "exact": 0.75,
    "exact_lo": 0.375,
    "exact_hi": 1.0,
-   "cell": 0.868421052631579,
-   "cell_lo": 0.618421052631579,
-   "cell_hi": 1.0
-  },
-  {
-   "family": "futoshiki",
-   "level": 1,
-   "model": "opus",
-   "n": 8,
-   "exact": 1.0,
-   "exact_lo": 1.0,
-   "exact_hi": 1.0,
-   "cell": 1.0,
-   "cell_lo": 1.0,
-   "cell_hi": 1.0
-  },
-  {
-   "family": "futoshiki",
-   "level": 1,
-   "model": "sonnet",
-   "n": 8,
-   "exact": 1.0,
-   "exact_lo": 1.0,
-   "exact_hi": 1.0,
-   "cell": 1.0,
-   "cell_lo": 1.0,
-   "cell_hi": 1.0
-  },
-  {
-   "family": "futoshiki",
-   "level": 2,
-   "model": "haiku",
-   "n": 8,
-   "exact": 1.0,
-   "exact_lo": 1.0,
-   "exact_hi": 1.0,
-   "cell": 1.0,
-   "cell_lo": 1.0,
-   "cell_hi": 1.0
-  },
-  {
-   "family": "futoshiki",
-   "level": 2,
-   "model": "opus",
-   "n": 8,
-   "exact": 1.0,
-   "exact_lo": 1.0,
-   "exact_hi": 1.0,
-   "cell": 1.0,
-   "cell_lo": 1.0,
-   "cell_hi": 1.0
-  },
-  {
-   "family": "futoshiki",
-   "level": 2,
-   "model": "sonnet",
-   "n": 8,
-   "exact": 1.0,
-   "exact_lo": 1.0,
-   "exact_hi": 1.0,
-   "cell": 1.0,
-   "cell_lo": 1.0,
-   "cell_hi": 1.0
-  },
-  {
-   "family": "futoshiki",
-   "level": 3,
-   "model": "haiku",
-   "n": 8,
-   "exact": 0.875,
-   "exact_lo": 0.625,
-   "exact_hi": 1.0,
-   "cell": 0.875,
-   "cell_lo": 0.625,
-   "cell_hi": 1.0
-  },
-  {
-   "family": "futoshiki",
-   "level": 3,
-   "model": "opus",
-   "n": 8,
-   "exact": 1.0,
-   "exact_lo": 1.0,
-   "exact_hi": 1.0,
-   "cell": 1.0,
-   "cell_lo": 1.0,
-   "cell_hi": 1.0
-  },
-  {
-   "family": "futoshiki",
-   "level": 3,
-   "model": "sonnet",
-   "n": 8,
-   "exact": 1.0,
-   "exact_lo": 1.0,
-   "exact_hi": 1.0,
-   "cell": 1.0,
-   "cell_lo": 1.0,
-   "cell_hi": 1.0
-  },
-  {
-   "family": "killer",
-   "level": 1,
-   "model": "haiku",
-   "n": 8,
-   "exact": 1.0,
-   "exact_lo": 1.0,
-   "exact_hi": 1.0,
-   "cell": 1.0,
-   "cell_lo": 1.0,
-   "cell_hi": 1.0
-  },
-  {
-   "family": "killer",
-   "level": 1,
-   "model": "opus",
-   "n": 8,
-   "exact": 1.0,
-   "exact_lo": 1.0,
-   "exact_hi": 1.0,
-   "cell": 1.0,
-   "cell_lo": 1.0,
-   "cell_hi": 1.0
-  },
-  {
-   "family": "killer",
-   "level": 1,
-   "model": "sonnet",
-   "n": 8,
-   "exact": 1.0,
-   "exact_lo": 1.0,
-   "exact_hi": 1.0,
-   "cell": 1.0,
-   "cell_lo": 1.0,
+   "cell": 0.9653846153846154,
+   "cell_lo": 0.9153846153846154,
    "cell_hi": 1.0
   },
   {
@@ -151,11 +151,11 @@
    "level": 2,
    "model": "haiku",
    "n": 8,
-   "exact": 0.875,
-   "exact_lo": 0.625,
+   "exact": 0.75,
+   "exact_lo": 0.5,
    "exact_hi": 1.0,
-   "cell": 0.9926470588235294,
-   "cell_lo": 0.9779411764705883,
+   "cell": 0.9070208728652751,
+   "cell_lo": 0.7452561669829223,
    "cell_hi": 1.0
   },
   {
@@ -187,11 +187,11 @@
    "level": 3,
    "model": "haiku",
    "n": 8,
-   "exact": 1.0,
-   "exact_lo": 1.0,
+   "exact": 0.75,
+   "exact_lo": 0.375,
    "exact_hi": 1.0,
-   "cell": 1.0,
-   "cell_lo": 1.0,
+   "cell": 0.8781512605042017,
+   "cell_lo": 0.6638655462184874,
    "cell_hi": 1.0
   },
   {
@@ -211,11 +211,11 @@
    "level": 3,
    "model": "sonnet",
    "n": 8,
-   "exact": 1.0,
-   "exact_lo": 1.0,
+   "exact": 0.75,
+   "exact_lo": 0.375,
    "exact_hi": 1.0,
-   "cell": 1.0,
-   "cell_lo": 1.0,
+   "cell": 0.9634453781512605,
+   "cell_lo": 0.9046218487394958,
    "cell_hi": 1.0
   },
   {
@@ -226,8 +226,8 @@
    "exact": 0.875,
    "exact_lo": 0.625,
    "exact_hi": 1.0,
-   "cell": 0.9861111111111112,
-   "cell_lo": 0.9583333333333333,
+   "cell": 0.90625,
+   "cell_lo": 0.71875,
    "cell_hi": 1.0
   },
   {
@@ -235,11 +235,11 @@
    "level": 4,
    "model": "opus",
    "n": 8,
-   "exact": 1.0,
-   "exact_lo": 1.0,
+   "exact": 0.875,
+   "exact_lo": 0.625,
    "exact_hi": 1.0,
-   "cell": 1.0,
-   "cell_lo": 1.0,
+   "cell": 0.90625,
+   "cell_lo": 0.71875,
    "cell_hi": 1.0
   },
   {
@@ -259,11 +259,11 @@
    "level": 5,
    "model": "haiku",
    "n": 4,
-   "exact": 1.0,
-   "exact_lo": 1.0,
+   "exact": 0.75,
+   "exact_lo": 0.25,
    "exact_hi": 1.0,
-   "cell": 1.0,
-   "cell_lo": 1.0,
+   "cell": 0.8055555555555556,
+   "cell_lo": 0.41666666666666663,
    "cell_hi": 1.0
   },
   {
@@ -271,11 +271,11 @@
    "level": 5,
    "model": "opus",
    "n": 4,
-   "exact": 1.0,
-   "exact_lo": 1.0,
+   "exact": 0.5,
+   "exact_lo": 0.0,
    "exact_hi": 1.0,
-   "cell": 1.0,
-   "cell_lo": 1.0,
+   "cell": 0.7916666666666667,
+   "cell_lo": 0.41666666666666663,
    "cell_hi": 1.0
   },
   {
@@ -286,116 +286,116 @@
    "exact": 0.75,
    "exact_lo": 0.25,
    "exact_hi": 1.0,
-   "cell": 0.9930555555555556,
-   "cell_lo": 0.9791666666666667,
+   "cell": 0.9861111111111112,
+   "cell_lo": 0.9583333333333333,
    "cell_hi": 1.0
   },
   {
    "family": "sudoku",
    "level": 1,
    "model": "haiku",
+   "n": 8,
+   "exact": 0.625,
+   "exact_lo": 0.25,
+   "exact_hi": 0.875,
+   "cell": 0.9824534396335667,
+   "cell_lo": 0.9649068792671334,
+   "cell_hi": 0.9956896551724138
+  },
+  {
+   "family": "sudoku",
+   "level": 1,
+   "model": "opus",
+   "n": 8,
+   "exact": 1.0,
+   "exact_lo": 1.0,
+   "exact_hi": 1.0,
+   "cell": 1.0,
+   "cell_lo": 1.0,
+   "cell_hi": 1.0
+  },
+  {
+   "family": "sudoku",
+   "level": 1,
+   "model": "sonnet",
+   "n": 8,
+   "exact": 1.0,
+   "exact_lo": 1.0,
+   "exact_hi": 1.0,
+   "cell": 1.0,
+   "cell_lo": 1.0,
+   "cell_hi": 1.0
+  },
+  {
+   "family": "sudoku",
+   "level": 2,
+   "model": "haiku",
+   "n": 8,
+   "exact": 0.5,
+   "exact_lo": 0.125,
+   "exact_hi": 0.875,
+   "cell": 0.9713737468671679,
+   "cell_lo": 0.9451754385964912,
+   "cell_hi": 0.9955357142857143
+  },
+  {
+   "family": "sudoku",
+   "level": 2,
+   "model": "opus",
+   "n": 8,
+   "exact": 1.0,
+   "exact_lo": 1.0,
+   "exact_hi": 1.0,
+   "cell": 1.0,
+   "cell_lo": 1.0,
+   "cell_hi": 1.0
+  },
+  {
+   "family": "sudoku",
+   "level": 2,
+   "model": "sonnet",
+   "n": 8,
+   "exact": 0.875,
+   "exact_lo": 0.625,
+   "exact_hi": 1.0,
+   "cell": 0.9977678571428572,
+   "cell_lo": 0.9933035714285714,
+   "cell_hi": 1.0
+  },
+  {
+   "family": "sudoku",
+   "level": 3,
+   "model": "haiku",
+   "n": 8,
+   "exact": 0.625,
+   "exact_lo": 0.25,
+   "exact_hi": 0.875,
+   "cell": 0.9404131355932204,
+   "cell_lo": 0.8779131355932204,
+   "cell_hi": 0.9872881355932204
+  },
+  {
+   "family": "sudoku",
+   "level": 3,
+   "model": "opus",
+   "n": 8,
+   "exact": 1.0,
+   "exact_lo": 1.0,
+   "exact_hi": 1.0,
+   "cell": 1.0,
+   "cell_lo": 1.0,
+   "cell_hi": 1.0
+  },
+  {
+   "family": "sudoku",
+   "level": 3,
+   "model": "sonnet",
    "n": 8,
    "exact": 0.75,
    "exact_lo": 0.375,
    "exact_hi": 1.0,
-   "cell": 0.8706140350877193,
-   "cell_lo": 0.6206140350877193,
-   "cell_hi": 1.0
-  },
-  {
-   "family": "sudoku",
-   "level": 1,
-   "model": "opus",
-   "n": 8,
-   "exact": 1.0,
-   "exact_lo": 1.0,
-   "exact_hi": 1.0,
-   "cell": 1.0,
-   "cell_lo": 1.0,
-   "cell_hi": 1.0
-  },
-  {
-   "family": "sudoku",
-   "level": 1,
-   "model": "sonnet",
-   "n": 8,
-   "exact": 1.0,
-   "exact_lo": 1.0,
-   "exact_hi": 1.0,
-   "cell": 1.0,
-   "cell_lo": 1.0,
-   "cell_hi": 1.0
-  },
-  {
-   "family": "sudoku",
-   "level": 2,
-   "model": "haiku",
-   "n": 8,
-   "exact": 0.75,
-   "exact_lo": 0.375,
-   "exact_hi": 1.0,
-   "cell": 0.8706896551724138,
-   "cell_lo": 0.6206896551724138,
-   "cell_hi": 1.0
-  },
-  {
-   "family": "sudoku",
-   "level": 2,
-   "model": "opus",
-   "n": 8,
-   "exact": 1.0,
-   "exact_lo": 1.0,
-   "exact_hi": 1.0,
-   "cell": 1.0,
-   "cell_lo": 1.0,
-   "cell_hi": 1.0
-  },
-  {
-   "family": "sudoku",
-   "level": 2,
-   "model": "sonnet",
-   "n": 8,
-   "exact": 1.0,
-   "exact_lo": 1.0,
-   "exact_hi": 1.0,
-   "cell": 1.0,
-   "cell_lo": 1.0,
-   "cell_hi": 1.0
-  },
-  {
-   "family": "sudoku",
-   "level": 3,
-   "model": "haiku",
-   "n": 8,
-   "exact": 0.375,
-   "exact_lo": 0.0,
-   "exact_hi": 0.75,
-   "cell": 0.375,
-   "cell_lo": 0.0,
-   "cell_hi": 0.75
-  },
-  {
-   "family": "sudoku",
-   "level": 3,
-   "model": "opus",
-   "n": 8,
-   "exact": 1.0,
-   "exact_lo": 1.0,
-   "exact_hi": 1.0,
-   "cell": 1.0,
-   "cell_lo": 1.0,
-   "cell_hi": 1.0
-  },
-  {
-   "family": "sudoku",
-   "level": 3,
-   "model": "sonnet",
-   "n": 8,
-   "exact": 1.0,
-   "exact_lo": 1.0,
-   "exact_hi": 1.0,
-   "cell": 1.0,
-   "cell_lo": 1.0,
+   "cell": 0.9955748746867168,
+   "cell_lo": 0.9889567669172932,
    "cell_hi": 1.0
   },
   {
@@ -511,11 +511,11 @@
    "level": 4,
    "model": "haiku",
    "n": 8,
-   "exact": 1.0,
-   "exact_lo": 1.0,
+   "exact": 0.875,
+   "exact_lo": 0.625,
    "exact_hi": 1.0,
-   "cell": 1.0,
-   "cell_lo": 1.0,
+   "cell": 0.9875,
+   "cell_lo": 0.9624999999999999,
    "cell_hi": 1.0
   },
   {
@@ -535,11 +535,11 @@
    "level": 4,
    "model": "sonnet",
    "n": 8,
-   "exact": 1.0,
-   "exact_lo": 1.0,
+   "exact": 0.875,
+   "exact_lo": 0.625,
    "exact_hi": 1.0,
-   "cell": 1.0,
-   "cell_lo": 1.0,
+   "cell": 0.875,
+   "cell_lo": 0.625,
    "cell_hi": 1.0
   }
  ],
@@ -548,10 +548,10 @@
    "family": "futoshiki",
    "model": "haiku",
    "n": 24,
-   "exact": 0.875,
-   "exact_lo": 0.7489583333333334,
+   "exact": 1.0,
+   "exact_lo": 1.0,
    "exact_hi": 1.0,
-   "cell": 0.9144736842105262
+   "cell": 1.0
   },
   {
    "family": "futoshiki",
@@ -566,46 +566,46 @@
    "family": "futoshiki",
    "model": "sonnet",
    "n": 24,
-   "exact": 1.0,
-   "exact_lo": 1.0,
+   "exact": 0.9583333333333334,
+   "exact_lo": 0.875,
    "exact_hi": 1.0,
-   "cell": 1.0
+   "cell": 0.9978070175438596
   },
   {
    "family": "killer",
    "model": "haiku",
    "n": 36,
-   "exact": 0.9444444444444444,
-   "exact_lo": 0.8611111111111112,
-   "exact_hi": 1.0,
-   "cell": 0.995279593318809
+   "exact": 0.8333333333333334,
+   "exact_lo": 0.6944444444444444,
+   "exact_hi": 0.9444444444444444,
+   "cell": 0.9098222024771678
   },
   {
    "family": "killer",
    "model": "opus",
    "n": 36,
-   "exact": 1.0,
-   "exact_lo": 1.0,
-   "exact_hi": 1.0,
-   "cell": 1.0
+   "exact": 0.8888888888888888,
+   "exact_lo": 0.7777777777777778,
+   "exact_hi": 0.9722222222222222,
+   "cell": 0.9541666666666667
   },
   {
    "family": "killer",
    "model": "sonnet",
    "n": 36,
-   "exact": 0.9722222222222222,
-   "exact_lo": 0.9166666666666666,
-   "exact_hi": 1.0,
-   "cell": 0.9992283950617283
+   "exact": 0.8611111111111112,
+   "exact_lo": 0.75,
+   "exact_hi": 0.9722222222222222,
+   "cell": 0.9826412331314293
   },
   {
    "family": "sudoku",
    "model": "haiku",
    "n": 24,
-   "exact": 0.625,
-   "exact_lo": 0.4166666666666667,
+   "exact": 0.5833333333333334,
+   "exact_lo": 0.375,
    "exact_hi": 0.7916666666666666,
-   "cell": 0.7054345634200443
+   "cell": 0.9647467740313184
   },
   {
    "family": "sudoku",
@@ -620,19 +620,19 @@
    "family": "sudoku",
    "model": "sonnet",
    "n": 24,
-   "exact": 1.0,
-   "exact_lo": 1.0,
+   "exact": 0.875,
+   "exact_lo": 0.75,
    "exact_hi": 1.0,
-   "cell": 1.0
+   "cell": 0.997780910609858
   },
   {
    "family": "zebra",
    "model": "haiku",
    "n": 32,
-   "exact": 1.0,
-   "exact_lo": 1.0,
+   "exact": 0.96875,
+   "exact_lo": 0.90625,
    "exact_hi": 1.0,
-   "cell": 1.0
+   "cell": 0.996875
   },
   {
    "family": "zebra",
@@ -647,10 +647,10 @@
    "family": "zebra",
    "model": "sonnet",
    "n": 32,
-   "exact": 1.0,
-   "exact_lo": 1.0,
+   "exact": 0.96875,
+   "exact_lo": 0.90625,
    "exact_hi": 1.0,
-   "cell": 1.0
+   "cell": 0.96875
   }
  ],
  "metric_vs_level": [
@@ -658,7 +658,7 @@
    "family": "futoshiki",
    "metric": "conflicts",
    "rho": 0.8641000665562892,
-   "p": 5.294818228934627e-08,
+   "p": 5.29481822893463e-08,
    "lo": 0.6436809836455435,
    "hi": 0.9712937266564461,
    "n": 24
@@ -676,7 +676,7 @@
    "family": "futoshiki",
    "metric": "mus_mean",
    "rho": 0.9143389191006615,
-   "p": 4.2075419494173654e-10,
+   "p": 4.207541949417367e-10,
    "lo": 0.7961548319329761,
    "hi": 0.945495885692983,
    "n": 24
@@ -685,7 +685,7 @@
    "family": "futoshiki",
    "metric": "up_closure",
    "rho": -0.7671004563554296,
-   "p": 1.2239540447503811e-05,
+   "p": 1.2239540447503804e-05,
    "lo": -0.9351447599809009,
    "hi": -0.45103947553964924,
    "n": 24
@@ -694,7 +694,7 @@
    "family": "futoshiki",
    "metric": "n_clues",
    "rho": -0.5509516057153793,
-   "p": 0.005267334355517401,
+   "p": 0.005267334355517402,
    "lo": -0.7875816471495835,
    "hi": -0.0699361085489228,
    "n": 24
@@ -712,7 +712,7 @@
    "family": "killer",
    "metric": "conflicts",
    "rho": 0.9109106475554962,
-   "p": 1.256649503253936e-14,
+   "p": 1.2566495032539362e-14,
    "lo": 0.7997866792264156,
    "hi": 0.9651572390261269,
    "n": 36
@@ -721,7 +721,7 @@
    "family": "killer",
    "metric": "decisions",
    "rho": 0.9203236697643392,
-   "p": 2.0271077890532584e-15,
+   "p": 2.027107789053259e-15,
    "lo": 0.8159130092685238,
    "hi": 0.9723791668323037,
    "n": 36
@@ -730,7 +730,7 @@
    "family": "killer",
    "metric": "mus_mean",
    "rho": 0.714723886389806,
-   "p": 9.74490442015424e-07,
+   "p": 9.744904420154234e-07,
    "lo": 0.4917407473486771,
    "hi": 0.8469670378158719,
    "n": 36
@@ -739,7 +739,7 @@
    "family": "killer",
    "metric": "up_closure",
    "rho": -0.8687967720830435,
-   "p": 6.48429189260612e-12,
+   "p": 6.4842918926061224e-12,
    "lo": -0.9550916908254197,
    "hi": -0.7150969832117018,
    "n": 36
@@ -748,7 +748,7 @@
    "family": "killer",
    "metric": "n_clues",
    "rho": -0.7729109027942326,
-   "p": 3.312015942375872e-08,
+   "p": 3.312015942375871e-08,
    "lo": -0.9110306544225858,
    "hi": -0.5158970752305096,
    "n": 36
@@ -757,7 +757,7 @@
    "family": "killer",
    "metric": "fl_steps",
    "rho": 0.6702705738659221,
-   "p": 7.74566164019749e-06,
+   "p": 7.745661640197498e-06,
    "lo": 0.3889818527670183,
    "hi": 0.8387627843673179,
    "n": 36
@@ -766,7 +766,7 @@
    "family": "sudoku",
    "metric": "conflicts",
    "rho": 0.7385349644293686,
-   "p": 3.7753304530890904e-05,
+   "p": 3.77533045308909e-05,
    "lo": 0.40876303926836205,
    "hi": 0.925274652271383,
    "n": 24
@@ -775,7 +775,7 @@
    "family": "sudoku",
    "metric": "decisions",
    "rho": 0.7334352251668976,
-   "p": 4.54788024691066e-05,
+   "p": 4.547880246910659e-05,
    "lo": 0.38884872968769973,
    "hi": 0.9267469053664553,
    "n": 24
@@ -784,7 +784,7 @@
    "family": "sudoku",
    "metric": "mus_mean",
    "rho": 0.4497957585898415,
-   "p": 0.027432819789132812,
+   "p": 0.027432819789132815,
    "lo": 0.035461737388762425,
    "hi": 0.769771777540889,
    "n": 24
@@ -793,7 +793,7 @@
    "family": "sudoku",
    "metric": "up_closure",
    "rho": -0.8421290672443174,
-   "p": 2.472347991045614e-07,
+   "p": 2.472347991045613e-07,
    "lo": -0.9645742883877935,
    "hi": -0.6167129880090314,
    "n": 24
@@ -811,7 +811,7 @@
    "family": "sudoku",
    "metric": "fl_steps",
    "rho": 0.8432740427115677,
-   "p": 2.2949784765569335e-07,
+   "p": 2.2949784765569343e-07,
    "lo": 0.6959922770015508,
    "hi": 0.8903467683608528,
    "n": 24
@@ -829,7 +829,7 @@
    "family": "zebra",
    "metric": "decisions",
    "rho": 0.9199943830287602,
-   "p": 9.769018539940147e-14,
+   "p": 9.769018539940152e-14,
    "lo": 0.8118691004600808,
    "hi": 0.9700425970577939,
    "n": 32
@@ -838,7 +838,7 @@
    "family": "zebra",
    "metric": "mus_mean",
    "rho": 0.8826042095332058,
-   "p": 2.3789986379001023e-11,
+   "p": 2.378998637900102e-11,
    "lo": 0.7803482351912531,
    "hi": 0.9326874279354537,
    "n": 32
@@ -865,7 +865,7 @@
    "family": "zebra",
    "metric": "fl_steps",
    "rho": 0.8413402421977456,
-   "p": 1.6344047068979316e-09,
+   "p": 1.6344047068979322e-09,
    "lo": 0.7038795949151341,
    "hi": 0.9036408523955758,
    "n": 32
@@ -875,44 +875,44 @@
   {
    "family": "futoshiki",
    "model": "haiku",
-   "spearman_level_cellacc": 0.14116492564331998,
-   "p": 0.5105682834676517
-  },
-  {
-   "family": "futoshiki",
-   "model": "opus",
    "slope": null,
    "note": "no variation in outcome"
   },
   {
    "family": "futoshiki",
-   "model": "sonnet",
-   "slope": null,
-   "note": "no variation in outcome"
-  },
-  {
-   "family": "killer",
-   "model": "haiku",
-   "spearman_level_cellacc": -0.053055810907729095,
-   "p": 0.7586022618608795
-  },
-  {
-   "family": "killer",
    "model": "opus",
    "slope": null,
    "note": "no variation in outcome"
   },
   {
+   "family": "futoshiki",
+   "model": "sonnet",
+   "spearman_level_cellacc": 0.2553769592276246,
+   "p": 0.22843676081726064
+  },
+  {
+   "family": "killer",
+   "model": "haiku",
+   "spearman_level_cellacc": -0.15129138327522101,
+   "p": 0.3784272904782048
+  },
+  {
+   "family": "killer",
+   "model": "opus",
+   "spearman_level_cellacc": -0.24898835639707237,
+   "p": 0.1430894350721111
+  },
+  {
    "family": "killer",
    "model": "sonnet",
-   "spearman_level_cellacc": -0.2663380569710851,
-   "p": 0.11638179459759235
+   "spearman_level_cellacc": 0.08232196026416755,
+   "p": 0.633140247375233
   },
   {
    "family": "sudoku",
    "model": "haiku",
-   "spearman_level_cellacc": -0.3704694652776229,
-   "p": 0.07473859060367274
+   "spearman_level_cellacc": -0.1358864907243076,
+   "p": 0.5266587292467925
   },
   {
    "family": "sudoku",
@@ -923,14 +923,14 @@
   {
    "family": "sudoku",
    "model": "sonnet",
-   "slope": null,
-   "note": "no variation in outcome"
+   "spearman_level_cellacc": -0.3015796138743653,
+   "p": 0.15209879020996916
   },
   {
    "family": "zebra",
    "model": "haiku",
-   "slope": null,
-   "note": "no variation in outcome"
+   "spearman_level_cellacc": -0.24096579867074963,
+   "p": 0.18399612839740728
   },
   {
    "family": "zebra",
@@ -941,161 +941,161 @@
   {
    "family": "zebra",
    "model": "sonnet",
-   "slope": null,
-   "note": "no variation in outcome"
+   "spearman_level_cellacc": -0.24096579867074963,
+   "p": 0.18399612839740728
   }
  ],
  "models": {
   "logit_main": {
    "params": {
-    "Intercept": 2.963850670307903,
-    "C(family)[T.killer]": 0.8925060660782261,
-    "C(family)[T.sudoku]": -1.4100213628695244,
-    "C(family)[T.zebra]": 21.54086192195863,
-    "C(model)[T.opus]": 22.715311398672036,
-    "C(model)[T.sonnet]": 2.9612740606850765,
-    "level": -0.45067181617537144
+    "Intercept": 4.326467212674394,
+    "C(family)[T.killer]": -2.2258381056147223,
+    "C(family)[T.sudoku]": -2.824441131058915,
+    "C(family)[T.zebra]": -0.23907669075503604,
+    "C(model)[T.opus]": 1.682607248383269,
+    "C(model)[T.sonnet]": 0.6618231574332196,
+    "level": -0.30313853643905375
    },
    "bse": {
-    "Intercept": 0.9448930833012059,
-    "C(family)[T.killer]": 0.9461556896590673,
-    "C(family)[T.sudoku]": 0.743563331872662,
-    "C(family)[T.zebra]": 19325.614658750736,
-    "C(model)[T.opus]": 19247.582142613723,
-    "C(model)[T.sonnet]": 1.0637537145321962,
-    "level": 0.3211862582360352
+    "Intercept": 1.0976641240102216,
+    "C(family)[T.killer]": 1.0639404399822863,
+    "C(family)[T.sudoku]": 1.0592631837850952,
+    "C(family)[T.zebra]": 1.2451677335113984,
+    "C(model)[T.opus]": 0.5887042660030049,
+    "C(model)[T.sonnet]": 0.4436019983865547,
+    "level": 0.18339405179649837
    },
-   "aic": 90.39756197232725,
-   "llf": -38.19878098616363,
+   "aic": 186.13563203427958,
+   "llf": -86.06781601713979,
    "n": 348,
    "level_boot": [
-    -0.45067181617537144,
-    -1.354348492122614,
-    0.26767379062451113
+    -0.30313853643905375,
+    -0.8209981282742026,
+    0.17145618165201484
    ]
   },
   "logit_nonceiling": {
    "params": {
-    "Intercept": 2.963850669697555,
-    "C(family)[T.killer]": 0.892506067421855,
-    "C(family)[T.sudoku]": -1.4100213620411777,
-    "C(model)[T.sonnet]": 2.96127406105261,
-    "level": -0.45067181644281284
+    "Intercept": 3.768373861650918,
+    "C(family)[T.killer]": -2.066740229309056,
+    "C(family)[T.sudoku]": -2.8933676394169594,
+    "C(model)[T.sonnet]": 0.7256778373922401,
+    "level": -0.1077383462777647
    },
    "bse": {
-    "Intercept": 0.9448930832699032,
-    "C(family)[T.killer]": 0.9461556895905034,
-    "C(family)[T.sudoku]": 0.7435633317172261,
-    "C(model)[T.sonnet]": 1.063753714537009,
-    "level": 0.3211862582958037
+    "Intercept": 1.111440798875907,
+    "C(family)[T.killer]": 1.079077253444579,
+    "C(family)[T.sudoku]": 1.0648731104870792,
+    "C(model)[T.sonnet]": 0.4660471404018422,
+    "level": 0.2101057447986757
    },
    "pvalues": {
-    "Intercept": 0.001708580612163731,
-    "C(family)[T.killer]": 0.3455288781207313,
-    "C(family)[T.sudoku]": 0.05791999241066264,
-    "C(model)[T.sonnet]": 0.005372670122352023,
-    "level": 0.1605727468230035
+    "Intercept": 0.0006975750707708397,
+    "C(family)[T.killer]": 0.05545619678528284,
+    "C(family)[T.sudoku]": 0.00658565362098311,
+    "C(model)[T.sonnet]": 0.1194488665100734,
+    "level": 0.6081041477802992
    },
    "n": 168,
    "level_boot": [
-    -0.45067181644281284,
-    -1.3451830139915983,
-    0.24469664150998813
+    -0.1077383462777647,
+    -0.5295848015177239,
+    0.3094144397317493
    ],
    "subset": "families sudoku/killer/futoshiki, models haiku/sonnet"
   },
   "logit_sudoku_haiku": {
    "params": {
-    "Intercept": 2.2716781808761386,
-    "level": -0.850455789868429
+    "Intercept": 0.3364722366212127,
+    "level": 1.0934256391859215e-16
    },
    "pvalues": {
-    "Intercept": 0.07854448379182111,
-    "level": 0.13332485650631523
+    "Intercept": 0.7587248452107658,
+    "level": 0.9999999999999998
    },
    "n": 24,
    "level_boot": [
-    -0.850455789868429,
-    -3.076328567033158,
-    0.2690586853286655
+    1.0934256391859215e-16,
+    -1.163123144026646,
+    1.2163010352775692
    ]
   },
   "metrics_only": {
    "params": {
-    "Intercept": 3.9310146173189238,
-    "C(family)[T.killer]": 0.8028698735882022,
-    "C(family)[T.sudoku]": -3.7727612083839497,
-    "C(model)[T.sonnet]": 3.0034702235937085,
-    "log_conf": -0.5203878868160849,
-    "mus_mean": 0.23985922297722737,
-    "n_clues": -0.13719665627712035
+    "Intercept": 5.111007506200712,
+    "C(family)[T.killer]": -2.4989548341312213,
+    "C(family)[T.sudoku]": -2.2641438746984095,
+    "C(model)[T.sonnet]": 0.7264256143237686,
+    "log_conf": -0.09751154880398724,
+    "mus_mean": -0.03228839022351287,
+    "n_clues": -0.06154631139465225
    },
    "pvalues": {
-    "Intercept": 0.12932196693340614,
-    "C(family)[T.killer]": 0.5649873549382205,
-    "C(family)[T.sudoku]": 0.2502621106033619,
-    "C(model)[T.sonnet]": 0.005007730584661971,
-    "log_conf": 0.11271174145653547,
-    "mus_mean": 0.38507574147733503,
-    "n_clues": 0.06970371418652757
+    "Intercept": 0.04766331009594187,
+    "C(family)[T.killer]": 0.05232032028488488,
+    "C(family)[T.sudoku]": 0.3844927944891786,
+    "C(model)[T.sonnet]": 0.11927178972675131,
+    "log_conf": 0.6425859890012082,
+    "mus_mean": 0.8791144021481273,
+    "n_clues": 0.5022201870396312
    },
-   "aic": 88.42820160561445,
-   "llf": -37.21410080280722
+   "aic": 138.3620852381072,
+   "llf": -62.1810426190536
   },
   "metrics_plus_level": {
    "params": {
-    "Intercept": 3.191335025203328,
-    "C(family)[T.killer]": 1.3847003700676863,
-    "C(family)[T.sudoku]": -4.251301617603343,
-    "C(model)[T.sonnet]": 3.0892986965265097,
-    "level": -1.1099154280882582,
-    "log_conf": 0.0706634354353247,
-    "mus_mean": 0.3507808607739751,
-    "n_clues": -0.1009830174694281
+    "Intercept": 4.824013853346353,
+    "C(family)[T.killer]": -2.3601544857401047,
+    "C(family)[T.sudoku]": -2.4083201915749584,
+    "C(model)[T.sonnet]": 0.7286915910779285,
+    "level": -0.2592884985663284,
+    "log_conf": 0.04744133020685943,
+    "mus_mean": -0.00535968359640258,
+    "n_clues": -0.048624403233037114
    },
    "pvalues": {
-    "Intercept": 0.24060887392221408,
-    "C(family)[T.killer]": 0.3604300250982604,
-    "C(family)[T.sudoku]": 0.21243969997122847,
-    "C(model)[T.sonnet]": 0.004285880038338834,
-    "level": 0.07269603774555815,
-    "log_conf": 0.8801209020795095,
-    "mus_mean": 0.2338570973269578,
-    "n_clues": 0.2074678322647181
+    "Intercept": 0.06790741340632922,
+    "C(family)[T.killer]": 0.07008845113299875,
+    "C(family)[T.sudoku]": 0.3578146184510622,
+    "C(model)[T.sonnet]": 0.11872114556952962,
+    "level": 0.5395813612902094,
+    "log_conf": 0.8818171074381885,
+    "mus_mean": 0.9803895633114905,
+    "n_clues": 0.6147376607861823
    },
-   "aic": 86.9694731923474,
-   "llf": -35.4847365961737
+   "aic": 139.9837246350194,
+   "llf": -61.9918623175097
   },
   "mixed_cell": {
    "params": {
-    "Intercept": 0.9383536929418311,
-    "C(family)[T.killer]": 0.03452810677735428,
-    "C(family)[T.sudoku]": -0.06967970693016035,
-    "C(family)[T.zebra]": 0.03355520396455007,
-    "C(model)[T.opus]": 0.0801046267016326,
-    "C(model)[T.sonnet]": 0.07986516310009996,
-    "level": -0.01009286406945015,
-    "Group Var": 5.194204263785587e-09
+    "Intercept": 1.01766263197649,
+    "C(family)[T.killer]": -0.03764710556765054,
+    "C(family)[T.sudoku]": -0.011759777634225458,
+    "C(family)[T.zebra]": -0.002533996631504791,
+    "C(model)[T.opus]": 0.021917914948881827,
+    "C(model)[T.sonnet]": 0.02122131726285327,
+    "level": -0.016386685099558727,
+    "Group Var": 0.244733435044143
    },
    "bse": {
-    "Intercept": 0.025895248750622754,
-    "C(family)[T.killer]": 0.023643329881975858,
-    "C(family)[T.sudoku]": 0.025098323698870165,
-    "C(family)[T.zebra]": 0.023775293678291162,
-    "C(model)[T.opus]": 0.01977342797988283,
-    "C(model)[T.sonnet]": 0.01977342797988283,
-    "level": 0.007504523584447634,
-    "Group Var": 0.06284894701319774
+    "Intercept": 0.02189256415727272,
+    "C(family)[T.killer]": 0.020865612681100165,
+    "C(family)[T.sudoku]": 0.022149667743913304,
+    "C(family)[T.zebra]": 0.020982072819142814,
+    "C(model)[T.opus]": 0.01325118875946426,
+    "C(model)[T.sonnet]": 0.01325118875946426,
+    "level": 0.006622860792067913,
+    "Group Var": 0.09447985491920674
    },
    "pvalues": {
-    "Intercept": 1.6203152912618255e-287,
-    "C(family)[T.killer]": 0.14418728486171073,
-    "C(family)[T.sudoku]": 0.005498663344856156,
-    "C(family)[T.zebra]": 0.15814214190963904,
-    "C(model)[T.opus]": 5.0971985475035374e-05,
-    "C(model)[T.sonnet]": 5.367623834800037e-05,
-    "level": 0.17865622617758625,
-    "Group Var": 0.9999999340581571
+    "Intercept": 0.0,
+    "C(family)[T.killer]": 0.07118969194021352,
+    "C(family)[T.sudoku]": 0.5954718388333039,
+    "C(family)[T.zebra]": 0.9038735261109165,
+    "C(model)[T.opus]": 0.09812063227932777,
+    "C(model)[T.sonnet]": 0.10927392838703529,
+    "level": 0.013351217886915687,
+    "Group Var": 0.009588564021701291
    }
   }
  }

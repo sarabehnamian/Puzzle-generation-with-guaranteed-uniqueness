@@ -18,7 +18,7 @@ Examples (from other puzzles):
 - "The person who reads poetry lives next to the person who drinks lemonade."
                                             ->  Abs(pos('poetry') - pos('lemonade')) == 1
 
-Output: write a single JSON object to the file /home/user/Puzzle-generation-with-guaranteed-uniqueness/data/llm_tasks/e1_encB/e1_encB_022.out.json with this exact structure
+Output: write a single JSON object to the file D:\Puzzle-generation-with-guaranteed-uniqueness\data\llm_tasks\e1_encB\e1_encB_022.out.json with this exact structure
 {"puzzles": [{"id": "<puzzle id>", "constraints": [{"clue": 1, "expr": "<expression>"}, ...]}, ...]}
 One entry per puzzle and exactly one constraint per numbered clue, in order. Use single quotes inside
 expressions so the JSON stays valid.
@@ -104,20 +104,20 @@ There are 5 houses in a row, numbered 1 to 5 from left to right. Each house has 
 - job: farmer, baker, teacher, doctor, lawyer
 
 Clues:
-1. The Dane and the Norwegian do not live next door to each other.
-2. The milk drinker is directly to the left of the tea drinker.
-3. The golfer lives at one of the two ends of the row.
-4. The lawyer is the hiking enthusiast.
-5. Cooking is the doctor's hobby.
-6. The Swede's house is at one end of the row.
-7. The farmer's house number is lower than the lawyer's.
-8. The baker and the golfer live in neighbouring houses.
-9. The coffee drinker lives right next to the painter.
+1. The Dane and the Norwegian are not next-door neighbours.
+2. The milk drinker lives directly to the left of the tea drinker.
+3. The golfer lives in one of the end houses.
+4. The hiker is the lawyer.
+5. The doctor's hobby is cooking.
+6. The Swede lives at one end of the row.
+7. The farmer lives in a lower-numbered house than the lawyer.
+8. The baker and the golfer live in adjacent houses.
+9. The coffee drinker lives next door to the painter.
 10. The teacher lives immediately to the left of the tea drinker.
-11. The coffee drinker and the water drinker are in adjacent houses.
+11. The coffee drinker and the water drinker are next-door neighbours.
 12. The Dane's hobby is either golf or tennis.
-13. Hiking is the Spaniard's hobby.
-14. The Brit lives in house number four.
+13. The Spaniard's hobby is hiking.
+14. The Brit lives in the fourth house.
 
 ## Puzzle paraphrase:zebra-00150
 
@@ -128,19 +128,19 @@ There are 5 houses in a row, numbered 1 to 5 from left to right. Each house has 
 - color: white, purple, green, yellow, blue
 
 Clues:
-1. There are exactly two houses between the teacher and the occupant of the yellow house, which is to say they are two doors apart.
+1. The teacher and the resident of the yellow house are separated by exactly one house.
 2. The Brit and the Spaniard are next-door neighbours.
-3. Painting is the Swede's hobby.
-4. The tennis player lives in either the green house or the yellow house.
-5. The green house is one of the two houses at the ends of the row.
-6. The farmer's house lies somewhere to the right of the painter's.
-7. The white house sits directly to the left of the lawyer's home.
-8. One house separates the Dane from the resident of the purple house.
-9. The German and the green house's occupant live two houses apart.
-10. The chess player lives immediately to the left of the doctor.
-11. The Spaniard's house is the yellow one.
+3. The Swede's hobby is painting.
+4. Whoever plays tennis lives in either the green house or the yellow house.
+5. The green house is one of the two end houses.
+6. The farmer lives somewhere to the right of the painter.
+7. The white house is immediately to the left of the lawyer's house.
+8. Exactly one house sits between the Dane and the resident of the purple house.
+9. The German and the green house's occupant live two doors apart.
+10. The chess player lives directly to the left of the doctor.
+11. The Spaniard lives in the yellow house.
 12. The farmer's hobby is chess.
-13. The Brit's favourite pastime is golf.
+13. The Brit's hobby is golf.
 
 ## Puzzle paraphrase:zebra-00140
 
@@ -151,19 +151,19 @@ There are 5 houses in a row, numbered 1 to 5 from left to right. Each house has 
 - pet: cat, bird, horse, fish, rabbit
 
 Clues:
-1. The resident of the yellow house is no tennis player.
-2. Cocoa is what the person in the white house drinks.
-3. House 2 belongs to the water drinker.
-4. Hiking is the pastime of whoever owns the rabbit.
-5. Whoever paints lives in one of the two end houses.
-6. The horse lives with the occupant of the red house.
+1. The yellow house's resident does not play tennis.
+2. Cocoa is drunk by whoever lives in the white house.
+3. House 2 is home to the water drinker.
+4. Whoever owns the rabbit loves hiking.
+5. The painting enthusiast lives in one of the two end houses.
+6. The red house's occupant keeps a horse.
 7. The tea drinker is not the one who keeps the horse.
-8. The purple house and the tennis enthusiast's home stand side by side.
-9. The juice drinker is the golf fan.
-10. The chess player does not live in the yellow house.
-11. The cat owner lives right next door to the right of the tennis enthusiast.
-12. The bird keeper lives in the house directly right of the juice drinker's.
-13. The rabbit belongs to the occupant of the white house.
+8. The purple house and the tennis player are next-door neighbours.
+9. Whoever drinks juice enjoys golf.
+10. The chess enthusiast is not the person living in the yellow house.
+11. The cat owner lives directly to the right of the tennis player.
+12. The bird keeper lives right next to the juice drinker, on the right side.
+13. The white house's occupant keeps the rabbit.
 14. The horse owner lives in house 5.
 
 ## Puzzle hard:zebra_hard-00043
