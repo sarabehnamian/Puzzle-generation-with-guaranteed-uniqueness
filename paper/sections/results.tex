@@ -147,6 +147,47 @@ Family & Haiku & Sonnet & Opus \\
 \label{fig:acc}
 \end{figure*}
 
+
+\subsection{E3 extension: a small open-weights model}
+\label{sec:smallmodel}
+
+To extend the size axis of E3 below the API models, we evaluated a 4B
+open-weights model --- \texttt{SZL-Nemotron-Mini-4B-Estate-v1}, a
+Nemotron-Mini-4B-Instruct fine-tune served locally with vLLM --- on 12
+certified puzzles sampled with a fixed seed from the fair range (L1--L3),
+three per family, one puzzle per call. Scoring is crude containment (the
+certified value and its position must both appear in the output; grid
+families count solution digits present in the output text), so a correct
+grid in an unexpected format could score zero; full outputs are preserved
+in the released results file for hand-scoring.
+
+\begin{table}[h]
+\centering
+\begin{tabular}{lcc}
+\toprule
+Family & Level range & Crude cell accuracy \\
+\midrule
+Zebra & L1--L2 & 0.65 \\
+Sudoku & L1--L3 & 0.00 \\
+Killer & L3 & 0.00 \\
+Futoshiki & L2 & 0.00 \\
+\bottomrule
+\end{tabular}
+\caption{E3 extension. A 4B open-weights model on 12 certified puzzles
+(one puzzle per call, fixed seed). The model answered all 12 calls.}
+\label{tab:smallmodel}
+\end{table}
+
+The model answered all 12 calls. Zebra relational reasoning partially
+survives at 4B (one L2 puzzle scored 1.00, another 0.95), while every
+grid family scored zero across all levels. This sharpens the
+solution-carrying reading of Section 3.4: at 4B, the bookkeeping a
+$9{\times}9$ grid requires appears entirely absent, while pairwise
+relational deduction remains partially within reach --- a collapse by
+family rather than by level, consistent with a capacity limit rather
+than a deductive one. Full verbatim outputs and the fixed-seed
+evaluation script are in \texttt{extensions/small-open-model-eval/}.
+
 \subsection{E4: evolving fair puzzles against a solver}
 
 \input{sections/e4.tex}
