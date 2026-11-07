@@ -1,0 +1,55 @@
+name: CI
+
+# Continuously certified benchmark: the uniqueness certificates in
+# benchmark/puzzles.jsonl are re-proved on every push (fast stratified sample)
+# and in full on a weekly schedule, with the repository's own certifier
+# (MiniSat via PySAT, cross-checked with OR-tools CP-SAT).
+
+on:
+  push:
+  pull_request:
+  schedule:
+    - cron: "0 6 * * 1"  # weekly full re-certification (UTC Mondays 06:00)
+
+permissions:
+  contents: read
+
+jobs:
+  tests:
+    if: github.event_name != 'schedule'
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v5
+      - uses: actions/setup-python@v6
+        with:
+          python-version: "3.12"
+      - run: pip install -r requirements.txt
+      - run: pytest -q
+
+  full-recertification:
+    if: github.event_name == 'schedule'
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v5
+      - uses: actions/setup-python@v6
+        with:
+          python-version: "3.12"
+      - run: pip install -r requirements.txt
+      - name: Re-prove every released certificate (both solvers)
+        run: |
+          python - <<'PY'
+          import json, sys
+          sys.path.insert(0, ".")
+          from src.analyze import certify
+          puzzles = [json.loads(l) for l in open("benchmark/puzzles.jsonl") if l.strip()]
+          bad = []
+          for i, p in enumerate(puzzles):
+              cert, _, _ = certify(p["spec"])
+              if not (cert["unique"] and cert["cpsat_unique"] and cert["matches_intended"]):
+                  bad.append(p["id"])
+              if (i + 1) % 25 == 0:
+                  print(f"re-certified {i + 1}/{len(puzzles)}", flush=True)
+          if bad:
+              sys.exit(f"CERTIFICATE FAILURES: {bad}")
+          print(f"ALL {len(puzzles)} released certificates re-proved (MiniSat + CP-SAT)")
+          PY
