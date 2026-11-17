@@ -1,0 +1,40 @@
+{
+  "name": "certified-puzzles-frontier-bank-v1",
+  "provenance": "generated with the pipeline of sarabehnamian/Puzzle-generation-with-guaranteed-uniqueness (MIT, (c) 2026 Sara Behnamian) @ 30c1d81b3bca512a12dc06d6f60d96e50e3018fa, extended to sizes beyond the released benchmark; every item re-certified unique by MiniSat and OR-Tools CP-SAT by the pipeline's own export machinery",
+  "banks": {
+    "zebra_fresh": "fresh-seed eval bank at the paper's 5x4 size (contamination-free eval for models trained on the released benchmark)",
+    "zebra_f7": "NEW SIZE: 7 houses x 5 categories",
+    "futoshiki_f7": "NEW SIZE: 7x7",
+    "sudoku_f12": "NEW SIZE: 12x12 (box 3x4)",
+    "killer_f9": "NEW SIZE: 9x9 (box 3x3, the classic Killer size)",
+    "killer_fresh": "fresh-seed eval bank at the paper's 6x6 size"
+  },
+  "banks_in_release": {
+    "futoshiki_f7": 100,
+    "killer_f9": 17,
+    "killer_fresh": 60,
+    "sudoku_f12": 59,
+    "zebra_f7": 100,
+    "zebra_fresh": 100
+  },
+  "sha256": {
+    "puzzles.jsonl": "d61b664b407852bce54daff228ec1787f427bc127e5ac0e3603dc468da9bd6df"
+  },
+  "n_items": 436,
+  "by_family_level": {
+    "futoshiki|L2": 2,
+    "futoshiki|L3": 67,
+    "futoshiki|L4": 31,
+    "killer|L2": 22,
+    "killer|L3": 27,
+    "killer|L4": 20,
+    "killer|L5": 8,
+    "sudoku|L1": 3,
+    "sudoku|L2": 3,
+    "sudoku|L3": 53,
+    "zebra|L2": 36,
+    "zebra|L3": 112,
+    "zebra|L4": 52
+  },
+  "license": "MIT (attribution: Sara Behnamian)"
+}

@@ -1,0 +1,27 @@
+{
+ "n_items": 436,
+ "by_family_level": {
+  "futoshiki|L2": 2,
+  "futoshiki|L3": 67,
+  "futoshiki|L4": 31,
+  "killer|L2": 22,
+  "killer|L3": 27,
+  "killer|L4": 20,
+  "killer|L5": 8,
+  "sudoku|L1": 3,
+  "sudoku|L2": 3,
+  "sudoku|L3": 53,
+  "zebra|L2": 36,
+  "zebra|L3": 112,
+  "zebra|L4": 52
+ },
+ "by_bank": {
+  "futoshiki_f7": 100,
+  "killer_f9": 17,
+  "killer_fresh": 60,
+  "sudoku_f12": 59,
+  "zebra_f7": 100,
+  "zebra_fresh": 100
+ },
+ "skipped": []
+}

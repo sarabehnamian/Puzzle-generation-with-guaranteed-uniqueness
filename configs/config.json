@@ -53,6 +53,62 @@
           3
         ]
       }
+    },
+    "zebra_f7": {
+      "n_puzzles": 100,
+      "family": "zebra",
+      "params": {
+        "n": 7,
+        "k": 5
+      }
+    },
+    "futoshiki_f7": {
+      "n_puzzles": 100,
+      "family": "futoshiki",
+      "params": {
+        "n": 7
+      }
+    },
+    "sudoku_f12": {
+      "n_puzzles": 60,
+      "family": "sudoku",
+      "params": {
+        "n": 12,
+        "box": [
+          3,
+          4
+        ]
+      }
+    },
+    "killer_f9": {
+      "n_puzzles": 20,
+      "family": "killer",
+      "params": {
+        "n": 9,
+        "box": [
+          3,
+          3
+        ]
+      }
+    },
+    "zebra_fresh": {
+      "n_puzzles": 100,
+      "family": "zebra",
+      "params": {
+        "n": 5,
+        "k": 4
+      }
+    },
+    "killer_fresh": {
+      "n_puzzles": 60,
+      "family": "killer",
+      "params": {
+        "n": 6,
+        "box": [
+          2,
+          3
+        ]
+      }
     }
   },
   "e1": {
