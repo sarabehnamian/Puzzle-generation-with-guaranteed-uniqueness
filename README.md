@@ -33,7 +33,7 @@ The manuscript is `paper/main.pdf`. The benchmark release is in `benchmark/` (se
 
 ```bash
 pip install -r requirements.txt
-pytest -q                                   # 17 tests
+pytest -q                                   # 19 tests
 python -m src.build_bank                    # certified banks (seeded; takes a while on 4 cores)
 python -m src.bank_stats
 ```
